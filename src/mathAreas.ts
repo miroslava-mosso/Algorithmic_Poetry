@@ -1,8 +1,34 @@
+export type MathShapeId =
+  // Geometría
+  | 'pascal-triangle'
+  | 'circulo-vicioso'
+  | 'koch-snowflake'
+  // Nudos
+  | 'overhand-knot'
+  | 'figure-eight-knot'
+  | 'trefoil-knot'
+  // Grafos
+  | 'grafo-arbol'
+  | 'konigsberg'
+  | 'bipartito'
+  // Números
+  | 'primo'
+  | 'fibonacci'
+  | 'mersenne'
+  // Probabilidad
+  | 'dado'
+  | 'markov'
+  | 'borracho'
+  // Cuerdas
+  | 'vibracion'
+  | 'dimension-oculta'
+  | 'brana';
+
 export interface MathExample {
   index: string;
   title: string;
   technique: string;
-  lines: string[];
+  shape: MathShapeId;
 }
 
 export interface MathArea {
@@ -24,29 +50,20 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'Triángulo de Pascal',
-        technique: 'Sílabas por verso: 1, 1, 2, 1',
-        lines: ['sal', 'luz', 'doble voz', 'sol'],
+        technique: 'Cada fila suma la anterior — el número es la palabra',
+        shape: 'pascal-triangle',
       },
       {
         index: '02',
         title: 'Círculo vicioso',
         technique: 'Poema circular — el último verso enlaza con el primero',
-        lines: [
-          'el río nace en la montaña',
-          'la montaña recibe la lluvia',
-          'la lluvia cae al río',
-          'el río nace en la montaña',
-        ],
+        shape: 'circulo-vicioso',
       },
       {
         index: '03',
         title: 'Copo de Koch',
-        technique: 'Fractal — cada iteración triplica los bordes',
-        lines: [
-          'un copo',
-          'un copo un copo un copo',
-          'un copo un copo un copo un copo un copo un copo un copo un copo un copo',
-        ],
+        technique: 'Fractal — cada arista se reemplaza por un triángulo equilátero',
+        shape: 'koch-snowflake',
       },
     ],
   },
@@ -59,33 +76,21 @@ export const mathAreas: MathArea[] = [
     examples: [
       {
         index: '01',
-        title: 'Trébol',
-        technique: 'Nudo trébol — tres cruces, la lazada más simple que no se deshace',
-        lines: [
-          'cuerda que se cruza',
-          'cuerda que se cruza',
-          'cuerda que se cruza',
-          'tres veces y vuelve',
-          'al mismo punto',
-        ],
+        title: 'Overhand knot',
+        technique: 'El nudo más simple — una lazada, un cruce, imposible de desatar',
+        shape: 'overhand-knot',
       },
       {
         index: '02',
-        title: 'Ocho',
-        technique: 'Nudo de figura ocho — una cuerda, dos cruces, vuelve al inicio',
-        lines: [
-          'sube y baja',
-          'se cruza una vez',
-          'se cruza otra vez',
-          'y vuelve al inicio',
-          'sin haberse ido',
-        ],
+        title: 'Nudo de figura ocho',
+        technique: 'Dos cruces alternados — el nudo de escalada más seguro',
+        shape: 'figure-eight-knot',
       },
       {
         index: '03',
-        title: 'Desnudo',
-        technique: 'El nudo que se desata — poema reversible, cada verbo tiene su inverso',
-        lines: ['atar     desatar', 'nudar    desnudar', 'lazo     deslazo'],
+        title: 'Nudo trébol',
+        technique: 'Tres cruces alternados — el nudo no trivial más pequeño',
+        shape: 'trefoil-knot',
       },
     ],
   },
@@ -99,34 +104,20 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'Árbol',
-        technique: 'Grafo árbol — cada palabra se ramifica en dos',
-        lines: [
-          '              raíz',
-          '        tronco        tronco',
-          '    rama    rama    rama    rama',
-          'hoja hoja hoja hoja hoja hoja hoja hoja',
-        ],
+        technique: 'Grafo árbol — acíclico, sin raíz fija, toda hoja es un poema',
+        shape: 'grafo-arbol',
       },
       {
         index: '02',
-        title: 'Königsberg',
-        technique: 'Los siete puentes — un camino que cruza cada arista una sola vez',
-        lines: [
-          'siete puentes sobre dos orillas',
-          'ningún camino los cruza todos',
-          'sin repetir ni uno',
-        ],
+        title: 'Los puentes de Königsberg',
+        technique: 'Euler demostró que no existe camino que cruce cada arista exactamente una vez',
+        shape: 'konigsberg',
       },
       {
         index: '03',
         title: 'Bipartito',
-        technique: 'Grafo bipartito — dos conjuntos que solo se tocan entre sí',
-        lines: [
-          'tierra       agua',
-          'tierra       agua',
-          'tierra       agua',
-          'solo se encuentran en la orilla',
-        ],
+        technique: 'Dos conjuntos que solo se conectan entre sí — nunca consigo mismo',
+        shape: 'bipartito',
       },
     ],
   },
@@ -140,20 +131,20 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'Primo',
-        technique: 'Cada palabra tiene un número primo de letras: 2, 3, 5, 7, 11',
-        lines: ['el sol nogal amanecer imposibilitado'],
+        technique: 'Solo palabras cuyo número de letras es primo: 2, 3, 5, 7, 11',
+        shape: 'primo',
       },
       {
         index: '02',
         title: 'Fibonacci',
-        technique: 'Sílabas por verso: 1, 2, 3, 5, 8',
-        lines: ['sol', 'luna', 'naranja', 'manzana madura', 'círculo de agua que cae y cae'],
+        technique: 'Sílabas por verso: 1, 1, 2, 3, 5, 8, 13 — espiral logarítmica',
+        shape: 'fibonacci',
       },
       {
         index: '03',
         title: 'Mersenne',
-        technique: 'Sílabas por verso: 2ⁿ − 1 → 1, 3, 7, 15',
-        lines: ['uno', 'tres manos', 'siete pájaros sobre el alambre', 'quince gotas de lluvia resbalan por el cristal'],
+        technique: 'Palabras por verso: 2ⁿ − 1 → 1, 3, 7, 15',
+        shape: 'mersenne',
       },
     ],
   },
@@ -167,25 +158,20 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'Dado',
-        technique: 'Cada palabra elegida lanzando un dado sobre una página abierta al azar',
-        lines: ['casa    río    pájaro', 'noche    luz    calle'],
+        technique: 'Seis caras, seis versos — distribución uniforme sobre el lenguaje',
+        shape: 'dado',
       },
       {
         index: '02',
         title: 'Cadena de Markov',
         technique: 'Cada palabra depende solo de la anterior — memoria de un solo paso',
-        lines: [
-          'el gato duerme',
-          'duerme tranquilo',
-          'tranquilo bajo la luna',
-          'luna que mira al gato',
-        ],
+        shape: 'markov',
       },
       {
         index: '03',
         title: 'Camino del borracho',
-        technique: 'Paseo aleatorio por el diccionario — cada paso es independiente',
-        lines: ['paso a paso a paso', 'a paso a paso a paso a', 'a paso a paso a paso'],
+        technique: 'Paseo aleatorio — cada paso es independiente del anterior',
+        shape: 'borracho',
       },
     ],
   },
@@ -199,26 +185,20 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'Vibración',
-        technique: 'La misma cuerda vibra en frecuencias distintas — las mismas notas en órdenes diferentes',
-        lines: ['do  re  mi  fa  sol', 'mi  do  sol  re  fa', 'sol  mi  do  fa  re'],
+        technique: 'La misma cuerda en modos armónicos distintos — texto sobre onda sinusoidal',
+        shape: 'vibracion',
       },
       {
         index: '02',
         title: 'Dimensión oculta',
         technique: 'Anagramas — la misma materia en dimensiones distintas del sentido',
-        lines: ['amor    roma    ramo', 'roma    ramo    amor', 'ramo    amor    roma'],
+        shape: 'dimension-oculta',
       },
       {
         index: '03',
         title: 'Brana',
-        technique: 'Superficie bidimensional de texto — el poema como membrana',
-        lines: [
-          'l  l  l  l  l  l',
-          'l  a  a  a  a  l',
-          'l  a     ·     a  l',
-          'l  a  a  a  a  l',
-          'l  l  l  l  l  l',
-        ],
+        technique: 'Membrana bidimensional — el poema como superficie en once dimensiones',
+        shape: 'brana',
       },
     ],
   },

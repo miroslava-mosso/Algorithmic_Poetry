@@ -169,6 +169,20 @@ function App() {
         </div>
       </section>
 
+      {/* ── Fotografía ─────────────────────────────────── */}
+      <div className="reveal relative overflow-hidden" style={{ height: 'clamp(280px, 38vw, 560px)' }}>
+        <img
+          src="/0001_2000268740001_2.jpg"
+          alt="Mar tranquilo, horizonte azul"
+          className="w-full h-full object-cover object-center"
+          style={{ filter: 'saturate(0.88) contrast(1.04)' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f7f5f1]/0 via-[#f7f5f1]/0 to-[#0d0d0d]/80" />
+        <p className="absolute bottom-7 left-1/2 -translate-x-1/2 font-mono-lt text-[11px] uppercase text-[#f7f5f1]/65 tracking-[0.22em] text-center whitespace-nowrap">
+          el horizonte también es una restricción
+        </p>
+      </div>
+
       {/* ── Contacto / Footer ──────────────────────────── */}
       <footer id="contacto" className="bg-ink text-[#f7f5f1]">
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 py-20 sm:py-24">
