@@ -1,3 +1,3 @@
-# landing_page_oulipo
+# Algorithmic_Poetry
 
 [![Open in Bolt](https://bolt.new/static/open-in-bolt.svg)](https://bolt.new/~/sb1-tjbf9qra)
