@@ -83,6 +83,17 @@
     border-color: rgba(13, 13, 13, 0.18);
   }
 
+  .area-accordion .area-chevron {
+    transition: transform 0.4s ease, background-color 0.4s ease;
+  }
+  .area-accordion[open] .area-chevron {
+    transform: rotate(180deg);
+    background-color: var(--pink);
+  }
+  .area-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(18px);

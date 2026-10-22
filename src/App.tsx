@@ -3,6 +3,7 @@ import { mathAreas } from '@/mathAreas';
 import { useReveal } from '@/useReveal';
 import { PoemCard } from '@/components/PoemCard';
 import { MathAreaCard } from '@/components/MathAreaCard';
+import { HodgeAlgorithm } from '@/components/HodgeAlgorithm';
 
 function App() {
   const ref = useReveal<HTMLDivElement>();
@@ -20,6 +21,7 @@ function App() {
             <a href="#manifiesto" className="hover:text-ink transition">Manifiesto</a>
             <a href="#galeria" className="hover:text-ink transition">Galería</a>
             <a href="#areas" className="hover:text-ink transition">Áreas</a>
+            <a href="#mi-algoritmo" className="hover:text-ink transition">Mi algoritmo</a>
             <a href="#contacto" className="hover:text-ink transition">Contacto</a>
           </nav>
           <span className="font-mono-lt text-[10px] text-ink/40">Portafolio · 01—04</span>
@@ -177,12 +179,14 @@ function App() {
         </div>
       </section>
 
+      <HodgeAlgorithm />
+
       {/* ── Fotografía ─────────────────────────────────── */}
       <div className="reveal relative overflow-hidden bg-[#cdb887]" style={{ height: 'clamp(280px, 38vw, 560px)' }}>
         <img
           src="/0001_2000268740001_2.jpg"
           alt="Mar tranquilo, horizonte azul y arena"
-          className="w-full h-full object-cover object-bottom"
+          className="w-full h-full object-cover object-center"
           style={{ filter: 'saturate(0.88) contrast(1.04)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#f7f5f1]/0 via-[#f7f5f1]/0 to-[#0d0d0d]/80" />

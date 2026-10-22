@@ -3,56 +3,58 @@ import { MathExampleShape } from '@/components/MathExampleShape';
 
 export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
   return (
-    <section
+    <details
       id={area.id}
-      className="reveal border-b hairline"
+      className="area-accordion reveal border-b hairline"
       style={{ transitionDelay: `${(i % 2) * 60}ms` }}
     >
-      <div className="mx-auto max-w-[1180px] px-5 sm:px-8 py-16 sm:py-24">
-        {/* Area header */}
-        <div className="flex items-baseline gap-5 mb-12">
-          <span className="font-display text-6xl sm:text-7xl text-[#f4b6c2] leading-none">
-            {area.index}
-          </span>
-          <div>
-            <span className="font-mono-lt text-[10px] uppercase text-ink/45">Área</span>
-            <h3 className="font-display text-3xl sm:text-4xl leading-[1.05] mt-1">
-              <span className="pink-underline">{area.title}</span>
-            </h3>
-            <p className="font-body text-base text-ink/65 italic mt-2 max-w-[52ch] leading-[1.5]">
-              {area.description}
-            </p>
+      <summary className="cursor-pointer list-none select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#f4b6c2] focus-visible:outline-offset-8">
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 py-10 sm:py-14 flex items-center justify-between gap-6">
+          <div className="flex items-baseline gap-5 min-w-0">
+            <span className="font-display text-5xl sm:text-7xl text-[#f4b6c2] leading-none shrink-0">
+              {area.index}
+            </span>
+            <div className="min-w-0">
+              <span className="font-mono-lt text-[10px] uppercase text-ink/45">Área</span>
+              <h3 className="font-display text-3xl sm:text-4xl leading-[1.05] mt-1">
+                <span className="pink-underline">{area.title}</span>
+              </h3>
+              <p className="font-body text-base text-ink/65 italic mt-2 max-w-[58ch] leading-[1.5]">
+                {area.description}
+              </p>
+            </div>
           </div>
+          <span className="area-chevron shrink-0 flex items-center justify-center w-9 h-9 border hairline font-mono-lt text-lg text-ink/65" aria-hidden="true">
+            ↓
+          </span>
         </div>
+      </summary>
 
-        {/* Three examples side by side */}
-        <div className="grid gap-6 sm:grid-cols-3">
-          {area.examples.map((ex) => (
-            <article
-              key={ex.index}
-              className="poem-cell lift border hairline p-5 sm:p-6 flex flex-col gap-4"
-            >
-              <header className="flex items-baseline justify-between gap-3">
-                <div className="flex items-baseline gap-2.5">
-                  <span className="font-mono-lt text-[10px] text-ink/40">{ex.index}</span>
-                  <h4 className="font-display text-xl sm:text-2xl leading-tight">{ex.title}</h4>
-                </div>
-              </header>
-
-              {/* Visual poem shape */}
-              <div className="flex items-center justify-center py-4 min-h-[140px]">
-                <MathExampleShape shape={ex.shape} />
+      <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-14 sm:pb-20 grid gap-6 sm:grid-cols-3">
+        {area.examples.map((ex) => (
+          <article
+            key={ex.index}
+            className="poem-cell lift min-w-0 overflow-hidden border hairline p-5 sm:p-6 flex flex-col gap-4"
+          >
+            <header className="flex items-baseline justify-between gap-3">
+              <div className="flex items-baseline gap-2.5">
+                <span className="font-mono-lt text-[10px] text-ink/40">{ex.index}</span>
+                <h4 className="font-display text-xl sm:text-2xl leading-tight">{ex.title}</h4>
               </div>
+            </header>
 
-              <footer className="mt-auto pt-3 border-t hairline">
-                <p className="font-mono-lt text-[9.5px] uppercase text-ink/50 leading-snug">
-                  {ex.technique}
-                </p>
-              </footer>
-            </article>
-          ))}
-        </div>
+            <div className="flex items-center justify-center py-4 min-h-[140px]">
+              <MathExampleShape shape={ex.shape} />
+            </div>
+
+            <footer className="mt-auto pt-3 border-t hairline">
+              <p className="font-mono-lt text-[9.5px] uppercase text-ink/50 leading-snug">
+                {ex.technique}
+              </p>
+            </footer>
+          </article>
+        ))}
       </div>
-    </section>
+    </details>
   );
 }

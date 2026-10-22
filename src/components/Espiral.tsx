@@ -12,7 +12,7 @@ export function Espiral({ lines }: { lines: string[] }) {
       <use href="#poem-spiral-path" fill="none" stroke="#f4b6c2" strokeWidth="0.8" strokeOpacity="0.65" />
       <text className="font-mono-lt" fontSize="9.5" fill="#0d0d0d" letterSpacing="0.45">
         <textPath href="#poem-spiral-path" startOffset="0%">
-          {verse} · {verse}
+          {verse} · {verse} · {verse} · {verse}
         </textPath>
       </text>
       <circle cx="148" cy="116" r="2" fill="#f4b6c2" />

@@ -45,18 +45,17 @@ export function MathExampleShape({ shape }: Props) {
     case 'circulo-vicioso': return (
       <svg viewBox="0 0 220 220" className="w-full max-w-[220px]" fontFamily="'JetBrains Mono', monospace">
         <defs>
-          <path id="cv-ring"
-            d="M 110,22 A 88,88 0 1,1 109.99,22" />
+          <path id="cv-ring" d="M 110,22 A 88,88 0 1,1 109.99,22" />
         </defs>
         <circle cx="110" cy="110" r="88" fill="none" stroke={PINK} strokeWidth="0.6" strokeOpacity="0.4"/>
         <circle cx="110" cy="110" r="3" fill={PINK}/>
-        <text fontSize="9.5" fill={INK} letterSpacing="1.2">
-          <textPath href="#cv-ring">
-            el río nace · la montaña llora · la lluvia baja · el río nace · 
+        <text fontSize="8.6" fill={INK} letterSpacing="0.55">
+          <textPath href="#cv-ring" startOffset="0%">
+            el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace · el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace ·
           </textPath>
         </text>
-        <text x="110" y="106" textAnchor="middle" fontSize="8" fill={DIM} fontFamily="'JetBrains Mono', monospace">∞</text>
-        <text x="110" y="118" textAnchor="middle" fontSize="7.5" fill={DIM} fontFamily="'JetBrains Mono', monospace">vicioso</text>
+        <text x="110" y="106" textAnchor="middle" fontSize="8" fill={DIM}>capicúa</text>
+        <text x="110" y="118" textAnchor="middle" fontSize="7.5" fill={PINK}>∞</text>
       </svg>
     );
 
