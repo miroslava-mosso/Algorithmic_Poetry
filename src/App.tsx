@@ -44,8 +44,8 @@ function App() {
           </h1>
 
           <p className="reveal font-body text-xl sm:text-2xl leading-[1.5] mt-10 max-w-[52ch] text-ink/80">
-            Un portafolio de cuatro poemas con forma, inspirados en Oulipo y la
-            literatura potencial. Cada obra obedece a una restricción
+            Un portafolio de poemas con forma, inspirados en Oulipo y la literatura
+            potencial. Cada obra obedece a una restricción
             matemática: la palabra se pliega, gira, mengua o vuela. La página
             es el papel cuadriculado donde el verso se convierte en figura.
           </p>
@@ -178,11 +178,11 @@ function App() {
       </section>
 
       {/* ── Fotografía ─────────────────────────────────── */}
-      <div className="reveal relative overflow-hidden bg-[#cdb887]">
+      <div className="reveal relative overflow-hidden bg-[#cdb887]" style={{ height: 'clamp(280px, 38vw, 560px)' }}>
         <img
           src="/0001_2000268740001_2.jpg"
           alt="Mar tranquilo, horizonte azul y arena"
-          className="block w-full h-auto"
+          className="w-full h-full object-cover object-bottom"
           style={{ filter: 'saturate(0.88) contrast(1.04)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#f7f5f1]/0 via-[#f7f5f1]/0 to-[#0d0d0d]/80" />

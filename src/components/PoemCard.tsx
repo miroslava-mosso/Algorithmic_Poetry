@@ -5,7 +5,7 @@ export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
   return (
     <article
       id={poem.id}
-      className="poem-cell lift reveal grid grid-rows-[auto_1fr_auto] border hairline border-t-0 border-r-0 border-l-0 px-5 py-8 sm:px-7 sm:py-10"
+      className="poem-cell lift reveal min-w-0 overflow-hidden grid grid-rows-[auto_1fr_auto] border hairline border-t-0 border-r-0 border-l-0 px-5 py-8 sm:px-7 sm:py-10"
       style={{ transitionDelay: `${(i % 3) * 80}ms` }}
     >
       <header className="flex items-baseline justify-between gap-4 mb-6">
