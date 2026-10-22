@@ -22,7 +22,7 @@ function App() {
             <a href="#areas" className="hover:text-ink transition">Áreas</a>
             <a href="#contacto" className="hover:text-ink transition">Contacto</a>
           </nav>
-          <span className="font-mono-lt text-[10px] text-ink/40">Portafolio · 01—10</span>
+          <span className="font-mono-lt text-[10px] text-ink/40">Portafolio · 01—04</span>
         </div>
       </header>
 
@@ -34,7 +34,7 @@ function App() {
               Portafolio de poesía algorítmica
             </span>
             <span className="h-px flex-1 bg-ink/15" />
-            <span className="font-mono-lt text-[11px] text-ink/40">Nº 01 — 10</span>
+            <span className="font-mono-lt text-[11px] text-ink/40">Nº 01 — 04</span>
           </div>
 
           <h1 className="reveal font-display text-[13vw] sm:text-[8vw] leading-[0.95] tracking-tight max-w-[14ch]">
@@ -44,15 +44,14 @@ function App() {
           </h1>
 
           <p className="reveal font-body text-xl sm:text-2xl leading-[1.5] mt-10 max-w-[52ch] text-ink/80">
-            Un portafolio de diez poemas con forma, inspirados en el taller
-            Oulipo y la literatura potencial. Cada obra obedece a una
-            restricción matemática: la palabra se pliega, gira, mengua o vuela.
-            La página es el papel cuadriculado donde el verso se convierte en
-            figura.
+            Un portafolio de cuatro poemas con forma, inspirados en Oulipo y la
+            literatura potencial. Cada obra obedece a una restricción
+            matemática: la palabra se pliega, gira, mengua o vuela. La página
+            es el papel cuadriculado donde el verso se convierte en figura.
           </p>
 
           <div className="reveal mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono-lt text-[11px] uppercase text-ink/55">
-            <span>10 poemas</span>
+            <span>4 poemas</span>
             <span className="text-ink/20">/</span>
             <span>6 áreas matemáticas</span>
             <span className="text-ink/20">/</span>
@@ -100,13 +99,22 @@ function App() {
               hace posibles los poemas que nadie había escrito aún.
             </p>
             <p>
-              Una liana que pierde letras, un pájaro que levanta el vuelo, una
-              cruz donde dos versos se cruzan en una sola letra. La geometría
-              no decora el poema: lo produce. Este portafolio recoge mi
-              propia lectura de aquella tradición.
+              Una cruz donde dos versos se encuentran, un diamante que crece y mengua,
+              un cono que concentra el lenguaje y una espiral que lo lleva hacia
+              adentro. La geometría no decora el poema: lo produce. Este
+              portafolio recoge mi propia lectura de aquella tradición.
             </p>
-            <p className="font-mono-lt text-[12px] uppercase text-ink/45 not-italic">
-              Queneau · Bens · Roubaud · Bénabou · Calvino · Le Lionnais
+            <p className="font-body text-lg sm:text-xl leading-[1.55] text-ink/75 not-italic">
+              Agradezco infinitamente a{' '}
+              <a className="burnt-marker" href="https://www.instagram.com/batsssht/" target="_blank" rel="noreferrer">
+                Regina Roze
+              </a>{' '}
+              por introducirme al mundo de la poesía potencial, a través de los
+              laboratorios de poesía potencial en México,{' '}
+              <a className="burnt-marker" href="https://www.instagram.com/popoesia/" target="_blank" rel="noreferrer">
+                popoesía
+              </a>, a los que me uní en algunas ocasiones y en donde aprendí a
+              hacer muchos de los poemas que aquí muestro.
             </p>
           </div>
         </div>
@@ -119,7 +127,7 @@ function App() {
             <div>
               <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Galería</span>
               <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
-                Diez <span className="pink-underline">formas</span> del poema
+                Cuatro <span className="pink-underline">formas</span> del poema
               </h2>
             </div>
             <p className="font-body text-base text-ink/60 max-w-[34ch]">
@@ -170,11 +178,11 @@ function App() {
       </section>
 
       {/* ── Fotografía ─────────────────────────────────── */}
-      <div className="reveal relative overflow-hidden" style={{ height: 'clamp(280px, 38vw, 560px)' }}>
+      <div className="reveal relative overflow-hidden bg-[#cdb887]">
         <img
           src="/0001_2000268740001_2.jpg"
-          alt="Mar tranquilo, horizonte azul"
-          className="w-full h-full object-cover object-center"
+          alt="Mar tranquilo, horizonte azul y arena"
+          className="block w-full h-auto"
           style={{ filter: 'saturate(0.88) contrast(1.04)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#f7f5f1]/0 via-[#f7f5f1]/0 to-[#0d0d0d]/80" />
@@ -204,8 +212,8 @@ function App() {
                 <p className="font-display text-2xl mt-1">poesia@potencial.co</p>
               </div>
               <div>
-                <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">Desde</p>
-                <p className="font-body text-lg mt-1">Un cuaderno, una restricción</p>
+                <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">Materia</p>
+                <p className="font-body text-lg mt-1">Un cuaderno, una constricción 2 dimensional</p>
               </div>
             </div>
           </div>
