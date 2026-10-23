@@ -3,6 +3,17 @@ import type { MathArea, MathExample } from '@/mathAreas';
 import { MathExampleShape } from '@/components/MathExampleShape';
 import { Lightbox } from '@/components/Lightbox';
 
+const enlargedShapes = new Set([
+  'pascal-triangle',
+  'circulo-vicioso',
+  'overhand-knot',
+  'figure-eight-knot',
+  'trefoil-knot',
+  'konigsberg',
+  'fibonacci',
+  'markov',
+]);
+
 export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
   return (
     <details
@@ -43,6 +54,7 @@ export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
 
 function MathExample({ ex }: { ex: MathExample }) {
   const [open, setOpen] = useState(false);
+  const isEnlarged = enlargedShapes.has(ex.shape);
 
   return (
     <>
@@ -53,18 +65,18 @@ function MathExample({ ex }: { ex: MathExample }) {
         <header className="flex items-baseline justify-between gap-3">
           <div className="flex items-baseline gap-2.5">
             <span className="font-mono-lt text-[10px] text-ink/40">{ex.index}</span>
-            <h4 className="font-display text-2xl sm:text-3xl leading-tight">{ex.title}</h4>
+            <h4 className={`font-display leading-tight ${isEnlarged ? 'text-3xl sm:text-4xl' : 'text-2xl sm:text-3xl'}`}>{ex.title}</h4>
           </div>
         </header>
 
         <div className="flex items-center justify-center py-4 min-h-[140px] overflow-hidden">
-          <div className="scale-[1.05] origin-center">
+          <div className={`${isEnlarged ? 'scale-[1.1]' : 'scale-[1.05]'} origin-center`}>
             <MathExampleShape shape={ex.shape} />
           </div>
         </div>
 
         <footer className="mt-auto pt-3 border-t hairline">
-          <p className="font-mono-lt text-[11px] sm:text-xs uppercase text-ink/50 leading-snug">
+          <p className={`font-mono-lt uppercase text-ink/50 leading-snug ${isEnlarged ? 'text-xs sm:text-sm' : 'text-[11px] sm:text-xs'}`}>
             {ex.technique}
           </p>
         </footer>

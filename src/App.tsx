@@ -72,7 +72,7 @@ function App() {
                 <img
                   src="/Po-poema_2.001.jpeg"
                   alt="Poema visual sobre una escultura en un patio"
-                  className="w-full h-full object-cover object-[45%_center]"
+                  className="w-full h-full object-cover object-[38%_center]"
                 />
               </div>
             </div>

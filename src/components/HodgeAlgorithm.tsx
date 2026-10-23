@@ -6,9 +6,9 @@ function hpq(p: number, q: number): ReactNode {
   );
 }
 
-function Diamond({ values }: { values: ReactNode[][] }) {
+function Diamond({ values, wide = false }: { values: ReactNode[][]; wide?: boolean }) {
   return (
-    <div className="flex flex-col items-center gap-3 sm:gap-4 font-mono-lt text-sm sm:text-base text-center">
+    <div className={`flex flex-col items-center gap-3 sm:gap-4 font-mono-lt text-sm sm:text-base text-center ${wide ? 'scale-x-[1.3]' : ''}`}>
       {values.map((row, i) => (
         <div key={i} className="flex justify-center items-center gap-4 sm:gap-8 min-h-[1.4em]">
           {row.map((value, j) => (
@@ -187,7 +187,7 @@ export function HodgeAlgorithm() {
                 <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between">
                   <span className="font-mono-lt text-[10px] uppercase text-ink/45">Diamante sin sustituir</span>
                   <div className="flex-1 flex items-center justify-center">
-                    <Diamond values={rawK3} />
+                    <Diamond values={rawK3} wide />
                   </div>
                   <span className="font-body text-base text-ink/55 italic text-center">la arquitectura, antes del poema</span>
                 </div>
@@ -200,7 +200,7 @@ export function HodgeAlgorithm() {
                 <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between bg-[#f4b6c2]/10">
                   <span className="font-mono-lt text-[10px] uppercase text-ink/55">Sustituyendo los números de Hodge para una superficie K3</span>
                   <div className="flex-1 flex items-center justify-center">
-                    <Diamond values={numericK3} />
+                    <Diamond values={numericK3} wide />
                   </div>
                   <span className="font-body text-base text-ink/60 italic text-center">la superficie K3, ya despierta</span>
                 </div>
