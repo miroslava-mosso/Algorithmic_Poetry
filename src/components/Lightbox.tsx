@@ -51,7 +51,7 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children }: 
           )}
         </div>
         <div className="flex-1 flex items-center justify-center w-full py-6">
-          <div className="scale-[0.85] origin-center">
+          <div className="scale-[1.15] origin-center">
             {children}
           </div>
         </div>
