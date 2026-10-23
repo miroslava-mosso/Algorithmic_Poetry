@@ -132,7 +132,7 @@ function StepHeader({ number, title }: { number: string; title: string }) {
 export function HodgeAlgorithm() {
   return (
     <section id="mi-algoritmo" className="border-b hairline">
-      <div className="mx-auto max-w-[1180px] px-5 sm:px-8 py-20 sm:py-28">
+      <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-20 sm:pb-28">
         {/* Intro */}
         <div className="reveal grid gap-10 sm:grid-cols-[0.78fr_1.22fr]">
           <div>
@@ -338,7 +338,7 @@ export function HodgeAlgorithm() {
                   { k: 'b₄', formula: <>h<sup className="text-[0.72em]">22</sup> = 1</>, words: 'bruma' },
                 ].map((item) => (
                   <div key={item.k} className="border hairline p-6 flex flex-col gap-3">
-                    <span className="font-mono-lt text-lg text-[#f4b6c2]">{item.k}</span>
+                    <span className="font-mono-lt text-2xl sm:text-3xl text-[#f4b6c2] leading-none">{item.k}</span>
                     <span className="font-mono-lt text-xs text-ink/70">{item.formula}</span>
                     <span className="font-body text-lg italic text-ink/75">{item.words}</span>
                   </div>

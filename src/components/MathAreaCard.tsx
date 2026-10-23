@@ -53,18 +53,18 @@ function MathExample({ ex }: { ex: MathExample }) {
         <header className="flex items-baseline justify-between gap-3">
           <div className="flex items-baseline gap-2.5">
             <span className="font-mono-lt text-[10px] text-ink/40">{ex.index}</span>
-            <h4 className="font-display text-xl sm:text-2xl leading-tight">{ex.title}</h4>
+            <h4 className="font-display text-2xl sm:text-3xl leading-tight">{ex.title}</h4>
           </div>
         </header>
 
         <div className="flex items-center justify-center py-4 min-h-[140px] overflow-hidden">
-          <div className="scale-[0.95] origin-center">
+          <div className="scale-[1.05] origin-center">
             <MathExampleShape shape={ex.shape} />
           </div>
         </div>
 
         <footer className="mt-auto pt-3 border-t hairline">
-          <p className="font-mono-lt text-[9.5px] uppercase text-ink/50 leading-snug">
+          <p className="font-mono-lt text-[11px] sm:text-xs uppercase text-ink/50 leading-snug">
             {ex.technique}
           </p>
         </footer>

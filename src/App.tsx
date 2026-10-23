@@ -72,11 +72,8 @@ function App() {
                 <img
                   src="/Po-poema_2.001.jpeg"
                   alt="Poema visual sobre una escultura en un patio"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-[45%_center]"
                 />
-                <span className="absolute bottom-5 left-5 bg-[#f7f5f1]/90 px-3 py-1 font-mono-lt text-[9px] uppercase text-ink/65">
-                  poema potencial
-                </span>
               </div>
             </div>
           </div>
@@ -141,7 +138,7 @@ function App() {
 
       {/* ── Galería ─────────────────────────────────────── */}
       <section id="galeria" className="border-b hairline">
-        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-20 sm:pt-28 pb-6">
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
           <div className="reveal flex items-end justify-between gap-6 flex-wrap">
             <div>
               <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Galería</span>
@@ -165,7 +162,7 @@ function App() {
 
       {/* ── Áreas matemáticas ──────────────────────────── */}
       <section id="areas">
-        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-20 sm:pt-28 pb-6">
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
           <div className="reveal flex items-end justify-between gap-6 flex-wrap">
             <div>
               <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Áreas</span>
