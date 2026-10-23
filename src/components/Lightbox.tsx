@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import type { ReactNode } from 'react';
 
 interface LightboxProps {
@@ -26,7 +27,7 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children }: 
 
   if (!open) return null;
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-8"
       onClick={onClose}
@@ -58,6 +59,7 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children }: 
           </p>
         )}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

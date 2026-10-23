@@ -58,7 +58,7 @@ function MathExample({ ex }: { ex: MathExample }) {
         </header>
 
         <div className="flex items-center justify-center py-4 min-h-[140px] overflow-hidden">
-          <div className="scale-[0.65] origin-center">
+          <div className="scale-[0.75] origin-center">
             <MathExampleShape shape={ex.shape} />
           </div>
         </div>

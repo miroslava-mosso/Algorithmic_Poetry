@@ -132,7 +132,7 @@ function App() {
                 Cuatro <span className="pink-underline">formas</span> del poema
               </h2>
             </div>
-            <p className="font-body text-base text-ink/60 max-w-[34ch]">
+            <p className="font-body text-lg sm:text-xl text-ink/60 max-w-[34ch]">
               Pase el cursor o haga clic en cada poema. La restricción geométrica es
               la obra; el texto, su sombra.
             </p>
@@ -156,7 +156,7 @@ function App() {
                 Cinco <span className="pink-underline">territorios</span> matemáticos
               </h2>
             </div>
-            <p className="font-body text-base text-ink/60 max-w-[36ch]">
+            <p className="font-body text-lg sm:text-xl text-ink/60 max-w-[36ch]">
               Cada área matemática abre una manera distinta de doblar el
               lenguaje. Tres ejemplos por territorio.
             </p>

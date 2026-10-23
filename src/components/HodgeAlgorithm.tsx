@@ -89,7 +89,7 @@ function SymmetryBlock({
     <div className="space-y-6">
       <div>
         <h4 className="font-display text-2xl sm:text-3xl mb-3"><span className="aqua-underline">{title}</span></h4>
-        <p className="font-body text-base sm:text-lg leading-[1.55] text-ink/75 max-w-[60ch]">{description}</p>
+        <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 max-w-[60ch]">{description}</p>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
@@ -140,7 +140,7 @@ export function HodgeAlgorithm() {
             <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
               Un poema en forma de <span className="pink-underline">diamante</span>
             </h2>
-            <p className="font-body text-xl leading-[1.5] text-ink/75 mt-7 max-w-[34ch]">
+            <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mt-7 max-w-[34ch]">
               Mi algoritmo, o constricción, está inspirado en el diamante de Hodge de las <em>Kähler manifolds</em>.
             </p>
             <p className="font-mono-lt text-[10px] uppercase text-ink/45 mt-8 leading-[1.7]">
@@ -148,7 +148,7 @@ export function HodgeAlgorithm() {
             </p>
           </div>
 
-          <div className="font-body text-lg leading-[1.58] text-ink/80 space-y-5">
+          <div className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 space-y-5">
             <p>
               Elige una geometría que te intrigue y deja que sus simetrías escriban contigo. No hace falta dominar toda la matemática: basta con mirar el diamante como quien mira un mapa antes de emprender un viaje.
             </p>
@@ -179,7 +179,7 @@ export function HodgeAlgorithm() {
               </div>
             </summary>
             <div className="pb-14 sm:pb-20">
-              <p className="font-body text-lg text-ink/70 max-w-[60ch] mb-9">
+              <p className="font-body text-lg sm:text-xl text-ink/70 max-w-[60ch] mb-9">
                 Tomemos una superficie K3. A la izquierda está el diamante de Hodge con sus números todavía en forma de variables; a la derecha, la misma estructura después de revelar sus valores.
               </p>
 
@@ -221,7 +221,7 @@ export function HodgeAlgorithm() {
             <div className="pb-14 sm:pb-20">
               <div className="grid gap-8 lg:grid-cols-[1fr_1fr] items-start">
                 <div>
-                  <ol className="font-body text-lg leading-[1.58] text-ink/80 space-y-4 list-decimal pl-6 mb-10">
+                  <ol className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 space-y-4 list-decimal pl-6 mb-10">
                     <li>
                       Donde veas un <strong>1</strong>, escribe una palabra. No tiene que ser necesariamente la misma palabra cada vez: cada 1 puede convertirse en una palabra distinta.
                     </li>
@@ -231,7 +231,7 @@ export function HodgeAlgorithm() {
                     <li>Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número.</li>
                   </ol>
 
-                  <p className="font-body text-lg leading-[1.58] text-ink/75 mb-10">
+                  <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mb-10">
                     El poema puede ser leído como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección revela un recorrido distinto por el diamante.
                   </p>
                 </div>
@@ -239,7 +239,7 @@ export function HodgeAlgorithm() {
                 <div>
                   <div className="border hairline p-6 sm:p-8">
                     <span className="font-mono-lt text-[10px] uppercase text-ink/45">Un ejemplo de traducción</span>
-                    <div className="mt-6 space-y-3 font-body text-lg leading-[1.6]">
+                    <div className="mt-6 space-y-3 font-body text-lg sm:text-xl leading-[1.6]">
                       <p><span className="font-mono-lt text-[#a84739]">1</span> → <span className="pink-underline-thin">bruma</span></p>
                       <p><span className="font-mono-lt text-[#a84739]">0</span> → <span className="font-mono-lt text-sm">[silencio]</span></p>
                       <p><span className="font-mono-lt text-[#a84739]">20</span> → <em>veinte sílabas para cruzar la noche sin tocarla</em></p>
@@ -317,7 +317,7 @@ export function HodgeAlgorithm() {
               </div>
             </summary>
             <div className="pb-14 sm:pb-20">
-              <p className="font-body text-lg leading-[1.58] text-ink/80 max-w-[62ch] mb-8">
+              <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 max-w-[62ch] mb-8">
                 Si te queda curiosidad, puedes calcular el <em>k-ésimo número de Betti</em> de tu variedad sumando los números de Hodge a lo largo de la anti-diagonal k del diamante. La fórmula general es:
               </p>
 
@@ -327,7 +327,7 @@ export function HodgeAlgorithm() {
                 </p>
               </div>
 
-              <p className="font-body text-lg leading-[1.58] text-ink/80 max-w-[62ch] mb-8">
+              <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 max-w-[62ch] mb-8">
                 Reemplazando los números de Hodge por las palabras y versos de nuestro ejemplo, la suma se vuelve una lectura: cada número de Betti es el total de palabras y versos que confluyen en esa diagonal.
               </p>
 
@@ -340,7 +340,7 @@ export function HodgeAlgorithm() {
                   <div key={item.k} className="border hairline p-6 flex flex-col gap-3">
                     <span className="font-mono-lt text-lg text-[#f4b6c2]">{item.k}</span>
                     <span className="font-mono-lt text-xs text-ink/70">{item.formula}</span>
-                    <span className="font-body text-base italic text-ink/75">{item.words}</span>
+                    <span className="font-body text-lg italic text-ink/75">{item.words}</span>
                   </div>
                 ))}
               </div>
@@ -349,7 +349,7 @@ export function HodgeAlgorithm() {
         </div>
 
         {/* Último gesto */}
-        <div className="reveal mt-12 pt-8 font-body text-lg sm:text-xl leading-[1.55] text-ink/75">
+        <div className="reveal mt-12 pt-8 font-body text-lg sm:text-xl leading-[1.6] text-ink/75">
           <span className="font-mono-lt text-[10px] uppercase text-ink/45 block mb-3">Último gesto</span>
           Recuerda escribir al final a qué geometría corresponde el diamante de Hodge que dio origen a tu constricción. En nuestro ejemplo: <span className="pink-underline italic">la superficie K3</span>.
         </div>
