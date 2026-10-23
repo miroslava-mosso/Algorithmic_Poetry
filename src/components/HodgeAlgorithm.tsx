@@ -109,7 +109,7 @@ function SymmetryBlock({
         </div>
       </div>
 
-      <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6 max-w-[760px] mx-auto">
+      <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6 max-w-[960px] mx-auto">
         <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">El poema con la simetría aplicada</span>
         <div className="flex-1 flex items-center justify-center py-6">
           <Diamond values={wordK3} />
@@ -161,7 +161,7 @@ export function HodgeAlgorithm() {
         <div className="reveal mt-16 sm:mt-24">
           <div className="flex items-baseline gap-4 mb-7">
             <span className="font-display text-4xl text-[#f4b6c2]">01</span>
-            <h3 className="font-display text-3xl sm:text-4xl">Mira el diamante antes de tocarlo</h3>
+            <h3 className="font-display text-3xl sm:text-4xl cyan-underline">Mira el diamante antes de tocarlo</h3>
           </div>
           <p className="font-body text-lg text-ink/70 max-w-[60ch] mb-9">
             Tomemos una superficie K3. A la izquierda está el diamante de Hodge con sus números todavía en forma de variables; a la derecha, la misma estructura después de revelar sus valores.
@@ -195,38 +195,42 @@ export function HodgeAlgorithm() {
         <div className="reveal mt-16 sm:mt-24">
           <div className="flex items-baseline gap-4 mb-5">
             <span className="font-display text-4xl text-[#f4b6c2]">02</span>
-            <h3 className="font-display text-3xl sm:text-4xl">Sustituye los números por lenguaje</h3>
+            <h3 className="font-display text-3xl sm:text-4xl cyan-underline">Sustituye los números por lenguaje</h3>
           </div>
-          <ol className="font-body text-lg leading-[1.58] text-ink/80 space-y-4 list-decimal pl-6 max-w-[62ch] mb-10">
-            <li>
-              Donde veas un <strong>1</strong>, escribe una palabra. No tiene que ser necesariamente la misma palabra cada vez: cada 1 puede convertirse en una palabra distinta.
-            </li>
-            <li>
-              Donde veas un <strong>0</strong>, agrega algo relacionado con la nada, el vacío o una pausa. Si es silencio, escríbelo fonéticamente, como en los subtítulos para personas sordas: <span className="font-mono-lt text-sm text-ink/60">[silencio]</span>. Estas palabras pueden variar en cada aparición, o pueden simplemente ser espacios vacíos.
-            </li>
-            <li>Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número.</li>
-          </ol>
+          <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] items-start">
+            <div>
+              <ol className="font-body text-lg leading-[1.58] text-ink/80 space-y-4 list-decimal pl-6 mb-10">
+                <li>
+                  Donde veas un <strong>1</strong>, escribe una palabra. No tiene que ser necesariamente la misma palabra cada vez: cada 1 puede convertirse en una palabra distinta.
+                </li>
+                <li>
+                  Donde veas un <strong>0</strong>, agrega algo relacionado con la nada, el vacío o una pausa. Si es silencio, escríbelo fonéticamente, como en los subtítulos para personas sordas: <span className="font-mono-lt text-sm text-ink/60">[silencio]</span>. Estas palabras pueden variar en cada aparición, o pueden simplemente ser espacios vacíos.
+                </li>
+                <li>Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número.</li>
+              </ol>
 
-          <p className="font-body text-lg leading-[1.58] text-ink/75 max-w-[62ch] mb-10">
-            El poema puede ser leído como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección revela un recorrido distinto por el diamante.
-          </p>
+              <p className="font-body text-lg leading-[1.58] text-ink/75 mb-10">
+                El poema puede ser leído como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección revela un recorrido distinto por el diamante.
+              </p>
 
-          <div className="flex flex-col items-center gap-8 max-w-[640px] mx-auto">
-            <div className="border hairline p-6 sm:p-8 w-full max-w-[360px]">
-              <span className="font-mono-lt text-[10px] uppercase text-ink/45">Un ejemplo de traducción</span>
-              <div className="mt-6 space-y-3 font-body text-lg leading-[1.6]">
-                <p><span className="font-mono-lt text-[#a84739]">1</span> → <span className="pink-underline-thin">bruma</span></p>
-                <p><span className="font-mono-lt text-[#a84739]">0</span> → <span className="font-mono-lt text-sm">[silencio]</span></p>
-                <p><span className="font-mono-lt text-[#a84739]">20</span> → <em>veinte sílabas para cruzar la noche sin tocarla</em></p>
+              <div className="border hairline p-6 sm:p-8">
+                <span className="font-mono-lt text-[10px] uppercase text-ink/45">Un ejemplo de traducción</span>
+                <div className="mt-6 space-y-3 font-body text-lg leading-[1.6]">
+                  <p><span className="font-mono-lt text-[#a84739]">1</span> → <span className="pink-underline-thin">bruma</span></p>
+                  <p><span className="font-mono-lt text-[#a84739]">0</span> → <span className="font-mono-lt text-sm">[silencio]</span></p>
+                  <p><span className="font-mono-lt text-[#a84739]">20</span> → <em>veinte sílabas para cruzar la noche sin tocarla</em></p>
+                </div>
               </div>
             </div>
 
-            <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 w-full flex flex-col justify-between gap-6">
-              <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">El diamante completo con las palabras sustituidas</span>
-              <div className="flex-1 flex items-center justify-center py-6">
-                <Diamond values={wordK3} />
+            <div className="lg:sticky lg:top-8">
+              <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6">
+                <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">El diamante completo con las palabras sustituidas</span>
+                <div className="flex-1 flex items-center justify-center py-6">
+                  <Diamond values={wordK3} />
+                </div>
+                <span className="font-body text-sm text-ink/55 italic text-center block">superficie K3 traducida a poema</span>
               </div>
-              <span className="font-body text-sm text-ink/55 italic text-center block">superficie K3 traducida a poema</span>
             </div>
           </div>
         </div>
@@ -235,7 +239,7 @@ export function HodgeAlgorithm() {
         <div className="reveal mt-16 sm:mt-24 space-y-16">
           <div className="flex items-baseline gap-4">
             <span className="font-display text-4xl text-[#f4b6c2]">03</span>
-            <h3 className="font-display text-3xl sm:text-4xl">Deja que la simetría responda</h3>
+            <h3 className="font-display text-3xl sm:text-4xl cyan-underline">Deja que la simetría responda</h3>
           </div>
 
           <SymmetryBlock
@@ -276,7 +280,7 @@ export function HodgeAlgorithm() {
         <div className="reveal mt-16 sm:mt-24">
           <div className="flex items-baseline gap-4 mb-5">
             <span className="font-display text-4xl text-[#f4b6c2]">04</span>
-            <h3 className="font-display text-3xl sm:text-4xl">
+            <h3 className="font-display text-3xl sm:text-4xl cyan-underline">
               Paso extra opcional: el número de Betti
             </h3>
           </div>

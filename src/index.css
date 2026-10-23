@@ -56,6 +56,14 @@
     padding-bottom: 1px;
   }
 
+  .cyan-underline {
+    background-image: linear-gradient(#5ebeb0, #5ebeb0);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 6px;
+    padding-bottom: 2px;
+  }
+
   .burnt-marker {
     position: relative;
     isolation: isolate;
