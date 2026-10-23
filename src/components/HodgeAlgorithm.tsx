@@ -93,22 +93,28 @@ function SymmetryBlock({
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
-        <div className="border hairline p-6 sm:p-8 min-h-[220px] flex flex-col justify-between">
+        <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between">
           <span className="font-mono-lt text-[10px] uppercase text-ink/45">{beforeLabel}</span>
-          <Diamond values={before} />
-          <span className="font-body text-sm text-ink/50 italic">antes</span>
+          <div className="flex-1 flex items-center justify-center">
+            <Diamond values={before} />
+          </div>
+          <span className="font-body text-sm text-ink/50 italic text-center">antes</span>
         </div>
-        <div className="border hairline p-6 sm:p-8 min-h-[220px] flex flex-col justify-between bg-[#f4b6c2]/8">
+        <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between bg-[#f4b6c2]/8">
           <span className="font-mono-lt text-[10px] uppercase text-ink/55">{afterLabel}</span>
-          <Diamond values={after} />
-          <span className="font-body text-sm text-ink/55 italic">después</span>
+          <div className="flex-1 flex items-center justify-center">
+            <Diamond values={after} />
+          </div>
+          <span className="font-body text-sm text-ink/55 italic text-center">después</span>
         </div>
       </div>
 
-      <div className="border hairline p-6 sm:p-8 bg-[#f4b6c2]/8 min-h-[220px] flex flex-col justify-between max-w-[480px] mx-auto">
-        <span className="font-mono-lt text-[10px] uppercase text-ink/55">El poema con la simetría aplicada</span>
-        <Diamond values={wordK3} />
-        <span className="font-body text-sm text-ink/55 italic">el diamante hecho verso</span>
+      <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6 max-w-[760px] mx-auto">
+        <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">El poema con la simetría aplicada</span>
+        <div className="flex-1 flex items-center justify-center py-6">
+          <Diamond values={wordK3} />
+        </div>
+        <span className="font-body text-sm text-ink/55 italic text-center block">el diamante hecho verso</span>
       </div>
     </div>
   );
@@ -162,10 +168,12 @@ export function HodgeAlgorithm() {
           </p>
 
           <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] items-center">
-            <div className="border hairline p-7 sm:p-10 min-h-[270px] flex flex-col justify-between">
+            <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between">
               <span className="font-mono-lt text-[10px] uppercase text-ink/45">Diamante sin sustituir</span>
-              <Diamond values={rawK3} />
-              <span className="font-body text-base text-ink/55 italic">la arquitectura, antes del poema</span>
+              <div className="flex-1 flex items-center justify-center">
+                <Diamond values={rawK3} />
+              </div>
+              <span className="font-body text-base text-ink/55 italic text-center">la arquitectura, antes del poema</span>
             </div>
 
             <svg viewBox="0 0 100 80" className="w-20 h-16 mx-auto text-[#a84739]" aria-hidden="true">
@@ -173,10 +181,12 @@ export function HodgeAlgorithm() {
               <path d="M 74 18 L 84 16 L 80 26" fill="none" stroke="currentColor" strokeWidth="1.5" />
             </svg>
 
-            <div className="border hairline p-7 sm:p-10 min-h-[270px] flex flex-col justify-between bg-[#f4b6c2]/10">
+            <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between bg-[#f4b6c2]/10">
               <span className="font-mono-lt text-[10px] uppercase text-ink/55">Sustituyendo los números de Hodge para una superficie K3</span>
-              <Diamond values={numericK3} />
-              <span className="font-body text-base text-ink/60 italic">la superficie K3, ya despierta</span>
+              <div className="flex-1 flex items-center justify-center">
+                <Diamond values={numericK3} />
+              </div>
+              <span className="font-body text-base text-ink/60 italic text-center">la superficie K3, ya despierta</span>
             </div>
           </div>
         </div>
@@ -201,8 +211,8 @@ export function HodgeAlgorithm() {
             El poema puede ser leído como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección revela un recorrido distinto por el diamante.
           </p>
 
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div className="border hairline p-6 sm:p-8 self-start">
+          <div className="flex flex-col items-center gap-8 max-w-[640px] mx-auto">
+            <div className="border hairline p-6 sm:p-8 w-full max-w-[360px]">
               <span className="font-mono-lt text-[10px] uppercase text-ink/45">Un ejemplo de traducción</span>
               <div className="mt-6 space-y-3 font-body text-lg leading-[1.6]">
                 <p><span className="font-mono-lt text-[#a84739]">1</span> → <span className="pink-underline-thin">bruma</span></p>
@@ -211,10 +221,12 @@ export function HodgeAlgorithm() {
               </div>
             </div>
 
-            <div className="border hairline p-6 sm:p-8 bg-[#f4b6c2]/8 flex flex-col justify-between min-h-[300px]">
-              <span className="font-mono-lt text-[10px] uppercase text-ink/55">El diamante completo con las palabras sustituidas</span>
-              <Diamond values={wordK3} />
-              <span className="font-body text-sm text-ink/55 italic">superficie K3 traducida a poema</span>
+            <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 w-full flex flex-col justify-between gap-6">
+              <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">El diamante completo con las palabras sustituidas</span>
+              <div className="flex-1 flex items-center justify-center py-6">
+                <Diamond values={wordK3} />
+              </div>
+              <span className="font-body text-sm text-ink/55 italic text-center block">superficie K3 traducida a poema</span>
             </div>
           </div>
         </div>
