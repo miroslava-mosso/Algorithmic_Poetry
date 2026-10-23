@@ -109,12 +109,12 @@ function App() {
             <p className="font-body text-lg sm:text-xl leading-[1.55] text-ink/75 not-italic">
               Agradezco infinitamente a{' '}
               <a className="burnt-marker" href="https://www.instagram.com/batsssht/" target="_blank" rel="noreferrer">
-                Regina Roze
+                <strong>Regina Roze</strong>
               </a>{' '}
               por introducirme al mundo de la poesía potencial, a través de los
               laboratorios de poesía potencial en México,{' '}
               <a className="burnt-marker" href="https://www.instagram.com/popoesia/" target="_blank" rel="noreferrer">
-                popoesía
+                <strong>popoesía</strong>
               </a>, a los que me uní en algunas ocasiones y en donde aprendí a
               hacer muchos de los poemas que aquí muestro.
             </p>
@@ -133,7 +133,7 @@ function App() {
               </h2>
             </div>
             <p className="font-body text-base text-ink/60 max-w-[34ch]">
-              Pase el cursor sobre cada poema. La restricción geométrica es
+              Pase el cursor o haga clic en cada poema. La restricción geométrica es
               la obra; el texto, su sombra.
             </p>
           </div>

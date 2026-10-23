@@ -79,19 +79,20 @@
     text-decoration: none;
     padding: 0 0.22em 0.04em;
     white-space: nowrap;
+    font-weight: 700;
   }
   .burnt-marker::before {
     content: '';
     position: absolute;
     z-index: -1;
     inset: 13% -0.12em 4%;
-    background: #a84739;
+    background: #dc143c;
     clip-path: polygon(1% 24%, 11% 8%, 29% 14%, 48% 4%, 68% 13%, 98% 1%, 94% 80%, 78% 92%, 57% 83%, 34% 96%, 13% 82%, 0 91%);
     transform: rotate(-1.5deg);
     opacity: 0.92;
   }
   .burnt-marker:hover::before {
-    background: #8f352c;
+    background: #b8112f;
     transform: rotate(1deg) scaleX(1.04);
   }
 

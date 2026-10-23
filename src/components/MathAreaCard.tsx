@@ -1,5 +1,7 @@
-import type { MathArea } from '@/mathAreas';
+import { useState } from 'react';
+import type { MathArea, MathExample } from '@/mathAreas';
 import { MathExampleShape } from '@/components/MathExampleShape';
+import { Lightbox } from '@/components/Lightbox';
 
 export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
   return (
@@ -32,29 +34,50 @@ export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
 
       <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-14 sm:pb-20 grid gap-6 sm:grid-cols-3">
         {area.examples.map((ex) => (
-          <article
-            key={ex.index}
-            className="poem-cell lift min-w-0 overflow-hidden border hairline p-5 sm:p-6 flex flex-col gap-4"
-          >
-            <header className="flex items-baseline justify-between gap-3">
-              <div className="flex items-baseline gap-2.5">
-                <span className="font-mono-lt text-[10px] text-ink/40">{ex.index}</span>
-                <h4 className="font-display text-xl sm:text-2xl leading-tight">{ex.title}</h4>
-              </div>
-            </header>
-
-            <div className="flex items-center justify-center py-4 min-h-[140px]">
-              <MathExampleShape shape={ex.shape} />
-            </div>
-
-            <footer className="mt-auto pt-3 border-t hairline">
-              <p className="font-mono-lt text-[9.5px] uppercase text-ink/50 leading-snug">
-                {ex.technique}
-              </p>
-            </footer>
-          </article>
+          <MathExample key={ex.index} ex={ex} />
         ))}
       </div>
     </details>
+  );
+}
+
+function MathExample({ ex }: { ex: MathExample }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <article
+        className="poem-cell lift min-w-0 overflow-hidden border hairline p-5 sm:p-6 flex flex-col gap-4 cursor-pointer"
+        onClick={() => setOpen(true)}
+      >
+        <header className="flex items-baseline justify-between gap-3">
+          <div className="flex items-baseline gap-2.5">
+            <span className="font-mono-lt text-[10px] text-ink/40">{ex.index}</span>
+            <h4 className="font-display text-xl sm:text-2xl leading-tight">{ex.title}</h4>
+          </div>
+        </header>
+
+        <div className="flex items-center justify-center py-4 min-h-[140px] overflow-hidden">
+          <div className="scale-[0.65] origin-center">
+            <MathExampleShape shape={ex.shape} />
+          </div>
+        </div>
+
+        <footer className="mt-auto pt-3 border-t hairline">
+          <p className="font-mono-lt text-[9.5px] uppercase text-ink/50 leading-snug">
+            {ex.technique}
+          </p>
+        </footer>
+      </article>
+
+      <Lightbox
+        open={open}
+        onClose={() => setOpen(false)}
+        title={ex.title}
+        subtitle={ex.technique}
+      >
+        <MathExampleShape shape={ex.shape} />
+      </Lightbox>
+    </>
   );
 }
