@@ -55,7 +55,7 @@ function App() {
           <div className="reveal mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono-lt text-[11px] uppercase text-ink/55">
             <span>4 poemas</span>
             <span className="text-ink/20">/</span>
-            <span>6 áreas matemáticas</span>
+            <span>5 áreas matemáticas</span>
             <span className="text-ink/20">/</span>
             <span>1 restricción cada uno</span>
             <span className="text-ink/20">/</span>
@@ -153,7 +153,7 @@ function App() {
             <div>
               <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Áreas</span>
               <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
-                Seis <span className="pink-underline">territorios</span> matemáticos
+                Cinco <span className="pink-underline">territorios</span> matemáticos
               </h2>
             </div>
             <p className="font-body text-base text-ink/60 max-w-[36ch]">
@@ -164,7 +164,7 @@ function App() {
 
           <nav className="reveal mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono-lt text-[11px] uppercase text-ink/60">
             {mathAreas.map((a) => (
-              <a key={a.id} href={`#${a.id}`} className="hover:text-ink transition pink-underline-thin">
+              <a key={a.id} href={`#${a.id}`} className="hover:text-ink transition">
                 <span className="text-[#f4b6c2] mr-1.5">{a.index}</span>
                 {a.title}
               </a>

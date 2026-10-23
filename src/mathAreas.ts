@@ -175,31 +175,4 @@ export const mathAreas: MathArea[] = [
       },
     ],
   },
-  {
-    id: 'cuerdas',
-    index: 'VI',
-    title: 'Teoría de cuerdas',
-    description:
-      'La palabra como cuerda que vibra: cada frecuencia genera un sentido distinto, cada dimensión oculta un anagrama.',
-    examples: [
-      {
-        index: '01',
-        title: 'Vibración',
-        technique: 'La misma cuerda en modos armónicos distintos — texto sobre onda sinusoidal',
-        shape: 'vibracion',
-      },
-      {
-        index: '02',
-        title: 'Dimensión oculta',
-        technique: 'Anagramas — la misma materia en dimensiones distintas del sentido',
-        shape: 'dimension-oculta',
-      },
-      {
-        index: '03',
-        title: 'Brana',
-        technique: 'Membrana bidimensional — el poema como superficie en once dimensiones',
-        shape: 'brana',
-      },
-    ],
-  },
 ];

@@ -17,7 +17,7 @@ export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
             <div className="min-w-0">
               <span className="font-mono-lt text-[10px] uppercase text-ink/45">Área</span>
               <h3 className="font-display text-3xl sm:text-4xl leading-[1.05] mt-1">
-                <span className="pink-underline">{area.title}</span>
+                <span>{area.title}</span>
               </h3>
               <p className="font-body text-base text-ink/65 italic mt-2 max-w-[58ch] leading-[1.5]">
                 {area.description}
