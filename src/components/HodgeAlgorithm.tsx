@@ -1,51 +1,72 @@
-function Diamond({ values, highlight }: { values: string[][]; highlight?: string }) {
+import type { ReactNode } from 'react';
+
+function hpq(p: number, q: number): ReactNode {
+  return (
+    <span>h<sup className="text-[0.72em] font-normal not-italic">{p},{q}</sup></span>
+  );
+}
+
+function Diamond({ values, commas = false }: { values: ReactNode[][]; commas?: boolean }) {
   return (
     <div className="flex flex-col items-center gap-2 font-mono-lt text-sm sm:text-base text-center">
       {values.map((row, i) => (
-        <div key={i} className="flex justify-center gap-6 sm:gap-10 min-h-[1.2em]">
-          {row.map((value, j) => {
-            const isPink = highlight && value === highlight;
-            return (
-              <span
-                key={`${i}-${j}`}
-                className={
-                  isPink
-                    ? 'text-[#f4b6c2]'
-                    : value.length > 2 && value !== '[silencio]'
-                      ? 'text-ink/90 italic'
-                      : 'text-ink'
-                }
-              >
-                {value}
-              </span>
-            );
-          })}
+        <div key={i} className="flex justify-center items-center gap-3 sm:gap-6 min-h-[1.2em]">
+          {row.map((value, j) => (
+            <span key={`${i}-${j}`} className="flex items-center text-ink not-italic">
+              {value}
+              {commas && j < row.length - 1 && <span className="text-ink/30 ml-0.5">,</span>}
+            </span>
+          ))}
         </div>
       ))}
     </div>
   );
 }
 
-const rawK3: string[][] = [
-  ['h⁰⁰'],
-  ['h¹⁰', 'h⁰¹'],
-  ['h²⁰', 'h¹¹', 'h⁰²'],
-  ['h²¹', 'h¹²'],
-  ['h²²'],
+const rawK3: ReactNode[][] = [
+  [hpq(0, 0)],
+  [hpq(1, 0), hpq(0, 1)],
+  [hpq(2, 0), hpq(1, 1), hpq(0, 2)],
+  [hpq(2, 1), hpq(1, 2)],
+  [hpq(2, 2)],
 ];
 
-const numericK3: string[][] = [
+const hodgeSymK3: ReactNode[][] = [
+  [hpq(0, 0)],
+  [hpq(0, 1), hpq(1, 0)],
+  [hpq(0, 2), hpq(1, 1), hpq(2, 0)],
+  [hpq(1, 2), hpq(2, 1)],
+  [hpq(2, 2)],
+];
+
+const conjugationK3: ReactNode[][] = [
+  [hpq(2, 2)],
+  [hpq(2, 1), hpq(1, 2)],
+  [hpq(2, 0), hpq(1, 1), hpq(0, 2)],
+  [hpq(1, 0), hpq(0, 1)],
+  [hpq(0, 0)],
+];
+
+const serreK3: ReactNode[][] = [
+  [hpq(2, 2)],
+  [hpq(1, 2), hpq(2, 1)],
+  [hpq(0, 2), hpq(1, 1), hpq(2, 0)],
+  [hpq(0, 1), hpq(1, 0)],
+  [hpq(0, 0)],
+];
+
+const numericK3: ReactNode[][] = [
   ['1'],
   ['0', '0'],
-  ['1', '20', '1'],
+  ['1', <span key="20" className="text-[#f4b6c2]">20</span>, '1'],
   ['0', '0'],
   ['1'],
 ];
 
-const wordK3: string[][] = [
+const wordK3: ReactNode[][] = [
   ['bruma'],
   ['[silencio]', '[silencio]'],
-  ['bruma', 'veinte sílabas para cruzar la noche sin tocarla', 'bruma'],
+  ['bruma', <em key="verse" className="text-ink/90">veinte sílabas para cruzar la noche sin tocarla</em>, 'bruma'],
   ['[silencio]', '[silencio]'],
   ['bruma'],
 ];
@@ -59,9 +80,9 @@ function SymmetryBlock({
   afterLabel,
 }: {
   title: string;
-  description: string;
-  before: string[][];
-  after: string[][];
+  description: ReactNode;
+  before: ReactNode[][];
+  after: ReactNode[][];
   beforeLabel: string;
   afterLabel: string;
 }) {
@@ -75,12 +96,12 @@ function SymmetryBlock({
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="border hairline p-6 sm:p-8 min-h-[220px] flex flex-col justify-between">
           <span className="font-mono-lt text-[10px] uppercase text-ink/45">{beforeLabel}</span>
-          <Diamond values={before} highlight="20" />
+          <Diamond values={before} commas />
           <span className="font-body text-sm text-ink/50 italic">antes</span>
         </div>
         <div className="border hairline p-6 sm:p-8 min-h-[220px] flex flex-col justify-between bg-[#f4b6c2]/8">
           <span className="font-mono-lt text-[10px] uppercase text-ink/55">{afterLabel}</span>
-          <Diamond values={after} highlight="20" />
+          <Diamond values={after} commas />
           <span className="font-body text-sm text-ink/55 italic">después</span>
         </div>
       </div>
@@ -144,7 +165,7 @@ export function HodgeAlgorithm() {
           <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] items-center">
             <div className="border hairline p-7 sm:p-10 min-h-[270px] flex flex-col justify-between">
               <span className="font-mono-lt text-[10px] uppercase text-ink/45">Diamante sin sustituir</span>
-              <Diamond values={rawK3} />
+              <Diamond values={rawK3} commas />
               <span className="font-body text-base text-ink/55 italic">la arquitectura, antes del poema</span>
             </div>
 
@@ -155,7 +176,7 @@ export function HodgeAlgorithm() {
 
             <div className="border hairline p-7 sm:p-10 min-h-[270px] flex flex-col justify-between bg-[#f4b6c2]/10">
               <span className="font-mono-lt text-[10px] uppercase text-ink/55">Sustituyendo los números de Hodge para una superficie K3</span>
-              <Diamond values={numericK3} highlight="20" />
+              <Diamond values={numericK3} commas />
               <span className="font-body text-base text-ink/60 italic">la superficie K3, ya despierta</span>
             </div>
           </div>
@@ -176,6 +197,10 @@ export function HodgeAlgorithm() {
             </li>
             <li>Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número.</li>
           </ol>
+
+          <p className="font-body text-lg leading-[1.58] text-ink/75 max-w-[62ch] mb-10">
+            El poema puede ser leído como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección revela un recorrido distinto por el diamante.
+          </p>
 
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="border hairline p-6 sm:p-8 self-start">
@@ -204,27 +229,33 @@ export function HodgeAlgorithm() {
 
           <SymmetryBlock
             title="Simetría de Hodge"
-            description="La simetría de Hodge refleja el diamante sobre su eje vertical: hᵖᑫ = hᑫᵖ. La columna izquierda se vuelve la derecha, y viceversa. En la superficie K3, el diamante ya es simétrico, así que la forma se preserva; pero en tu poema puedes aprovechar este reflejo para repetir, invertir o cambiar las palabras de cada lado."
-            before={numericK3}
-            after={[['1'], ['0', '0'], ['1', '20', '1'], ['0', '0'], ['1']]}
+            description={<>
+              La simetría de Hodge refleja el diamante sobre su eje vertical: h<sup className="text-[0.72em]">p,q</sup> = h<sup className="text-[0.72em]">q,p</sup>. La columna izquierda se vuelve la derecha, y viceversa. En la superficie K3, el diamante ya es simétrico, así que la forma se preserva; pero en tu poema puedes aprovechar este reflejo para repetir, invertir o cambiar las palabras de cada lado.
+            </>}
+            before={rawK3}
+            after={hodgeSymK3}
             beforeLabel="Diamante original (K3)"
             afterLabel="Con simetría de Hodge aplicada"
           />
 
           <SymmetryBlock
             title="Complex conjugation"
-            description="La conjugación compleja invierte los índices: hᵖᑫ → hᑫᵖ, reflejando el diamante sobre su eje horizontal. Arriba y abajo intercambian lugares. En la superficie K3, h⁰⁰ = h²² = 1 y h²⁰ = h⁰² = 1, así que la forma se preserva. En tu poema, puedes reflejar el primer verso en el último, el segundo en el penúltimo, y así sucesivamente."
-            before={numericK3}
-            after={[['1'], ['0', '0'], ['1', '20', '1'], ['0', '0'], ['1']]}
+            description={<>
+              La conjugación compleja refleja el diamante sobre su eje horizontal: arriba y abajo intercambian lugares. En la superficie K3, h<sup className="text-[0.72em]">0,0</sup> = h<sup className="text-[0.72em]">2,2</sup> = 1 y h<sup className="text-[0.72em]">1,0</sup> = h<sup className="text-[0.72em]">2,1</sup> = 0, así que la forma se preserva. En tu poema, puedes reflejar el primer verso en el último, el segundo en el penúltimo, y así sucesivamente.
+            </>}
+            before={rawK3}
+            after={conjugationK3}
             beforeLabel="Diamante original (K3)"
             afterLabel="Con conjugación compleja aplicada"
           />
 
           <SymmetryBlock
             title="Dualidad de Serre"
-            description="La dualidad de Serre establece que hᵖᑫ = hⁿ⁻ᵖ,ⁿ⁻ᑫ, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h⁰⁰ = h²², h¹⁰ = h²¹, h⁰¹ = h¹², y h²⁰ = h⁰². El diamante se refleja entonces a través de su centro, como un espejo rotado 180°."
-            before={numericK3}
-            after={[['1'], ['0', '0'], ['1', '20', '1'], ['0', '0'], ['1']]}
+            description={<>
+              La dualidad de Serre establece que h<sup className="text-[0.72em]">p,q</sup> = h<sup className="text-[0.72em]">n-p,n-q</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">0,0</sup> = h<sup className="text-[0.72em]">2,2</sup>, h<sup className="text-[0.72em]">1,0</sup> = h<sup className="text-[0.72em]">1,2</sup>, h<sup className="text-[0.72em]">0,1</sup> = h<sup className="text-[0.72em]">2,1</sup>, y h<sup className="text-[0.72em]">2,0</sup> = h<sup className="text-[0.72em]">0,2</sup>. El diamante se refleja entonces a través de su centro, como un espejo rotado 180°.
+            </>}
+            before={rawK3}
+            after={serreK3}
             beforeLabel="Diamante original (K3)"
             afterLabel="Con dualidad de Serre aplicada"
           />
@@ -254,9 +285,9 @@ export function HodgeAlgorithm() {
 
           <div className="grid gap-6 sm:grid-cols-3">
             {[
-              { k: 'b₀', formula: 'h⁰⁰ = 1', words: 'bruma' },
-              { k: 'b₂', formula: 'h²⁰ + h¹¹ + h⁰² = 1 + 20 + 1', words: 'bruma + veinte sílabas + bruma' },
-              { k: 'b₄', formula: 'h²² = 1', words: 'bruma' },
+              { k: 'b₀', formula: <>h<sup className="text-[0.72em]">0,0</sup> = 1</>, words: 'bruma' },
+              { k: 'b₂', formula: <>h<sup className="text-[0.72em]">2,0</sup> + h<sup className="text-[0.72em]">1,1</sup> + h<sup className="text-[0.72em]">0,2</sup> = 1 + 20 + 1</>, words: 'bruma + veinte sílabas + bruma' },
+              { k: 'b₄', formula: <>h<sup className="text-[0.72em]">2,2</sup> = 1</>, words: 'bruma' },
             ].map((item) => (
               <div key={item.k} className="border hairline p-6 flex flex-col gap-3">
                 <span className="font-mono-lt text-lg text-[#f4b6c2]">{item.k}</span>
