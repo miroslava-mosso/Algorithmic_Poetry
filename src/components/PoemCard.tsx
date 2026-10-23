@@ -12,7 +12,7 @@ export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
         <div className="flex items-baseline gap-3">
           <span className="font-mono-lt text-[11px] text-ink/50">{poem.index}</span>
           <h3 className="font-display text-2xl sm:text-3xl">
-            <span className="pink-underline">{poem.title}</span>
+            <span className="aqua-underline">{poem.title}</span>
           </h3>
         </div>
         <span className="font-mono-lt text-[10px] text-ink/40 hidden sm:inline">
