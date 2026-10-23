@@ -39,29 +39,46 @@ function App() {
             <span className="font-mono-lt text-[11px] text-ink/40">Nº 01 — 04</span>
           </div>
 
-          <h1 className="reveal font-display text-[13vw] sm:text-[8vw] leading-[0.95] tracking-tight max-w-[14ch]">
-            La poesía<br />
-            <span className="italic">como</span>{' '}
-            <span className="pink-underline">geometría</span>
-          </h1>
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
+            <div>
+              <h1 className="reveal font-display text-[13vw] sm:text-[8vw] leading-[0.95] tracking-tight max-w-[14ch]">
+                La poesía<br />
+                <span className="italic">como</span>{' '}
+                <span className="pink-underline">geometría</span>
+              </h1>
 
-          <p className="reveal font-body text-xl sm:text-2xl leading-[1.5] mt-10 max-w-[52ch] text-ink/80">
-            Un portafolio de poemas con forma, inspirados en Oulipo y la literatura
-            potencial. Cada obra obedece a una restricción
-            matemática: la palabra se pliega, gira, mengua o vuela. La página
-            es el papel cuadriculado donde el verso se convierte en figura.
-          </p>
+              <p className="reveal font-body text-xl sm:text-2xl leading-[1.5] mt-10 max-w-[52ch] text-ink/80">
+                Un portafolio de poemas con forma, inspirados en Oulipo y la literatura
+                potencial. Cada obra obedece a una restricción
+                matemática: la palabra se pliega, gira, mengua o vuela. La página
+                es el papel cuadriculado donde el verso se convierte en figura.
+              </p>
 
-          <div className="reveal mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono-lt text-[11px] uppercase text-ink/55">
-            <span>4 poemas</span>
-            <span className="text-ink/20">/</span>
-            <span>5 áreas matemáticas</span>
-            <span className="text-ink/20">/</span>
-            <span>1 restricción cada uno</span>
-            <span className="text-ink/20">/</span>
-            <a href="#galeria" className="pink-underline-thin text-ink hover:text-ink transition">
-              Ver galería
-            </a>
+              <div className="reveal mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono-lt text-[11px] uppercase text-ink/55">
+                <span>4 poemas</span>
+                <span className="text-ink/20">/</span>
+                <span>5 áreas matemáticas</span>
+                <span className="text-ink/20">/</span>
+                <span>1 restricción cada uno</span>
+                <span className="text-ink/20">/</span>
+                <a href="#galeria" className="pink-underline-thin text-ink hover:text-ink transition">
+                  Ver galería
+                </a>
+              </div>
+            </div>
+
+            <div className="reveal flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[420px] aspect-[4/5] overflow-hidden border hairline p-2 bg-[#ebe7df]">
+                <img
+                  src="/Po-poema_2.001.jpeg"
+                  alt="Poema visual sobre una escultura en un patio"
+                  className="w-full h-full object-cover object-center"
+                />
+                <span className="absolute bottom-5 left-5 bg-[#f7f5f1]/90 px-3 py-1 font-mono-lt text-[9px] uppercase text-ink/65">
+                  poema potencial
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -18,10 +18,10 @@ export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
             </span>
             <div className="min-w-0">
               <span className="font-mono-lt text-[10px] uppercase text-ink/45">Área</span>
-              <h3 className="font-display text-3xl sm:text-4xl leading-[1.05] mt-1">
+              <h3 className="font-display text-4xl sm:text-5xl leading-[1.05] mt-1">
                 <span>{area.title}</span>
               </h3>
-              <p className="font-body text-base text-ink/65 italic mt-2 max-w-[58ch] leading-[1.5]">
+              <p className="font-body text-lg sm:text-xl text-ink/65 italic mt-2 max-w-[58ch] leading-[1.5]">
                 {area.description}
               </p>
             </div>
@@ -58,7 +58,7 @@ function MathExample({ ex }: { ex: MathExample }) {
         </header>
 
         <div className="flex items-center justify-center py-4 min-h-[140px] overflow-hidden">
-          <div className="scale-[0.75] origin-center">
+          <div className="scale-[0.95] origin-center">
             <MathExampleShape shape={ex.shape} />
           </div>
         </div>
