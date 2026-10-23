@@ -6,7 +6,7 @@ function hpq(p: number, q: number): ReactNode {
   );
 }
 
-function Diamond({ values, commas = false }: { values: ReactNode[][]; commas?: boolean }) {
+function Diamond({ values }: { values: ReactNode[][] }) {
   return (
     <div className="flex flex-col items-center gap-2 font-mono-lt text-sm sm:text-base text-center">
       {values.map((row, i) => (
@@ -14,7 +14,6 @@ function Diamond({ values, commas = false }: { values: ReactNode[][]; commas?: b
           {row.map((value, j) => (
             <span key={`${i}-${j}`} className="flex items-center text-ink not-italic">
               {value}
-              {commas && j < row.length - 1 && <span className="text-ink/30 ml-0.5">,</span>}
             </span>
           ))}
         </div>
@@ -96,12 +95,12 @@ function SymmetryBlock({
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="border hairline p-6 sm:p-8 min-h-[220px] flex flex-col justify-between">
           <span className="font-mono-lt text-[10px] uppercase text-ink/45">{beforeLabel}</span>
-          <Diamond values={before} commas />
+          <Diamond values={before} />
           <span className="font-body text-sm text-ink/50 italic">antes</span>
         </div>
         <div className="border hairline p-6 sm:p-8 min-h-[220px] flex flex-col justify-between bg-[#f4b6c2]/8">
           <span className="font-mono-lt text-[10px] uppercase text-ink/55">{afterLabel}</span>
-          <Diamond values={after} commas />
+          <Diamond values={after} />
           <span className="font-body text-sm text-ink/55 italic">después</span>
         </div>
       </div>
@@ -165,7 +164,7 @@ export function HodgeAlgorithm() {
           <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] items-center">
             <div className="border hairline p-7 sm:p-10 min-h-[270px] flex flex-col justify-between">
               <span className="font-mono-lt text-[10px] uppercase text-ink/45">Diamante sin sustituir</span>
-              <Diamond values={rawK3} commas />
+              <Diamond values={rawK3} />
               <span className="font-body text-base text-ink/55 italic">la arquitectura, antes del poema</span>
             </div>
 
@@ -176,7 +175,7 @@ export function HodgeAlgorithm() {
 
             <div className="border hairline p-7 sm:p-10 min-h-[270px] flex flex-col justify-between bg-[#f4b6c2]/10">
               <span className="font-mono-lt text-[10px] uppercase text-ink/55">Sustituyendo los números de Hodge para una superficie K3</span>
-              <Diamond values={numericK3} commas />
+              <Diamond values={numericK3} />
               <span className="font-body text-base text-ink/60 italic">la superficie K3, ya despierta</span>
             </div>
           </div>
