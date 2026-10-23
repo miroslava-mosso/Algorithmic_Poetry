@@ -60,7 +60,7 @@ function App() {
             <span>1 restricción cada uno</span>
             <span className="text-ink/20">/</span>
             <a href="#galeria" className="pink-underline-thin text-ink hover:text-ink transition">
-              Ver galería ↓
+              Ver galería
             </a>
           </div>
         </div>

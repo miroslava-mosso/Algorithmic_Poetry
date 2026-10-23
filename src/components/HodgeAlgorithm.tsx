@@ -2,17 +2,17 @@ import type { ReactNode } from 'react';
 
 function hpq(p: number, q: number): ReactNode {
   return (
-    <span>h<sup className="text-[0.72em] font-normal not-italic">{p},{q}</sup></span>
+    <span>h<sup className="text-[0.72em] font-normal not-italic">{p}{q}</sup></span>
   );
 }
 
 function Diamond({ values }: { values: ReactNode[][] }) {
   return (
-    <div className="flex flex-col items-center gap-2 font-mono-lt text-sm sm:text-base text-center">
+    <div className="flex flex-col items-center gap-3 sm:gap-4 font-mono-lt text-sm sm:text-base text-center">
       {values.map((row, i) => (
-        <div key={i} className="flex justify-center items-center gap-3 sm:gap-6 min-h-[1.2em]">
+        <div key={i} className="flex justify-center items-center gap-4 sm:gap-8 min-h-[1.4em]">
           {row.map((value, j) => (
-            <span key={`${i}-${j}`} className="flex items-center text-ink not-italic">
+            <span key={`${i}-${j}`} className="flex items-center text-ink not-italic whitespace-nowrap">
               {value}
             </span>
           ))}
@@ -57,7 +57,7 @@ const serreK3: ReactNode[][] = [
 const numericK3: ReactNode[][] = [
   ['1'],
   ['0', '0'],
-  ['1', <span key="20" className="text-[#f4b6c2]">20</span>, '1'],
+  ['1', <span key="20" className="text-[#a84739]">20</span>, '1'],
   ['0', '0'],
   ['1'],
 ];
@@ -229,7 +229,7 @@ export function HodgeAlgorithm() {
           <SymmetryBlock
             title="Simetría de Hodge"
             description={<>
-              La simetría de Hodge refleja el diamante sobre su eje vertical: h<sup className="text-[0.72em]">p,q</sup> = h<sup className="text-[0.72em]">q,p</sup>. La columna izquierda se vuelve la derecha, y viceversa. En la superficie K3, el diamante ya es simétrico, así que la forma se preserva; pero en tu poema puedes aprovechar este reflejo para repetir, invertir o cambiar las palabras de cada lado.
+              La simetría de Hodge refleja el diamante sobre su eje vertical: h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. La columna izquierda se vuelve la derecha, y viceversa. En la superficie K3, el diamante ya es simétrico, así que la forma se preserva; pero en tu poema puedes aprovechar este reflejo para repetir, invertir o cambiar las palabras de cada lado.
             </>}
             before={rawK3}
             after={hodgeSymK3}
@@ -240,7 +240,7 @@ export function HodgeAlgorithm() {
           <SymmetryBlock
             title="Complex conjugation"
             description={<>
-              La conjugación compleja refleja el diamante sobre su eje horizontal: arriba y abajo intercambian lugares. En la superficie K3, h<sup className="text-[0.72em]">0,0</sup> = h<sup className="text-[0.72em]">2,2</sup> = 1 y h<sup className="text-[0.72em]">1,0</sup> = h<sup className="text-[0.72em]">2,1</sup> = 0, así que la forma se preserva. En tu poema, puedes reflejar el primer verso en el último, el segundo en el penúltimo, y así sucesivamente.
+              La conjugación compleja refleja el diamante sobre su eje horizontal: arriba y abajo intercambian lugares. En la superficie K3, h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1 y h<sup className="text-[0.72em]">10</sup> = h<sup className="text-[0.72em]">21</sup> = 0, así que la forma se preserva. En tu poema, puedes reflejar el primer verso en el último, el segundo en el penúltimo, y así sucesivamente.
             </>}
             before={rawK3}
             after={conjugationK3}
@@ -251,7 +251,7 @@ export function HodgeAlgorithm() {
           <SymmetryBlock
             title="Dualidad de Serre"
             description={<>
-              La dualidad de Serre establece que h<sup className="text-[0.72em]">p,q</sup> = h<sup className="text-[0.72em]">n-p,n-q</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">0,0</sup> = h<sup className="text-[0.72em]">2,2</sup>, h<sup className="text-[0.72em]">1,0</sup> = h<sup className="text-[0.72em]">1,2</sup>, h<sup className="text-[0.72em]">0,1</sup> = h<sup className="text-[0.72em]">2,1</sup>, y h<sup className="text-[0.72em]">2,0</sup> = h<sup className="text-[0.72em]">0,2</sup>. El diamante se refleja entonces a través de su centro, como un espejo rotado 180°.
+              La dualidad de Serre establece que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">n-p,n-q</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup>, h<sup className="text-[0.72em]">10</sup> = h<sup className="text-[0.72em]">12</sup>, h<sup className="text-[0.72em]">01</sup> = h<sup className="text-[0.72em]">21</sup>, y h<sup className="text-[0.72em]">20</sup> = h<sup className="text-[0.72em]">02</sup>. El diamante se refleja entonces a través de su centro, como un espejo rotado 180°.
             </>}
             before={rawK3}
             after={serreK3}
@@ -274,7 +274,7 @@ export function HodgeAlgorithm() {
 
           <div className="border hairline p-6 sm:p-10 mb-10 bg-[#f4b6c2]/8">
             <p className="font-mono-lt text-base sm:text-lg text-center text-ink">
-              b<sub>k</sub> = Σ<sub>p+q=k</sub> h<sup>p,q</sup>
+              b<sub>k</sub> = Σ<sub>p+q=k</sub> h<sup className="text-[0.72em]">pq</sup>
             </p>
           </div>
 
@@ -284,9 +284,9 @@ export function HodgeAlgorithm() {
 
           <div className="grid gap-6 sm:grid-cols-3">
             {[
-              { k: 'b₀', formula: <>h<sup className="text-[0.72em]">0,0</sup> = 1</>, words: 'bruma' },
-              { k: 'b₂', formula: <>h<sup className="text-[0.72em]">2,0</sup> + h<sup className="text-[0.72em]">1,1</sup> + h<sup className="text-[0.72em]">0,2</sup> = 1 + 20 + 1</>, words: 'bruma + veinte sílabas + bruma' },
-              { k: 'b₄', formula: <>h<sup className="text-[0.72em]">2,2</sup> = 1</>, words: 'bruma' },
+              { k: 'b₀', formula: <>h<sup className="text-[0.72em]">00</sup> = 1</>, words: 'bruma' },
+              { k: 'b₂', formula: <>h<sup className="text-[0.72em]">20</sup> + h<sup className="text-[0.72em]">11</sup> + h<sup className="text-[0.72em]">02</sup> = 1 + 20 + 1</>, words: 'bruma + veinte sílabas + bruma' },
+              { k: 'b₄', formula: <>h<sup className="text-[0.72em]">22</sup> = 1</>, words: 'bruma' },
             ].map((item) => (
               <div key={item.k} className="border hairline p-6 flex flex-col gap-3">
                 <span className="font-mono-lt text-lg text-[#f4b6c2]">{item.k}</span>
