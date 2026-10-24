@@ -108,10 +108,9 @@ function App() {
           </div>
           <div className="reveal font-body text-lg sm:text-xl leading-[1.6] text-ink/80 space-y-5">
             <p>
-              El Oulipo —<em>Ouvroir de littérature potentielle</em>— nació en
-              un café de París en 1960. Sus miembros no buscan la inspiración:
-              buscan la <span className="pink-underline-thin">regla</span> que
-              hace posibles los poemas que nadie había escrito aún.
+              El Oulipo —<em>Ouvroir de littérature potentielle</em>— es un grupo                de literatura experimental que nació en París en 1960. La poesía                   potencial no busca la inspiración, busca las 
+              <span className="pink-underline-thin">restricciones</span> que
+              aparecen como obstáculos que se le ponen al lenguaje para ver cómo                 responde la poesía a ellos. Une a las matemáticas con la literatura                para buscar nuevas formas y estructuras para generar poemas. 
             </p>
             <p>
               Una cruz donde dos versos se encuentran, un diamante que crece y mengua,
