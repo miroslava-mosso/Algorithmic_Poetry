@@ -113,10 +113,7 @@ function App() {
               aparecen como obstáculos que se le ponen al lenguaje para ver cómo                 responde la poesía a ellos. Une a las matemáticas con la literatura                para buscar nuevas formas y estructuras para generar poemas. 
             </p>
             <p>
-              Una cruz donde dos versos se encuentran, un diamante que crece y mengua,
-              un cono que concentra el lenguaje y una espiral que lo lleva hacia
-              adentro. La geometría no decora el poema: lo produce. Este
-              portafolio recoge mi propia lectura de aquella tradición.
+              Este cuaderno digital recoge mi propia lectura de aquella tradición.
             </p>
             <p className="font-body text-lg sm:text-xl leading-[1.55] text-ink/75 not-italic">
               Agradezco infinitamente a{' '}
