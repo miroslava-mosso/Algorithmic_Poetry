@@ -342,7 +342,7 @@ export function MathExampleShape({ shape }: Props) {
     /* ── PROBABILIDAD ──────────────────────────────── */
 
     case 'dado': return (
-      <svg viewBox="0 0 280 190" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
+      <svg viewBox="0 0 290 190" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
         {[
           {x:14, y:14, dots:1, word:'azar'},
           {x:110,y:14, dots:2, word:'suerte'},

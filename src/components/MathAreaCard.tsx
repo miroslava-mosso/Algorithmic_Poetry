@@ -88,7 +88,9 @@ function MathExample({ ex }: { ex: MathExample }) {
         title={ex.title}
         subtitle={ex.technique}
       >
-        <MathExampleShape shape={ex.shape} />
+        <div className="[&>svg]:!max-w-[680px] scale-150 origin-center">
+          <MathExampleShape shape={ex.shape} />
+        </div>
       </Lightbox>
     </>
   );
