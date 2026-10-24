@@ -103,7 +103,7 @@ function App() {
           <div className="reveal">
             <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Manifiesto</span>
             <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
-              Escribo bajo <span className="pink-underline italic">restricción</span>.
+              Instrucciones para ponerle límites a un <span className="pink-underline italic">poema</span>.
             </h2>
           </div>
           <div className="reveal font-body text-lg sm:text-xl leading-[1.6] text-ink/80 space-y-5">
