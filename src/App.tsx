@@ -54,11 +54,11 @@ function App() {
               </p>
 
               <div className="reveal mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono-lt text-[11px] uppercase text-ink/55">
-                <span>4 poemas</span>
+                <span>4 poemas visuales</span>
                 <span className="text-ink/20">/</span>
                 <span>5 áreas matemáticas</span>
                 <span className="text-ink/20">/</span>
-                <span>1 restricción cada uno</span>
+                <span>1 constricción</span>
                 <span className="text-ink/20">/</span>
                 <a href="#galeria" className="pink-underline-thin text-ink hover:text-ink transition">
                   Ver galería
