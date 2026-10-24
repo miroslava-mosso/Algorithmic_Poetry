@@ -18,7 +18,7 @@ function App() {
             Poesía potencial
           </a>
           <nav className="hidden sm:flex items-center gap-7 font-mono-lt text-[11px] uppercase text-ink/70">
-            <a href="#manifiesto" className="hover:text-ink transition">Manifiesto</a>
+            <a href="#Reglas del juego" className="hover:text-ink transition">Reglas del juego</a>
             <a href="#galeria" className="hover:text-ink transition">Galería</a>
             <a href="#areas" className="hover:text-ink transition">Áreas</a>
             <a href="#mi-algoritmo" className="hover:text-ink transition">Mi algoritmo</a>
@@ -97,11 +97,11 @@ function App() {
         </div>
       </section>
 
-      {/* ── Manifiesto ──────────────────────────────────── */}
-      <section id="manifiesto" className="border-b hairline">
+      {/* ── Reglas del juego ──────────────────────────────────── */}
+      <section id="Reglas del juego" className="border-b hairline">
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 py-20 sm:py-28 grid gap-10 sm:grid-cols-[0.9fr_1.1fr]">
           <div className="reveal">
-            <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Manifiesto</span>
+            <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Reglas del juego </span>
             <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
               Instrucciones para ponerle límites a un <span className="pink-underline italic">poema</span>.
             </h2>
