@@ -50,7 +50,7 @@ function App() {
               <p className="reveal font-body text-xl sm:text-2xl leading-[1.5] mt-10 max-w-[52ch] text-ink/80">
                 Cuaderno personal de poesía visual inspirada en Oulipo y la literatura
                 potencial. Cada poema obedece a una restricción
-                matemática diferente. Las palabras juegan, se constriñen, obedecen formas geométricas, y cada una tiene un significado diferente.  
+                matemática diferente. Las palabras juegan con el espacio, se constriñen, obedecen formas geométricas, y cada una tiene un significado diferente.  
               </p>
 
               <div className="reveal mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono-lt text-[11px] uppercase text-ink/55">
