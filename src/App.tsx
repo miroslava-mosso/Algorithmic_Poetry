@@ -58,7 +58,7 @@ function App() {
                 <span className="text-ink/20">/</span>
                 <span>5 áreas matemáticas</span>
                 <span className="text-ink/20">/</span>
-                <span>1 constricción</span>
+                <span>1 constricción diferente</span>
                 <span className="text-ink/20">/</span>
                 <a href="#galeria" className="pink-underline-thin text-ink hover:text-ink transition">
                   Ver galería
