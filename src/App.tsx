@@ -215,7 +215,7 @@ function App() {
               <p className="font-body text-lg text-[#f7f5f1]/70 mt-6 max-w-[44ch]">
                 Si escribes un poema usando el algoritmo  <em>Diamante</em> y te                   gustaría compartirlo, ¡envíanoslo por correo electrónico para                      publicarlo en nuestra página!
                 <p>
-                Puedes mandarlo como un dibujo hecho a mano o de manera digital,                   fotografía, composición visual, collage, o cualquier otra forma                    visual que explore las posibilidades del algoritmo.
+                Puedes mandarlo como un dibujo hecho a mano o de manera digital,                   fotografía, composición visual, collage o cualquier otra forma                    visual que explore las posibilidades del algoritmo.
                 </p>
               </p>
             </div>
@@ -229,7 +229,7 @@ function App() {
                 <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">Manda tu poema</p>
                 <p className="font-body text-lg mt-1">
                 Incluye lo siguiente: - El diamante de Hodge con los números                       originales y otro con las palabras sustituidas.
-                - A qué geometría corresponde.
+                - La geometría a la que corresponde.
                 - (Opcional) Número de Betti.
                 -Título de tu poema.
                 - Nombre o pseudónimo de su autor(a)
