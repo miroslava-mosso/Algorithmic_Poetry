@@ -46,7 +46,7 @@ export const poems: Poem[] = [
     shape: 'cono',
     technique: 'Geométrica',
     manifest:
-      'El poema se estrecha hacia un punto, embudo que condensa el sentido en una sola sílaba final.',
+      'El poema se estrecha hacia un punto inferior como un embudo que condensa el sentido en una última sílaba.',
     lines: ['amanecer sobre el Sena', '  anecer sobre el Se  ', '    ecer sobr el     ', '      er ob          ', '        o           '],
   },
   {
