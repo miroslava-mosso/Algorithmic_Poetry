@@ -84,7 +84,7 @@ function App() {
             {Array.from({ length: 2 }).map((_, k) => (
               <span key={k} className="flex">
                 {poems.map((p) => (
-                  <span key={p.id} className="px-6 flex items-center gap-6">
+                  <span key={p.id} className="px-12 flex items-center gap-6">
                     {p.title}
                     <span className="inline-block w-1 h-1 bg-[#f4b6c2] rounded-full" />
                     {p.technique}
