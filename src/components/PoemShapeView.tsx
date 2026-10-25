@@ -1,3 +1,4 @@
+
 import type { PoemShape } from '@/poems';
 import { Pajarito } from '@/components/Pajarito';
 import { Cruz } from '@/components/Cruz';
@@ -17,13 +18,11 @@ interface Props {
 }
 
 /** Renders the geometric form of a poem, dispatching to the right shape component. */
-export function Diamante({
-  lines: _lines,
+export function PoemShapeView({
+  shape,
+  lines,
   compact = false,
-}: {
-  lines: string[];
-  compact?: boolean;
-}) {
+}: Props) {
   switch (shape) {
     case 'liana':
       return <Liana lines={lines} />;
