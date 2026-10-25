@@ -16,11 +16,11 @@ export const poems: Poem[] = [
   {
     id: 'cruz',
     index: '01',
-    title: 'Cruz',
-    author: 'Noël Arnaud',
-    year: '1961',
+    title: 'Intersección',
+    author: 'Composición en cruz',
+    year: '2026',
     shape: 'cruz',
-    technique: 'Poema cruz',
+    technique: 'Intersección alfabética',
     manifest:
       'Verso horizontal y verso vertical se cruzan en una letra compartida, como dos miradas que se encuentran.',
     lines: ['            o            ', '            j            ', '            e            ', 'P O É T I C A _ P O T E N C I A L', '            i            ', '            a            ', '            l            '],
@@ -34,17 +34,17 @@ export const poems: Poem[] = [
     shape: 'diamante',
     technique: 'Tarkib-band',
     manifest:
-      'Dios persa antiguo como personificación del tiempo infinito y el espacio. Tarkib-band es una forma poética de la literatura persa y urdu.',
+      'Dios persa antiguo como personificación del tiempo infinito y el espacio. Tarkib-band es una forma poética de la literatura persa       y urdu.',
     lines: ['     nube     ', '   blanca   ', '  sobre el   ', ' cielo de París ', '  sobre el   ', '   blanca   ', '     nube     '],
   },
   {
     id: 'cono',
     index: '03',
     title: 'Cono',
-    author: 'Paul Braffort',
+    author: 'Caligrama',
     year: '2026',
     shape: 'cono',
-    technique: 'Geométrica',
+    technique: 'Geometría',
     manifest:
       'El poema se estrecha hacia un punto inferior como un embudo que condensa el sentido en una última sílaba.',
     lines: ['amanecer sobre el Sena', '  anecer sobre el Se  ', '    ecer sobr el     ', '      er ob          ', '        o           '],
