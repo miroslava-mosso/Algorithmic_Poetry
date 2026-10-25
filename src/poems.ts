@@ -59,6 +59,6 @@ export const poems: Poem[] = [
     technique: 'Literatura ergódica',
     manifest:
       'El poema empieza desde afuera hacia adentro. Se termina cuando el espiral colapsa en el centro. Puedes comenzar otro espiral que empiece en la última palabra del espiral anterior.',
-    lines: ['Probé el sol reflejado en el agua. El calor me quemaba los labios. Transparentes eran las gotas de café amargo. Despierto después de medio día.'],
+    lines: ['Probé el sol reflejado en el agua. El calor me quemaba los labios. Transparentes eran las gotas de café amargo. Despierto después del medio día, en el que el'],
   },
 ];
