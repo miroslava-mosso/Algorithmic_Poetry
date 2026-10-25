@@ -1,4 +1,4 @@
-/** Cono — embudo que condensa el sentido en una sílaba final. */
+/** Cono — embudo que condensa el sentido en una sílaba o palabra final. */
 export function Cono({ lines }: { lines: string[] }) {
   return (
     <div className="flex flex-col items-center font-mono-lt text-xs sm:text-sm text-ink">
