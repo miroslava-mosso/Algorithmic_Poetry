@@ -1,7 +1,14 @@
 
 /** Zurvan — superposición tipográfica del espacio y el tiempo. */
 
-export function Diamante({ lines: _lines }: { lines: string[] }) {
+
+export function Diamante({
+  lines: _lines,
+  compact = false,
+}: {
+  lines: string[];
+  compact?: boolean;
+}) {
   const space = '#171717';
   const time = '#8f2638';
 
