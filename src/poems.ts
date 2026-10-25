@@ -53,12 +53,12 @@ export const poems: Poem[] = [
     id: 'espiral',
     index: '04',
     title: 'Espiral',
-    author: 'Jacques Roubaud',
+    author: 'Jacqueline Turner',
     year: '1966',
     shape: 'espiral',
-    technique: 'Trayectoria continua',
+    technique: 'Literatura ergódica',
     manifest:
-      'El poema entra desde el borde y gira hacia su centro: cada palabra ocupa el siguiente tramo de la misma respiración.',
+      'El poema empieza desde afuera hacia adentro. Se termina cuando el espiral colapsa en el centro. Comenzamos otro espiral que empiece en la última palabra del espiral anterior.',
     lines: ['afuera', 'gira', 'la', 'palabra', 'hacia', 'adentro', 'calla'],
   },
 ];
