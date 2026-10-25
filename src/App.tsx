@@ -236,7 +236,7 @@ function App() {
     El diamante de Hodge con los números originales y otro con las palabras sustituidas.
   </li>
   <li>La geometría a la que corresponde.</li>
-  <li>(Opcional) Número de Betti.</li>
+  <li>(Opcional) Números de Betti.</li>
   <li>Título de tu poema.</li>
   <li>Nombre o pseudónimo de su autor(a).</li>
   <li>Fecha de creación.</li>
