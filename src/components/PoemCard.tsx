@@ -31,7 +31,6 @@ export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
             <PoemShapeView
   shape={poem.shape}
   lines={poem.lines}
-  compact={poem.shape === 'diamante'}
 />
           </div>
         </div>
