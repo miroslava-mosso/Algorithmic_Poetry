@@ -38,18 +38,13 @@ className={
     ? 'w-full'
     : 'scale-[0.7] origin-center'
 }
-className={
-  poem.shape === 'cono'
-    ? 'w-full'
-    : 'scale-[0.7] origin-center'
-}            
+            
 
 >
   <PoemShapeView
   shape={poem.shape}
   lines={poem.lines}
   compact={poem.shape === 'diamante'
-  compact={poem.shape === 'cono'
   }
 />
 </div>
