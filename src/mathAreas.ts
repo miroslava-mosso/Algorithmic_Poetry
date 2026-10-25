@@ -61,8 +61,8 @@ export const mathAreas: MathArea[] = [
       },
       {
         index: '03',
-        title: 'Copo de Koch',
-        technique: 'Fractal — cada arista se reemplaza por un triángulo equilátero',
+        title: 'Copo de nieve de Koch',
+        technique: 'Curva fractal — cada arista se reemplaza por un triángulo equilátero',
         shape: 'koch-snowflake',
       },
     ],
