@@ -12,8 +12,8 @@ export function Diamante({
   const time = '#8f2638';
 
   const fontSize = compact
-  ? 'text-[8px]'
-  : 'text-[10px] sm:text-xs';
+    ? 'text-[5px] sm:text-[6px]'
+    : 'text-[10px] sm:text-xs';
 
   const vertical = (
     text: string,
