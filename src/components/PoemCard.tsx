@@ -43,7 +43,8 @@ className={
   <PoemShapeView
   shape={poem.shape}
   lines={poem.lines}
-  compact={poem.shape === 'diamante'}
+  compact={poem.shape === 'diamante'
+  compact={poem.shape === 'cono'}
 />
 </div>
         </div>
