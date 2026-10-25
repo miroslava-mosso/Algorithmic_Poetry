@@ -213,7 +213,7 @@ function App() {
                 Escribámonos.
               </h2>
               <p className="font-body text-lg text-[#f7f5f1]/70 mt-6 max-w-[44ch]">
-                Si escribes un poema usando el algoritmo  —<em>Diamante</em>— y te                 gustaría compartirlo, mándalo a nuestro correo                                     electrónico con lo siguiente: título de tu                                         poema, nombre o pseudónimo del autor(a), fecha de creación para                    publicarlo en la página.
+                Si escribes un poema usando el algoritmo  —<em>Diamante</em>— y te                 gustaría compartirlo, mándalo a nuestro correo                                     electrónico con lo siguiente: título de tu                                         poema, nombre o pseudónimo del autor(a), fecha de creación para                    publicarlo en la página. Puedes mandarlo en forma de dibujo hecho                  a mano o digital, fotografía, composición visual, collage, y                       demás.
               </p>
             </div>
 
