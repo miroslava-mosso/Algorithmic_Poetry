@@ -215,10 +215,8 @@ function App() {
               <p className="font-body text-lg text-[#f7f5f1]/70 mt-6 max-w-[44ch]">
                 Si escribes un poema usando el algoritmo  <em>Diamante</em> y te                   gustaría compartirlo, ¡envíanoslo por correo electrónico para                      publicarlo en nuestra página!
                 </p>
-              
-                <p className="font-body text-lg text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
+              <p className="font-body text-lg text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
                 Puedes mandarlo como un dibujo hecho a mano o de manera digital,                   fotografía, composición visual, collage o cualquier otra forma                    visual que explore las posibilidades del algoritmo.
-                </p>
               </p>
             </div>
 
