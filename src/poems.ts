@@ -23,7 +23,7 @@ export const poems: Poem[] = [
     technique: 'Intersección alfabética',
     manifest:
       'Verso horizontal y verso vertical se cruzan en una letra compartida, como dos miradas que se encuentran.',
-    lines: ['e', 'l', ' ', 'd', 'a', 'ñ', 'o', '', ' D E  M I  P A Í S  E L  D E S T I E R R O ', 's', 't', 'á', '', 'h', 'e', 'c', 'h', 'o' ],
+    lines: ['e', 'l', ' ', 'd', 'a', 'ñ', 'o', '', 'de mi país el destierro ', 's', 't', 'á', '', 'h', 'e', 'c', 'h', 'o' ],
   },
   {
     id: 'diamante',
