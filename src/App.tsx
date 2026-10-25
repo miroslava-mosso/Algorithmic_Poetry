@@ -165,8 +165,8 @@ function App() {
               </h2>
             </div>
             <p className="font-body text-lg sm:text-xl text-ink/60 max-w-[36ch]">
-              Cada área matemática abre una manera distinta de doblar el
-              lenguaje. Tres ejemplos por territorio.
+              Cada área matemática abre una manera distinta de jugar con el
+              lenguaje. Hay tres ejemplos por cada territorio matemático.
             </p>
           </div>
 
