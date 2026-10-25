@@ -1,19 +1,9 @@
 
 /** Zurvan — superposición tipográfica del espacio y el tiempo. */
 
-export function Diamante({
-  lines: _lines,
-  compact = false,
-}: {
-  lines: string[];
-  compact?: boolean;
-}) {
+export function Diamante({ lines: _lines }: { lines: string[] }) {
   const space = '#171717';
   const time = '#8f2638';
-
-  const fontSize = compact
-    ? 'text-[5px] sm:text-[6px]'
-    : 'text-[10px] sm:text-xs';
 
   const vertical = (
     text: string,
@@ -22,7 +12,9 @@ export function Diamante({
     direction: 'up' | 'down' = 'down',
   ) => (
     <span
-      className={`absolute whitespace-nowrap font-mono-lt ${fontSize} ${className}`}
+      className={`absolute whitespace-nowrap font-mono-lt ${
+  compact ? 'text-[7px] sm:text-[8px]' : 'text-[10px] sm:text-xs'
+} ${className}`}
       style={{
         color,
         writingMode: 'vertical-rl',
@@ -41,7 +33,7 @@ export function Diamante({
     className: string,
   ) => (
     <span
-      className={`absolute whitespace-nowrap font-mono-lt ${fontSize} ${className}`}
+      className={`absolute whitespace-nowrap font-mono-lt text-[10px] sm:text-xs ${className}`}
       style={{
         color,
         transform: 'translate(-50%, -50%)',
@@ -52,83 +44,86 @@ export function Diamante({
   );
 
   return (
-    <div className="w-full">
-      <div
-        className={`relative mx-auto w-full aspect-[6/5] font-mono-lt ${
-          compact
-            ? 'min-w-0 max-w-[360px]'
-            : 'min-w-[340px] max-w-[620px]'
-        }`}
-      >
-        {/* ESPACIO — símbolo exterior, negro */}
+    <div className="w-full overflow-x-auto">
+     <div
+  className={`relative mx-auto w-full aspect-[6/5] font-mono-lt ${
+    compact ? 'min-w-0 max-w-[360px]' : 'min-w-[340px] max-w-[620px]'
+  }`}
+>
 
-        {vertical('superficie', space, 'left-[8%] top-[24%]')}
+        
+{/* ESPACIO — símbolo exterior, negro */}
 
-        {horizontal(
-          'suavemente',
-          space,
-          'left-[25%] top-[37%]',
-        )}
+{vertical('superficie', space, 'left-[8%] top-[24%]')}
 
-        {horizontal(
-          'infinita',
-          space,
-          'left-[47%] top-[37%]',
-        )}
+{horizontal(
+  'suavemente',
+  space,
+  'left-[25%] top-[37%]',
+)}
 
-        {horizontal(
-          'está',
-          space,
-          'left-[72%] top-[37%]',
-        )}
+{horizontal(
+  'infinita',
+  space,
+  'left-[47%] top-[37%]',
+)}
 
-        {vertical(
-          'cerrada',
-          space,
-          'left-[89%] top-[24%]',
-          'up',
-        )}
+{horizontal(
+  'está',
+  space,
+  'left-[72%] top-[37%]',
+)}
 
-        {vertical(
-          'sí misma',
-          space,
-          'left-[47%] top-[57%]',
-          'down',
-        )}
+{vertical(
+  'cerrada',
+  space,
+  'left-[89%] top-[24%]',
+  'up',
+)}
 
-        {/* TIEMPO — símbolo interior, rojo oscuro */}
+{vertical(
+  'sí misma',
+  space,
+  'left-[47%] top-[57%]',
+  'down',
+)}
 
-        {horizontal(
-          'los amaneceres seguirán',
-          time,
-          'left-[43%] top-[27%]',
-        )}
 
-        {vertical(
-          'existir en el tiempo',
-          time,
-          'left-[24%] top-[61%]',
-          'up',
-        )}
+{/* TIEMPO — símbolo interior, rojo oscuro */}
 
-        {vertical(
-          'repitiéndose y los cerezos',
-          time,
-          'left-[66%] top-[53%]',
-          'down',
-        )}
+{horizontal(
+  'los amaneceres seguirán',
+  time,
+  'left-[43%] top-[27%]',
+)}
 
-        {horizontal(
-          'aunque deje de',
-          time,
-          'left-[14%] top-[83%]',
-        )}
+{vertical(
+  'existir en el tiempo',
+  time,
+  'left-[24%] top-[61%]',
+  'up',
+)}
 
-        {horizontal(
-          'seguirán floreciendo',
-          time,
-          'left-[82%] top-[83%]',
-        )}
+{vertical(
+  'repitiéndose y los cerezos',
+  time,
+  'left-[66%] top-[53%]',
+  'down',
+)}
+
+{horizontal(
+  'aunque deje de',
+  time,
+  'left-[14%] top-[83%]',
+)}
+
+{horizontal(
+  'seguirán floreciendo',
+  time,
+  'left-[82%] top-[83%]',
+)}
+
+
       </div>
     </div>
   );
