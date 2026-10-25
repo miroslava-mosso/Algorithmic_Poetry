@@ -45,7 +45,7 @@ export const mathAreas: MathArea[] = [
     index: 'I',
     title: 'Geometría',
     description:
-      'El verso se pliega en figuras: triángulos, círculos, fractales. La página es el plano donde el poema adquiere forma.',
+      'Los versos se despliegan en figuras: triángulos, círculos, fractales.',
     examples: [
       {
         index: '01',
