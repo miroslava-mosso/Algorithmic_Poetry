@@ -23,7 +23,7 @@ export function Cruz({ lines }: { lines: string[] }) {
 <span className="poem-cell w-max max-w-none px-1 py-0.5 text-xs sm:text-sm tracking-[0.06em] whitespace-nowrap">
 
         <span className="pink-underline-thin">
-          {horizontal.trim() === '' ? '\u00A0' : l.trim()}
+          {horizontal.trim()}
         </span>
       </span>
 
