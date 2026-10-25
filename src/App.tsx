@@ -48,7 +48,7 @@ function App() {
               </h1>
 
               <p className="reveal font-body text-xl sm:text-2xl leading-[1.5] mt-10 max-w-[52ch] text-ink/80">
-                Cuaderno personal de poesía visual inspirada en el Oulipo y la literatura potencial. Cada poema obedece a una restricción matemática diferente. Las palabras juegan con el espacio, se constriñen, obedecen formas geométricas, y cada una tiene un significado diferente.  
+                Cuaderno personal de poesía visual inspirada en el Oulipo y la                     literatura potencial. Cada poema obedece a una restricción                         matemática diferente. Las palabras juegan con el espacio, se                       constriñen, obedecen formas geométricas, y cada una tiene un                       significado diferente.  
               </p>
 
               <div className="reveal mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono-lt text-[11px] uppercase text-ink/55">
@@ -122,8 +122,7 @@ function App() {
               laboratorios de poesía potencial en México,{' '}
               <a className="burnt-marker" href="https://www.instagram.com/popoesia/" target="_blank" rel="noreferrer">
                 <strong>popoesía</strong>
-              </a>, a los que me uní en algunas ocasiones y en donde aprendí a
-              hacer muchos de los poemas que aquí muestro.
+              </a>, en donde aprendí a hacer muchos de los poemas que aquí muestro.
             </p>
           </div>
         </div>
