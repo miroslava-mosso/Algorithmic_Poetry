@@ -12,7 +12,9 @@ export function Diamante({ lines: _lines }: { lines: string[] }) {
     direction: 'up' | 'down' = 'down',
   ) => (
     <span
-      className={`absolute whitespace-nowrap font-mono-lt text-[10px] sm:text-xs ${className}`}
+      className={`absolute whitespace-nowrap font-mono-lt ${
+  compact ? 'text-[7px] sm:text-[8px]' : 'text-[10px] sm:text-xs'
+} ${className}`}
       style={{
         color,
         writingMode: 'vertical-rl',
@@ -43,7 +45,11 @@ export function Diamante({ lines: _lines }: { lines: string[] }) {
 
   return (
     <div className="w-full overflow-x-auto">
-      <div className="relative mx-auto w-full min-w-[340px] max-w-[620px] aspect-[6/5] font-mono-lt">
+     <div
+  className={`relative mx-auto w-full aspect-[6/5] font-mono-lt ${
+    compact ? 'min-w-0 max-w-[360px]' : 'min-w-[340px] max-w-[620px]'
+  }`}
+>
 
         
 {/* ESPACIO — símbolo exterior, negro */}
