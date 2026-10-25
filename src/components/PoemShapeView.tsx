@@ -35,7 +35,7 @@ export function PoemShapeView({
     case 'piramide':
       return <Piramide lines={lines} />;
     case 'cono':
-      return <Cono lines={lines} />;
+      return <Cono lines={lines} compact={compact} />;
     case 'ola':
       return <Ola lines={lines} />;
     case 'gemelos':
