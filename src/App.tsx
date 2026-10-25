@@ -112,7 +112,7 @@ function App() {
               aparecen como obstáculos que imponemos al lenguaje para descubrir                 cómo responde la poesía ante ellos. 
             </p>
               A través de juego y reglas, se unen las <span className="pink-underline-thin">matemáticas</span> con la <span className="pink-underline-thin">literatura</span> para buscar nuevas posibilidades y estructuras para generar poemas. Este cuaderno digital recoge mi propia lectura de esa tradición.
-          
+           </p>
             <p className="font-body text-lg sm:text-xl leading-[1.55] text-ink/75 not-italic">
               Agradezco infinitamente a{' '}
               <a className="burnt-marker" href="https://www.instagram.com/batsssht/" target="_blank" rel="noreferrer">
