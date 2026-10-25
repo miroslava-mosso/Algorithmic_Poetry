@@ -12,9 +12,12 @@ export function Cruz({ lines }: { lines: string[] }) {
           {l.trim()}
         </span>
       ))}
-      <span className="poem-cell w-max max-w-none px-1 py-0.5 text-[9px] sm:text-xs tracking-[0.06em] whitespace-nowrap pink-underline-thin">
-        {horizontal.trim()}
-      </span>
+      
+<span className="poem-cell w-max max-w-none px-1 py-0.5 text-[9px] sm:text-xs tracking-[0.06em] whitespace-nowrap">
+  <span className="pink-underline-thin">
+    {horizontal.trim()}
+  </span>
+</span>
       {bottom.map((l, i) => (
         <span key={`b${i}`} className="poem-cell px-2 py-0.5 tracking-[0.2em]">
           {l.trim()}
