@@ -26,14 +26,17 @@ export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
           </span>
         </header>
 
-        <div className="flex items-center justify-center py-6 min-h-[200px] overflow-hidden">
-          <div className="scale-[0.7] origin-center">
-            <PoemShapeView
-  shape={poem.shape}
-  lines={poem.lines}
-/>
-          </div>
-        </div>
+        
+<div className="flex items-center justify-center py-6 min-h-[200px] overflow-hidden">
+  <div className={poem.shape === 'diamante' ? 'w-full' : 'scale-[0.7] origin-center'}>
+    <PoemShapeView
+      shape={poem.shape}
+      lines={poem.lines}
+      compact={poem.shape === 'diamante'}
+    />
+  </div>
+</div>
+
 
         <footer className="flex flex-col gap-2 mt-4">
           <div className="flex items-center justify-between font-mono-lt text-[10px] uppercase text-ink/55">
