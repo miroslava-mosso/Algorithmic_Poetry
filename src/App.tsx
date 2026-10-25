@@ -142,8 +142,8 @@ function App() {
               </h2>
             </div>
             <p className="font-body text-lg sm:text-xl text-ink/60 max-w-[34ch]">
-              Pase el cursor o haga clic en cada poema. La restricción geométrica es
-              la obra; el texto, su sombra.
+              Pasa el cursor y haz click sobre cada poema para verlo en grande. La               restricción geométrica es
+              la forma y el texto su contenido.
             </p>
           </div>
         </div>
