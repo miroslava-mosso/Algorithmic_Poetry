@@ -19,9 +19,9 @@ export function Cruz({ lines }: { lines: string[] }) {
         <span key={`t${i}`} className="poem-cell px-2 py-0.5 tracking-[0.2em]">
           {l.trim()}
         </span>
-      ))}
+      ))}      
+<span className="poem-cell w-max max-w-none px-1 py-0.5 text-xs sm:text-sm tracking-[0.06em] whitespace-nowrap">
 
-      <span className="poem-cell w-max max-w-none px-1 py-0.5 text-[9px] sm:text-xs tracking-[0.06em] whitespace-nowrap">
         <span className="pink-underline-thin">
           {horizontal.trim()}
         </span>
