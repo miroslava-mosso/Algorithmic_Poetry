@@ -58,7 +58,7 @@ export const poems: Poem[] = [
     shape: 'espiral',
     technique: 'Literatura ergódica',
     manifest:
-      'El poema empieza desde afuera hacia adentro. Se termina cuando el espiral colapsa en el centro. Puedes comenzar otro espiral que         empiece en la última palabra del espiral anterior.',
-    lines: ['afuera', 'gira', 'la', 'palabra', 'hacia', 'adentro', 'calla'],
+      'El poema empieza desde afuera hacia adentro. Se termina cuando el espiral colapsa en el centro. Puedes comenzar otro espiral que empiece en la última palabra del espiral anterior.',
+    lines: ['Probé el sol reflejado en el agua. El'],
   },
 ];
