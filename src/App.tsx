@@ -215,7 +215,8 @@ function App() {
               <p className="font-body text-lg text-[#f7f5f1]/70 mt-6 max-w-[44ch]">
                 Si escribes un poema usando el algoritmo 
                 
-                <a href="#galeria" className="pink-underline-thin text-ink hover:text-ink transition">El diamante de Hodge</a>
+                <a href="#galeria" className="pink-underline-thin text-ink hover:text-ink transition">El diamante de Hodge
+                </a>
                 
                 <span className="pink-underline"> <a href="#mi-algoritmo" className="hover:text-ink transition">El diamante de Hodge</a> </span> y te                   gustaría compartirlo, ¡envíanoslo por correo electrónico para                      publicarlo en nuestra página!
                 </p>
