@@ -47,7 +47,7 @@ export const poems: Poem[] = [
     technique: 'Geometría',
     manifest:
       'El poema se estrecha hacia un punto inferior como un embudo que condensa el sentido en una última sílaba.',
-    lines: ['amanecer sobre el Sena', '  anecer sobre el Se  ', '    ecer sobr el     ', '      er ob          ', '        o           '],
+    lines: ['El cielo despejado, el sonido de los grillos', '  me acompañan hasta que amanece.  ', '    Qué sorda es la soledad y     ', '      qué presente es la lejanía.       ','        Prende la luz, respira.         ','          No puedo dormir.           ','            No quiero             ','              cerrar los              ', '                ojos                 '],
   },
   {
     id: 'espiral',
