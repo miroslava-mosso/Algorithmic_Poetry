@@ -228,13 +228,19 @@ function App() {
               <div>
                 <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">Manda tu poema</p>
                 <p className="font-body text-lg mt-1">
-                Incluye lo siguiente: - El diamante de Hodge con los números                       originales y otro con las palabras sustituidas.
-                - La geometría a la que corresponde.
-                - (Opcional) Número de Betti.
-                -Título de tu poema.
-                - Nombre o pseudónimo de su autor(a)
-                - Fecha de creación. 
+                Incluye lo siguiente:
                 </p>
+
+<ul className="font-body text-lg mt-2 list-disc pl-6 space-y-1">
+  <li>
+    El diamante de Hodge con los números originales y otro con las palabras sustituidas.
+  </li>
+  <li>La geometría a la que corresponde.</li>
+  <li>(Opcional) Número de Betti.</li>
+  <li>Título de tu poema.</li>
+  <li>Nombre o pseudónimo de su autor(a).</li>
+  <li>Fecha de creación.</li>
+</ul>
               </div>
             </div>
           </div>
