@@ -218,7 +218,7 @@ function App() {
                 <a href="#galeria" className="pink-underline-thin text-ink hover:text-ink transition">El diamante de Hodge
                 </a>
                 
-                <span className="pink-underline-thin text-ink hover:text-ink transition"> <a href="#mi-algoritmo" className="hover:text-ink transition">El diamante de Hodge</a> </span> y te                   gustaría compartirlo, ¡envíanoslo por correo electrónico para                      publicarlo en nuestra página!
+                <span className="pink-underline-thin"> <a href="#mi-algoritmo" className="hover:text-ink transition">El diamante de Hodge</a> </span> y te                   gustaría compartirlo, ¡envíanoslo por correo electrónico para                      publicarlo en nuestra página!
                 </p>
               <p className="font-body text-lg text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
                 Puedes mandarlo como un dibujo hecho a mano o de manera digital,                   fotografía, composición visual, collage o cualquier otra forma                    visual que explore las posibilidades del algoritmo.
