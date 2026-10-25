@@ -9,10 +9,17 @@ export function Diamante({ lines: _lines }: { lines: string[] }) {
     text: string,
     color: string,
     className: string,
+    direction: 'up' | 'down' = 'down',
   ) => (
     <span
       className={`absolute whitespace-nowrap font-mono-lt text-[10px] sm:text-xs ${className}`}
-      style={{ color, transform: 'translate(-50%, -50%) rotate(90deg)' }}
+      style={{
+        color,
+        writingMode: 'vertical-rl',
+        transform: `translate(-50%, -50%) ${
+          direction === 'up' ? 'rotate(180deg)' : ''
+        }`,
+      }}
     >
       {text}
     </span>
@@ -25,7 +32,10 @@ export function Diamante({ lines: _lines }: { lines: string[] }) {
   ) => (
     <span
       className={`absolute whitespace-nowrap font-mono-lt text-[10px] sm:text-xs ${className}`}
-      style={{ color, transform: 'translate(-50%, -50%)' }}
+      style={{
+        color,
+        transform: 'translate(-50%, -50%)',
+      }}
     >
       {text}
     </span>
@@ -42,25 +52,32 @@ export function Diamante({ lines: _lines }: { lines: string[] }) {
         {horizontal(
           'suavemente',
           space,
-          'left-[34%] top-[37%]',
+          'left-[32%] top-[37%]',
         )}
 
         {horizontal(
           'infinita',
           space,
-          'left-[53%] top-[37%]',
+          'left-[51%] top-[37%]',
+        )}
+
+        {horizontal(
+          'está',
+          space,
+          'left-[68%] top-[37%]',
         )}
 
         {vertical(
           'cerrada en',
           space,
-          'left-[77%] top-[24%]',
+          'left-[82%] top-[24%]',
         )}
 
         {vertical(
           'sí misma',
           space,
-          'left-[53%] top-[78%]',
+          'left-[51%] top-[78%]',
+          'down',
         )}
 
         {/* TIEMPO — símbolo interior, rojo oscuro */}
@@ -68,25 +85,27 @@ export function Diamante({ lines: _lines }: { lines: string[] }) {
         {horizontal(
           'los amaneceres seguirán',
           time,
-          'left-[53%] top-[48%]',
+          'left-[43%] top-[27%]',
         )}
 
         {vertical(
           'existir en el tiempo',
           time,
-          'left-[27%] top-[66%]',
+          'left-[24%] top-[61%]',
+          'up',
         )}
 
         {vertical(
           'repitiéndose y los cerezos',
           time,
-          'left-[79%] top-[66%]',
+          'left-[66%] top-[53%]',
+          'down',
         )}
 
         {horizontal(
           'aunque deje de',
           time,
-          'left-[24%] top-[83%]',
+          'left-[14%] top-[83%]',
         )}
 
         {horizontal(
