@@ -55,7 +55,7 @@ export const mathAreas: MathArea[] = [
       },
       {
         index: '02',
-        title: 'Círculo vicioso',
+        title: 'Círculo uroboros',
         technique: 'Poema circular — el último verso enlaza con el primero',
         shape: 'circulo-vicioso',
       },
