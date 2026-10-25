@@ -1,4 +1,4 @@
-/** Diamante — crece y mengua por el centro, dos vértices. */
+/** Zurvan, símbolo persa del tiempo infinito y del espacio. */
 export function Diamante({ lines }: { lines: string[] }) {
   const mid = Math.floor(lines.length / 2);
   return (
