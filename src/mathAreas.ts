@@ -45,7 +45,7 @@ export const mathAreas: MathArea[] = [
     index: 'I',
     title: 'Geometría',
     description:
-      'Los versos se despliegan en figuras: triángulos, círculos, fractales.',
+      'Los versos obedecen la geometría asignada y al mismo tiempo la geometría define al poema.',
     examples: [
       {
         index: '01',
