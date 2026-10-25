@@ -18,12 +18,9 @@ export function Diamante({
     color: string,
     position: string,
     direction: 'up' | 'down' = 'down',
-    small = false,
   ) => (
     <span
-      className={`absolute whitespace-nowrap font-mono-lt ${
-        small ? 'text-[8px]' : 'text-[10px] sm:text-xs'
-      } ${position}`}
+      className={`absolute whitespace-nowrap font-mono-lt text-[10px] sm:text-xs ${position}`}
       style={{
         color,
         writingMode: 'vertical-rl',
@@ -40,12 +37,9 @@ export function Diamante({
     text: string,
     color: string,
     position: string,
-    small = false,
   ) => (
     <span
-      className={`absolute whitespace-nowrap font-mono-lt ${
-        small ? 'text-[8px]' : 'text-[10px] sm:text-xs'
-      } ${position}`}
+      className={`absolute whitespace-nowrap font-mono-lt text-[10px] sm:text-xs ${position}`}
       style={{
         color,
         transform: 'translate(-50%, -50%)',
@@ -55,93 +49,75 @@ export function Diamante({
     </span>
   );
 
-  return (
-    <div className={compact ? 'w-full' : 'w-full overflow-x-auto'}>
-      <div
-        className={`relative mx-auto aspect-[6/5] w-full font-mono-lt ${
-          compact
-            ? 'max-w-[360px] min-w-0 overflow-hidden'
-            : 'min-w-[340px] max-w-[620px]'
-        }`}
-      >
-        {/* ESPACIO — negro */}
-        {vertical('superficie', space, 'left-[8%] top-[24%]', 'down', compact)}
+  const composition = (
+    <div
+      className={`relative aspect-[6/5] font-mono-lt ${
+        compact ? 'w-[520px]' : 'mx-auto w-full min-w-[340px] max-w-[620px]'
+      }`}
+    >
+      {/* ESPACIO — negro */}
+      {vertical('superficie', space, 'left-[8%] top-[24%]')}
 
-        {horizontal(
-          'suavemente',
-          space,
-          compact ? 'left-[25%] top-[39%]' : 'left-[25%] top-[37%]',
-          compact,
-        )}
+      {horizontal('suavemente', space, 'left-[25%] top-[37%]')}
 
-        {horizontal(
-          'infinita',
-          space,
-          compact ? 'left-[50%] top-[39%]' : 'left-[47%] top-[37%]',
-          compact,
-        )}
+      {horizontal('infinita', space, 'left-[47%] top-[37%]')}
 
-        {horizontal(
-          'está',
-          space,
-          compact ? 'left-[76%] top-[39%]' : 'left-[72%] top-[37%]',
-          compact,
-        )}
+      {horizontal('está', space, 'left-[72%] top-[37%]')}
 
-        {vertical(
-          'cerrada',
-          space,
-          compact ? 'left-[94%] top-[24%]' : 'left-[89%] top-[24%]',
-          'up',
-          compact,
-        )}
+      {vertical('cerrada', space, 'left-[89%] top-[24%]', 'up')}
 
-        {vertical(
-          'sí misma',
-          space,
-          compact ? 'left-[50%] top-[61%]' : 'left-[47%] top-[57%]',
-          'down',
-          compact,
-        )}
+      {vertical('sí misma', space, 'left-[47%] top-[57%]')}
 
-        {/* TIEMPO — rojo oscuro */}
-        {horizontal(
-          'los amaneceres seguirán',
-          time,
-          compact ? 'left-[50%] top-[25%]' : 'left-[43%] top-[27%]',
-          compact,
-        )}
+      {/* TIEMPO — rojo oscuro */}
+      {horizontal(
+        'los amaneceres seguirán',
+        time,
+        'left-[43%] top-[27%]',
+      )}
 
-        {vertical(
-          'existir en el tiempo',
-          time,
-          compact ? 'left-[19%] top-[64%]' : 'left-[24%] top-[61%]',
-          'up',
-          compact,
-        )}
+      {vertical(
+        'existir en el tiempo',
+        time,
+        'left-[24%] top-[61%]',
+        'up',
+      )}
 
-        {vertical(
-          'repitiéndose y los cerezos',
-          time,
-          compact ? 'left-[81%] top-[59%]' : 'left-[66%] top-[53%]',
-          'down',
-          compact,
-        )}
+      {vertical(
+        'repitiéndose y los cerezos',
+        time,
+        'left-[66%] top-[53%]',
+      )}
 
-        {horizontal(
-          'aunque deje de',
-          time,
-          compact ? 'left-[25%] top-[85%]' : 'left-[14%] top-[83%]',
-          compact,
-        )}
+      {horizontal(
+        'aunque deje de',
+        time,
+        'left-[14%] top-[83%]',
+      )}
 
-        {horizontal(
-          'seguirán floreciendo',
-          time,
-          compact ? 'left-[76%] top-[85%]' : 'left-[82%] top-[83%]',
-          compact,
-        )}
-      </div>
+      {horizontal(
+        'seguirán floreciendo',
+        time,
+        'left-[82%] top-[83%]',
+      )}
     </div>
   );
+
+  if (compact) {
+    return (
+      <div className="relative aspect-[6/5] w-full overflow-hidden">
+        <div
+          className="absolute top-0"
+          style={{
+            left: '50%',
+            transform: 'translateX(-50%) scale(0.45)',
+            transformOrigin: 'top center',
+          }}
+        >
+          {composition}
+        </div>
+      </div>
+    );
+  }
+
+  return <div className="w-full overflow-x-auto">{composition}</div>;
 }
