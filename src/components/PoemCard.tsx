@@ -28,7 +28,11 @@ export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
 
         <div className="flex items-center justify-center py-6 min-h-[200px] overflow-hidden">
           <div className="scale-[0.7] origin-center">
-            <PoemShapeView shape={poem.shape} lines={poem.lines} />
+            <PoemShapeView
+  shape={poem.shape}
+  lines={poem.lines}
+  compact={poem.shape === 'diamante'}
+/>
           </div>
         </div>
 
