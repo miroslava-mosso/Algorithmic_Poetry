@@ -13,10 +13,17 @@ import { Liana } from '@/components/Liana';
 interface Props {
   shape: PoemShape;
   lines: string[];
+  compact?: boolean;
 }
 
 /** Renders the geometric form of a poem, dispatching to the right shape component. */
-export function PoemShapeView({ shape, lines }: Props) {
+export function Diamante({
+  lines: _lines,
+  compact = false,
+}: {
+  lines: string[];
+  compact?: boolean;
+}) {
   switch (shape) {
     case 'liana':
       return <Liana lines={lines} />;
@@ -25,7 +32,7 @@ export function PoemShapeView({ shape, lines }: Props) {
     case 'cruz':
       return <Cruz lines={lines} />;
     case 'diamante':
-      return <Diamante lines={lines} />;
+      return <Diamante lines={lines} compact={compact} />;
     case 'piramide':
       return <Piramide lines={lines} />;
     case 'cono':
