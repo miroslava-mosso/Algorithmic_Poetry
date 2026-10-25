@@ -13,19 +13,13 @@ export function Cono({
   return (
     <div
       className={`flex flex-col items-center font-mono-lt text-ink ${
-        compact
-          ? 'w-full text-[8px] leading-tight'
-          : 'text-xs sm:text-sm'
+        compact ? 'w-max max-w-none text-[8px]' : 'text-xs sm:text-sm'
       }`}
     >
       {lines.map((l, i) => (
         <span
           key={i}
-          className={`poem-cell px-2 py-0.5 ${
-            compact
-              ? 'max-w-full whitespace-normal break-words text-center'
-              : 'whitespace-nowrap'
-          }`}
+          className="poem-cell whitespace-nowrap px-2 py-0.5"
           style={{ opacity: 1 - i * 0.1 }}
         >
           {l.trim()}
