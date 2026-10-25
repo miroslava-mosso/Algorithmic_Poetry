@@ -28,13 +28,13 @@ export const poems: Poem[] = [
   {
     id: 'diamante',
     index: '02',
-    title: 'Diamante',
-    author: 'Jacques Bens',
-    year: '1965',
+    title: 'Zurvan',
+    author: 'Símbolo persa',
+    year: '2026',
     shape: 'diamante',
-    technique: 'Contrapunto',
+    technique: 'Tarkib-band',
     manifest:
-      'Un diamante de versos: crece y mengua por el centro, dos vértices de cúspide y base.',
+      'Dios persa antiguo como personificación del tiempo infinito y el espacio. Tarkib-band es una forma poética de la literatura persa y urdu.',
     lines: ['     nube     ', '   blanca   ', '  sobre el   ', ' cielo de París ', '  sobre el   ', '   blanca   ', '     nube     '],
   },
   {
@@ -42,7 +42,7 @@ export const poems: Poem[] = [
     index: '03',
     title: 'Cono',
     author: 'Paul Braffort',
-    year: '1973',
+    year: '2026',
     shape: 'cono',
     technique: 'Geométrica',
     manifest:
@@ -54,7 +54,7 @@ export const poems: Poem[] = [
     index: '04',
     title: 'Espiral',
     author: 'Jacqueline Turner',
-    year: '1966',
+    year: '2026',
     shape: 'espiral',
     technique: 'Literatura ergódica',
     manifest:
