@@ -1,15 +1,15 @@
 
 /** Zurvan — superposición tipográfica del espacio y el tiempo. */
 
-type DiamanteProps = {
+type ZurvanProps = {
   lines: string[];
   compact?: boolean;
 };
 
-export function Diamante({
+export function Zurvan({
   lines: _lines,
   compact = false,
-}: DiamanteProps) {
+}: ZurvanProps) {
   const space = '#171717';
   const time = '#8f2638';
 
