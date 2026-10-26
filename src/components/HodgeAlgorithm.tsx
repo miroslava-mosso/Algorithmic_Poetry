@@ -318,7 +318,7 @@ export function HodgeAlgorithm() {
             </summary>
             <div className="pb-14 sm:pb-20">
               <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 max-w-[62ch] mb-8">
-                Si te queda curiosidad, puedes calcular el <em>k-ésimo número de Betti</em> de tu variedad sumando los números de Hodge a lo largo de la anti-diagonal k del diamante. La fórmula general es:
+                Si te da curiosidad, puedes calcular el <em>k-ésimo número de Betti</em>, sumando los números de Hodge a lo                   largo del renglón <em>k<em> del diamante. La fórmula general es:
               </p>
 
               <div className="border hairline p-6 sm:p-10 mb-10 bg-[#f4b6c2]/8">
