@@ -8,7 +8,7 @@ export function Espiral({ lines }: EspiralProps) {
 
   // Espiral principal: grande, en la parte superior izquierda.
   const centerX = 96;
-  const centerY = 68;
+  const centerY = 38;
   const startRadius = 82;
   const endRadius = 3;
 
