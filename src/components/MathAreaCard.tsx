@@ -6,7 +6,7 @@ import { Lightbox } from '@/components/Lightbox';
 const enlargedShapes = new Set([
   'pascal-triangle',
   'circulo-vicioso',
-  'overhand-knot',
+  'hopf-link',
   'figure-eight-knot',
   'trefoil-knot',
   'konigsberg',
