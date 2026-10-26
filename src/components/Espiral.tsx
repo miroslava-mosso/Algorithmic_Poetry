@@ -6,13 +6,13 @@ type EspiralProps = {
 export function Espiral({ lines }: EspiralProps) {
   const verse = lines.join(' ').trim();
 
-  // Espiral principal: parte superior izquierda.
-  const centerX = 92;
-  const centerY = 80;
-  const startRadius = 66;
+  // Espiral principal: grande, en la parte superior izquierda.
+  const centerX = 96;
+  const centerY = 78;
+  const startRadius = 82;
   const endRadius = 3;
 
-  // Conservamos el ajuste que te funcionó.
+  // Conserva las vueltas que ya funcionaban.
   const turns = Math.max(1.2, verse.length / 41);
   const points = 500;
 
@@ -33,27 +33,24 @@ export function Espiral({ lines }: EspiralProps) {
     )
     .join(' ');
 
-  // Espiral pequeño: parte inferior derecha.
-  const smallCenterX = 238;
-  const smallCenterY = 205;
-  const smallStartRadius = 32;
-  const smallEndRadius = 2;
+  // Espiral pequeño: ampliado, en la parte inferior derecha.
+  const smallCenterX = 236;
+  const smallCenterY = 208;
+  const smallStartRadius = 43;
+  const smallEndRadius = 2.7;
   const smallTurns = 1.2;
 
-  const smallCoordinates = Array.from(
-    { length: 301 },
-    (_, i) => {
-      const t = i / 300;
-      const angle = -Math.PI / 2 + t * smallTurns * Math.PI * 2;
-      const radius =
-        smallStartRadius * (1 - t) + smallEndRadius * t;
+  const smallCoordinates = Array.from({ length: 301 }, (_, i) => {
+    const t = i / 300;
+    const angle = -Math.PI / 2 + t * smallTurns * Math.PI * 2;
+    const radius =
+      smallStartRadius * (1 - t) + smallEndRadius * t;
 
-      return [
-        smallCenterX + radius * Math.cos(angle),
-        smallCenterY + radius * Math.sin(angle),
-      ];
-    }
-  );
+    return [
+      smallCenterX + radius * Math.cos(angle),
+      smallCenterY + radius * Math.sin(angle),
+    ];
+  });
 
   const smallSpiralPath = smallCoordinates
     .map(([x, y], i) =>
