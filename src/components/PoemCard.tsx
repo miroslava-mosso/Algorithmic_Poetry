@@ -36,7 +36,7 @@ export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
 className={
   poem.shape === 'diamante'
     ? 'w-full'
-    : 'scale-[0.7] origin-center'
+    : 'scale-[0.7] origin-center -my-6'
 }
             
 
