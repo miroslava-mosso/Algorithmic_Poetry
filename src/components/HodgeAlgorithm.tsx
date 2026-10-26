@@ -250,7 +250,7 @@ export function HodgeAlgorithm() {
 
               <div className="mt-8">
                 <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6">
-                  <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">El diamante completo con las palabras sustituidas</span>
+                  <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">Tallando el diamante de                       Hodge, ahora con las palabras sustituidas</span>
                   <div className="flex-1 flex items-center justify-center py-6">
                     <Diamond values={wordK3} />
                   </div>
