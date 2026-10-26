@@ -299,6 +299,7 @@ export function HodgeAlgorithm() {
             </summary>
             <div className="pb-14 sm:pb-20">
               
+              
               <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 max-w-[62ch] mb-8">
   Si te da curiosidad, puedes calcular el <em>k-ésimo número de Betti</em> sumando los números de Hodge para los que p + q = k; en el diamante, cada suma corresponde a una diagonal. La fórmula general es:
 </p>
@@ -343,6 +344,9 @@ export function HodgeAlgorithm() {
     </div>
   ))}
 </div>
+            </div>
+          </details>
+        </div>
 
         {/* Último gesto */}
         <div className="reveal mt-12 pt-8 font-body text-lg sm:text-xl leading-[1.6] text-ink/75">
