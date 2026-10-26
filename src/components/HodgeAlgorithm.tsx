@@ -228,11 +228,11 @@ export function HodgeAlgorithm() {
                     <li>
                       Donde veas un <strong>0</strong>, agrega algo relacionado con la nada, el vacío o una pausa. Si es una acción sin palabras, escríbela fonéticamente, como en los subtítulos para personas sordas y con discapacidad auditiva, e.g. <span className="font-mono-lt text-sm text-ink/60">[silencio]</span>. Estas palabras pueden variar en cada aparición, o pueden simplemente ser espacios vacíos.
                     </li>
-                    <li>Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número.</li>
+                    <li>Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número. En nuestro ejemplo sería un verso de 20 sílabas. </li>
                   </ol>
 
                   <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mb-10">
-                    El poema puede ser leído como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección                        revela un recorrido distinto por el diamante. En nuestro ejemplo sería un verso de 20 sílabas.
+                    El poema puede ser leído como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección                        revela un recorrido distinto por el diamante. 
                   </p>
                 </div>
 
