@@ -172,7 +172,7 @@ export function HodgeAlgorithm() {
           <details className="area-accordion border-b hairline">
             <summary className="cursor-pointer list-none select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#f4b6c2] focus-visible:outline-offset-8">
               <div className="py-8 sm:py-10 flex items-center justify-between gap-6">
-                <StepHeader number="01" title="Mira el diamante antes de tocarlo" />
+                <StepHeader number="01" title="Explorando la mina de diamantes" />
                 <span className="area-chevron shrink-0 flex items-center justify-center w-9 h-9 border hairline font-mono-lt text-lg text-ink/65" aria-hidden="true">
                   ↓
                 </span>
@@ -180,7 +180,7 @@ export function HodgeAlgorithm() {
             </summary>
             <div className="pb-14 sm:pb-20">
               <p className="font-body text-lg sm:text-xl text-ink/70 max-w-[60ch] mb-9">
-                Tomemos una superficie K3. A la izquierda está el diamante de Hodge el términos de los números de Hodge como variables. A                 la derecha, sustituímos los valores de los números de Hodge correspondientes a la geometría elegida.
+                Tomemos una superficie K3. A la izquierda está el diamante de Hodge el términos de los números de Hodge como variables. A                 la derecha, sustituimos los valores de los números de Hodge correspondientes a la geometría elegida.
               </p>
 
               <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] items-center">
