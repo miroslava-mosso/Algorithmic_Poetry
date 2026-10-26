@@ -328,7 +328,7 @@ export function HodgeAlgorithm() {
               </div>
 
               <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 max-w-[62ch] mb-8">
-                Reemplazamos los números de Hodge por las palabras y versos de nuestro ejemplo. Los números de Betti son una                   suma, la suma se vuelve un tipo de lectura, i.e., cada número de Betti es el total de palabras y versos que                    confluyen en esa diagonal.
+                Reemplazamos los números de Hodge por las palabras y versos de nuestro ejemplo. Los números de Betti son una                   suma, la suma se vuelve un tipo de lectura, i.e., cada número de Betti es el total de palabras y versos que                    confluyen en ese nivel.
               </p>
 
               <div className="grid gap-6 sm:grid-cols-3">
