@@ -138,23 +138,23 @@ export function HodgeAlgorithm() {
           <div>
             <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Mi algoritmo</span>
             <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
-              Un poema en forma de <span className="pink-underline">diamante</span>
+              Un poema en un arreglo de <span className="pink-underline">diamante</span>
             </h2>
             <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mt-7 max-w-[34ch]">
-              Mi algoritmo, o constricción, está inspirado en el diamante de Hodge de las <em>Kähler manifolds</em>.
+              Mi algoritmo --o constricción-- está inspirado en el diamante de Hodge de las <em>Kähler manifolds</em>.
             </p>
             <p className="font-mono-lt text-[10px] uppercase text-ink/45 mt-8 leading-[1.7]">
-              Autora: Miroslava Mosso Rojas
+              Técnica de: Miroslava Mosso Rojas
             </p>
           </div>
 
           <div className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 space-y-5">
             <p>
-              Elige una geometría que te intrigue y deja que sus simetrías escriban contigo. No hace falta dominar toda la matemática: basta con mirar el diamante como quien mira un mapa antes de emprender un viaje.
+              Elige tu geometría de <em>Kähler</em> favorita y deja que sus números de Hodge definan la longitud de los versos. No                      necesitas conocer toda la teoría matemática detrás, siguiendo los pasos de este algoritmo vamos a pulir este diamante el                  bruto
             </p>
             <div className="border-l-2 border-[#f4b6c2] pl-5 py-1">
               <p className="font-mono-lt text-[11px] uppercase text-ink/60 leading-[1.7]">
-                <strong className="font-normal text-ink">Primera chispa:</strong> escoge tu <em>Kähler manifold</em> favorita y busca su diamante de Hodge asociado.
+                <strong className="font-normal text-ink">Extracción:</strong> escoge tu <em>Kähler manifold</em> favorita y busca su                       diamante de Hodge asociado.
               </p>
             </div>
             <p>
