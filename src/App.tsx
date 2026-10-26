@@ -120,7 +120,7 @@ function App() {
               <a className="burnt-marker" href="https://www.instagram.com/batsssht/" target="_blank" rel="noreferrer">
                 <strong>Regina Roze</strong>
               </a>{' '}
-              por introducirme al mundo de la poesía potencial, a través de los
+              por introducirme al mundo de la poesía potencial a través de los
               laboratorios de poesía potencial en México,{' '}
               <a className="burnt-marker" href="https://www.instagram.com/popoesia/" target="_blank" rel="noreferrer">
                 <strong>popoesía</strong>
