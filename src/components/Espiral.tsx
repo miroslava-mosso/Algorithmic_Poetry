@@ -36,7 +36,7 @@ export function Espiral({ lines }: EspiralProps) {
   // Espiral pequeño: ampliado, en la parte inferior derecha.
   const smallCenterX = 236;
   const smallCenterY = 208;
-  const smallStartRadius = 69;
+  const smallStartRadius = 70;
   const smallEndRadius = 2.7;
   const smallTurns = 1.2;
 
@@ -110,7 +110,7 @@ export function Espiral({ lines }: EspiralProps) {
 
       <text
         className="font-mono-lt"
-        fontSize="7"
+        fontSize="9"
         fill="#0d0d0d"
         letterSpacing="0.25"
       >
