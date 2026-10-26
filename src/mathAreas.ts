@@ -50,7 +50,7 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'Triángulo de Pascal',
-        technique: 'Cada fila suma la anterior — el número es la palabra',
+        technique: 'Cada número representa el número de sílabas de la palabra que debes escribir. Puedes hacer el triángulo de Pascan tan                   grande como desees.',
         shape: 'pascal-triangle',
       },
       {
