@@ -142,7 +142,13 @@ function App() {
               </h2>
             </div>
             <p className="font-body text-lg sm:text-xl text-ink/60 max-w-[34ch]">
-              Pasa el cursor y haz clic sobre cada poema para verlo en grande. La restricción geométrica define la forma y el                texto su contenido. Autora de los poemas: Miroslava Mosso Rojas.
+              Pasa el cursor y haz clic sobre cada poema para verlo en grande. La restricción geométrica define la forma y el                texto su contenido. 
+               {/* Authorship */}
+        <div className="reveal mt-10 pt-6 border-t hairline">
+          <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
+            Algoritmo y constricción poética por <span className="text-ink">Miroslava Mosso Rojas</span>
+          </p>
+        </div>
             </p>
           </div>
         </div>
