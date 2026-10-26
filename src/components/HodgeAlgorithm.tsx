@@ -254,7 +254,7 @@ export function HodgeAlgorithm() {
                   <div className="flex-1 flex items-center justify-center py-6">
                     <Diamond values={wordK3} />
                   </div>
-                  <span className="font-body text-sm text-ink/55 italic text-center block">superficie K3 traducida a poema</span>
+                  <span className="font-body text-sm text-ink/55 italic text-center block">Diamante de Hodge de la superficie                     K3 traducido en un poema</span>
                 </div>
               </div>
             </div>
