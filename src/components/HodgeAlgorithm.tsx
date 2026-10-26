@@ -238,7 +238,7 @@ export function HodgeAlgorithm() {
 
                 <div>
                   <div className="border hairline p-6 sm:p-8">
-                    <span className="font-mono-lt text-[10px] uppercase text-ink/45">Ejemplo de traducción de los números a las palabras</span>
+                    <span className="font-mono-lt text-[10px] uppercase text-ink/45">Ejemplo de traducción de los números a                         las palabras</span>
                     <div className="mt-6 space-y-3 font-body text-lg sm:text-xl leading-[1.6]">
                       <p><span className="font-mono-lt text-[#a84739]">1</span> → <span className="pink-underline-thin">bruma</span></p>
                       <p><span className="font-mono-lt text-[#a84739]">0</span> → <span className="font-mono-lt text-sm">[silencio]</span></p>
@@ -250,7 +250,7 @@ export function HodgeAlgorithm() {
 
               <div className="mt-8">
                 <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6">
-                  <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">Puliendo el diamante de                       Hodge, ahora con las palabras sustituidas</span>
+                  <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">Puliendo el diamante de                       Hodge: ahora con los números sustituídos por las palabras.</span>
                   <div className="flex-1 flex items-center justify-center py-6">
                     <Diamond values={wordK3} />
                   </div>
