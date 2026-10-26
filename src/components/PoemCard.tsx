@@ -11,7 +11,7 @@ export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
     <>
       <article
         id={poem.id}
-        className="poem-cell lift reveal min-w-0 overflow-hidden grid grid-rows-[auto_1fr_auto] border hairline border-t-0 border-r-0 border-l-0 px-5 py-8 sm:px-7 sm:py-10 cursor-pointer"
+        className="poem-cell lift reveal min-w-0 overflow-hidden grid grid-rows-[auto_auto_auto] border hairline border-t-0 border-r-0 border-l-0 px-5 py-8 sm:px-7 sm:py-10 cursor-pointer"
         style={{ transitionDelay: `${(i % 3) * 80}ms` }}
         onClick={() => setOpen(true)}
       >
@@ -30,7 +30,7 @@ export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
           </span>
         </header>
 
-        <div className="flex items-center justify-center py-6 min-h-[200px] overflow-hidden">
+        <div className="flex items-center justify-center py-0 min-h-0 overflow-hidden">
           <div
   
 className={
