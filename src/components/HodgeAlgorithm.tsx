@@ -189,7 +189,7 @@ export function HodgeAlgorithm() {
                   <div className="flex-1 flex items-center justify-center">
                     <Diamond values={rawK3} roomy />
                   </div>
-                  <span className="font-body text-base text-ink/55 italic text-center">la arquitectura, antes del poema</span>
+                  <span className="font-body text-base text-ink/55 italic text-center">El esqueleto del diamante, antes del poema</span>
                 </div>
 
                 <svg viewBox="0 0 100 80" className="w-20 h-16 mx-auto text-[#a84739]" aria-hidden="true">
@@ -198,11 +198,11 @@ export function HodgeAlgorithm() {
                 </svg>
 
                 <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between bg-[#f4b6c2]/10">
-                  <span className="font-mono-lt text-[10px] uppercase text-ink/55">Sustituyendo los números de Hodge para una superficie K3</span>
+                  <span className="font-mono-lt text-[10px] uppercase text-ink/55">Primer corte (sustituyendo los números de Hodge para una superficie K3)</span>
                   <div className="flex-1 flex items-center justify-center">
                     <Diamond values={numericK3} roomy />
                   </div>
-                  <span className="font-body text-base text-ink/60 italic text-center">la superficie K3, ya despierta</span>
+                  <span className="font-body text-base text-ink/60 italic text-center">El diamante de Hodge de la superficie K3 tomando forma</span>
                 </div>
               </div>
             </div>
