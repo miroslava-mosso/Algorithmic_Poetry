@@ -12,7 +12,7 @@ export function Espiral({ lines }: EspiralProps) {
   const endRadius = 3;
 
   // Menos vueltas para que el poema termine al colapsar en el centro.
-  const turns = Math.max(1.15, verse.length / 39);
+  const turns = Math.max(1.15, verse.length / 41);
 
   const points = 500;
 
