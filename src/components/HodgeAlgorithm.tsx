@@ -223,7 +223,7 @@ export function HodgeAlgorithm() {
                 <div>
                   <ol className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 space-y-4 list-decimal pl-6 mb-10">
                     <li>
-                      Donde veas un <strong>1</strong>, escribe una palabra. No tiene que ser necesariamente la misma palabra cada vez: cada 1 puede convertirse en una palabra distinta.
+                      Donde veas un <strong>1</strong>, escribe una palabra. No es necesario que siempre uses la misma                               palabra; cada 1 puede convertirse en una palabra distinta.
                     </li>
                     <li>
                       Donde veas un <strong>0</strong>, agrega algo relacionado con la nada, el vacío o una pausa. Si es silencio, escríbelo fonéticamente, como en los subtítulos para personas sordas: <span className="font-mono-lt text-sm text-ink/60">[silencio]</span>. Estas palabras pueden variar en cada aparición, o pueden simplemente ser espacios vacíos.
