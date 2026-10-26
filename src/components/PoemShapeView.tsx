@@ -1,7 +1,7 @@
 
 import type { PoemShape } from '@/poems';
 import { Cruz } from '@/components/Cruz';
-import { Diamante } from '@/components/Diamante';
+import { Zurvan } from '@/components/Zurvan';
 import { Cono } from '@/components/Cono';
 import { Espiral } from '@/components/Espiral';
 
@@ -21,8 +21,8 @@ export function PoemShapeView({
   switch (shape) {
     case 'cruz':
       return <Cruz lines={lines} />;
-    case 'diamante':
-      return <Diamante lines={lines} compact={compact} />;
+    case 'zurvan':
+      return <Zurvan lines={lines} compact={compact} />;
     case 'cono':
       return <Cono lines={lines} compact={compact} />;
     case 'espiral':
