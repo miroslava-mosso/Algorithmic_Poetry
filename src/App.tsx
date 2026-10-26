@@ -56,7 +56,7 @@ function App() {
                 <span className="text-ink/20">/</span>
                 <span>5 áreas matemáticas</span>
                 <span className="text-ink/20">/</span>
-                <span>1 constricción diferente</span>
+                <span>1 constricción diferente para cada poema</span>
                 <span className="text-ink/20">/</span>
                 <span>1 algoritmo nuevo</span>
                 <span className="text-ink/20">/</span>
