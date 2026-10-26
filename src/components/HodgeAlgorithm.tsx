@@ -296,7 +296,7 @@ export function HodgeAlgorithm() {
               <SymmetryBlock
                 title="Dualidad de Serre"
                 description={<>
-                  La dualidad de Serre establece que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">n-p,n-q</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup>, h<sup className="text-[0.72em]">10</sup> = h<sup className="text-[0.72em]">12</sup>, h<sup className="text-[0.72em]">01</sup> = h<sup className="text-[0.72em]">21</sup>, y h<sup className="text-[0.72em]">20</sup> = h<sup className="text-[0.72em]">02</sup>. El diamante se refleja entonces a través de su centro, como un espejo rotado 180°.
+                  La dualidad de Serre establece que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">n-q,n-p</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1. El diamante se refleja 180° como si fuera un espejo.
                 </>}
                 before={rawK3}
                 after={serreK3}
