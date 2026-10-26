@@ -141,7 +141,7 @@ export function HodgeAlgorithm() {
               Un poema en un arreglo de <span className="pink-underline">diamante</span>
             </h2>
             <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mt-7 max-w-[34ch]">
-              Mi algoritmo --o constricción-- está inspirado en el diamante de Hodge de las <em>Kähler manifolds</em>.
+              Mi algoritmo —o constricción— está inspirado en el diamante de Hodge de las <em>Kähler manifolds</em>.
             </p>
             <p className="font-mono-lt text-[10px] uppercase text-ink/45 mt-8 leading-[1.7]">
               Técnica de: Miroslava Mosso Rojas
@@ -180,7 +180,7 @@ export function HodgeAlgorithm() {
             </summary>
             <div className="pb-14 sm:pb-20">
               <p className="font-body text-lg sm:text-xl text-ink/70 max-w-[60ch] mb-9">
-                Tomemos una superficie K3. A la izquierda está el diamante de Hodge el términos de los números de Hodge como variables. A                 la derecha, sustituímos los valores de los números de Hodge correspondientes a la geometría elegida, en esto caso, una                    superficie K3.
+                Tomemos una superficie K3. A la izquierda está el diamante de Hodge el términos de los números de Hodge como variables. A                 la derecha, sustituímos los valores de los números de Hodge correspondientes a la geometría elegida.
               </p>
 
               <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] items-center">
