@@ -1,4 +1,4 @@
-export type PoemShape = 'cruz' | 'diamante' | 'cono' | 'espiral';
+export type PoemShape = 'cruz' | 'zurvan' | 'cono' | 'espiral';
 
 export interface Poem {
   id: string;
@@ -26,12 +26,12 @@ export const poems: Poem[] = [
     lines: ['e', 'l', ' ', 'd', 'a', 'ñ', 'o','de mi país el destierro ', 's', 't', 'á', '', 'h', 'e', 'c', 'h', 'o' ],
   },
   {
-    id: 'diamante',
+    id: 'zurvan',
     index: '02',
     title: 'Zurvan',
     author: 'Símbolo persa',
     year: '2026',
-    shape: 'diamante',
+    shape: 'zurvan',
     technique: 'Tarkib-band',
     manifest:
       'Dios persa antiguo como personificación del tiempo infinito y el espacio. Tarkib-band es una forma poética de la literatura persa       y urdu.',
