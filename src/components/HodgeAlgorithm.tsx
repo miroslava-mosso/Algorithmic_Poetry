@@ -48,9 +48,9 @@ const conjugationK3: ReactNode[][] = [
 
 const serreK3: ReactNode[][] = [
   [hpq(2, 2)],
-  [hpq(1, 2), hpq(2, 1)],
-  [hpq(0, 2), hpq(1, 1), hpq(2, 0)],
-  [hpq(0, 1), hpq(1, 0)],
+  [hpq(2, 1), hpq(1, 2)],
+  [hpq(2, 0), hpq(1, 1), hpq(0, 2)],
+  [hpq(1, 0), hpq(0, 1)],
   [hpq(0, 0)],
 ];
 
@@ -296,7 +296,7 @@ export function HodgeAlgorithm() {
               <SymmetryBlock
                 title="Dualidad de Serre"
                 description={<>
-                  La dualidad de Serre establece que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">n-q,n-p</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1. El diamante se refleja 180° como si fuera un espejo.
+                  La dualidad de Serre establece que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">n-q,n-p</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1. El diamante se refleja con respecto al eje horizontal como si fuera un espejo.
                 </>}
                 before={rawK3}
                 after={serreK3}
