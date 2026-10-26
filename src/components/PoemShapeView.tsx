@@ -2,7 +2,6 @@
 import type { PoemShape } from '@/poems';
 import { Cruz } from '@/components/Cruz';
 import { Diamante } from '@/components/Diamante';
-import { Piramide } from '@/components/Piramide';
 import { Cono } from '@/components/Cono';
 import { Espiral } from '@/components/Espiral';
 
