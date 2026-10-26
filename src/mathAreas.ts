@@ -4,7 +4,7 @@ export type MathShapeId =
   | 'circulo-vicioso'
   | 'koch-snowflake'
   // Nudos
-  | 'overhand-knot'
+  | 'hopf-link'
   | 'figure-eight-knot'
   | 'trefoil-knot'
   // Grafos
@@ -72,13 +72,13 @@ export const mathAreas: MathArea[] = [
     index: 'II',
     title: 'Nudos',
     description:
-      'Poemas inspirados en la teoría de nudos: cuerdas que se cruzan, lazadas que se entrelazan, versos que no se pueden desatar sin cortar.',
+      'Caligramas inspirados en la teoría de nudos, versos entrelazados que no se pueden desatar sin cortar.',
     examples: [
       {
         index: '01',
-        title: 'Overhand knot',
-        technique: 'El nudo más simple — una lazada, un cruce, imposible de desatar',
-        shape: 'overhand-knot',
+        title: 'Hopf link',
+        technique: 'Es el link no-trivial más simple que tiene más de una componente. Consiste en 2 círculos enlazados entre sí una vez.',
+        shape: 'hopf-link',
       },
       {
         index: '02',
