@@ -54,7 +54,7 @@ export function MathExampleShape({ shape }: Props) {
             el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace · el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace ·
           </textPath>
         </text>
-        <text x="110" y="118" textAnchor="middle" fontSize="7.5" fill={PINK}>∞</text>
+        <text x="110" y="118" textAnchor="middle" fontSize="7.5" fill={PINK}>.</text>
       </svg>
     );
 
