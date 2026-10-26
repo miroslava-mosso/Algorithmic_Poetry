@@ -64,7 +64,7 @@ export function Diamante({
 
       {horizontal('está', space, 'left-[72%] top-[37%]')}
 
-      {vertical('cerrada', space, 'left-[89%] top-[24%]', 'up')}
+      {vertical('cerrada en', space, 'left-[89%] top-[24%]', 'up')}
 
       {vertical('sí misma', space, 'left-[47%] top-[57%]')}
 
