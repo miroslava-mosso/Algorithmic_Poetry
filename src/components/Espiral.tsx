@@ -9,7 +9,7 @@ export function Espiral({ lines }: EspiralProps) {
   // Espiral principal: parte superior izquierda.
   const centerX = 92;
   const centerY = 80;
-  const startRadius = 86;
+  const startRadius = 66;
   const endRadius = 3;
 
   // Conservamos el ajuste que te funcionó.
@@ -36,7 +36,7 @@ export function Espiral({ lines }: EspiralProps) {
   // Espiral pequeño: parte inferior derecha.
   const smallCenterX = 238;
   const smallCenterY = 205;
-  const smallStartRadius = 62;
+  const smallStartRadius = 32;
   const smallEndRadius = 2;
   const smallTurns = 1.2;
 
