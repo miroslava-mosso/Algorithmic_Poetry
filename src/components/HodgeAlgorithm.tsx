@@ -266,7 +266,7 @@ export function HodgeAlgorithm() {
               <SymmetryBlock
                 title="Conjugación compleja"
                 description={<>
-                  La conjugación compleja intercambia los índices p y q en los números de Hodge; es decir, h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. En el diamante, esto refleja cada fila respecto a su eje vertical. Para la superficie K3, h<sup className="text-[0.72em]">20</sup> = h<sup className="text-[0.72em]">02</sup> = 1 y h<sup className="text-[0.72em]">10</sup> = h<sup className="text-[0.72em]">01</sup> = 0. En tu poema, puedes reflejar el primer verso en el último, el segundo en el penúltimo, y así sucesivamente.
+                  La conjugación compleja intercambia los índices p y q en los números de Hodge; es decir, h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. En el diamante, cada fila se refleja con respecto a su eje vertical. Para la superficie K3, h<sup className="text-[0.72em]">20</sup> = h<sup className="text-[0.72em]">02</sup> = 1 y h<sup className="text-[0.72em]">10</sup> = h<sup className="text-[0.72em]">01</sup> = 0. En tu poema, puedes reflejar el primer verso en el último, el segundo en el penúltimo, y así sucesivamente.
                 </>}
                 before={rawK3}
                 after={conjugationK3}
