@@ -172,7 +172,7 @@ export function HodgeAlgorithm() {
           <details className="area-accordion border-b hairline">
             <summary className="cursor-pointer list-none select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#f4b6c2] focus-visible:outline-offset-8">
               <div className="py-8 sm:py-10 flex items-center justify-between gap-6">
-                <StepHeader number="01" title="Explorando la mina de diamantes" />
+                <StepHeader number="01" title="Explorando la mina: eligiendo la geometría" />
                 <span className="area-chevron shrink-0 flex items-center justify-center w-9 h-9 border hairline font-mono-lt text-lg text-ink/65" aria-hidden="true">
                   ↓
                 </span>
@@ -212,7 +212,7 @@ export function HodgeAlgorithm() {
           <details className="area-accordion border-b hairline">
             <summary className="cursor-pointer list-none select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#f4b6c2] focus-visible:outline-offset-8">
               <div className="py-8 sm:py-10 flex items-center justify-between gap-6">
-                <StepHeader number="02" title="Sustituye los números por lenguaje" />
+                <StepHeader number="02" title="Pulido: Sustituye los números por lenguaje" />
                 <span className="area-chevron shrink-0 flex items-center justify-center w-9 h-9 border hairline font-mono-lt text-lg text-ink/65" aria-hidden="true">
                   ↓
                 </span>
