@@ -277,7 +277,7 @@ export function HodgeAlgorithm() {
               <SymmetryBlock
                 title="Dualidad de Serre"
                 description={<>
-                  La dualidad de Serre establece que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">n-q,n-p</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">2-q,2-p</sup>. En el diamante, esta relación corresponde a una rotación de 180°; por ejemplo, h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1. En tu poema, puedes reflejar las filas superiores en las inferiores.
+                  La dualidad de Serre establece que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">n-q,n-p</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">2-q,2-p</sup>. En el diamante, esto se ve reflejado en una rotación de 180°. Es decir,los números de Hodge se ven reflejados con respecto al eje horizontal principal, tal que h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1. En tu poema, puedes intercambiar las filas superiores por las inferiores.
                 </>}
                 before={rawK3}
                 after={serreK3}
