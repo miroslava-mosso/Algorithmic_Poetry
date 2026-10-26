@@ -185,7 +185,7 @@ export function HodgeAlgorithm() {
 
               <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] items-center">
                 <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between">
-                  <span className="font-mono-lt text-[10px] uppercase text-ink/45">Diamante en bruto (sin sustituir aún los números de Hodge)</span>
+                  <span className="font-mono-lt text-[10px] uppercase text-ink/45">Diamante en bruto: sin sustituir aún los                       valores de los números de Hodge.</span>
                   <div className="flex-1 flex items-center justify-center">
                     <Diamond values={rawK3} roomy />
                   </div>
