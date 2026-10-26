@@ -88,7 +88,7 @@ export const mathAreas: MathArea[] = [
       },
       {
         index: '03',
-        title: 'Nudo trébol',
+        title: 'Nudo de trébol',
         technique: 'Tres cruces alternados — el nudo no trivial más pequeño',
         shape: 'trefoil-knot',
       },
