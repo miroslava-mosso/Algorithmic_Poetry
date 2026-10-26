@@ -124,7 +124,7 @@ function App() {
               laboratorios de poesía potencial en México,{' '}
               <a className="burnt-marker" href="https://www.instagram.com/popoesia/" target="_blank" rel="noreferrer">
                 <strong>popoesía</strong>
-              </a>, en donde aprendí a hacer muchos de los poemas que aquí muestro.
+              </a>, en donde aprendí a hacer muchos de los poemas que aquí muestro. Y si tienen curiosidad por aprender muchas otras constricciones y juegos, les recomiendo unirse a sus laboratorios.
             </p>
           </div>
         </div>
