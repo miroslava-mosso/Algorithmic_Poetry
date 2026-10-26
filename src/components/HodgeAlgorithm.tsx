@@ -31,11 +31,11 @@ const rawK3: ReactNode[][] = [
 ];
 
 const hodgeSymK3: ReactNode[][] = [
-  [hpq(0, 0)],
-  [hpq(0, 1), hpq(1, 0)],
-  [hpq(0, 2), hpq(1, 1), hpq(2, 0)],
-  [hpq(1, 2), hpq(2, 1)],
   [hpq(2, 2)],
+  [hpq(2, 1), hpq(1, 2)],
+  [hpq(2, 0), hpq(1, 1), hpq(0, 2)],
+  [hpq(1, 0), hpq(0, 1)],
+  [hpq(0, 0)],
 ];
 
 const conjugationK3: ReactNode[][] = [
