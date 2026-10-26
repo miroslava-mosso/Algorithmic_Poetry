@@ -232,7 +232,7 @@ export function HodgeAlgorithm() {
                   </ol>
 
                   <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mb-10">
-                    El poema se puede leer como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección                        revela un recorrido distinto del diamante. 
+                    El poema se puede leer como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección                          revela un recorrido distinto del diamante. 
                   </p>
                 </div>
 
