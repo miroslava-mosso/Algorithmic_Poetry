@@ -285,7 +285,7 @@ export function HodgeAlgorithm() {
               <SymmetryBlock
                 title="Complex conjugation"
                 description={<>
-                  La conjugación compleja refleja el diamante con respecto a su eje vertical, es decir h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. En la superficie K3, h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1 y h<sup className="text-[0.72em]">10</sup> = h<sup className="text-[0.72em]">21</sup> = 0, así que la forma se preserva. En tu poema, puedes reflejar el primer verso en el último, el segundo en el penúltimo, y así sucesivamente.
+                  La conjugación compleja refleja el diamante con respecto a su eje vertical, es decir h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. En la superficie K3, h<sup className="text-[0.72em]">20</sup> = h<sup className="text-[0.72em]">02</sup> = 1 y h<sup className="text-[0.72em]">10</sup> = h<sup className="text-[0.72em]">01</sup> = 0 = h<sup className="text-[0.72em]">20</sup> = h<sup className="text-[0.72em]">02</sup>, así que la forma se preserva. En tu poema, puedes reflejar el primer verso en el último, el segundo en el penúltimo, y así sucesivamente.
                 </>}
                 before={rawK3}
                 after={conjugationK3}
