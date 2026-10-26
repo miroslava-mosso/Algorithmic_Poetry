@@ -103,7 +103,7 @@ export function Espiral({ lines }: EspiralProps) {
       <use
         href="#poem-small-spiral-path"
         fill="none"
-        stroke="#a3a878"
+        stroke="#b7d957"
         strokeWidth="0.8"
         strokeOpacity="0.8"
       />
