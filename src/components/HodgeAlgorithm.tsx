@@ -232,7 +232,7 @@ export function HodgeAlgorithm() {
                   </ol>
 
                   <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mb-10">
-                    El poema puede ser leído como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección revela un recorrido distinto por el diamante. En nuestro ejemplo sería un verso de 20 sílabas.
+                    El poema puede ser leído como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección                        revela un recorrido distinto por el diamante. En nuestro ejemplo sería un verso de 20 sílabas.
                   </p>
                 </div>
 
