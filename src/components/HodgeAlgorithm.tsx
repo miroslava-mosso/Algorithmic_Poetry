@@ -226,9 +226,9 @@ export function HodgeAlgorithm() {
                       Donde veas un <strong>1</strong>, escribe una palabra. No es necesario que siempre uses la misma                               palabra; cada 1 puede convertirse en una palabra distinta.
                     </li>
                     <li>
-                      Donde veas un <strong>0</strong>, agrega algo relacionado con la nada, el vacío o una pausa. Si es una acción sin palabras, escríbela fonéticamente, como en los subtítulos para personas sordas y con discapacidad auditiva, e.g. <span className="font-mono-lt text-sm text-ink/60">[silencio]</span>. Estas palabras pueden variar en cada aparición, o pueden simplemente ser espacios vacíos.
+                      Donde veas un <strong>0</strong>, agrega algo relacionado con la nada, el vacío o una pausa. Si es una                         acción sin palabras, escríbela fonéticamente, como en los subtítulos para personas sordas y con                                discapacidad auditiva, e.g., <span className="font-mono-lt text-sm text-ink/60">[silencio]</span>. Estas                       palabras pueden variar en cada aparición, o pueden simplemente ser espacios vacíos.
                     </li>
-                    <li>Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número. En nuestro ejemplo sería un verso de 20 sílabas. </li>
+                    <li>Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número.                       En nuestro ejemplo sería un verso de 20 sílabas. </li>
                   </ol>
 
                   <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mb-10">
