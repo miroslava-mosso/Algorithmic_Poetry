@@ -274,7 +274,7 @@ export function HodgeAlgorithm() {
               <SymmetryBlock
                 title="Simetría de Hodge"
                 description={<>
-                  La simetría de Hodge refleja el diamante sobre su eje vertical: h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. La columna izquierda se vuelve la derecha, y viceversa. En la superficie K3, el diamante ya es simétrico, así que la forma se preserva; pero en tu poema puedes aprovechar este reflejo para repetir, invertir o cambiar las palabras de cada lado.
+                  Las simetrías del diamante de Hodge reflejan el diamante sobre su eje vertical: h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. La columna izquierda se vuelve la derecha, y viceversa. En la superficie K3, el diamante ya es simétrico, así que la forma se preserva; pero en tu poema puedes aprovechar este reflejo para repetir, invertir o cambiar las palabras de cada lado.
                 </>}
                 before={rawK3}
                 after={hodgeSymK3}
