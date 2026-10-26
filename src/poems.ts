@@ -53,7 +53,7 @@ export const poems: Poem[] = [
     id: 'espiral',
     index: '04',
     title: 'Espiral',
-    author: 'Jacqueline Turner',
+    author: 'Técnica de Jacqueline Turner',
     year: '2026',
     shape: 'espiral',
     technique: 'Literatura ergódica',
