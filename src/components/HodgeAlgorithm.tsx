@@ -351,7 +351,7 @@ export function HodgeAlgorithm() {
         {/* Último gesto */}
         <div className="reveal mt-12 pt-8 font-body text-lg sm:text-xl leading-[1.6] text-ink/75">
           <span className="font-mono-lt text-[10px] uppercase text-ink/45 block mb-3">Último detalle</span>
-          Recuerda escribir al final a qué geometría corresponde el diamante de Hodge que dio origen a tu constricción. En nuestro ejemplo usamos a <span className="pink-underline italic">la superficie K3</span>.
+          Recuerda escribir al final a qué geometría corresponde el diamante de Hodge que dio origen a tu constricción y a tu            poema. En nuestro ejemplo usamos a <span className="pink-underline italic">la superficie K3</span>.
         </div>
 
         {/* Authorship */}
