@@ -36,7 +36,7 @@ export function Espiral({ lines }: EspiralProps) {
   // Espiral pequeño: ampliado, en la parte inferior derecha.
   const smallCenterX = 236;
   const smallCenterY = 208;
-  const smallStartRadius = 63;
+  const smallStartRadius = 73;
   const smallEndRadius = 2.7;
   const smallTurns = 1.2;
 
