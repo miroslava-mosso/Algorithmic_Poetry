@@ -112,7 +112,7 @@ function App() {
             </p>
 
             <p>
-              Sucede que a través de juegos y reglas que unen las <span className="pink-underline-thin">matemáticas</span> con la <span className="pink-underline-thin">literatura</span> para buscar nuevas posibilidades y estructuras para generar poemas. Este cuaderno digital recoge mi propia lectura de esa tradición.
+              Sucede que a través de juegos y reglas se unen las <span className="pink-underline-thin">matemáticas</span> y la <span className="pink-underline-thin">literatura</span> para buscar nuevas posibilidades y estructuras para generar poemas. Este cuaderno digital recoge mi propia lectura de esa tradición.
              </p>
           
             <p className="font-body text-lg sm:text-xl leading-[1.55] text-ink/75 not-italic">
