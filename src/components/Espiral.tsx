@@ -6,30 +6,8 @@ type EspiralProps = {
 export function Espiral({ lines }: EspiralProps) {
   const verse = lines.join(' ').trim();
 
-  // Genera una espiral cuyo recorrido depende de la longitud del poema.
-  const turns = Math.max(1.5, verse.length / 45);
-  const points = 240;
-  const centerX = 160;
-  const centerY = 105;
-  const startRadius = 130;
-  const endRadius = 5;
-
-  const coordinates = Array.from({ length: points + 1 }, (_, i) => {
-    const t = i / points;
-    const angle = -Math.PI / 2 + t * turns * Math.PI * 2;
-    const radius = startRadius + (endRadius - startRadius) * t;
-
-    return [
-      centerX + radius * Math.cos(angle),
-      centerY + radius * Math.sin(angle),
-    ];
-  });
-
-  const spiralPath = coordinates
-    .map(([x, y], i) =>
-      `${i === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`
-    )
-    .join(' ');
+  const spiralPath =
+    'M 35 78 C 43 28 126 8 207 29 C 294 51 300 137 239 174 C 176 210 86 185 86 119 C 86 69 141 57 187 77 C 227 94 210 139 168 140 C 137 141 122 121 137 103 C 148 89 166 92 166 108 C 166 119 156 123 151 116';
 
   return (
     <svg
@@ -59,13 +37,6 @@ export function Espiral({ lines }: EspiralProps) {
           {verse}
         </textPath>
       </text>
-
-      <circle
-        cx={coordinates[coordinates.length - 1][0]}
-        cy={coordinates[coordinates.length - 1][1]}
-        r="2"
-        fill="#f4b6c2"
-      />
     </svg>
   );
 }
