@@ -11,11 +11,11 @@ export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
     <>
       <article
         id={poem.id}
-        className="poem-cell lift reveal min-w-0 overflow-hidden grid grid-rows-[auto_1fr_auto] border hairline border-t-0 border-r-0 border-l-0 px-5 py-8 sm:px-7 sm:py-10 cursor-pointer"
+        className="poem-cell lift reveal min-w-0 overflow-hidden grid grid-rows-[auto_1fr_auto] border hairline border-t-0 border-r-0 border-l-0 px-5 py-5 sm:px-7 sm:py-6 cursor-pointer"
         style={{ transitionDelay: `${(i % 3) * 80}ms` }}
         onClick={() => setOpen(true)}
       >
-        <header className="flex items-baseline justify-between gap-4 mb-6">
+        <header className="flex items-baseline justify-between gap-4 mb-3">
           <div className="flex items-baseline gap-3">
             <span className="font-mono-lt text-[11px] text-ink/50">
               {poem.index}
@@ -30,26 +30,23 @@ export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
           </span>
         </header>
 
-        <div className="flex items-center justify-center py-6 min-h-[200px] overflow-hidden">
+        <div className="flex items-center justify-center py-2 min-h-[150px] overflow-hidden">
           <div
-  
-className={
-  poem.shape === 'diamante'
-    ? 'w-full'
-    : 'scale-[0.7] origin-center'
-}
-            
-
->
-  <PoemShapeView
-  shape={poem.shape}
-  lines={poem.lines}
-  compact={poem.shape === 'diamante' || poem.shape === 'cono'}
-/>
-</div>
+            className={
+              poem.shape === 'diamante'
+                ? 'w-full'
+                : 'scale-[0.7] origin-center'
+            }
+          >
+            <PoemShapeView
+              shape={poem.shape}
+              lines={poem.lines}
+              compact={poem.shape === 'diamante' || poem.shape === 'cono'}
+            />
+          </div>
         </div>
 
-        <footer className="flex flex-col gap-2 mt-4">
+        <footer className="flex flex-col gap-2 mt-2">
           <div className="flex items-center justify-between font-mono-lt text-[10px] uppercase text-ink/55">
             <span>{poem.technique}</span>
             <span className="text-ink/40">{poem.author}</span>
