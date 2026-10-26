@@ -12,7 +12,7 @@ export function Espiral({ lines }: EspiralProps) {
   const startRadius = 82;
   const endRadius = 3;
 
-  // Conserva las vueltas que ya funcionaban.
+  // Conserva las vueltas que funcionan con el poema.
   const turns = Math.max(1.2, verse.length / 41);
   const points = 500;
 
