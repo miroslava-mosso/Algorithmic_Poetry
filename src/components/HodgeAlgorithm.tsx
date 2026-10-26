@@ -180,7 +180,7 @@ export function HodgeAlgorithm() {
             </summary>
             <div className="pb-14 sm:pb-20">
               <p className="font-body text-lg sm:text-xl text-ink/70 max-w-[60ch] mb-9">
-                Tomemos una superficie K3. A la izquierda está el diamante de Hodge el términos de los números de Hodge como variables. A                 la derecha, sustituímos los valores de los números de Hodge correspondientes a la geometría elegida, en esto caso, una                     superficie K3.
+                Tomemos una superficie K3. A la izquierda está el diamante de Hodge el términos de los números de Hodge como variables. A                 la derecha, sustituímos los valores de los números de Hodge correspondientes a la geometría elegida, en esto caso, una                    superficie K3.
               </p>
 
               <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] items-center">
