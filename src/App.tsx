@@ -137,7 +137,7 @@ function App() {
             <div>
               <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Galería</span>
               <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
-                Cuatro <span className="pink-underline">formas</span> geométricas de cuatro poemas
+                Cuatro <span className="pink-underline">formas</span> geométricas, cuatro poemas
               </h2>
             </div>
             <p className="font-body text-lg sm:text-xl text-ink/60 max-w-[34ch]">
