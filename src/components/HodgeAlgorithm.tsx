@@ -30,14 +30,6 @@ const rawK3: ReactNode[][] = [
   [hpq(2, 2)],
 ];
 
-const hodgeSymK3: ReactNode[][] = [
-  [hpq(2, 2)],
-  [hpq(2, 1), hpq(1, 2)],
-  [hpq(2, 0), hpq(1, 1), hpq(0, 2)],
-  [hpq(1, 0), hpq(0, 1)],
-  [hpq(0, 0)],
-];
-
 const conjugationK3: ReactNode[][] = [
   [hpq(0, 0)],
   [hpq(0, 1), hpq(1, 0)],
@@ -272,20 +264,9 @@ export function HodgeAlgorithm() {
             </summary>
             <div className="pb-14 sm:pb-20 space-y-16">
               <SymmetryBlock
-                title="Simetría de Hodge"
+                title="Conjugación compleja"
                 description={<>
-                  Las simetrías del diamante de Hodge reflejan el diamante sobre su eje vertical: h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. La columna izquierda se vuelve la derecha, y viceversa. En la superficie K3, el diamante ya es simétrico, así que la forma se preserva; pero en tu poema puedes aprovechar este reflejo para repetir, invertir o cambiar las palabras de cada lado.
-                </>}
-                before={rawK3}
-                after={hodgeSymK3}
-                beforeLabel="Diamante original (K3)"
-                afterLabel="Con simetría de Hodge aplicada"
-              />
-
-              <SymmetryBlock
-                title="Complex conjugation"
-                description={<>
-                  La conjugación compleja refleja el diamante con respecto a su eje vertical; es decir, h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. En la superficie K3, h<sup className="text-[0.72em]">20</sup> = h<sup className="text-[0.72em]">02</sup> = 1 y h<sup className="text-[0.72em]">10</sup> = h<sup className="text-[0.72em]">01</sup> = 0 = h<sup className="text-[0.72em]">20</sup> = h<sup className="text-[0.72em]">02</sup>. En tu poema, puedes reflejar el primer verso en el último, el segundo en el penúltimo, y así sucesivamente.
+                  La conjugación compleja intercambia los índices p y q: h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. En el diamante, esto refleja cada fila respecto a su eje vertical. Para la superficie K3, h<sup className="text-[0.72em]">20</sup> = h<sup className="text-[0.72em]">02</sup> = 1 y h<sup className="text-[0.72em]">10</sup> = h<sup className="text-[0.72em]">01</sup> = 0. En tu poema, puedes reflejar el primer verso en el último, el segundo en el penúltimo, y así sucesivamente.
                 </>}
                 before={rawK3}
                 after={conjugationK3}
@@ -296,7 +277,7 @@ export function HodgeAlgorithm() {
               <SymmetryBlock
                 title="Dualidad de Serre"
                 description={<>
-                  La dualidad de Serre establece que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">n-q,n-p</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1. El diamante se refleja con respecto al eje horizontal como si fuera un espejo.
+                  La dualidad de Serre establece que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">n-q,n-p</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">2-q,2-p</sup>. En el diamante, esta relación corresponde a una rotación de 180°; por ejemplo, h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1. En tu poema, puedes reflejar las filas superiores en las inferiores.
                 </>}
                 before={rawK3}
                 after={serreK3}
