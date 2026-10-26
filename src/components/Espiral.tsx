@@ -110,7 +110,7 @@ export function Espiral({ lines }: EspiralProps) {
 
       <text
         className="font-mono-lt"
-        fontSize="7"
+        fontSize="9"
         fill="#0d0d0d"
         letterSpacing="0.25"
       >
