@@ -158,7 +158,7 @@ export function HodgeAlgorithm() {
               </p>
             </div>
             <p>
-              Si no encuentras uno, puedes experimentar buscando uno aleatoriamente en{' '}
+              Si no sabes cuál elegir, puedes buscar uno de manera aleatoria en{' '}
               <a href="https://ahuchala.com/hodge/" target="_blank" rel="noreferrer" className="pink-underline-thin text-ink">
                 esta página de diamantes de Hodge
               </a>.
