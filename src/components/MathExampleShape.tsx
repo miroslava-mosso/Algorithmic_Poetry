@@ -255,40 +255,77 @@ case 'figure-eight-knot': return (
 );
 
 
-  /* Nudo trebol */          
+/* Nudo trébol */
+      
+    case 'trefoil-knot': {
+      const tfPath =
+        Array.from({ length: 121 }, (_, i) => {
+          const t = (i / 120) * Math.PI * 2;
+          const x = 120 + 28 * (Math.sin(t) + 2 * Math.sin(2 * t));
+          const y = 120 + 28 * (Math.cos(t) - 2 * Math.cos(2 * t));
 
-    case 'trefoil-knot': return (
-      <svg viewBox="0 0 240 240" className="w-full max-w-[240px]" fontFamily="'JetBrains Mono', monospace">
-        <defs>
-          <path id="tf-path"
-            d="M 120,30 C 180,30 220,80 200,130
-               C 180,180 130,200 120,190
-               C 110,200 60,180 40,130
-               C 20,80 60,30 120,30
-               M 120,190 C 80,170 60,130 80,90
-               C 100,50 140,50 160,90
-               C 180,130 160,170 120,190" />
-        </defs>
-        {/* Three lobes */}
-        <path d="M 120,50 C 165,50 195,85 180,125 C 165,165 135,178 120,172"
-          fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.4"/>
-        <path d="M 120,172 C 80,172 45,145 50,110 C 55,75 85,55 120,50"
-          fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.4"/>
-        <path d="M 120,50 C 120,50 170,80 170,120 C 170,160 150,172 120,172"
-          fill="none" stroke={PINK} strokeWidth="0.2" strokeDasharray="2,3" strokeOpacity="0.3"/>
-        {/* Labels at lobes */}
-        <text x="120" y="40" textAnchor="middle" fontSize="9" fill={INK}>tres</text>
-        <text x="55"  y="155" textAnchor="middle" fontSize="9" fill={INK}>cruces</text>
-        <text x="185" y="155" textAnchor="middle" fontSize="9" fill={INK}>alternos</text>
-        {/* Center */}
-        <text x="120" y="114" textAnchor="middle" fontSize="8" fill={DIM}>nudo</text>
-        <text x="120" y="126" textAnchor="middle" fontSize="8" fill={PINK}>trébol</text>
-        {/* Crossing dots */}
-        <circle cx="90"  cy="95"  r="2" fill={INK} fillOpacity="0.3"/>
-        <circle cx="150" cy="95"  r="2" fill={INK} fillOpacity="0.3"/>
-        <circle cx="120" cy="155" r="2" fill={INK} fillOpacity="0.3"/>
-      </svg>
-    );
+          return `${i === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`;
+        }).join(' ') + ' Z';
+
+      return (
+        <svg
+          viewBox="0 0 240 240"
+          className="w-full max-w-[240px]"
+          fontFamily="'JetBrains Mono', monospace"
+        >
+          <defs>
+            <path id="tf-path" d={tfPath} />
+          </defs>
+
+          {/* Trayectoria del nudo */}
+          <use
+            href="#tf-path"
+            fill="none"
+            stroke={PINK}
+            strokeWidth="1.2"
+            strokeOpacity="0.3"
+            strokeLinejoin="round"
+          />
+
+          {/* El verso recorre el nudo completo */}
+          <text
+            fill={INK}
+            fontSize="5"
+            textLength="790"
+            lengthAdjust="spacingAndGlyphs"
+          >
+            <textPath href="#tf-path" startOffset="0%">
+              ¿Qué ves cuando cierras los ojos? Despierto y no sé distinguir lo real de los sueños. Un minuto se siente elongado en el tiempo. Recuerdos distantes de una vida pasada. Amanece todos los días mientras yo siga existiendo. ¿Qué ves cuando cierras los ojos?
+            </textPath>
+          </text>
+
+          {/* Centro del nudo */}
+          <text
+            x="120"
+            y="116"
+            textAnchor="middle"
+            fontSize="7"
+            fill={DIM}
+          >
+            nudo
+          </text>
+          <text
+            x="120"
+            y="126"
+            textAnchor="middle"
+            fontSize="8"
+            fill={PINK}
+          >
+            trébol
+          </text>
+        </svg>
+      );
+    }
+
+
+
+
+      
 
     /* ── GRAFOS ────────────────────────────────────── */
 
