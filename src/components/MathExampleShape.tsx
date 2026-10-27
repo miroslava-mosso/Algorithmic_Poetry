@@ -102,7 +102,7 @@ export function MathExampleGraphic({ shape }: Props) {
 
 case 'hopf-link': return (
   <svg
-    viewBox="0 0 300 190"
+     viewBox="0 0 320 240"
     className="w-full max-w-sm"
     fontFamily="'JetBrains Mono', monospace"
   >
