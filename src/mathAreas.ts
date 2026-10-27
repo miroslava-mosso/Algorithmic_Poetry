@@ -62,8 +62,8 @@ export const mathAreas: MathArea[] = [
       {
         index: '03',
         title: 'Copo de nieve de Koch',
-        technique: 'Curva fractal — cada arista se reemplaza por un triángulo equilátero',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        technique: 'Curva fractal ',
+        manifest: 'Cada arista se reemplaza por un triángulo equilátero.',
         shape: 'koch-snowflake',
       },
     ],
