@@ -281,8 +281,8 @@ case 'figure-eight-knot': return (
   preserveAspectRatio="xMidYMid meet"
   style={{
     display: 'block',
-    width: isLightbox ? 'min(85vw, 78vh)' : '200%',
-    maxWidth: isLightbox ? '2000px' : '280px',
+    width: isLightbox ? 'min(85vw, 78vh)' : '400%',
+    maxWidth: isLightbox ? '4000px' : '280px',
     flex: '0 0 auto',
     margin: '0 auto',
   }}
