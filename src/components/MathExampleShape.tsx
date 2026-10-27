@@ -310,11 +310,12 @@ case 'figure-eight-knot': return (
   viewBox="0 0 240 240"
   preserveAspectRatio="xMidYMid meet"
   style={{
-    display: 'block',
-    width: isLightbox ? 'min(85vw, 78vh)' : '100%',
-    maxWidth: isLightbox ? '4000px' : '280px',
-    flex: '0 0 auto',
-    margin: '0 auto',
+  display: 'block',
+  width: isLightbox ? 'min(92vw, 86vh)' : '100%',
+  height: 'auto',
+  maxWidth: isLightbox ? '1100px' : '280px',
+  flex: '0 0 auto',
+  margin: '0 auto',
   }}
   fontFamily="'JetBrains Mono', monospace"
 >
