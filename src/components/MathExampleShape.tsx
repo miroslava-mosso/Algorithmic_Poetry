@@ -128,7 +128,7 @@ case 'hopf-link': return (
     <circle
       cx="112"
       cy="92"
-      r="60"
+      r="100"
       fill="none"
       stroke="#B69AE8"
       strokeWidth="0.5"
