@@ -3,6 +3,7 @@ import type { MathShapeId } from '@/mathAreas';
 interface Props {
   shape: MathShapeId;
   lines: string[];
+  isLightbox?: boolean;
 }
 
 const PINK = '#f4b6c2';
