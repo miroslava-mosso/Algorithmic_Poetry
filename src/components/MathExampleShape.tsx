@@ -274,7 +274,8 @@ case 'figure-eight-knot': return (
         }).join(' ') + ' Z';
 
       return (
-        <svg
+        
+<svg
   viewBox="0 0 240 240"
   preserveAspectRatio="xMidYMid meet"
   className={`block h-auto w-full ${
@@ -282,6 +283,7 @@ case 'figure-eight-knot': return (
   }`}
   fontFamily="'JetBrains Mono', monospace"
 >
+
           <defs>
             <path id="tf-path" d={tfPath} />
           </defs>
