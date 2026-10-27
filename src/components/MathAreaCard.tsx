@@ -110,16 +110,24 @@ function MathExample({ ex }: { ex: MathExample }) {
         </footer>
       </article>
 
-      <Lightbox
+      
+<Lightbox
   open={open}
   onClose={() => setOpen(false)}
   title={ex.title}
   subtitle={ex.technique}
 >
-  <div className="w-[min(85vw,70vh,680px)]">
+  <div
+    className={
+      ex.shape === 'trefoil-knot'
+        ? 'w-[min(75vw,65vh,620px)] shrink-0'
+        : 'w-[min(85vw,70vh,680px)]'
+    }
+  >
     <MathExampleShape shape={ex.shape} isLightbox />
   </div>
 </Lightbox>
+
     </>
   );
 }
