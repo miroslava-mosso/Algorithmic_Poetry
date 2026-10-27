@@ -533,3 +533,11 @@ export function MathExampleGraphic({ shape }: Props) {
       return null;
   }
 }
+
+export function MathExampleShape({ shape, lines }: Props) {
+  return (
+    <div className="flex flex-col items-center">
+      <MathExampleGraphic shape={shape} lines={lines} />
+    </div>
+  );
+}
