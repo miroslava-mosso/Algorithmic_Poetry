@@ -183,7 +183,7 @@ case 'hopf-link': return (
     textLength="350"
     lengthAdjust="spacing"
   >
-    algo se rompió cuando los hermanos fueron separados
+    Algo se rompió cuando los hermanos fueron separados
   </textPath>
 </text>
 
