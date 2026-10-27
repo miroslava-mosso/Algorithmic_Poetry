@@ -334,9 +334,7 @@ case 'figure-eight-knot': return (
         </svg>
       );
     }
-
-
-      
+ 
 
     /* ── GRAFOS ────────────────────────────────────── */
 
