@@ -111,15 +111,15 @@ function MathExample({ ex }: { ex: MathExample }) {
       </article>
 
       <Lightbox
-        open={open}
-        onClose={() => setOpen(false)}
-        title={ex.title}
-        subtitle={ex.technique}
-      >
-        <div className="w-[min(85vw,70vh,680px)] [&_svg]:!w-full [&_svg]:!max-w-none">
-          <MathExampleShape shape={ex.shape} isLightbox />
-        </div>
-      </Lightbox>
+  open={open}
+  onClose={() => setOpen(false)}
+  title={ex.title}
+  subtitle={ex.technique}
+>
+  <div className="w-[min(85vw,70vh,680px)]">
+    <MathExampleShape shape={ex.shape} isLightbox />
+  </div>
+</Lightbox>
     </>
   );
 }
