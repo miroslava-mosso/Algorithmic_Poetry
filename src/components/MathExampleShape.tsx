@@ -45,23 +45,53 @@ export function MathExampleGraphic({ shape, isLightbox = false }: Props) {  swit
       </svg>
     );
 
-    case 'circulo-vicioso': return (
-      <svg viewBox="0 0 220 220" className="w-full max-w-[220px]" fontFamily="'JetBrains Mono', monospace">
-        <defs>
-          <path id="cv-ring" d="M 110,22 A 88,88 0 1,1 109.99,22" />
-        </defs>
-        <circle cx="110" cy="110" r="88" fill="none" stroke={PINK} strokeWidth="0.6" strokeOpacity="0.4"/>
-        <circle cx="110" cy="110" r="3" fill={PINK}/>
-        <text fontSize="8.6" fill={INK} letterSpacing="0.55">
-          <textPath href="#cv-ring" startOffset="0%">
-            el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace · el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace ·
-          </textPath>
-        </text>
-        <text x="110" y="106" textAnchor="middle" fontSize="8" fill={DIM}>palíndromo</text>
-        <text x="110" y="118" textAnchor="middle" fontSize="7.5" fill={PINK}></text>
-      </svg>
-    );
+    
+    /* ── Círculo uroboros ─────────────────────────────────── */
 
+    
+
+case 'circulo-vicioso': return (
+  <svg
+    viewBox="0 0 220 220"
+    className={`block h-auto w-full ${
+      isLightbox ? 'max-w-[600px]' : 'max-w-[220px]'
+    }`}
+    fontFamily="'JetBrains Mono', monospace"
+  >
+    <defs>
+      <path id="cv-ring" d="M 110,22 A 88,88 0 1,1 109.99,22" />
+    </defs>
+
+    <circle
+      cx="110"
+      cy="110"
+      r="88"
+      fill="none"
+      stroke={PINK}
+      strokeWidth="0.6"
+      strokeOpacity="0.4"
+    />
+
+    <circle cx="110" cy="110" r="3" fill={PINK} />
+
+    <text fontSize="8.6" fill={INK} letterSpacing="0.55">
+      <textPath href="#cv-ring" startOffset="0%">
+        el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace · el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace ·
+      </textPath>
+    </text>
+
+    <text x="110" y="106" textAnchor="middle" fontSize="8" fill={DIM}>
+      palíndromo
+    </text>
+
+    <text x="110" y="118" textAnchor="middle" fontSize="7.5" fill={PINK}></text>
+  </svg>
+);
+
+
+    /* ── Copo de nueve ─────────────────────────────────── */
+
+    
     case 'koch-snowflake': return (
       <svg viewBox="0 0 280 260" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
         {/* Level-2 Koch snowflake outline as polygon */}
