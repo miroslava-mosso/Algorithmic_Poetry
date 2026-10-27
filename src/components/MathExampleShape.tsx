@@ -200,10 +200,10 @@ case 'hopf-link': return (
 
 case 'figure-eight-knot': return (
   <svg
-    viewBox="0 45 320 230"
+    viewBox="12 12 216 216"
     preserveAspectRatio="xMidYMid meet"
     className={`block h-auto w-full ${
-      isLightbox ? 'max-w-none' : 'max-w-sm'
+      isLightbox ? 'max-w-none' : 'max-w-[240px]'
     }`}
     fontFamily="'JetBrains Mono', monospace"
   >
