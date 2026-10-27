@@ -137,16 +137,16 @@ export const mathAreas: MathArea[] = [
     examples: [
       {
         index: '01',
-        title: 'Primo',
-        technique: 'Solo palabras cuyo número de letras es primo: 2, 3, 5, 7, 11',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        title: 'Números primos',
+        technique: 'Letras y números primos',
+        manifest: 'Solo palabras cuyo número de letras es primo: 2, 3, 5, 7, 11.',
         shape: 'primo',
       },
       {
         index: '02',
         title: 'Fibonacci',
-        technique: 'Sílabas por verso: 1, 1, 2, 3, 5, 8, 13 — espiral logarítmica',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        technique: 'Espiral logarítmica',
+        manifest: 'Sílabas por verso: 1, 1, 2, 3, 5, 8, 13.',
         shape: 'fibonacci',
       },
       {
