@@ -141,7 +141,7 @@ case 'hopf-link': return (
       cy="92"
       r="57"
       fill="none"
-      stroke="#929292"
+      stroke={PINK}
       strokeWidth="0.5"
       strokeOpacity="0.0.35"
     />
@@ -173,7 +173,7 @@ case 'hopf-link': return (
   fill="#0d0d0d"
   letterSpacing="0.1"
   paintOrder="stroke"
-  stroke={PINK}
+  stroke="#F7F5F1"
   strokeWidth="2.5"
   strokeLinejoin="round"
 >
