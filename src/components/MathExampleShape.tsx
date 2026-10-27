@@ -135,7 +135,7 @@ case 'hopf-link': return (
       strokeOpacity="0.35"
     />
 
-    {/* Aro gris */}
+    {/* Aro rosa */}
     <circle
       cx="188"
       cy="92"
@@ -149,7 +149,7 @@ case 'hopf-link': return (
    
 {/* Verso del aro lila */}
 <text
-  fontSize="10"
+  fontSize="9"
   fill="#0d0d0d"
   letterSpacing="0.3"
   paintOrder="stroke"
