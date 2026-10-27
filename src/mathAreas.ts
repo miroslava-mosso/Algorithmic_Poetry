@@ -82,8 +82,8 @@ export const mathAreas: MathArea[] = [
       },
       {
         index: '02',
-        title: 'Nudo de figura ocho',
-        technique: 'Dos cruces alternados — el nudo de escalada más seguro',
+        title: 'Nudo Figure-eight 4_{1}',
+        technique: '4 cruces — el nudo de escalada más seguro',
         shape: 'figure-eight-knot',
       },
       {
