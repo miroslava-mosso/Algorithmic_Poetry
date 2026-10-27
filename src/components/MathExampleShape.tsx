@@ -171,7 +171,7 @@ case 'hopf-link': return (
 <text
   fontSize="8"
   fill="#0d0d0d"
-  letterSpacing="0.1"
+  letterSpacing="0.2"
   paintOrder="stroke"
   stroke={PINK}
   strokeWidth="2.5"
