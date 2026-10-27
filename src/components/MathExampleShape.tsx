@@ -160,7 +160,7 @@ case 'hopf-link': return (
   <textPath
     href="#hopf-lilac-text-path"
     startOffset="0%"
-    textLength="350"
+    textLength="340"
     lengthAdjust="spacing"
   >
     Mientras la casa olía a pastel horneado
