@@ -275,7 +275,6 @@ case 'figure-eight-knot': return (
 
       return (
         
-
 <svg
   viewBox="0 0 240 240"
   preserveAspectRatio="xMidYMid meet"
@@ -288,7 +287,6 @@ case 'figure-eight-knot': return (
   }}
   fontFamily="'JetBrains Mono', monospace"
 >
-
 
           <defs>
             <path id="tf-path" d={tfPath} />
