@@ -168,8 +168,8 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'Dado',
-        technique: 'Seis caras, seis versos — distribución uniforme sobre el lenguaje',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        technique: 'Seis caras, seis versos',
+        manifest: 'Distribución uniforme sobre el lenguaje.',
         shape: 'dado',
       },
       {
