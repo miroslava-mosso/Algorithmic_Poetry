@@ -7,11 +7,11 @@ const PINK = '#f4b6c2';
 const INK  = '#0d0d0d';
 const DIM  = 'rgba(13,13,13,0.45)';
 
-export function MathExampleShape({ shape, lines }: Props) {
+export function MathExampleShape({ shape, lines}: Props) {
   switch (shape) {
     /* ── GEOMETRÍA ─────────────────────────────────── */
 
-    case 'pascal-triangle': return (
+    case 'pascal-triangle': return ( lines={lines} 
       <svg viewBox="0 0 320 130" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
         {[
           [160, 8,  ['1']],
