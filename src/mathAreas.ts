@@ -152,8 +152,8 @@ export const mathAreas: MathArea[] = [
       {
         index: '03',
         title: 'Mersenne',
-        technique: 'Palabras por verso: 2ⁿ − 1 → 1, 3, 7, 15',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        technique: 'Sucesiones',
+        manifest: 'Palabras por verso: 2ⁿ − 1 → 1, 3, 7, 15.',
         shape: 'mersenne',
       },
     ],
