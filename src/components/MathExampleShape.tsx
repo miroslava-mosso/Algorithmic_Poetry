@@ -146,45 +146,47 @@ case 'hopf-link': return (
       strokeOpacity="0.45"
     />
 
-    {/* Verso lila: separado de la línea */}
-    <text
-      fontSize="7.5"
-      fill="#9673D1"
-      letterSpacing="0.2"
-      paintOrder="stroke"
-      stroke="#F7F5F1"
-      strokeWidth="2.5"
-      strokeLinejoin="round"
-    >
-      <textPath
-        href="#hopf-lilac-text-path"
-        startOffset="0%"
-        textLength="260"
-        lengthAdjust="spacing"
-      >
-        Mientras la casa olía a pastel horneado
-      </textPath>
-    </text>
+   
+{/* Verso del aro lila */}
+<text
+  fontSize="9"
+  fill="#0d0d0d"
+  letterSpacing="0.2"
+  paintOrder="stroke"
+  stroke="#F7F5F1"
+  strokeWidth="2.5"
+  strokeLinejoin="round"
+>
+  <textPath
+    href="#hopf-lilac-text-path"
+    startOffset="0%"
+    textLength="350"
+    lengthAdjust="spacing"
+  >
+    Mientras la casa olía a pastel horneado
+  </textPath>
+</text>
 
-    {/* Verso gris: separado de la línea */}
-    <text
-      fontSize="7"
-      fill="#737373"
-      letterSpacing="0.1"
-      paintOrder="stroke"
-      stroke="#F7F5F1"
-      strokeWidth="2.5"
-      strokeLinejoin="round"
-    >
-      <textPath
-        href="#hopf-gray-text-path"
-        startOffset="0%"
-        textLength="285"
-        lengthAdjust="spacing"
-      >
-        algo se rompió cuando los hermanos fueron separados
-      </textPath>
-    </text>
+{/* Verso del aro gris */}
+<text
+  fontSize="8.5"
+  fill="#0d0d0d"
+  letterSpacing="0.1"
+  paintOrder="stroke"
+  stroke="#F7F5F1"
+  strokeWidth="2.5"
+  strokeLinejoin="round"
+>
+  <textPath
+    href="#hopf-gray-text-path"
+    startOffset="0%"
+    textLength="350"
+    lengthAdjust="spacing"
+  >
+    algo se rompió cuando los hermanos fueron separados
+  </textPath>
+</text>
+
   </svg>
 );
 
