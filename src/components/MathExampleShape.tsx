@@ -131,7 +131,8 @@ case 'hopf-link': return (
       r="57"
       fill="none"
       stroke="#B69AE8"
-      strokeWidth="0.8"
+      strokeWidth="0.5"
+      strokeOpacity="0.35"
     />
 
     {/* Aro gris */}
@@ -141,7 +142,8 @@ case 'hopf-link': return (
       r="57"
       fill="none"
       stroke="#929292"
-      strokeWidth="0.8"
+      strokeWidth="0.5"
+      strokeOpacity="0.0.35"
     />
 
    
