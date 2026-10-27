@@ -98,7 +98,6 @@ export function MathExampleGraphic({ shape }: Props) {
 
     /* ── NUDOS ─────────────────────────────────────── */
 
-   
 
 case 'hopf-link': return (
   <svg
@@ -106,21 +105,6 @@ case 'hopf-link': return (
     className="w-full max-w-xs"
     fontFamily="'JetBrains Mono', monospace"
   >
-    <defs>
-      <circle
-        id="hopf-lilac-path"
-        cx="96"
-        cy="90"
-        r="57"
-      />
-      <circle
-        id="hopf-gray-path"
-        cx="184"
-        cy="90"
-        r="57"
-      />
-    </defs>
-
     {/* Aros */}
     <circle
       cx="96"
@@ -128,8 +112,8 @@ case 'hopf-link': return (
       r="57"
       fill="none"
       stroke="#B69AE8"
-      strokeWidth="1.2"
-      opacity="0.65"
+      strokeWidth="1.5"
+      opacity="0.8"
     />
     <circle
       cx="184"
@@ -137,43 +121,76 @@ case 'hopf-link': return (
       r="57"
       fill="none"
       stroke="#929292"
-      strokeWidth="1.2"
-      opacity="0.65"
+      strokeWidth="1.5"
+      opacity="0.8"
     />
 
-    {/* Texto del aro lila */}
-    <text
-      fontSize="7.2"
-      fill="#9673D1"
-      letterSpacing="0.1"
-    >
-      <textPath
-        href="#hopf-lilac-path"
-        startOffset="0%"
-        textAnchor="start"
-      >
-        Mientras la casa olía a pastel horneado
-      </textPath>
-    </text>
+    {/* Texto lila */}
+    {(() => {
+      const phrase = 'Mientras la casa olía a pastel horneado';
+      const chars = [...phrase];
+      const start = 205;
+      const span = 155;
 
-    {/* Texto del aro gris */}
-    <text
-      fontSize="6.4"
-      fill="#737373"
-      letterSpacing="0"
-    >
-      <textPath
-        href="#hopf-gray-path"
-        startOffset="0%"
-        textAnchor="start"
-      >
-        algo se rompió cuando los hermanos fueron separados
-      </textPath>
-    </text>
+      return chars.map((char, i) => {
+        const angle = (start + (i / (chars.length - 1)) * span) * Math.PI / 180;
+        const x = 96 + 57 * Math.cos(angle);
+        const y = 90 + 57 * Math.sin(angle);
+        const rotation = start + (i / (chars.length - 1)) * span + 90;
+
+        return (
+          <text
+            key={`lilac-${i}`}
+            x={x}
+            y={y}
+            fontSize="6.2"
+            fill="#9673D1"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            transform={`rotate(${rotation}, ${x}, ${y})`}
+          >
+            {char === ' ' ? '\u00A0' : char}
+          </text>
+        );
+      });
+    })()}
+
+    {/* Texto gris */}
+    {(() => {
+      const phrase = 'algo se rompió cuando los hermanos fueron separados';
+      const chars = [...phrase];
+      const start = 25;
+      const span = 245;
+
+      return chars.map((char, i) => {
+        const angle = (start + (i / (chars.length - 1)) * span) * Math.PI / 180;
+        const x = 184 + 57 * Math.cos(angle);
+        const y = 90 + 57 * Math.sin(angle);
+        const rotation = start + (i / (chars.length - 1)) * span + 90;
+
+        return (
+          <text
+            key={`gray-${i}`}
+            x={x}
+            y={y}
+            fontSize="5.3"
+            fill="#737373"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            transform={`rotate(${rotation}, ${x}, ${y})`}
+          >
+            {char === ' ' ? '\u00A0' : char}
+          </text>
+        );
+      });
+    })()}
   </svg>
 );
 
+   
 
+
+      
     case 'figure-eight-knot': return (
       <svg viewBox="0 0 300 160" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
         <defs>
