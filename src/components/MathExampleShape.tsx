@@ -275,14 +275,20 @@ case 'figure-eight-knot': return (
 
       return (
         
+
 <svg
   viewBox="0 0 240 240"
   preserveAspectRatio="xMidYMid meet"
-  className={`block h-auto w-full ${
-    isLightbox ? 'max-w-none' : 'max-w-[280px]'
-  }`}
+  style={{
+    display: 'block',
+    width: isLightbox ? 'min(75vw, 65vh, 620px)' : '100%',
+    maxWidth: isLightbox ? 'none' : '280px',
+    height: 'auto',
+    flexShrink: 0,
+  }}
   fontFamily="'JetBrains Mono', monospace"
 >
+
 
           <defs>
             <path id="tf-path" d={tfPath} />
