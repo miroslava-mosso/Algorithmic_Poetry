@@ -325,13 +325,13 @@ case 'figure-eight-knot': return (
           </defs>
 
           <use
-            href="#tf-path"
-            fill="none"
-            stroke={PINK}
-            strokeWidth="1.2"
-            strokeOpacity="0.3"
-            strokeLinejoin="round"
-          />
+  href="#tf-path"
+  fill="none"
+  stroke={PINK}
+  strokeWidth={isLightbox ? 1.6 : 1.2}
+  strokeOpacity="0.3"
+  strokeLinejoin="round"
+/>
 
           <text
             fill={INK}
