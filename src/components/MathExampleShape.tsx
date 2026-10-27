@@ -263,6 +263,7 @@ case 'figure-eight-knot': return (
 
 /* Nudo trébol */
       
+
     case 'trefoil-knot': {
       const tfPath =
         Array.from({ length: 121 }, (_, i) => {
@@ -274,25 +275,24 @@ case 'figure-eight-knot': return (
         }).join(' ') + ' Z';
 
       return (
-        
-<svg
-  viewBox="0 0 240 240"
-  preserveAspectRatio="xMidYMid meet"
-  style={{
-    display: 'block',
-    width: isLightbox ? 'min(75vw, 65vh, 620px)' : '100%',
-    maxWidth: isLightbox ? 'none' : '280px',
-    height: 'auto',
-    flexShrink: 0,
-  }}
-  fontFamily="'JetBrains Mono', monospace"
->
-
+        <svg
+          viewBox="0 0 240 240"
+          preserveAspectRatio="xMidYMid meet"
+          width={isLightbox ? 560 : 280}
+          height={isLightbox ? 560 : 280}
+          style={{
+            display: 'block',
+            width: isLightbox ? 'min(560px, 75vw, 65vh)' : '100%',
+            height: 'auto',
+            maxWidth: isLightbox ? 'none' : '280px',
+            flex: '0 0 auto',
+          }}
+          fontFamily="'JetBrains Mono', monospace"
+        >
           <defs>
             <path id="tf-path" d={tfPath} />
           </defs>
 
-          {/* Trayectoria del nudo */}
           <use
             href="#tf-path"
             fill="none"
@@ -302,7 +302,6 @@ case 'figure-eight-knot': return (
             strokeLinejoin="round"
           />
 
-          {/* El verso recorre el nudo completo */}
           <text
             fill={INK}
             fontSize="5"
@@ -314,7 +313,6 @@ case 'figure-eight-knot': return (
             </textPath>
           </text>
 
-          {/* Centro del nudo */}
           <text
             x="120"
             y="116"
@@ -336,8 +334,6 @@ case 'figure-eight-knot': return (
         </svg>
       );
     }
-
-
 
 
       
