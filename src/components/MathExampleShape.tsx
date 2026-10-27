@@ -149,7 +149,7 @@ case 'hopf-link': return (
    
 {/* Verso del aro lila */}
 <text
-  fontSize="9"
+  fontSize="10"
   fill="#0d0d0d"
   letterSpacing="0.3"
   paintOrder="stroke"
