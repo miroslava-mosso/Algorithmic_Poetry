@@ -180,7 +180,7 @@ case 'hopf-link': return (
   <textPath
     href="#hopf-gray-text-path"
     startOffset="0%"
-    textLength="350"
+    textLength="340"
     lengthAdjust="spacing"
   >
     Algo se rompió cuando los hermanos fueron separados
