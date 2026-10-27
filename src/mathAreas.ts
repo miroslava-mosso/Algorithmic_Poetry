@@ -73,7 +73,7 @@ export const mathAreas: MathArea[] = [
     index: 'II',
     title: 'Nudos',
     description:
-      'Caligramas inspirados en la teoría de nudos, versos entrelazados que no se pueden desatar sin cortar.',
+      'Caligramas inspirados en la teoría de nudos, versos entrelazados que no se pueden desenredad sin cortar.',
     examples: [
       {
         index: '01',
