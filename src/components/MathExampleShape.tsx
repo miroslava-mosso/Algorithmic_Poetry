@@ -120,7 +120,7 @@ case 'hopf-link': return (
         id="hopf-gray-text-path"
         d="M 188,35
            A 57,57 0 1 1 188,149
-           A 57,57 0 1 1 188,35"
+           A 57,57 0 1 1 188,17"
       />
     </defs>
 
