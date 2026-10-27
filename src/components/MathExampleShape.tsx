@@ -143,7 +143,7 @@ case 'hopf-link': return (
       fill="none"
       stroke={PINK}
       strokeWidth="0.5"
-      strokeOpacity="0.0.35"
+      strokeOpacity="0.35"
     />
 
    
