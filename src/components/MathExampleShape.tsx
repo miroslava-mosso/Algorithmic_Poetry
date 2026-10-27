@@ -173,7 +173,7 @@ case 'hopf-link': return (
 <text
   fontSize="8"
   fill="#0d0d0d"
-  letterSpacing="10.5"
+  letterSpacing="0.6"
   paintOrder="stroke"
   stroke={PINK}
   strokeWidth="2.5"
@@ -182,7 +182,7 @@ case 'hopf-link': return (
   <textPath
     href="#hopf-gray-text-path"
     startOffset="0%"
-    textLength="345"
+    textLength="350"
     lengthAdjust="spacing"
   >
     Algo se rompió cuando los hermanos fueron separados
