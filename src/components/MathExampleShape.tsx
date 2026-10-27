@@ -98,7 +98,7 @@ export function MathExampleGraphic({ shape }: Props) {
 
     /* ── NUDOS ─────────────────────────────────────── */
 
-
+/* Nudo Hopf-link */      
 
 case 'hopf-link': return (
   <svg
@@ -193,42 +193,42 @@ case 'hopf-link': return (
 );
 
 /* Nudo figure-eight */       
-  
+
+      
 case 'figure-eight-knot': return (
   <svg
-    viewBox="0 0 320 250"
+    viewBox="0 0 320 320"
     className="w-full max-w-sm"
     fontFamily="'JetBrains Mono', monospace"
   >
     <defs>
       <path
-        id="figure-eight-poem-path"
-        d="M 160,125
-           C 225,65 255,35 220,20
-           C 185,5 135,45 160,95
-           C 185,145 245,195 205,225
-           C 170,252 125,205 100,165
-           C 75,125 35,85 65,50
-           C 95,15 145,55 160,95
-           C 175,135 135,175 160,125
-           C 185,75 235,75 255,115
-           C 275,155 220,205 180,175
-           C 140,145 135,105 160,125"
+        id="figure-eight-square-path"
+        d="
+          M 160,35
+          H 275 V 275 H 45 V 115
+          H 205 V 205 H 115 V 75
+          H 245 V 155 H 160
+          V 245 H 75 V 160
+          H 160 V 35
+        "
+        fill="none"
       />
     </defs>
 
-    {/* Trayectoria turquesa */}
+    {/* Trayectoria geométrica turquesa */}
     <use
-      href="#figure-eight-poem-path"
+      href="#figure-eight-square-path"
       fill="none"
       stroke="#35BFC2"
       strokeWidth="1.5"
-      strokeOpacity="0.75"
+      strokeOpacity="0.8"
+      strokeLinejoin="round"
     />
 
-    {/* Verso sobre la trayectoria */}
+    {/* Poema siguiendo el recorrido */}
     <text
-      fontSize="8"
+      fontSize="7.5"
       fill="#0d0d0d"
       letterSpacing="0.15"
       paintOrder="stroke"
@@ -237,9 +237,9 @@ case 'figure-eight-knot': return (
       strokeLinejoin="round"
     >
       <textPath
-        href="#figure-eight-poem-path"
+        href="#figure-eight-square-path"
         startOffset="0%"
-        textLength="1000"
+        textLength="1450"
         lengthAdjust="spacing"
       >
         ¿Qué ves cuando cierras los ojos? La nada, el vacío, la oscuridad, el miedo a perderme y no poder regresar. A veces siento que he tenido mil vidas. Muchas las he olvidado ya.
@@ -249,7 +249,8 @@ case 'figure-eight-knot': return (
 );
 
 
-      
+
+  /* Nudo trebol */          
 
     case 'trefoil-knot': return (
       <svg viewBox="0 0 240 240" className="w-full max-w-[240px]" fontFamily="'JetBrains Mono', monospace">
