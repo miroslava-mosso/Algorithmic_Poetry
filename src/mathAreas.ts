@@ -52,9 +52,10 @@ export const mathAreas: MathArea[] = [
         index: '01',
         title: 'Triángulo de Pascal',
         technique: 'Cada número representa el número de sílabas de cada palabra',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        manifest:
+    'Cada fila del triángulo propone una nueva medida para el poema. Puedes extender la figura tanto como quieras.',
         shape: 'pascal-triangle',
-      },
+},,
       {
         index: '02',
         title: 'Círculo uroboros',
