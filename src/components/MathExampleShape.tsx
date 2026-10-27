@@ -197,10 +197,10 @@ case 'hopf-link': return (
 
 case 'figure-eight-knot': return (
   <svg
-    viewBox="0 0 320 320"
-    className="w-full max-w-sm"
-    fontFamily="'JetBrains Mono', monospace"
-  >
+  viewBox="0 0 330 320"
+  preserveAspectRatio="xMidYMid meet"
+  className="block h-auto w-full max-w-sm"
+>
     <defs>
       
 <path
