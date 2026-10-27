@@ -79,7 +79,7 @@ export const mathAreas: MathArea[] = [
         index: '01',
         title: 'Hopf link',
         technique: '2 círculos enlazados entre sí una vez.',
-        manifest: 'El link no-trivial más simple con más de una componente',
+        manifest: 'El link no-trivial más simple con más de una componente. Texto del poema inspirado en los landays.',
         shape: 'hopf-link',
       },
       {
