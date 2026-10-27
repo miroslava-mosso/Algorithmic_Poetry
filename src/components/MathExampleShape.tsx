@@ -131,7 +131,7 @@ case 'hopf-link': return (
       r="57"
       fill="none"
       stroke="#B69AE8"
-      strokeWidth="1"
+      strokeWidth="0.8"
       strokeOpacity="0.45"
     />
 
@@ -142,7 +142,7 @@ case 'hopf-link': return (
       r="57"
       fill="none"
       stroke="#929292"
-      strokeWidth="1"
+      strokeWidth="0.8"
       strokeOpacity="0.45"
     />
 
