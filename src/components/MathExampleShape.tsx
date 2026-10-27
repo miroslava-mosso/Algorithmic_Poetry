@@ -202,30 +202,25 @@ case 'figure-eight-knot': return (
     fontFamily="'JetBrains Mono', monospace"
   >
     <defs>
-      <path
-        id="figure-eight-square-path"
-        
-d="
-  M 160,32
-  H 288
-  V 288
-  H 64
-  V 128
-  H 208
-  V 192
-  H 128
-  V 96
-  H 240
-  V 160
-  H 160
-  V 240
-  H 96
-  V 160
-  H 160
-  V 32
-"
-
-        fill="none"
+      
+<path
+  id="figure-eight-square-path"
+  d="
+    M 80,80
+    H 240
+    V 240
+    H 80
+    V 160
+    H 160
+    V 200
+    H 120
+    V 120
+    H 200
+    V 160
+    H 160
+    V 80
+  "
+  fill="none"
       />
     </defs>
 
