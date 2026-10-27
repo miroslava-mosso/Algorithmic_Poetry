@@ -98,7 +98,7 @@ export function MathExampleGraphic({ shape }: Props) {
 
     /* ── NUDOS ─────────────────────────────────────── */
 
-    case 'overhand-knot': return (
+    case 'hopf-knot': return (
       <svg viewBox="0 0 280 180" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
         <defs>
           <path id="ok-path"
