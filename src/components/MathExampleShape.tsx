@@ -270,7 +270,11 @@ case 'figure-eight-knot': return (
       return (
         <svg
           viewBox="0 0 240 240"
-          className="w-[min(85vw,70vh,560px)] max-w-none"
+          className={
+            isLightbox
+            ? "w-[min(85vw,70vh,560px)] max-w-none"
+            : "w-full max-w-[240px]"
+            }
           fontFamily="'JetBrains Mono', monospace"
         >
           <defs>
