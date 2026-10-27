@@ -197,7 +197,7 @@ case 'hopf-link': return (
 
 case 'figure-eight-knot': return (
   <svg
-    viewBox="0 0 320 320"
+    viewBox="0 0 340 320"
     className="w-full max-w-sm"
     fontFamily="'JetBrains Mono', monospace"
   >
