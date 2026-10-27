@@ -207,9 +207,6 @@ case 'figure-eight-knot': return (
   id="figure-eight-square-path"
   d="
     M 80,80
-    H 240
-    V 240
-    H 80
     V 160
     H 160
     V 200
@@ -217,7 +214,9 @@ case 'figure-eight-knot': return (
     V 120
     H 200
     V 160
-    H 160
+    H 80
+    V 240
+    H 240
     V 80
   "
   fill="none"
