@@ -99,89 +99,80 @@ export function MathExampleGraphic({ shape }: Props) {
     /* ── NUDOS ─────────────────────────────────────── */
 
    
+
 case 'hopf-link': return (
   <svg
     viewBox="0 0 280 180"
     className="w-full max-w-xs"
     fontFamily="'JetBrains Mono', monospace"
-    role="img"
-    aria-label="Dos aros enlazados con versos sobre sus trayectorias"
   >
     <defs>
-      {/* Trayectoria del aro lila */}
       <circle
         id="hopf-lilac-path"
         cx="96"
         cy="90"
         r="57"
-        fill="none"
       />
-
-      {/* Trayectoria del aro gris */}
       <circle
         id="hopf-gray-path"
         cx="184"
         cy="90"
         r="57"
-        fill="none"
       />
     </defs>
 
-    {/* Aro lila */}
+    {/* Aros */}
     <circle
       cx="96"
       cy="90"
       r="57"
       fill="none"
       stroke="#B69AE8"
-      strokeWidth="1.5"
-      opacity="0.9"
+      strokeWidth="1.2"
+      opacity="0.65"
     />
-
-    {/* Aro gris */}
     <circle
       cx="184"
       cy="90"
       r="57"
       fill="none"
       stroke="#929292"
-      strokeWidth="1.5"
-      opacity="0.9"
+      strokeWidth="1.2"
+      opacity="0.65"
     />
 
-    {/* Verso del aro lila */}
+    {/* Texto del aro lila */}
     <text
-      fontSize="7.5"
+      fontSize="7.2"
       fill="#9673D1"
-      letterSpacing="0.15"
+      letterSpacing="0.1"
     >
       <textPath
         href="#hopf-lilac-path"
-        startOffset="3%"
-        textLength="230"
-        lengthAdjust="spacing"
+        startOffset="0%"
+        textAnchor="start"
       >
         Mientras la casa olía a pastel horneado
       </textPath>
     </text>
 
-    {/* Verso del aro gris */}
+    {/* Texto del aro gris */}
     <text
-      fontSize="7"
+      fontSize="6.4"
       fill="#737373"
-      letterSpacing="0.05"
+      letterSpacing="0"
     >
       <textPath
         href="#hopf-gray-path"
-        startOffset="2%"
-        textLength="265"
-        lengthAdjust="spacing"
+        startOffset="0%"
+        textAnchor="start"
       >
         algo se rompió cuando los hermanos fueron separados
       </textPath>
     </text>
   </svg>
 );
+
 
     case 'figure-eight-knot': return (
       <svg viewBox="0 0 300 160" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
