@@ -175,8 +175,8 @@ export const mathAreas: MathArea[] = [
       {
         index: '02',
         title: 'Cadena de Markov',
-        technique: 'Cada palabra depende solo de la anterior — memoria de un solo paso',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        technique: 'Memoria de un solo paso',
+        manifest: 'Cada palabra depende solo de la anterior.',
         shape: 'markov',
       },
       {
