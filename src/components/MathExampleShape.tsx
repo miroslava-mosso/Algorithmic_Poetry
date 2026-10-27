@@ -1,9 +1,8 @@
-import type { MathShapeId } from '@/mathAreas';
+import { mathAreas, type MathShapeId } from '@/mathAreas';
 
 interface Props {
   shape: MathShapeId;
   lines: string[];
-  manifest: string;
 }
 
 const PINK = '#f4b6c2';
