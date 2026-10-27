@@ -533,20 +533,3 @@ export function MathExampleGraphic({ shape }: Props) {
       return null;
   }
 }
-
-export function MathExampleShape({ shape, lines }: Props) {
-  const manifest = mathAreas
-    .flatMap((area) => area.examples)
-    .find((example) => example.shape === shape)?.manifest;
-
-  return (
-    <div className="flex flex-col items-center">
-      <MathExampleGraphic shape={shape} lines={lines} />
-      {manifest && (
-        <p className="font-body text-sm sm:text-base leading-[1.6] text-ink/70 mt-4 text-center">
-          {manifest}
-        </p>
-      )}
-    </div>
-  );
-}
