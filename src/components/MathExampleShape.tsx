@@ -245,6 +245,8 @@ case 'figure-eight-knot': return (
       <textPath
         href="#figure-eight-square-path"
         startOffset="0%"
+        textLength="1500"
+        lengthAdjust="spacing"
       >
         ¿Qué ves cuando cierras los ojos? La nada, el vacío, la oscuridad, el miedo a perderme y no poder regresar. A veces siento que he tenido mil vidas. Muchas las he olvidado ya.
       </textPath>
