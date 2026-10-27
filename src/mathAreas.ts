@@ -182,8 +182,8 @@ export const mathAreas: MathArea[] = [
       {
         index: '03',
         title: 'Camino del borracho',
-        technique: 'Paseo aleatorio — cada paso es independiente del anterior',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        technique: 'Paseo aleatorio',
+        manifest: 'Cada paso es independiente del anterior.',
         shape: 'borracho',
       },
     ],
