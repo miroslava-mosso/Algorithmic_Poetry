@@ -117,11 +117,11 @@ case 'hopf-link': return (
 
       {/* Trayectoria circular del aro rosa */}
       <path
-        id="hopf-gray-text-path"
-        d="M 188,35
-           A 57,57 0 1 1 188,149
-           A 57,57 0 1 1 188,17"
-      />
+  id="hopf-lilac-text-path"
+  d="M 112,17
+     A 90,90 0 1 1 112,197
+     A 90,90 0 1 1 112,17"
+/>
     </defs>
 
     {/* Aro lila */}
