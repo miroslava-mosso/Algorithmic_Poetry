@@ -77,7 +77,7 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'Hopf link',
-        technique: 'Es el link no-trivial más simple que tiene más de una componente. Consiste en 2 círculos enlazados entre sí una vez.',
+        technique: 'El link no-trivial más simple con más de una componente — 2 círculos enlazados entre sí una vez.',
         shape: 'hopf-link',
       },
       {
