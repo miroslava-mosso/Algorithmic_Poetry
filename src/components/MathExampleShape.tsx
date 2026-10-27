@@ -275,20 +275,21 @@ case 'figure-eight-knot': return (
         }).join(' ') + ' Z';
 
       return (
-        <svg
-          viewBox="0 0 240 240"
-          preserveAspectRatio="xMidYMid meet"
-          width={isLightbox ? 560 : 280}
-          height={isLightbox ? 560 : 280}
-          style={{
-            display: 'block',
-            width: isLightbox ? 'min(560px, 75vw, 65vh)' : '100%',
-            height: 'auto',
-            maxWidth: isLightbox ? 'none' : '280px',
-            flex: '0 0 auto',
-          }}
-          fontFamily="'JetBrains Mono', monospace"
-        >
+      
+<svg
+  viewBox="0 0 240 240"
+  preserveAspectRatio="xMidYMid meet"
+  style={{
+    display: 'block',
+    width: isLightbox ? '100%' : '100%',
+    height: 'auto',
+    maxWidth: isLightbox ? '720px' : '280px',
+    flex: '0 0 auto',
+    margin: '0 auto',
+  }}
+  fontFamily="'JetBrains Mono', monospace"
+>
+
           <defs>
             <path id="tf-path" d={tfPath} />
           </defs>
