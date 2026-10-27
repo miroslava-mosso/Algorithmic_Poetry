@@ -206,43 +206,38 @@ case 'figure-eight-knot': return (
         id="figure-eight-square-path"
         d="
           M 160,32
-          H 292
-          V 292
-          H 96
+          H 288
+          V 288
+          H 64
+          V 128
+          H 208
           V 192
+          H 128
+          V 96
+          H 240
+          V 160
           H 160
-          V 224
+          V 240
           H 96
           V 160
-          H 224
-          V 96
-          H 96
-          V 128
-          H 64
-          V 224
-          H 160
-          V 128
-          H 96
-          V 64
           H 160
           V 32
         "
         fill="none"
-        strokeLinecap="butt"
-        strokeLinejoin="miter"
       />
     </defs>
 
-    {/* Un único recorrido turquesa */}
+    {/* Trayectoria continua turquesa */}
     <use
       href="#figure-eight-square-path"
       fill="none"
       stroke="#35BFC2"
       strokeWidth="1.5"
       strokeOpacity="0.9"
+      strokeLinejoin="round"
     />
 
-    {/* Poema siguiendo exactamente el mismo recorrido */}
+    {/* Poema sobre la trayectoria */}
     <text
       fontSize="7"
       fill="#0d0d0d"
