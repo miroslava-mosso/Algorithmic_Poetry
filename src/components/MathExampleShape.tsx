@@ -206,20 +206,18 @@ case 'figure-eight-knot': return (
 <path
   id="figure-eight-square-path"
   d="
-    M 80,80
-    H 240
-    V 240
-    H 80
-    V 80
-    H 160
-    V 200
-    H 20
-    V 120
-    H 20
-    V 160
-    H 160
-    V 80
-  "
+  M 158,58
+  H 308
+  V 260
+  H 87
+  V 109
+  H 237
+  V 160
+  H 10
+  V 210
+  H 158
+  V 58
+"
   fill="none"
       />
     </defs>
