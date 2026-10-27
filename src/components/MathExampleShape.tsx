@@ -10,8 +10,7 @@ const PINK = '#f4b6c2';
 const INK  = '#0d0d0d';
 const DIM  = 'rgba(13,13,13,0.45)';
 
-export function MathExampleGraphic({ shape }: Props) {
-  switch (shape) {
+export function MathExampleGraphic({ shape, isLightbox = false }: Props) {  switch (shape) {
     /* ── GEOMETRÍA ─────────────────────────────────── */
 
     case 'pascal-triangle': return (
@@ -694,10 +693,18 @@ case 'figure-eight-knot': return (
   }
 }
 
-export function MathExampleShape({ shape, lines }: Props) {
+export function MathExampleShape({
+  shape,
+  lines,
+  isLightbox = false,
+}: Props) {
   return (
     <div className="flex flex-col items-center">
-      <MathExampleGraphic shape={shape} lines={lines} />
+      <MathExampleGraphic
+        shape={shape}
+        lines={lines}
+        isLightbox={isLightbox}
+      />
     </div>
   );
 }
