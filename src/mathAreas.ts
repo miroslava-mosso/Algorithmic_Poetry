@@ -28,6 +28,7 @@ export interface MathExample {
   index: string;
   title: string;
   technique: string;
+  manifest: string;
   shape: MathShapeId;
 }
 
@@ -50,7 +51,8 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'Triángulo de Pascal',
-        technique: 'Cada número representa el número de sílabas de la palabra que debes escribir. Puedes hacer el triángulo de Pascan tan                   grande como desees.',
+        technique: 'Cada número representa el número de sílabas de cada palabra',
+        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
         shape: 'pascal-triangle',
       },
       {
