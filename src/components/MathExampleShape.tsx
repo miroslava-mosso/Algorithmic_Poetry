@@ -197,7 +197,7 @@ case 'hopf-link': return (
 
 case 'figure-eight-knot': return (
   <svg
-  viewBox="0 0 330 320"
+  viewBox="-10 0 340 320"
   preserveAspectRatio="xMidYMid meet"
   className="block h-auto w-full max-w-sm"
 >
@@ -236,7 +236,7 @@ case 'figure-eight-knot': return (
     <text
       fontSize="12"
       fill="#0d0d0d"
-      letterSpacing="0.3"
+      letterSpacing="0.2"
       paintOrder="stroke"
       stroke="#F7F5F1"
       strokeWidth="2"
