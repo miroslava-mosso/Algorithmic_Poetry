@@ -95,7 +95,7 @@ export const mathAreas: MathArea[] = [
       {
         index: '03',
         title: 'Nudo de trébol',
-        technique: 'El nudo no-trivial más simple - Pretzel - Notación de Alexander–Briggs 3_{1}', 
+        technique: 'El nudo no-trivial más simple - Pretzel - Notación de Alexander–Briggs 3_{1}',
         manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
         shape: 'trefoil-knot',
       },
