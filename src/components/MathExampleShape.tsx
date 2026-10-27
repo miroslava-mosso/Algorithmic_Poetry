@@ -102,8 +102,11 @@ export function MathExampleGraphic({ shape, isLightbox = false }: Props) {  swit
 
 case 'hopf-link': return (
   <svg
-     viewBox="0 0 320 240"
-    className="w-full max-w-sm"
+    viewBox="0 0 300 220"
+    preserveAspectRatio="xMidYMid meet"
+    className={`block h-auto w-full ${
+      isLightbox ? 'max-w-none' : 'max-w-sm'
+    }`}
     fontFamily="'JetBrains Mono', monospace"
   >
     <defs>
