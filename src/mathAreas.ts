@@ -82,14 +82,14 @@ export const mathAreas: MathArea[] = [
       },
       {
         index: '02',
-        title: 'Nudo Figure-eight 4_{1}',
-        technique: '4 cruces — el nudo de escalada más seguro',
+        title: 'Nudo Figure-eight ',
+        technique: '4 cruces — Notación de Alexander–Briggs 4_{1}',
         shape: 'figure-eight-knot',
       },
       {
         index: '03',
-        title: 'Nudo de trébol 3_{1}',
-        technique: 'El nudo no-trivial más simple - Pretzel',
+        title: 'Nudo de trébol ',
+        technique: 'El nudo no-trivial más simple - Pretzel - Notación de Alexander–Briggs 3_{1}', 
         shape: 'trefoil-knot',
       },
     ],
