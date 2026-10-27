@@ -167,13 +167,13 @@ case 'hopf-link': return (
   </textPath>
 </text>
 
-{/* Verso del aro gris */}
+{/* Verso del aro rosa */}
 <text
-  fontSize="8.5"
+  fontSize="8"
   fill="#0d0d0d"
   letterSpacing="0.1"
   paintOrder="stroke"
-  stroke="#F7F5F1"
+  stroke={PINK}
   strokeWidth="2.5"
   strokeLinejoin="round"
 >
