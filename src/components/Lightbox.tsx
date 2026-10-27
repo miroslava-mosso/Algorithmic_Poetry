@@ -34,7 +34,7 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children }: 
     >
       <div className="absolute inset-0 bg-ink/60 backdrop-blur-md" />
       <div
-        className="relative bg-[#f7f5f1] border hairline max-w-[900px] w-full max-h-[90vh] overflow-auto p-8 sm:p-12 flex flex-col items-center gap-6"
+        className="relative bg-[#f7f5f1] border hairline w-[96vw] max-w-none max-h-[95vh] overflow-auto p-4 sm:p-6 flex flex-col items-center gap-4"
         onClick={(e) => e.stopPropagation()}
       >
         <button
