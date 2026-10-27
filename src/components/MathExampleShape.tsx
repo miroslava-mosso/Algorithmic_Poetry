@@ -7,7 +7,7 @@ const PINK = '#f4b6c2';
 const INK  = '#0d0d0d';
 const DIM  = 'rgba(13,13,13,0.45)';
 
-export function MathExampleShape({ shape }: Props) {
+export function MathExampleShape({ shape, lines }: Props) {
   switch (shape) {
     /* ── GEOMETRÍA ─────────────────────────────────── */
 
