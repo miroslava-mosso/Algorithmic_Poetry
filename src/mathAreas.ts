@@ -78,15 +78,15 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'Hopf link',
-        technique: 'El link no-trivial más simple con más de una componente — 2 círculos enlazados entre sí una vez.',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        technique: '2 círculos enlazados entre sí una vez.',
+        manifest: 'El link no-trivial más simple con más de una componente',
         shape: 'hopf-link',
       },
       {
         index: '02',
         title: 'Nudo Figure-eight',
-        technique: '4 cruces — Notación de Alexander–Briggs 4_{1}',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        technique: '4 cruces',
+        manifest: 'Nudo no-trivial cuya notación de Alexander–Briggs es 4_{1}.',
         shape: 'figure-eight-knot',
       },
       {
