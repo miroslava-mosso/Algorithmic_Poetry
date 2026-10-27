@@ -18,11 +18,8 @@ export type MathShapeId =
   // Probabilidad
   | 'dado'
   | 'markov'
-  | 'borracho'
-  // Cuerdas
-  | 'vibracion'
-  | 'dimension-oculta'
-  | 'brana';
+  | 'borracho';
+
 
 export interface MathExample {
   index: string;
