@@ -212,7 +212,7 @@ case 'figure-eight-knot': return (
     H 80
     V 160
     H 160
-    V 100
+    V 200
     H 20
     V 120
     H 20
