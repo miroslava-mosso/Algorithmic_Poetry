@@ -292,80 +292,78 @@ case 'figure-eight-knot': return (
 
 
 /* Nudo trébol */
-      
 
-    case 'trefoil-knot': {
-      const tfPath =
-        Array.from({ length: 121 }, (_, i) => {
-          const t = (i / 120) * Math.PI * 2;
-          const x = 120 + 28 * (Math.sin(t) + 2 * Math.sin(2 * t));
-          const y = 120 + 28 * (Math.cos(t) - 2 * Math.cos(2 * t));
+case 'trefoil-knot': {
+  const tfPath =
+    Array.from({ length: 121 }, (_, i) => {
+      const t = (i / 120) * Math.PI * 2;
+      const x = 120 + 28 * (Math.sin(t) + 2 * Math.sin(2 * t));
+      const y = 120 + 28 * (Math.cos(t) - 2 * Math.cos(2 * t));
 
-          return `${i === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`;
-        }).join(' ') + ' Z';
+      return `${i === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`;
+    }).join(' ') + ' Z';
 
-      return (
-      
-<svg
-  viewBox="0 0 240 240"
-  preserveAspectRatio="xMidYMid meet"
-  style={{
-  display: 'block',
-  width: isLightbox ? 'min(92vw, 86vh)' : '100%',
-  height: 'auto',
-  maxWidth: isLightbox ? '1100px' : '280px',
-  flex: '0 0 auto',
-  margin: '0 auto',
-  }}
-  fontFamily="'JetBrains Mono', monospace"
->
+  return (
+    <svg
+      viewBox={isLightbox ? '15 15 210 210' : '0 0 240 240'}
+      preserveAspectRatio="xMidYMid meet"
+      style={{
+        display: 'block',
+        width: '100%',
+        height: 'auto',
+        maxWidth: isLightbox ? '1100px' : '280px',
+        flex: '0 0 auto',
+        margin: '0 auto',
+      }}
+      fontFamily="'JetBrains Mono', monospace"
+    >
+      <defs>
+        <path id="tf-path" d={tfPath} />
+      </defs>
 
-          <defs>
-            <path id="tf-path" d={tfPath} />
-          </defs>
+      <use
+        href="#tf-path"
+        fill="none"
+        stroke={PINK}
+        strokeWidth={isLightbox ? 1.6 : 1.2}
+        strokeOpacity="0.3"
+        strokeLinejoin="round"
+      />
 
-          <use
-  href="#tf-path"
-  fill="none"
-  stroke={PINK}
-  strokeWidth={isLightbox ? 1.6 : 1.2}
-  strokeOpacity="0.3"
-  strokeLinejoin="round"
-/>
+      <text
+        fill={INK}
+        fontSize="5"
+        textLength="790"
+        lengthAdjust="spacingAndGlyphs"
+      >
+        <textPath href="#tf-path" startOffset="0%">
+          ¿Qué ves cuando cierras los ojos? Despierto y no sé distinguir lo real de los sueños. Un minuto se siente elongado en el tiempo. Recuerdos distantes de una vida pasada. Amanece todos los días mientras yo siga existiendo. ¿Qué ves cuando cierras los ojos?
+        </textPath>
+      </text>
 
-          <text
-            fill={INK}
-            fontSize="5"
-            textLength="790"
-            lengthAdjust="spacingAndGlyphs"
-          >
-            <textPath href="#tf-path" startOffset="0%">
-              ¿Qué ves cuando cierras los ojos? Despierto y no sé distinguir lo real de los sueños. Un minuto se siente elongado en el tiempo. Recuerdos distantes de una vida pasada. Amanece todos los días mientras yo siga existiendo. ¿Qué ves cuando cierras los ojos?
-            </textPath>
-          </text>
+      <text
+        x="120"
+        y="116"
+        textAnchor="middle"
+        fontSize="7"
+        fill={DIM}
+      >
+        nudo
+      </text>
 
-          <text
-            x="120"
-            y="116"
-            textAnchor="middle"
-            fontSize="7"
-            fill={DIM}
-          >
-            nudo
-          </text>
-          <text
-            x="120"
-            y="126"
-            textAnchor="middle"
-            fontSize="8"
-            fill={PINK}
-          >
-            trébol
-          </text>
-        </svg>
-      );
-    }
- 
+      <text
+        x="120"
+        y="126"
+        textAnchor="middle"
+        fontSize="8"
+        fill={PINK}
+      >
+        trébol
+      </text>
+    </svg>
+  );
+}
+
 
     /* ── GRAFOS ────────────────────────────────────── */
 
