@@ -99,91 +99,92 @@ export function MathExampleGraphic({ shape }: Props) {
     /* ── NUDOS ─────────────────────────────────────── */
 
 
+
 case 'hopf-link': return (
   <svg
-    viewBox="0 0 280 180"
-    className="w-full max-w-xs"
+    viewBox="0 0 300 190"
+    className="w-full max-w-sm"
     fontFamily="'JetBrains Mono', monospace"
   >
-    {/* Aros */}
+    <defs>
+      {/* Trayectoria circular del aro lila */}
+      <path
+        id="hopf-lilac-text-path"
+        d="M 112,35
+           A 57,57 0 1 1 112,149
+           A 57,57 0 1 1 112,35"
+      />
+
+      {/* Trayectoria circular del aro gris */}
+      <path
+        id="hopf-gray-text-path"
+        d="M 188,35
+           A 57,57 0 1 1 188,149
+           A 57,57 0 1 1 188,35"
+      />
+    </defs>
+
+    {/* Aro lila */}
     <circle
-      cx="96"
-      cy="90"
+      cx="112"
+      cy="92"
       r="57"
       fill="none"
       stroke="#B69AE8"
-      strokeWidth="1.5"
-      opacity="0.8"
+      strokeWidth="1"
+      strokeOpacity="0.45"
     />
+
+    {/* Aro gris */}
     <circle
-      cx="184"
-      cy="90"
+      cx="188"
+      cy="92"
       r="57"
       fill="none"
       stroke="#929292"
-      strokeWidth="1.5"
-      opacity="0.8"
+      strokeWidth="1"
+      strokeOpacity="0.45"
     />
 
-    {/* Texto lila */}
-    {(() => {
-      const phrase = 'Mientras la casa olía a pastel horneado';
-      const chars = [...phrase];
-      const start = 205;
-      const span = 155;
+    {/* Verso lila: separado de la línea */}
+    <text
+      fontSize="7.5"
+      fill="#9673D1"
+      letterSpacing="0.2"
+      paintOrder="stroke"
+      stroke="#F7F5F1"
+      strokeWidth="2.5"
+      strokeLinejoin="round"
+    >
+      <textPath
+        href="#hopf-lilac-text-path"
+        startOffset="0%"
+        textLength="260"
+        lengthAdjust="spacing"
+      >
+        Mientras la casa olía a pastel horneado
+      </textPath>
+    </text>
 
-      return chars.map((char, i) => {
-        const angle = (start + (i / (chars.length - 1)) * span) * Math.PI / 180;
-        const x = 96 + 57 * Math.cos(angle);
-        const y = 90 + 57 * Math.sin(angle);
-        const rotation = start + (i / (chars.length - 1)) * span + 90;
-
-        return (
-          <text
-            key={`lilac-${i}`}
-            x={x}
-            y={y}
-            fontSize="6.2"
-            fill="#9673D1"
-            textAnchor="middle"
-            dominantBaseline="middle"
-            transform={`rotate(${rotation}, ${x}, ${y})`}
-          >
-            {char === ' ' ? '\u00A0' : char}
-          </text>
-        );
-      });
-    })()}
-
-    {/* Texto gris */}
-    {(() => {
-      const phrase = 'algo se rompió cuando los hermanos fueron separados';
-      const chars = [...phrase];
-      const start = 25;
-      const span = 245;
-
-      return chars.map((char, i) => {
-        const angle = (start + (i / (chars.length - 1)) * span) * Math.PI / 180;
-        const x = 184 + 57 * Math.cos(angle);
-        const y = 90 + 57 * Math.sin(angle);
-        const rotation = start + (i / (chars.length - 1)) * span + 90;
-
-        return (
-          <text
-            key={`gray-${i}`}
-            x={x}
-            y={y}
-            fontSize="5.3"
-            fill="#737373"
-            textAnchor="middle"
-            dominantBaseline="middle"
-            transform={`rotate(${rotation}, ${x}, ${y})`}
-          >
-            {char === ' ' ? '\u00A0' : char}
-          </text>
-        );
-      });
-    })()}
+    {/* Verso gris: separado de la línea */}
+    <text
+      fontSize="7"
+      fill="#737373"
+      letterSpacing="0.1"
+      paintOrder="stroke"
+      stroke="#F7F5F1"
+      strokeWidth="2.5"
+      strokeLinejoin="round"
+    >
+      <textPath
+        href="#hopf-gray-text-path"
+        startOffset="0%"
+        textLength="285"
+        lengthAdjust="spacing"
+      >
+        algo se rompió cuando los hermanos fueron separados
+      </textPath>
+    </text>
   </svg>
 );
 
