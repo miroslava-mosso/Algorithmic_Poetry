@@ -1,4 +1,4 @@
-import { mathAreas, type MathShapeId } from '@/mathAreas';
+import type { MathShapeId } from '@/mathAreas';
 
 interface Props {
   shape: MathShapeId;
