@@ -9,11 +9,11 @@ const PINK = '#f4b6c2';
 const INK  = '#0d0d0d';
 const DIM  = 'rgba(13,13,13,0.45)';
 
-export function MathExampleGraphic({ shape, lines}: Props) {
+export function MathExampleGraphic({ shape }: Props) {
   switch (shape) {
     /* ── GEOMETRÍA ─────────────────────────────────── */
 
-    case 'pascal-triangle': return ( 
+    case 'pascal-triangle': return (
       <svg viewBox="0 0 320 130" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
         {[
           [160, 8,  ['1']],
@@ -57,7 +57,8 @@ export function MathExampleGraphic({ shape, lines}: Props) {
             el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace · el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace ·
           </textPath>
         </text>
-        <text x="110" y="118" textAnchor="middle" fontSize="7.5" fill={PINK}></text>
+        <text x="110" y="106" textAnchor="middle" fontSize="8" fill={DIM}>capicúa</text>
+        <text x="110" y="118" textAnchor="middle" fontSize="7.5" fill={PINK}>∞</text>
       </svg>
     );
 
@@ -97,7 +98,7 @@ export function MathExampleGraphic({ shape, lines}: Props) {
 
     /* ── NUDOS ─────────────────────────────────────── */
 
-    case 'hopf-link': return (
+    case 'overhand-knot': return (
       <svg viewBox="0 0 280 180" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
         <defs>
           <path id="ok-path"
@@ -531,21 +532,4 @@ export function MathExampleGraphic({ shape, lines}: Props) {
     default:
       return null;
   }
-}
-
-export function MathExampleShape({ shape, lines }: Props) {
-  const manifest = mathAreas
-    .flatMap((area) => area.examples)
-    .find((example) => example.shape === shape)?.manifest;
-
-  return (
-    <div className="flex flex-col items-center">
-      <MathExampleGraphic shape={shape} lines={lines} />
-      {manifest && (
-        <p className="font-body text-sm sm:text-base leading-[1.6] text-ink/70 mt-4 text-center">
-          {manifest}
-        </p>
-      )}
-    </div>
-  );
 }
