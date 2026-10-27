@@ -11,7 +11,7 @@ export function MathExampleShape({ shape, lines}: Props) {
   switch (shape) {
     /* ── GEOMETRÍA ─────────────────────────────────── */
 
-    case 'pascal-triangle': return ( lines={lines} 
+    case 'pascal-triangle': return ( 
       <svg viewBox="0 0 320 130" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
         {[
           [160, 8,  ['1']],
