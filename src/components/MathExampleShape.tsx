@@ -1,6 +1,7 @@
 import type { MathShapeId } from '@/mathAreas';
 
-interface Props { shape: MathShapeId; }
+interface Props { shape: MathShapeId; 
+                  lines: string[];}
 
 const PINK = '#f4b6c2';
 const INK  = '#0d0d0d';
