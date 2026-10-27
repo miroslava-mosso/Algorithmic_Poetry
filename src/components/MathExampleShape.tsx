@@ -234,7 +234,7 @@ case 'figure-eight-knot': return (
 
     {/* Poema sobre la trayectoria */}
     <text
-      fontSize="7"
+      fontSize="12"
       fill="#0d0d0d"
       letterSpacing="0.1"
       paintOrder="stroke"
