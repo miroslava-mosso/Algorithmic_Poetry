@@ -119,7 +119,7 @@ function MathExample({ ex }: { ex: MathExample }) {
   <div
     className={
       ex.shape === 'trefoil-knot'
-        ? 'w-[min(80vw,72vh,720px)] min-w-0 shrink-0'
+        ? 'w-[min(92vw,86vh,1100px)] min-w-0 shrink-0'
         : 'w-[min(85vw,70vh,680px)]'
     }
   >
