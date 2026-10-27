@@ -82,7 +82,7 @@ export const mathAreas: MathArea[] = [
       },
       {
         index: '02',
-        title: 'Nudo Figure—eight',
+        title: 'Nudo Figure-eight',
         technique: '4 cruces — Notación de Alexander–Briggs 4_{1}',
         shape: 'figure-eight-knot',
       },
