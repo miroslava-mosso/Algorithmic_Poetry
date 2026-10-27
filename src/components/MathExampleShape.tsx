@@ -194,7 +194,7 @@ case 'hopf-link': return (
 
 /* Nudo figure-eight */       
 
-      
+
 case 'figure-eight-knot': return (
   <svg
     viewBox="0 0 320 320"
@@ -202,56 +202,60 @@ case 'figure-eight-knot': return (
     fontFamily="'JetBrains Mono', monospace"
   >
     <defs>
-      {/* Eje central de la trayectoria entrelazada */}
       <path
         id="figure-eight-square-path"
         d="
-          M 160,55
-          H 265
-          V 265
-          H 55
-          V 135
-          H 185
-          V 185
-          H 105
-          V 85
-          H 215
-          V 155
+          M 160,32
+          H 292
+          V 292
+          H 96
+          V 192
           H 160
-          V 235
-          H 85
+          V 224
+          H 96
           V 160
+          H 224
+          V 96
+          H 96
+          V 128
+          H 64
+          V 224
           H 160
-          V 55
+          V 128
+          H 96
+          V 64
+          H 160
+          V 32
         "
         fill="none"
+        strokeLinecap="butt"
+        strokeLinejoin="miter"
       />
     </defs>
 
-    {/* Trayectoria turquesa */}
+    {/* Un único recorrido turquesa */}
     <use
       href="#figure-eight-square-path"
       fill="none"
       stroke="#35BFC2"
       strokeWidth="1.5"
-      strokeOpacity="0.8"
-      strokeLinejoin="round"
+      strokeOpacity="0.9"
     />
 
-    {/* Poema sobre la trayectoria */}
+    {/* Poema siguiendo exactamente el mismo recorrido */}
     <text
-      fontSize="7.5"
+      fontSize="7"
       fill="#0d0d0d"
       letterSpacing="0.1"
       paintOrder="stroke"
       stroke="#F7F5F1"
-      strokeWidth="2.5"
+      strokeWidth="2"
       strokeLinejoin="round"
     >
       <textPath
         href="#figure-eight-square-path"
         startOffset="0%"
-        textLength="1250"
+        textLength="1200"
         lengthAdjust="spacing"
       >
         ¿Qué ves cuando cierras los ojos? La nada, el vacío, la oscuridad, el miedo a perderme y no poder regresar. A veces siento que he tenido mil vidas. Muchas las he olvidado ya.
