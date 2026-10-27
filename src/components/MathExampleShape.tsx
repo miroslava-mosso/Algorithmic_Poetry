@@ -338,7 +338,9 @@ case 'trefoil-knot': {
       >
         <textPath href="#tf-path" startOffset="0%">
           ¿Qué ves cuando cierras los ojos? Despierto y no sé distinguir lo real de los sueños. Un minuto se siente elongado en el tiempo.  <tspan dx="10">Recuerdos</tspan>   <tspan dx="14">distantes</tspan>
- de una vida pasada. Amanece todos los días mientras yo siga existiendo. ¿Qué ves cuando cierras los ojos?
+ de una <tspan>vida</tspan>
+ <tspan dx="7">pasada.</tspan>
+. Amanece todos los días mientras yo siga existiendo. ¿Qué ves cuando cierras los ojos?
         </textPath>
       </text>
 
