@@ -282,7 +282,6 @@ case 'figure-eight-knot': return (
   style={{
     display: 'block',
     width: isLightbox ? 'min(85vw, 78vh)' : '100%',
-    height: 'auto',
     maxWidth: isLightbox ? '900px' : '280px',
     flex: '0 0 auto',
     margin: '0 auto',
