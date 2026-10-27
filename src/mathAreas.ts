@@ -55,7 +55,7 @@ export const mathAreas: MathArea[] = [
         manifest:
     'Cada fila del triángulo propone una nueva medida para el poema. Puedes extender la figura tanto como quieras.',
         shape: 'pascal-triangle',
-},,
+},
       {
         index: '02',
         title: 'Círculo uroboros',
