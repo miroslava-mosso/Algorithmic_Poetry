@@ -192,27 +192,64 @@ case 'hopf-link': return (
   </svg>
 );
 
+/* Nudo figure-eight */       
+  
+case 'figure-eight-knot': return (
+  <svg
+    viewBox="0 0 320 250"
+    className="w-full max-w-sm"
+    fontFamily="'JetBrains Mono', monospace"
+  >
+    <defs>
+      <path
+        id="figure-eight-poem-path"
+        d="M 160,125
+           C 225,65 255,35 220,20
+           C 185,5 135,45 160,95
+           C 185,145 245,195 205,225
+           C 170,252 125,205 100,165
+           C 75,125 35,85 65,50
+           C 95,15 145,55 160,95
+           C 175,135 135,175 160,125
+           C 185,75 235,75 255,115
+           C 275,155 220,205 180,175
+           C 140,145 135,105 160,125"
+      />
+    </defs>
+
+    {/* Trayectoria turquesa */}
+    <use
+      href="#figure-eight-poem-path"
+      fill="none"
+      stroke="#35BFC2"
+      strokeWidth="1.5"
+      strokeOpacity="0.75"
+    />
+
+    {/* Verso sobre la trayectoria */}
+    <text
+      fontSize="8"
+      fill="#0d0d0d"
+      letterSpacing="0.15"
+      paintOrder="stroke"
+      stroke="#F7F5F1"
+      strokeWidth="2.5"
+      strokeLinejoin="round"
+    >
+      <textPath
+        href="#figure-eight-poem-path"
+        startOffset="0%"
+        textLength="1000"
+        lengthAdjust="spacing"
+      >
+        ¿Qué ves cuando cierras los ojos? La nada, el vacío, la oscuridad, el miedo a perderme y no poder regresar. A veces siento que he tenido mil vidas. Muchas las he olvidado ya.
+      </textPath>
+    </text>
+  </svg>
+);
+
+
       
-    case 'figure-eight-knot': return (
-      <svg viewBox="0 0 300 160" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
-        <defs>
-          <path id="fe-path"
-            d="M 30,80 C 50,20 110,20 130,80 C 150,140 210,140 240,80
-               C 270,20 270,20 250,80 C 230,140 170,140 150,80
-               C 130,20 80,10 50,80 C 20,150 40,150 30,80" />
-        </defs>
-        <path d="M 30,80 C 50,20 110,20 130,80 C 150,140 210,140 240,80
-                 C 270,20 270,20 250,80 C 230,140 170,140 150,80
-                 C 130,20 80,10 50,80 C 20,150 40,150 30,80"
-          fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.35"/>
-        <text fontSize="8.5" fill={INK} letterSpacing="0.5">
-          <textPath href="#fe-path">
-            sube · baja · se · cruza · se · cruza · vuelve · nunca · ido ·
-          </textPath>
-        </text>
-        <text x="150" y="86" textAnchor="middle" fontSize="8" fill={DIM}>∞</text>
-      </svg>
-    );
 
     case 'trefoil-knot': return (
       <svg viewBox="0 0 240 240" className="w-full max-w-[240px]" fontFamily="'JetBrains Mono', monospace">
