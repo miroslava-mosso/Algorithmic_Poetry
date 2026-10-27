@@ -116,9 +116,9 @@ function MathExample({ ex }: { ex: MathExample }) {
         title={ex.title}
         subtitle={ex.technique}
       >
-        <div className="w-full flex justify-center">
-  <MathExampleShape shape={ex.shape} isLightbox />
-</div>
+        <div className="w-[min(85vw,70vh,680px)] [&_svg]:!w-full [&_svg]:!max-w-none">
+          <MathExampleShape shape={ex.shape} isLightbox />
+        </div>
       </Lightbox>
     </>
   );
