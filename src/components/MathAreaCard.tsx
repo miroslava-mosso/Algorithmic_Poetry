@@ -89,7 +89,7 @@ function MathExample({ ex }: { ex: MathExample }) {
               isEnlarged ? 'scale-[1.1]' : 'scale-[1.05]'
             } origin-center`}
           >
-            <MathExampleShape shape={ex.shape} />
+            <MathExampleShape shape={shape} lines={lines} isLightbox />
           </div>
         </div>
 
@@ -117,7 +117,7 @@ function MathExample({ ex }: { ex: MathExample }) {
         subtitle={ex.technique}
       >
         <div className="[&>svg]:!max-w-[680px] scale-150 origin-center">
-          <MathExampleShape shape={ex.shape} />
+          <<MathExampleShape shape={shape} lines={lines} isLightbox />
         </div>
       </Lightbox>
     </>
