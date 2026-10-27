@@ -122,8 +122,8 @@ export const mathAreas: MathArea[] = [
       {
         index: '03',
         title: 'Bipartito',
-        technique: 'Dos conjuntos que solo se conectan entre sí — nunca consigo mismo',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        technique: 'Funciones',
+        manifest: 'Dos conjuntos que solo se conectan entre sí — nunca consigo mismo.',
         shape: 'bipartito',
       },
     ],
