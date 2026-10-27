@@ -202,21 +202,33 @@ case 'figure-eight-knot': return (
     fontFamily="'JetBrains Mono', monospace"
   >
     <defs>
+      {/* Eje central de la trayectoria entrelazada */}
       <path
         id="figure-eight-square-path"
         d="
-          M 160,35
-          H 275 V 275 H 45 V 115
-          H 205 V 205 H 115 V 75
-          H 245 V 155 H 160
-          V 245 H 75 V 160
-          H 160 V 35
+          M 160,55
+          H 265
+          V 265
+          H 55
+          V 135
+          H 185
+          V 185
+          H 105
+          V 85
+          H 215
+          V 155
+          H 160
+          V 235
+          H 85
+          V 160
+          H 160
+          V 55
         "
         fill="none"
       />
     </defs>
 
-    {/* Trayectoria geométrica turquesa */}
+    {/* Trayectoria turquesa */}
     <use
       href="#figure-eight-square-path"
       fill="none"
@@ -226,11 +238,11 @@ case 'figure-eight-knot': return (
       strokeLinejoin="round"
     />
 
-    {/* Poema siguiendo el recorrido */}
+    {/* Poema sobre la trayectoria */}
     <text
       fontSize="7.5"
       fill="#0d0d0d"
-      letterSpacing="0.15"
+      letterSpacing="0.1"
       paintOrder="stroke"
       stroke="#F7F5F1"
       strokeWidth="2.5"
@@ -239,7 +251,7 @@ case 'figure-eight-knot': return (
       <textPath
         href="#figure-eight-square-path"
         startOffset="0%"
-        textLength="1450"
+        textLength="1250"
         lengthAdjust="spacing"
       >
         ¿Qué ves cuando cierras los ojos? La nada, el vacío, la oscuridad, el miedo a perderme y no poder regresar. A veces siento que he tenido mil vidas. Muchas las he olvidado ya.
@@ -247,7 +259,6 @@ case 'figure-eight-knot': return (
     </text>
   </svg>
 );
-
 
 
   /* Nudo trebol */          
