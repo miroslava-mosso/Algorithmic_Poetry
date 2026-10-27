@@ -704,7 +704,7 @@ export function MathExampleShape({
   isLightbox = false,
 }: Props) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex w-full min-w-0 flex-col items-center">
       <MathExampleGraphic
         shape={shape}
         lines={lines}
