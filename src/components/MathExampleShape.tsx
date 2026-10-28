@@ -28,8 +28,8 @@ case 'reflexion': return (
       {/* Cuadrícula tenue de cuaderno */}
       <pattern
         id="reflexion-grid"
-        width="20"
-        height="20"
+        width="24"
+        height="24"
         patternUnits="userSpaceOnUse"
       >
         <path
