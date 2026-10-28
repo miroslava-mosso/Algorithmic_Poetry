@@ -110,11 +110,13 @@ function MathExample({ ex }: { ex: MathExample }) {
         </footer>
       </article>
 
+
 <Lightbox
   open={open}
   onClose={() => setOpen(false)}
   title={ex.title}
   subtitle={ex.technique}
+  caption={ex.manifest}
 >
   <div
     className={
@@ -126,6 +128,7 @@ function MathExample({ ex }: { ex: MathExample }) {
     <MathExampleShape shape={ex.shape} isLightbox />
   </div>
 </Lightbox>
+
 
     </>
   );
