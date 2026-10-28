@@ -332,7 +332,7 @@ case 'trefoil-knot': {
 
       <text
         fill={INK}
-        fontSize="7"
+        fontSize="6"
       >
         <textPath
   href="#tf-path"
