@@ -660,6 +660,90 @@ case 'piema': return (
 );
 
 
+/* ── Número Pi ───────────────────────────────── */
+
+case 'pi': return (
+  <svg
+    viewBox="0 0 400 400"
+    className="w-full max-w-sm"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <path
+        id="pi-circle-text"
+        d="M 200,200 m -125,0 a 125,125 0 1,1 250,0 a 125,125 0 1,1 -250,0"
+      />
+    </defs>
+
+    {/* Órbitas exteriores */}
+    <circle
+      cx="200"
+      cy="200"
+      r="180"
+      fill="none"
+      stroke={PINK}
+      strokeWidth="1"
+      opacity="0.8"
+    />
+
+    <circle
+      cx="200"
+      cy="200"
+      r="157"
+      fill="none"
+      stroke={PINK}
+      strokeWidth="1"
+      strokeDasharray="4 6"
+      opacity="0.8"
+    />
+
+    {/* Círculo interior */}
+    <circle
+      cx="200"
+      cy="200"
+      r="100"
+      fill="none"
+      stroke={PINK}
+      strokeWidth="1"
+      opacity="0.8"
+    />
+
+    {/* Dígitos de pi siguiendo la circunferencia */}
+    <text
+      fill={PINK}
+      fontSize="13"
+      letterSpacing="3"
+      fontFamily="'JetBrains Mono', monospace"
+    >
+      <textPath
+        href="#pi-circle-text"
+        startOffset="0%"
+      >
+        3.14159265358979323846264338327950288419716939937510
+      </textPath>
+    </text>
+
+    {/* Símbolo central */}
+    <text
+      x="200"
+      y="222"
+      textAnchor="middle"
+      fontSize="112"
+      fontFamily="Georgia, serif"
+      fontStyle="italic"
+      fill={PINK}
+    >
+      π
+    </text>
+
+    {/* Pequeños puntos decorativos */}
+    <circle cx="200" cy="20" r="3" fill={PINK} />
+    <circle cx="380" cy="200" r="3" fill={PINK} />
+    <circle cx="200" cy="380" r="3" fill={PINK} />
+    <circle cx="20" cy="200" r="3" fill={PINK} />
+  </svg>
+);
+
 
 
     
