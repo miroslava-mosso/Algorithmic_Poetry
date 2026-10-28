@@ -133,7 +133,7 @@ export const mathAreas: MathArea[] = [
     index: 'IV',
     title: 'Teoría de números',
     description:
-      'Los números y sus propiedades aritméticas determinan la longitud y/o el ritmo del poema. De números primos, sucesiones de         Fibonacci, un π-ema.',
+      'Los números y sus propiedades aritméticas determinan la longitud y/o el ritmo del poema. De números primos, sucesiones de               Fibonacci, un π-ema. Puedes continuar tu poema usando los siguientes dígitos de π hasta donde tu quieras.',
     examples: [
       {
         index: '01',
@@ -146,7 +146,7 @@ export const mathAreas: MathArea[] = [
         index: '02',
         title: 'Secuencia de Fibonacci',
         technique: '20 sílabas y 6 líneas',
-        manifest: 'Cada número de la secuencia de Fibonacci determina el número de sílabas que debe de                        tener el verso. Puedes continuar con más dígitos de la secuencia.',
+        manifest: 'Cada número de la secuencia de Fibonacci determina el número de sílabas que debe de                        tener el                   verso. Puedes continuar con más dígitos de la secuencia.',
         shape: 'fibonacci',
       },
       {
