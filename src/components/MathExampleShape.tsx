@@ -494,7 +494,7 @@ case 'primo': return (
         {/* Segunda columna: números */}
         <text
           x="70"
-          y={36 + i * 20}
+          y={66 + i * 20}
           fontSize="16"
           fill={PINK}
           textAnchor="middle"
@@ -505,7 +505,7 @@ case 'primo': return (
         {/* Tercera columna: versos */}
         <text
           x="110"
-          y={36 + i * 20}
+          y={66 + i * 20}
           fontSize="16"
           fill={INK}
         >
