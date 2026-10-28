@@ -496,7 +496,7 @@ case 'primo': return (
         <text
           x="70"
           y={26 + i * 27}
-          fontSize="11"
+          fontSize="16"
           fill={PINK}
           textAnchor="middle"
         >
@@ -507,7 +507,7 @@ case 'primo': return (
         <text
           x="110"
           y={26 + i * 27}
-          fontSize="11"
+          fontSize="16"
           fill={INK}
         >
           {item.verse}
@@ -518,7 +518,7 @@ case 'primo': return (
     {/* Número 53 grande, rosa y centrado */}
     <text
       x="260"
-      y="400"
+      y="390"
       textAnchor="middle"
       fontSize="76"
       fontWeight="300"
