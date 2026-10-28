@@ -208,7 +208,7 @@ case 'circulo-vicioso': return (
       strokeOpacity="0.4"
     />
 
-    <circle cx="110" cy="110" r="3" fill={PINK} />
+    <circle cx="110" cy="110" r="1" fill={PINK} />
 
     <text fontSize="7.3" fill={INK} letterSpacing="0.2">
       <textPath href="#cv-ring" startOffset="0%">
