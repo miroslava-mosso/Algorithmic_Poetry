@@ -28,8 +28,8 @@ case 'reflexion': return (
       {/* Cuadrícula tenue de cuaderno */}
       <pattern
         id="reflexion-grid"
-        width="24"
-        height="24"
+        width="25"
+        height="25"
         patternUnits="userSpaceOnUse"
       >
         <path
@@ -118,7 +118,7 @@ case 'reflexion': return (
       transform="translate(420, 95)"
       textAnchor="end"
       fill={INK}
-      fontSize="21"
+      fontSize="23"
     >
       <text x="0" y="0">
         Restos, escombros después
@@ -155,7 +155,7 @@ case 'reflexion': return (
       transform="translate(490, 565) rotate(180)"
       textAnchor="end"
       fill={INK}
-      fontSize="21"
+      fontSize="23"
     >
       <text x="0" y="0">
         Precisa imagen,
