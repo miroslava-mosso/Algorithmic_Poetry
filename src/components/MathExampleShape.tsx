@@ -188,7 +188,7 @@ case 'hopf-link': return (
   fill="#0d0d0d"
   letterSpacing="0.3"
   paintOrder="stroke"
-  stroke="#F7F5F1"
+  stroke="#B69AE8"
   strokeWidth="2.5"
   strokeLinejoin="round"
 >
