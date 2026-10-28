@@ -31,7 +31,7 @@ case 'reflexion': return (
       x2="380"
       y2="282"
       stroke={PINK}
-      strokeWidth="1"
+      strokeWidth="2"
       strokeDasharray="4 5"
       opacity="0.8"
     />
