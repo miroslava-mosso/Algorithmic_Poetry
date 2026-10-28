@@ -220,7 +220,7 @@ case 'circulo-vicioso': return (
       loop
     </text>
 
-    <text x="110" y="118" textAnchor="middle" fontSize="10" fill={PINK}>
+    <text x="110" y="118" textAnchor="middle" fontSize="9" fill={PINK}>
     ∞
     </text>
   </svg>
