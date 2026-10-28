@@ -517,62 +517,88 @@ case 'primo': return (
 );
 
 
-         /* ── Fibonacci ─────────────────────────── */
+        
+/* ──———————————————— Fibonacci ─────────────────────────── */
 
+case 'fibonacci': return (
+  <svg
+    viewBox="0 0 300 330"
+    className="w-full max-w-sm"
+    fontFamily="'JetBrains Mono', monospace"
+  >
+    {/* Figura original de Fibonacci: rectángulos */}
+    <rect x="130" y="90" width="15" height="15" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
+    <rect x="115" y="90" width="15" height="15" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
+    <rect x="115" y="75" width="30" height="15" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
+    <rect x="85" y="75" width="30" height="30" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
+    <rect x="85" y="30" width="60" height="45" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
+    <rect x="145" y="30" width="95" height="75" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
 
-    case 'fibonacci': return (
-      <svg viewBox="0 0 300 200" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
-        {/* Fibonacci rectangles suggesting the spiral */}
-        <rect x="130" y="90" width="15"  height="15"  fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
-        <rect x="115" y="90" width="15"  height="15"  fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
-        <rect x="115" y="75" width="30"  height="15"  fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
-        <rect x="85"  y="75" width="30"  height="30"  fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
-        <rect x="85"  y="30" width="60"  height="45"  fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
-        <rect x="145" y="30" width="95"  height="75"  fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
-        {/* Spiral approximation */}
-        <path d="M 145,105 Q 130,105 130,90 Q 130,75 145,75 Q 175,75 175,105 Q 175,150 130,150 Q 85,150 85,105 Q 85,30 145,30"
-          fill="none" stroke={PINK} strokeWidth="0.8" strokeOpacity="0.3"/>
-        {/* Words at each rectangle */}
-        {[
-          {x:136, y:100, w:'sol',    s:8},
-          {x:120, y:100, w:'mar',    s:8},
-          {x:128, y:83,  w:'nube',   s:8},
-          {x:96,  y:93,  w:'lluvia', s:8},
-          {x:108, y:57,  w:'montaña',s:7.5},
-          {x:182, y:70,  w:'horizonte sin fin',s:7},
-        ].map(n=>(
-          <text key={n.w} x={n.x} y={n.y} textAnchor="middle" fontSize={n.s} fill={INK}>{n.w}</text>
-        ))}
-        <text x="148" y="175" textAnchor="middle" fontSize="7.5" fill={DIM} letterSpacing="0.5">
-          1 · 1 · 2 · 3 · 5 · 8 · 13
+    {/* Espiral original */}
+    <path
+      d="M 145,105 Q 130,105 130,90 Q 130,75 145,75 Q 175,75 175,105 Q 175,150 130,150 Q 85,150 85,105 Q 85,30 145,30"
+      fill="none"
+      stroke={PINK}
+      strokeWidth="0.8"
+      strokeOpacity="0.3"
+    />
+
+    {/* Números dentro de la figura */}
+    {[
+      { x: 136, y: 100, n: '1' },
+      { x: 120, y: 100, n: '1' },
+      { x: 130, y: 84, n: '2' },
+      { x: 100, y: 94, n: '3' },
+      { x: 115, y: 57, n: '5' },
+      { x: 192, y: 70, n: '8' },
+    ].map((item, i) => (
+      <text
+        key={i}
+        x={item.x}
+        y={item.y}
+        textAnchor="middle"
+        fontSize="8"
+        fill={PINK}
+      >
+        {item.n}
+      </text>
+    ))}
+
+    {/* Tabla: primera columna rosa, segunda columna versos */}
+    {[
+      { n: '1', verse: 'luz' },
+      { n: '1', verse: 'chal' },
+      { n: '2', verse: 'fuego' },
+      { n: '3', verse: 'de lana' },
+      { n: '5', verse: 'que me protege' },
+      { n: '8', verse: 'en el cielo despejado' },
+    ].map((item, i) => (
+      <g key={i}>
+        {/* Números */}
+        <text
+          x="70"
+          y={190 + i * 21}
+          textAnchor="middle"
+          fontSize="10"
+          fill={PINK}
+        >
+          {item.n}
         </text>
-      </svg>
-    );
 
-    case 'mersenne': return (
-      <svg viewBox="0 0 300 110" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
-        {[
-          {y:20, n:'2¹−1 = 1', words:['uno'],                                                                     s:10},
-          {y:44, n:'2²−1 = 3', words:['tres','lunas','frías'],                                                     s:9.5},
-          {y:68, n:'2³−1 = 7', words:['siete','pájaros','sobre','el','alambre','de','luz'],                       s:9},
-          {y:92, n:'2⁴−1 = 15',words:['quince','gotas','de','lluvia','resbalan','por','el','cristal','del','tren','que','nunca','llegó','a','tiempo'], s:8},
-        ].map((row,ri)=>{
-          const startX = 10;
-          const gap = (290 - startX) / Math.max(row.words.length, 1);
-          return (
-            <g key={ri}>
-              <text x={startX} y={row.y} fontSize="7" fill={DIM}>{row.n}</text>
-              {row.words.map((w,wi)=>(
-                <text key={wi} x={startX + 60 + wi * gap} y={row.y}
-                  fontSize={row.s} fill={ri===3 ? DIM : INK}
-                  textAnchor="middle">{w}</text>
-              ))}
-            </g>
-          );
-        })}
-        <line x1="10" y1="100" x2="290" y2="100" stroke={PINK} strokeWidth="0.4" strokeOpacity="0.4"/>
-      </svg>
-    );
+        {/* Versos */}
+        <text
+          x="95"
+          y={190 + i * 21}
+          fontSize="10"
+          fill={INK}
+        >
+          {item.verse}
+        </text>
+      </g>
+    ))}
+  </svg>
+);
+
 
     /* ── PROBABILIDAD ──────────────────────────────── */
 
