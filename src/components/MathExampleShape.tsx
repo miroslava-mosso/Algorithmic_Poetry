@@ -210,7 +210,7 @@ case 'circulo-vicioso': return (
 
     <circle cx="110" cy="110" r="3" fill={PINK} />
 
-    <text fontSize="8" fill={INK} letterSpacing="0.2">
+    <text fontSize="5" fill={INK} letterSpacing="0.2">
       <textPath href="#cv-ring" startOffset="0%">
         Proceso homogéneo y poroso · por el cual escapan las · cosas que un día conocimos · ya no son más que · memorias · fragmentadas ·
       </textPath>
