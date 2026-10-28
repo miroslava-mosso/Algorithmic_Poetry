@@ -704,7 +704,7 @@ case 'piema': return (
       </defs>
 
       <text
-        fill={PINK}
+        fill={INK}
         fontSize="10"
         letterSpacing="2"
         fontFamily="'JetBrains Mono', monospace"
