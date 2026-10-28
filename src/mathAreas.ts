@@ -152,7 +152,7 @@ export const mathAreas: MathArea[] = [
       {
         index: '03',
         title: 'El Pi-ema',
-        technique: 'Dígitos de π',
+        technique: 'Técnica de Mike Keith',
         manifest: 'El número de palabras en cada verso sigue los dígitos de π. Puedes continuar tu poema usando los siguientes dígitos de             π hasta donde tu quieras.',
         shape: 'piema',
       },
