@@ -133,7 +133,7 @@ export const mathAreas: MathArea[] = [
     index: 'IV',
     title: 'Teoría de números',
     description:
-      'Los enteros gobiernan el ritmo: sílabas primas, sucesiones de Fibonacci, números de Mersenne. El poema obedece a la aritmética.',
+      'Los números y sus propiedades aritméticas determinan la longitud y/o el ritmo del poema. De números primos, sucesiones de         Fibonacci, un π-ema.',
     examples: [
       {
         index: '01',
