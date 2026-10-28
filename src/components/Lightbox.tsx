@@ -54,7 +54,7 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children }: 
   {children}
 </div>
         {caption && (
-  <p className="font-body text-lg italic text-ink/80 text-center max-w-[60ch] leading-relaxed">
+  <p className="font-body text-lg italic text-ink/90 text-center max-w-[60ch] leading-relaxed">
     {caption}
   </p>
 )}
