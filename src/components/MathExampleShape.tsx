@@ -460,11 +460,12 @@ case 'trefoil-knot': {
     /* ── TEORÍA DE NÚMEROS ─────────────────────────── */
 
      
+
 /* ── Número primo 53 ─────────────────────────── */
 
 case 'primo': return (
   <svg
-    viewBox="0 0 520 250"
+    viewBox="0 0 520 390"
     className="w-full max-w-2xl"
     fontFamily="'JetBrains Mono', monospace"
   >
@@ -485,7 +486,7 @@ case 'primo': return (
         {/* Primera columna: puntos */}
         <circle
           cx="28"
-          cy={22 + i * 20}
+          cy={22 + i * 27}
           r="2"
           fill={PINK}
           opacity="0.8"
@@ -494,8 +495,8 @@ case 'primo': return (
         {/* Segunda columna: números */}
         <text
           x="70"
-          y={66 + i * 20}
-          fontSize="16"
+          y={26 + i * 27}
+          fontSize="11"
           fill={PINK}
           textAnchor="middle"
         >
@@ -505,14 +506,27 @@ case 'primo': return (
         {/* Tercera columna: versos */}
         <text
           x="110"
-          y={66 + i * 20}
-          fontSize="16"
+          y={26 + i * 27}
+          fontSize="11"
           fill={INK}
         >
           {item.verse}
         </text>
       </g>
     ))}
+
+    {/* Número 53 grande, rosa y centrado */}
+    <text
+      x="260"
+      y="365"
+      textAnchor="middle"
+      fontSize="76"
+      fontWeight="300"
+      fill={PINK}
+      opacity="0.9"
+    >
+      53
+    </text>
   </svg>
 );
 
