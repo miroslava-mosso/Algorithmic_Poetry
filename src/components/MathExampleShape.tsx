@@ -263,7 +263,7 @@ case 'figure-eight-knot': return (
       href="#figure-eight-square-path"
       fill="none"
       stroke="#35BFC2"
-      strokeWidth="1.5"
+      strokeWidth="1"
       strokeOpacity="1"
       strokeLinejoin="round"
     />
