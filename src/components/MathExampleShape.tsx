@@ -37,7 +37,7 @@ case 'reflexion': return (
           fill="none"
           stroke="#999999"
           strokeWidth="0.65"
-          opacity="0.22"
+          opacity="0.5"
         />
       </pattern>
 
