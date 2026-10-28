@@ -137,9 +137,9 @@ export const mathAreas: MathArea[] = [
     examples: [
       {
         index: '01',
-        title: 'Números primos',
-        technique: 'Letras y números primos',
-        manifest: 'Solo palabras cuyo número de letras es primo: 2, 3, 5, 7, 11.',
+        title: 'El número primo 53',
+        technique: 'Números primos',
+        manifest: 'Un poema de 53 sílabas, divididas en 11 líneas.',
         shape: 'primo',
       },
       {
