@@ -154,7 +154,7 @@ export const mathAreas: MathArea[] = [
         title: 'El Pi-ema',
         technique: 'Dígitos de π',
         manifest: 'El número de letras en cada palabra sigue los dígitos de π.',
-        shape: 'Piema',
+        shape: 'piema',
       },
     ],
   },
