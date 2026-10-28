@@ -638,7 +638,7 @@ case 'piema': return (
         <text
           x="35"
           y={24 + i * 29}
-          fontSize="17"
+          fontSize="19"
           fill={PINK}
           textAnchor="middle"
         >
@@ -648,7 +648,7 @@ case 'piema': return (
         <text
           x="65"
           y={24 + i * 29}
-          fontSize="16"
+          fontSize="18"
           fill={INK}
         >
           {item.verse}
