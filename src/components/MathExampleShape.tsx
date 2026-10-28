@@ -336,7 +336,8 @@ case 'trefoil-knot': {
       >
         <textPath
   href="#tf-path"
-  startOffset="-5%"
+  startOffset="0%"
+  dx="-5"
   textLength={undefined}
 >
           <tspan dx="0">¿Qué</tspan> ves cuando cierras los ojos? Despierto y no sé distinguir lo real de los sueños. Un minuto se siente elongado en el tiempo. Recuerdos distantes de una vida pasada. <tspan dx="13">Amanece</tspan> todos los días mientras yo siga existiendo. 
