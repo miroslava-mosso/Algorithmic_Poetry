@@ -212,7 +212,7 @@ case 'circulo-vicioso': return (
 
     <text fontSize="7" fill={INK} letterSpacing="0.2">
       <textPath href="#cv-ring" startOffset="0%">
-        Proceso homogéneo y poroso por el cual escapan · las cosas que un día conocimos · ya no son más que · memorias  fragmentadas ·
+        Proceso homogéneo y poroso por el cual escapan las cosas que un día conocimos ya no son más que memorias  fragmentadas 
       </textPath>
     </text>
 
