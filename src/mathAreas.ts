@@ -161,7 +161,7 @@ export const mathAreas: MathArea[] = [
   {
     id: 'probabilidad',
     index: 'V',
-    title: 'Probabilidad y estadística',
+    title: 'Probabilidad y combinatoria',
     description:
       'El azar como coautor: dados, cadenas de Markov, paseos aleatorios. El poema es uno entre todos los posibles.',
     examples: [
@@ -180,11 +180,11 @@ export const mathAreas: MathArea[] = [
         shape: 'markov',
       },
       {
-        index: '03',
-        title: 'Camino del borracho',
-        technique: 'Paseo aleatorio',
-        manifest: 'Cada paso es independiente del anterior.',
-        shape: 'borracho',
+        index: '01',
+        title: 'Triángulo de Pascal',
+        technique: 'Cada número representa el número de sílabas de cada palabra',
+        manifest: 'Cada fila del triángulo propone una nueva medida para el poema. Puedes extender el triángulo de Pascal                         tanto como quieras.',
+        shape: 'pascal-triangle',
       },
     ],
   },
