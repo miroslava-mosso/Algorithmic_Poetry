@@ -56,7 +56,7 @@ export const mathAreas: MathArea[] = [
         index: '02',
         title: 'Círculo uroboros',
         technique: 'Poema circular — Loop',
-        manifest: 'Poema de pensamientos rumiantes que se repiten una y otra vez.',
+        manifest: 'Poema de pensamientos rumiantes que se repiten en un ciclo eterno.',
         shape: 'circulo-vicioso',
       },
       {
