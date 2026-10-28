@@ -339,8 +339,7 @@ case 'trefoil-knot': {
   startOffset="0%"
   textLength={undefined}
 >
-          ¿Qué ves cuando cierras los ojos? Despierto y no sé distinguir lo real de los sueños. Un minuto se siente elongado en el tiempo. Recuerdos   <tspan dx="20">distantes</tspan>
- de una <tspan dx="5">vida</tspan>
+          ¿Qué ves cuando cierras los ojos? Despierto y no sé distinguir lo real de los sueños. Un minuto se siente elongado en el tiempo. Recuerdos distantes de una <tspan dx="5">vida</tspan>
  <tspan dx="18">pasada. </tspan>
  Amanece todos los días mientras yo siga existiendo. ¿Qué ves cuando cierras los ojos?
         </textPath>
