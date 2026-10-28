@@ -4,6 +4,7 @@ import { MathExampleShape } from '@/components/MathExampleShape';
 import { Lightbox } from '@/components/Lightbox';
 
 const enlargedShapes = new Set([
+  'reflexion',
   'pascal-triangle',
   'circulo-vicioso',
   'hopf-link',
