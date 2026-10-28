@@ -668,7 +668,7 @@ case 'piema': return (
         cy="0"
         r="115"
         fill="none"
-        stroke={INK}
+        stroke={PINK}
         strokeWidth="1"
         opacity="0.8"
       />
