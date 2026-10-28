@@ -536,7 +536,7 @@ case 'primo': return (
 
 case 'fibonacci': return (
   <svg
-    viewBox="0 0 300 330"
+    viewBox="0 0 520 350"
     className="w-full max-w-sm"
     fontFamily="'JetBrains Mono', monospace"
   >
@@ -612,6 +612,7 @@ case 'fibonacci': return (
     ))}
   </svg>
 );
+
 
 
 /* ── Piema ───────────────────────────────────── */
