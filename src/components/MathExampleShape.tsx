@@ -518,7 +518,7 @@ case 'primo': return (
 
 
         
-/* ──———————————————— Fibonacci ─────────────────────────── */
+/* ———————————————— Fibonacci ─────────────────────────── */
 
 case 'fibonacci': return (
   <svg
