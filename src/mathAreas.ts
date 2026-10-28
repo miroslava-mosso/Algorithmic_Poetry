@@ -145,8 +145,8 @@ export const mathAreas: MathArea[] = [
       {
         index: '02',
         title: 'Secuencia de Fibonacci',
-        technique: 'Espiral logarítmica',
-        manifest: '20 sílabas y 6 líneas. Cada número de la secuencia de Fibonacci determina el número de sílabas que debe de                        tener el verso. Puedes continuar con más dígitos de la secuencia.',
+        technique: '20 sílabas y 6 líneas',
+        manifest: 'Cada número de la secuencia de Fibonacci determina el número de sílabas que debe de                        tener el verso. Puedes continuar con más dígitos de la secuencia.',
         shape: 'fibonacci',
       },
       {
