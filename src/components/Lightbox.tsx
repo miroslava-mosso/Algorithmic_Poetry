@@ -47,7 +47,7 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children }: 
         <div className="text-center">
           <h3 className="font-display text-2xl sm:text-3xl">{title}</h3>
           {subtitle && (
-  <p className="font-mono-lt text-sm uppercase text-ink/50 mt-2">
+  <p className="font-mono-lt text-xs uppercase text-ink/50 mt-2">
     {subtitle}
   </p>
 )}
