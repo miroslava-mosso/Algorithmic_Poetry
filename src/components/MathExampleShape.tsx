@@ -15,9 +15,6 @@ export function MathExampleGraphic({ shape, isLightbox = false }: Props) {  swit
     /* ── GEOMETRÍA ─────────────────────────────────── */
  
 
-/* ── Reflexión ───────────────────────────────── */
-
-
 
 /* ── Reflexión ───────────────────────────────── */
 
@@ -29,7 +26,23 @@ case 'reflexion': return (
     xmlns="http://www.w3.org/2000/svg"
   >
     <defs>
-      {/* Flechas de los ejes cartesianos */}
+      {/* Cuadrícula tenue de cuaderno */}
+      <pattern
+        id="reflexion-grid"
+        width="20"
+        height="20"
+        patternUnits="userSpaceOnUse"
+      >
+        <path
+          d="M 20 0 L 0 0 0 20"
+          fill="none"
+          stroke="#999999"
+          strokeWidth="0.65"
+          opacity="0.22"
+        />
+      </pattern>
+
+      {/* Flechas de los ejes */}
       <marker
         id="reflexion-axis-arrow"
         markerWidth="8"
@@ -42,7 +55,7 @@ case 'reflexion': return (
         <path d="M 0,0 L 8,4 L 0,8 Z" fill="#8CCFE8" />
       </marker>
 
-      {/* Punta de la flecha curva rosa */}
+      {/* Flecha curva rosa */}
       <marker
         id="reflexion-rotation-arrow"
         markerWidth="9"
@@ -55,6 +68,15 @@ case 'reflexion': return (
         <path d="M 0,0 L 9,4.5 L 0,9 Z" fill={PINK} />
       </marker>
     </defs>
+
+    {/* Fondo cuadriculado */}
+    <rect
+      x="0"
+      y="0"
+      width="900"
+      height="650"
+      fill="url(#reflexion-grid)"
+    />
 
     {/* Eje horizontal */}
     <line
@@ -80,8 +102,7 @@ case 'reflexion': return (
       markerEnd="url(#reflexion-axis-arrow)"
     />
 
-    {/* Diagonal rosa punteada: del cuadrante superior
-        derecho al cuadrante inferior izquierdo */}
+    {/* Diagonal rosa punteada */}
     <line
       x1="710"
       y1="60"
@@ -95,50 +116,47 @@ case 'reflexion': return (
 
     {/* Poema original: cuadrante superior izquierdo */}
     <g
-      transform="translate(420, 110)"
+      transform="translate(420, 95)"
       textAnchor="end"
       fill={INK}
-      fontSize="14"
+      fontSize="19"
     >
       <text x="0" y="0">
         Restos, escombros después
       </text>
-      <text x="0" y="27">
+      <text x="0" y="32">
         de el vendaval
       </text>
-      <text x="0" y="54">
+      <text x="0" y="64">
         El paso del tiempo
       </text>
-      <text x="0" y="81">
+      <text x="0" y="96">
         erosionó la tierra,
       </text>
-      <text x="0" y="108">
+      <text x="0" y="128">
         mutiló la memoria de la
       </text>
-      <text x="0" y="135">
+      <text x="0" y="160">
         imagen precisa
       </text>
     </g>
 
-    {/* Flecha curva: del poema original hacia el reflejado.
-        Se mantiene dentro del cuadrante superior derecho. */}
+    {/* Flecha curva: del original al reflejo */}
     <path
       d="M 505,105 C 555,75 620,105 650,180"
       fill="none"
       stroke={PINK}
-      strokeWidth="2"
+      strokeWidth="2.5"
       markerEnd="url(#reflexion-rotation-arrow)"
       strokeLinecap="round"
     />
 
-    {/* Poema reflejado: cuadrante inferior derecho.
-        La rotación de 180° conserva el texto invertido.
-        textAnchor="end" hace que se extienda hacia la derecha. */}
+    {/* Poema reflejado: cuadrante inferior derecho */}
     <g
-      transform="translate(490, 555) rotate(180)"
+      transform="translate(490, 565) rotate(180)"
       textAnchor="end"
       fill={INK}
-      fontSize="14"
+      fontSize="18"
     >
       <text x="0" y="0">
         Precisa imagen,
