@@ -22,7 +22,7 @@ export function MathExampleGraphic({ shape, isLightbox = false }: Props) {  swit
 
 case 'reflexion': return (
   <svg
-    viewBox="0 0 1000 350"
+    viewBox="0 0 1000 390"
     className="w-full max-w-5xl"
     fontFamily="'JetBrains Mono', monospace"
     xmlns="http://www.w3.org/2000/svg"
