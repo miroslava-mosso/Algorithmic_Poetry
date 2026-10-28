@@ -614,6 +614,11 @@ case 'fibonacci': return (
 );
 
 
+     /* ── El pi-ema ──────────────────────────────── */
+
+
+    
+
     /* ── PROBABILIDAD ──────────────────────────────── */
 
     case 'dado': return (
