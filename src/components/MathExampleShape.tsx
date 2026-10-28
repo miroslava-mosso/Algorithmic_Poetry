@@ -706,7 +706,7 @@ case 'piema': return (
         fontFamily="'JetBrains Mono', monospace"
       >
         <textPath href="#piema-circle" startOffset="0%">
-          3.141592653589793238462643383279502884......
+          3.141592653589793238462643383279502884...............
         </textPath>
       </text>
 
