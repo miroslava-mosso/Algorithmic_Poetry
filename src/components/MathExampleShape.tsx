@@ -15,7 +15,6 @@ export function MathExampleGraphic({ shape, isLightbox = false }: Props) {  swit
     /* ── GEOMETRÍA ─────────────────────────────────── */
  
 
-
 /* ── Reflexión ───────────────────────────────── */
 
 case 'reflexion': return (
