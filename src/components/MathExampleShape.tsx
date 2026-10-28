@@ -118,7 +118,7 @@ case 'reflexion': return (
       transform="translate(420, 95)"
       textAnchor="end"
       fill={INK}
-      fontSize="19"
+      fontSize="21"
     >
       <text x="0" y="0">
         Restos, escombros después
@@ -155,7 +155,7 @@ case 'reflexion': return (
       transform="translate(490, 565) rotate(180)"
       textAnchor="end"
       fill={INK}
-      fontSize="18"
+      fontSize="21"
     >
       <text x="0" y="0">
         Precisa imagen,
