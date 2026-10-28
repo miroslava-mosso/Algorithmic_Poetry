@@ -186,7 +186,6 @@ case 'reflexion': return (
     /* ── Círculo uroboros ─────────────────────────────────── */
 
     
-
 case 'circulo-vicioso': return (
   <svg
     viewBox="0 0 220 220"
@@ -213,7 +212,7 @@ case 'circulo-vicioso': return (
 
     <text fontSize="8.6" fill={INK} letterSpacing="0.55">
       <textPath href="#cv-ring" startOffset="0%">
-        el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace · el río nace · la montaña sueña · la lluvia cae · la lluvia cae · la montaña sueña · el río nace ·
+        El cambio es a veces imperceptible · La llama encendida · se vuelve cera derretida · Proceso homogéneo y poroso · por el cual escapan las · cosas que un día conocimos · y ya no son más que memorias fragmentadas.
       </textPath>
     </text>
 
