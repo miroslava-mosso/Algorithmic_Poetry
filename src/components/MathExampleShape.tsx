@@ -333,8 +333,6 @@ case 'trefoil-knot': {
       <text
         fill={INK}
         fontSize="5"
-        textLength="790"
-        lengthAdjust="spacingAndGlyphs"
       >
         <textPath
   href="#tf-path"
