@@ -145,7 +145,7 @@ export const mathAreas: MathArea[] = [
       {
         index: '02',
         title: 'Secuencia de Fibonacci',
-        technique: '20 sílabas y 6 líneas',
+        technique: 'Técnica de Gregory K. Pincus',
         manifest: 'Cada número de la secuencia de Fibonacci determina el número de sílabas del verso. Puedes continuar con más dígitos de         la secuencia.',
         shape: 'fibonacci',
       },
