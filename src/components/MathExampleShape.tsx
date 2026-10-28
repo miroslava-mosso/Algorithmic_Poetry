@@ -517,7 +517,7 @@ case 'primo': return (
 
     {/* Número 53 grande, rosa y centrado */}
     <text
-      x="180"
+      x="190"
       y="490"
       textAnchor="middle"
       fontSize="76"
