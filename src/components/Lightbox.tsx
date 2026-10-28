@@ -50,9 +50,9 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children }: 
             <p className="font-mono-lt text-[10px] uppercase text-ink/50 mt-2">{subtitle}</p>
           )}
         </div>
-        <div className="flex-1 flex items-center justify-center w-full py-6">
-          {children}
-        </div>
+        <div className="flex-none flex items-center justify-center w-full py-2">
+  {children}
+</div>
         {caption && (
           <p className="font-body text-base italic text-ink/65 text-center max-w-[60ch]">
             {caption}
