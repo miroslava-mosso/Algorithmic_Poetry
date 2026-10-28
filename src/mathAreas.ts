@@ -47,15 +47,15 @@ export const mathAreas: MathArea[] = [
     examples: [
       {
         index: '01',
-        title: 'Triángulo de Pascal',
+        title: 'Reflexión — Palíndromo',
         technique: 'Cada número representa el número de sílabas de cada palabra',
-        manifest: 'Cada fila del triángulo propone una nueva medida para el poema. Puedes extender el triángulo de Pascal                   tanto como quieras.',
+        manifest: 'Las palabras se refleja con respecto a un eje en el plano. El poema original se lee en un sentido y                     el reflejado se lee al revés.',
         shape: 'pascal-triangle',
 },
       {
         index: '02',
         title: 'Círculo uroboros',
-        technique: 'Poema circular — Palíndromo',
+        technique: 'Poema circular — Loop',
         manifest: 'Se lee igual en un sentido que al revés.',
         shape: 'circulo-vicioso',
       },
