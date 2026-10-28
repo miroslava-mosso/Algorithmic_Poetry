@@ -216,7 +216,7 @@ case 'circulo-vicioso': return (
       </textPath>
     </text>
 
-    <text x="110" y="106" textAnchor="middle" fontSize="10" fill={DIM}>
+    <text x="110" y="106" textAnchor="middle" fontSize="8" fill={DIM}>
       loop
     </text>
 
