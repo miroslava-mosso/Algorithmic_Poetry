@@ -668,7 +668,7 @@ case 'piema': return (
         cy="0"
         r="115"
         fill="none"
-        stroke={PINK}
+        stroke={INK}
         strokeWidth="1"
         opacity="0.8"
       />
@@ -679,7 +679,7 @@ case 'piema': return (
         cy="0"
         r="95"
         fill="none"
-        stroke={PINK}
+        stroke={INK}
         strokeWidth="1"
         strokeDasharray="4 6"
         opacity="0.8"
@@ -691,7 +691,7 @@ case 'piema': return (
         cy="0"
         r="62"
         fill="none"
-        stroke={INK}
+        stroke={PINK}
         strokeWidth="1"
       />
 
