@@ -465,7 +465,7 @@ case 'trefoil-knot': {
 
 case 'primo': return (
   <svg
-    viewBox="0 0 420 350"
+    viewBox="0 0 420 650"
     className="w-full max-w-2xl"
     fontFamily="'JetBrains Mono', monospace"
   >
