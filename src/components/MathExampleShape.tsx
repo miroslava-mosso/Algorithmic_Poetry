@@ -465,7 +465,7 @@ case 'trefoil-knot': {
 
 case 'primo': return (
   <svg
-    viewBox="0 0 520 390"
+    viewBox="0 0 520 350"
     className="w-full max-w-2xl"
     fontFamily="'JetBrains Mono', monospace"
   >
@@ -518,7 +518,7 @@ case 'primo': return (
     {/* Número 53 grande, rosa y centrado */}
     <text
       x="260"
-      y="390"
+      y="340"
       textAnchor="middle"
       fontSize="76"
       fontWeight="300"
