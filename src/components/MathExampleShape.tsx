@@ -210,7 +210,7 @@ case 'circulo-vicioso': return (
 
     <circle cx="110" cy="110" r="3" fill={PINK} />
 
-    <text fontSize="8.6" fill={INK} letterSpacing="0.55">
+    <text fontSize="8" fill={INK} letterSpacing="0.5">
       <textPath href="#cv-ring" startOffset="0%">
         El cambio es a veces imperceptible · La llama encendida · se vuelve cera derretida · Proceso homogéneo y poroso · por el cual escapan las · cosas que un día conocimos · y ya no son más que memorias fragmentadas.
       </textPath>
