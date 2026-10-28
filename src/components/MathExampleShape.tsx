@@ -189,7 +189,7 @@ case 'hopf-link': return (
   letterSpacing="0.3"
   paintOrder="stroke"
   stroke="#B69AE8"
-  strokeWidth="2"
+  strokeWidth="1"
   strokeLinejoin="round"
 >
   <textPath
