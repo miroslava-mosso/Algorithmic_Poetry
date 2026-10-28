@@ -616,6 +616,51 @@ case 'fibonacci': return (
 
      /* ── El pi-ema ──────────────────────────────── */
 
+/* ── Piema ───────────────────────────────────── */
+
+case 'piema': return (
+  <svg
+    viewBox="0 0 520 240"
+    className="w-full max-w-2xl"
+    fontFamily="'JetBrains Mono', monospace"
+  >
+    {[
+      { n: '3', verse: 'No puedo dormir,' },
+      { n: '1', verse: 'orcuridad' },
+      { n: '4', verse: 'no quiero cerrar los' },
+      { n: '1', verse: 'ojos,' },
+      { n: '5', verse: 'perder el norte hasta desaparecer' },
+      { n: '9', verse: 'Sentir los números del reloj' },
+      { n: '', verse: 'parpadeando, vigilándole al dormir.' },
+    ].map((item, i) => (
+      <g key={i}>
+        {/* Primera columna: dígitos de pi */}
+        <text
+          x="35"
+          y={24 + i * 29}
+          fontSize="12"
+          fill={PINK}
+          textAnchor="middle"
+        >
+          {item.n}
+        </text>
+
+        {/* Segunda columna: versos */}
+        <text
+          x="65"
+          y={24 + i * 29}
+          fontSize="11"
+          fill={INK}
+        >
+          {item.verse}
+        </text>
+      </g>
+    ))}
+  </svg>
+);
+
+
+
 
     
 
