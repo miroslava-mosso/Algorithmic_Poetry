@@ -558,7 +558,7 @@ case 'fibonacci': return (
         y={item.y}
         textAnchor="middle"
         fontSize="8"
-        fill={PINK}
+        fill={INK}
       >
         {item.n}
       </text>
