@@ -459,29 +459,66 @@ case 'trefoil-knot': {
 
     /* ── TEORÍA DE NÚMEROS ─────────────────────────── */
 
-    case 'primo': return (
-      <svg viewBox="0 0 300 80" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
-        {[
-          {x:20,  w:'el',    n:2, prime:true},
-          {x:56,  w:'sol',   n:3, prime:true},
-          {x:100, w:'nogal', n:5, prime:true},
-          {x:164, w:'amanecer',n:8, prime:false},
-          {x:240, w:'cielo', n:5, prime:true},
-        ].map(item=>(
-          <g key={item.w}>
-            <text x={item.x} y={30} fontSize="11" fill={item.prime ? INK : DIM}
-              fontWeight={item.prime ? '400':'300'}>{item.w}</text>
-            <text x={item.x} y={50} fontSize="8" fill={item.prime ? PINK : DIM}
-              letterSpacing="0">{item.n}
-            </text>
-            {item.prime && <circle cx={item.x+4} cy={62} r="2" fill={PINK} opacity="0.6"/>}
-          </g>
-        ))}
-        <text x="150" y="78" textAnchor="middle" fontSize="7.5" fill={DIM} letterSpacing="1">
-          solo palabras de longitud prima
+     
+/* ── Número primo 53 ─────────────────────────── */
+
+case 'primo': return (
+  <svg
+    viewBox="0 0 520 250"
+    className="w-full max-w-2xl"
+    fontFamily="'JetBrains Mono', monospace"
+  >
+    {[
+      { n: '7', verse: 'el cielo despejado' },
+      { n: '5', verse: 'el sonido de' },
+      { n: '3', verse: 'los grillos' },
+      { n: '7', verse: 'me acompañan hasta' },
+      { n: '5', verse: 'que amanece' },
+      { n: '3', verse: 'Qué corda' },
+      { n: '7', verse: 'es la soledad y' },
+      { n: '5', verse: 'presente es la' },
+      { n: '3', verse: 'lejaní-' },
+      { n: '5', verse: 'a, prende la luz,' },
+      { n: '3', verse: 'respira' },
+    ].map((item, i) => (
+      <g key={i}>
+        {/* Primera columna: puntos */}
+        <circle
+          cx="28"
+          cy={22 + i * 20}
+          r="2"
+          fill={PINK}
+          opacity="0.8"
+        />
+
+        {/* Segunda columna: números */}
+        <text
+          x="70"
+          y={26 + i * 20}
+          fontSize="11"
+          fill={PINK}
+          textAnchor="middle"
+        >
+          {item.n}
         </text>
-      </svg>
-    );
+
+        {/* Tercera columna: versos */}
+        <text
+          x="110"
+          y={26 + i * 20}
+          fontSize="11"
+          fill={INK}
+        >
+          {item.verse}
+        </text>
+      </g>
+    ))}
+  </svg>
+);
+
+
+         /* ── Fibonacci ─────────────────────────── */
+
 
     case 'fibonacci': return (
       <svg viewBox="0 0 300 200" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
