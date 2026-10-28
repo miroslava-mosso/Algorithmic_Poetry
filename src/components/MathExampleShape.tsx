@@ -17,66 +17,106 @@ export function MathExampleGraphic({ shape, isLightbox = false }: Props) {  swit
 
 /* ── Reflexión ───────────────────────────────── */
 
+
+/* ── Reflexión ───────────────────────────────── */
+
 case 'reflexion': return (
   <svg
-    viewBox="0 0 700 300"
-    className="w-full max-w-2xl"
+    viewBox="0 0 1000 390"
+    className="w-full max-w-5xl"
     fontFamily="'JetBrains Mono', monospace"
     xmlns="http://www.w3.org/2000/svg"
   >
-    {/* Eje de reflexión */}
+    <defs>
+      {/* Flechas rosas para el eje vertical */}
+      <marker
+        id="reflexion-arrow-pink"
+        markerWidth="8"
+        markerHeight="8"
+        refX="4"
+        refY="4"
+        orient="auto-start-reverse"
+        markerUnits="userSpaceOnUse"
+      >
+        <path d="M 0,0 L 8,4 L 0,8 Z" fill={PINK} />
+      </marker>
+
+      {/* Flechas azul claro para el eje horizontal */}
+      <marker
+        id="reflexion-arrow-blue"
+        markerWidth="8"
+        markerHeight="8"
+        refX="4"
+        refY="4"
+        orient="auto-start-reverse"
+        markerUnits="userSpaceOnUse"
+      >
+        <path d="M 0,0 L 8,4 L 0,8 Z" fill="#8CCFE8" />
+      </marker>
+    </defs>
+
+    {/* Eje vertical de reflexión: rosa */}
     <line
-      x1="380"
+      x1="500"
       y1="18"
-      x2="380"
-      y2="282"
+      x2="500"
+      y2="350"
       stroke={PINK}
       strokeWidth="2"
-      strokeDasharray="4 5"
-      opacity="0.8"
+      strokeDasharray="5 6"
+      markerStart="url(#reflexion-arrow-pink)"
+      markerEnd="url(#reflexion-arrow-pink)"
     />
 
-    {/* Marcas del eje */}
-    <circle cx="380" cy="18" r="3" fill={PINK} />
-    <circle cx="380" cy="282" r="3" fill={PINK} />
-
     {/* Poema original: lado izquierdo */}
-    <g textAnchor="end" fill={INK} fontSize="13">
-      <text x="355" y="75">
+    <g textAnchor="end" fill={INK} fontSize="17">
+      <text x="465" y="95">
         Restos, escombros después de el vendaval
       </text>
-      <text x="355" y="105">
+      <text x="465" y="135">
         El paso del tiempo erosionó la tierra,
       </text>
-      <text x="355" y="135">
+      <text x="465" y="175">
         mutiló la memoria de la imagen precisa
       </text>
     </g>
 
     {/* Poema reflejado: lado derecho */}
-    <g textAnchor="start" fill={INK} fontSize="13">
-      <text x="405" y="75">
+    <g textAnchor="start" fill={INK} fontSize="17">
+      <text x="535" y="95">
         Precisa imagen,
       </text>
-      <text x="405" y="105">
+      <text x="535" y="135">
         —la de memoria—
       </text>
-      <text x="405" y="135">
+      <text x="535" y="175">
         La mutiló, tierra la erosionó
       </text>
-      <text x="405" y="165">
+      <text x="535" y="215">
         Tiempo del paso
       </text>
-      <text x="405" y="195">
+      <text x="535" y="255">
         El vendaval,
       </text>
-      <text x="405" y="225">
+      <text x="535" y="295">
         —el de después—
       </text>
-      <text x="405" y="255">
+      <text x="535" y="335">
         Escombros, restos
       </text>
     </g>
+
+    {/* Eje horizontal: azul claro */}
+    <line
+      x1="20"
+      y1="370"
+      x2="980"
+      y2="370"
+      stroke="#8CCFE8"
+      strokeWidth="2"
+      markerStart="url(#reflexion-arrow-blue)"
+      markerEnd="url(#reflexion-arrow-blue)"
+    />
   </svg>
 );
 
