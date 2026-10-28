@@ -11,39 +11,76 @@ const INK  = '#0d0d0d';
 const DIM  = 'rgba(13,13,13,0.45)';
 
 export function MathExampleGraphic({ shape, isLightbox = false }: Props) {  switch (shape) {
+    
     /* ── GEOMETRÍA ─────────────────────────────────── */
 
-    case 'pascal-triangle': return (
-      <svg viewBox="0 0 320 130" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
-        {[
-          [160, 8,  ['1']],
-          [136, 30, ['1','1']],
-          [112, 52, ['1','2','1']],
-          [88,  74, ['1','3','3','1']],
-          [64,  96, ['1','4','6','4','1']],
-          [40, 118, ['1','5','10','10','5','1']],
-        ].map(([startX, y, nums]) => {
-          const arr = nums as string[];
-          return arr.map((n, j) => {
-            const x = (startX as number) + j * 48;
-            const highlight = n === '1' ? DIM : n.length > 1 ? PINK : INK;
-            return (
-              <text key={`${y}-${j}`} x={x} y={y as number} fontSize="11"
-                textAnchor="middle" fill={highlight} fontWeight={n==='1'?'300':'500'}>
-                {n}
-              </text>
-            );
-          });
-        })}
-        {/* connectors */}
-        {[
-          [[160,12],[136,34]],[[160,12],[184,34]],
-          [[136,34],[112,56]],[[136,34],[160,56]],[[184,34],[160,56]],[[184,34],[208,56]],
-        ].map(([[x1,y1],[x2,y2]],i)=>(
-          <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke={PINK} strokeWidth="0.4" strokeOpacity="0.5"/>
-        ))}
-      </svg>
-    );
+
+ 
+/* ── Reflexión ───────────────────────────────── */
+
+case 'reflexion': return (
+  <svg
+    viewBox="0 0 760 300"
+    className="w-full max-w-2xl"
+    fontFamily="'JetBrains Mono', monospace"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Eje de reflexión */}
+    <line
+      x1="380"
+      y1="18"
+      x2="380"
+      y2="282"
+      stroke={PINK}
+      strokeWidth="1"
+      strokeDasharray="4 5"
+      opacity="0.8"
+    />
+
+    {/* Marcas del eje */}
+    <circle cx="380" cy="18" r="3" fill={PINK} />
+    <circle cx="380" cy="282" r="3" fill={PINK} />
+
+    {/* Poema original: lado izquierdo */}
+    <g textAnchor="end" fill={INK} fontSize="11">
+      <text x="355" y="75">
+        Restos, escombros después de el vendaval
+      </text>
+      <text x="355" y="105">
+        El paso del tiempo erosionó la tierra,
+      </text>
+      <text x="355" y="135">
+        mutiló la memoria de la imagen precisa
+      </text>
+    </g>
+
+    {/* Poema reflejado: lado derecho */}
+    <g textAnchor="start" fill={INK} fontSize="11">
+      <text x="405" y="75">
+        Precisa imagen,
+      </text>
+      <text x="405" y="105">
+        —la de memoria—
+      </text>
+      <text x="405" y="135">
+        La mutiló, tierra la erosionó
+      </text>
+      <text x="405" y="165">
+        Tiempo del paso
+      </text>
+      <text x="405" y="195">
+        El vendaval,
+      </text>
+      <text x="405" y="225">
+        —el de después—
+      </text>
+      <text x="405" y="255">
+        Escombros, restos
+      </text>
+    </g>
+  </svg>
+);
+
 
     
     /* ── Círculo uroboros ─────────────────────────────────── */
