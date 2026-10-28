@@ -216,11 +216,11 @@ case 'circulo-vicioso': return (
       </textPath>
     </text>
 
-    <text x="110" y="106" textAnchor="middle" fontSize="8" fill={DIM}>
+    <text x="110" y="106" textAnchor="middle" fontSize="7" fill={DIM}>
       loop
     </text>
 
-    <text x="110" y="118" textAnchor="middle" fontSize="12" fill={PINK}>
+    <text x="110" y="118" textAnchor="middle" fontSize="10" fill={PINK}>
     ∞
     </text>
   </svg>
