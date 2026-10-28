@@ -275,7 +275,7 @@ case 'figure-eight-knot': return (
       letterSpacing="0.2"
       paintOrder="stroke"
       stroke="#F7F5F1"
-      strokeWidth="2"
+      strokeWidth="0"
       strokeLinejoin="round"
     >
       <textPath
