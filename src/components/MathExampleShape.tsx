@@ -339,7 +339,7 @@ case 'trefoil-knot': {
   startOffset="0%"
   textLength={undefined}
 >
-          ¿Qué ves cuando <tspan dx="10">cierras</tspan> los ojos? Despierto y no sé distinguir lo real de los sueños. Un minuto se siente elongado en el tiempo. Recuerdos distantes de una vida pasada. <tspan dx="13">Amanece</tspan> todos los días mientras yo siga existiendo. 
+          ¿Qué ves cuando <tspan dx="20">cierras</tspan> los ojos? Despierto y no sé distinguir lo real de los sueños. Un minuto se siente elongado en el tiempo. Recuerdos distantes de una vida pasada. <tspan dx="13">Amanece</tspan> todos los días mientras yo siga existiendo. 
         </textPath>
       </text>
 
