@@ -42,7 +42,7 @@ case 'reflexion': return (
     <circle cx="380" cy="282" r="3" fill={PINK} />
 
     {/* Poema original: lado izquierdo */}
-    <g textAnchor="end" fill={INK} fontSize="18">
+    <g textAnchor="end" fill={INK} fontSize="15">
       <text x="355" y="75">
         Restos, escombros después de el vendaval
       </text>
@@ -55,7 +55,7 @@ case 'reflexion': return (
     </g>
 
     {/* Poema reflejado: lado derecho */}
-    <g textAnchor="start" fill={INK} fontSize="18">
+    <g textAnchor="start" fill={INK} fontSize="15">
       <text x="405" y="75">
         Precisa imagen,
       </text>
