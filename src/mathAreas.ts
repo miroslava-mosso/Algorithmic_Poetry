@@ -86,7 +86,7 @@ export const mathAreas: MathArea[] = [
         index: '02',
         title: 'Nudo Figure-eight',
         technique: '4 cruces',
-        manifest: 'Nudo no-trivial cuya notación de Alexander–Briggs es 4_{1}.',
+        manifest: 'Nudo no-trivial cuya notación de Alexander–Briggs es 4<sub>1</sub>.',
         shape: 'figure-eight-knot',
       },
       {
