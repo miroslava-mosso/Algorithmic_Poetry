@@ -208,7 +208,7 @@ case 'circulo-vicioso': return (
       strokeOpacity="0.4"
     />
 
-    <circle cx="110" cy="110" r="1" fill={PINK} />
+    <circle cx="110" cy="110" r="2" fill={PINK} />
 
     <text fontSize="7.3" fill={INK} letterSpacing="0.2">
       <textPath href="#cv-ring" startOffset="0%">
@@ -220,7 +220,7 @@ case 'circulo-vicioso': return (
       loop
     </text>
 
-    <text x="110" y="118" textAnchor="middle" fontSize="9" fill={PINK}>
+    <text x="110" y="118" textAnchor="middle" fontSize="10" fill={PINK}>
     ∞
     </text>
   </svg>
