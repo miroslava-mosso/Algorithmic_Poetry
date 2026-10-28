@@ -618,12 +618,17 @@ case 'fibonacci': return (
 
 /* ── Piema ───────────────────────────────────── */
 
+
+/* ── Piema ───────────────────────────────────── */
+
 case 'piema': return (
   <svg
-    viewBox="0 0 520 240"
+    viewBox="0 0 520 620"
     className="w-full max-w-2xl"
     fontFamily="'JetBrains Mono', monospace"
+    xmlns="http://www.w3.org/2000/svg"
   >
+    {/* Tabla del poema */}
     {[
       { n: '3', verse: 'No puedo dormir,' },
       { n: '1', verse: 'orcuridad' },
@@ -634,18 +639,16 @@ case 'piema': return (
       { n: '', verse: 'parpadeando, vigilándole al dormir.' },
     ].map((item, i) => (
       <g key={i}>
-        {/* Primera columna: dígitos de pi */}
         <text
           x="35"
           y={24 + i * 29}
-          fontSize="16"
+          fontSize="17"
           fill={PINK}
           textAnchor="middle"
         >
           {item.n}
         </text>
 
-        {/* Segunda columna: versos */}
         <text
           x="65"
           y={24 + i * 29}
@@ -656,91 +659,80 @@ case 'piema': return (
         </text>
       </g>
     ))}
-  </svg>
-);
 
-
-/* ── Número Pi ───────────────────────────────── */
-
-case 'pi': return (
-  <svg
-    viewBox="0 0 400 400"
-    className="w-full max-w-sm"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <defs>
-      <path
-        id="pi-circle-text"
-        d="M 200,200 m -125,0 a 125,125 0 1,1 250,0 a 125,125 0 1,1 -250,0"
+    {/* Dibujo de pi debajo del poema */}
+    <g transform="translate(260, 440)">
+      {/* Órbita exterior */}
+      <circle
+        cx="0"
+        cy="0"
+        r="115"
+        fill="none"
+        stroke={PINK}
+        strokeWidth="1"
+        opacity="0.8"
       />
-    </defs>
 
-    {/* Órbitas exteriores */}
-    <circle
-      cx="200"
-      cy="200"
-      r="180"
-      fill="none"
-      stroke={PINK}
-      strokeWidth="1"
-      opacity="0.8"
-    />
+      {/* Órbita discontinua */}
+      <circle
+        cx="0"
+        cy="0"
+        r="95"
+        fill="none"
+        stroke={PINK}
+        strokeWidth="1"
+        strokeDasharray="4 6"
+        opacity="0.8"
+      />
 
-    <circle
-      cx="200"
-      cy="200"
-      r="157"
-      fill="none"
-      stroke={PINK}
-      strokeWidth="1"
-      strokeDasharray="4 6"
-      opacity="0.8"
-    />
+      {/* Círculo interior */}
+      <circle
+        cx="0"
+        cy="0"
+        r="62"
+        fill="none"
+        stroke={PINK}
+        strokeWidth="1"
+      />
 
-    {/* Círculo interior */}
-    <circle
-      cx="200"
-      cy="200"
-      r="100"
-      fill="none"
-      stroke={PINK}
-      strokeWidth="1"
-      opacity="0.8"
-    />
+      {/* Dígitos de pi alrededor */}
+      <defs>
+        <path
+          id="piema-circle"
+          d="M 0,-82 A 82,82 0 1,1 -0.1,-82"
+        />
+      </defs>
 
-    {/* Dígitos de pi siguiendo la circunferencia */}
-    <text
-      fill={PINK}
-      fontSize="13"
-      letterSpacing="3"
-      fontFamily="'JetBrains Mono', monospace"
-    >
-      <textPath
-        href="#pi-circle-text"
-        startOffset="0%"
+      <text
+        fill={PINK}
+        fontSize="10"
+        letterSpacing="2"
+        fontFamily="'JetBrains Mono', monospace"
       >
-        3.14159265358979323846264338327950288419716939937510
-      </textPath>
-    </text>
+        <textPath href="#piema-circle" startOffset="0%">
+          3.141592653589793238462643383279502884
+        </textPath>
+      </text>
 
-    {/* Símbolo central */}
-    <text
-      x="200"
-      y="222"
-      textAnchor="middle"
-      fontSize="112"
-      fontFamily="Georgia, serif"
-      fontStyle="italic"
-      fill={PINK}
-    >
-      π
-    </text>
+      {/* Símbolo pi central */}
+      <text
+        x="0"
+        y="24"
+        textAnchor="middle"
+        fontSize="76"
+        fontFamily="Georgia, serif"
+        fontStyle="italic"
+        fill={PINK}
+      >
+        π
+      </text>
 
-    {/* Pequeños puntos decorativos */}
-    <circle cx="200" cy="20" r="3" fill={PINK} />
-    <circle cx="380" cy="200" r="3" fill={PINK} />
-    <circle cx="200" cy="380" r="3" fill={PINK} />
-    <circle cx="20" cy="200" r="3" fill={PINK} />
+      {/* Puntos decorativos */}
+      <circle cx="0" cy="-115" r="3" fill={PINK} />
+      <circle cx="115" cy="0" r="3" fill={PINK} />
+      <circle cx="0" cy="115" r="3" fill={PINK} />
+      <circle cx="-115" cy="0" r="3" fill={PINK} />
+    </g>
   </svg>
 );
 
