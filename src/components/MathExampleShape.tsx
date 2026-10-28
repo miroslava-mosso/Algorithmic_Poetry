@@ -42,7 +42,7 @@ case 'reflexion': return (
         <path d="M 0,0 L 8,4 L 0,8 Z" fill="#8CCFE8" />
       </marker>
 
-      {/* Flecha curva de rotación */}
+      {/* Punta de la flecha curva rosa */}
       <marker
         id="reflexion-rotation-arrow"
         markerWidth="9"
@@ -80,11 +80,12 @@ case 'reflexion': return (
       markerEnd="url(#reflexion-axis-arrow)"
     />
 
-    {/* Diagonal rosa punteada: eje de reflexión */}
+    {/* Diagonal rosa punteada: del cuadrante superior
+        derecho al cuadrante inferior izquierdo */}
     <line
-      x1="190"
+      x1="710"
       y1="60"
-      x2="710"
+      x2="190"
       y2="580"
       stroke={PINK}
       strokeWidth="1.8"
@@ -119,19 +120,23 @@ case 'reflexion': return (
       </text>
     </g>
 
-    {/* Flecha curva que indica la rotación */}
+    {/* Flecha curva: del poema original hacia el reflejado.
+        Se mantiene dentro del cuadrante superior derecho. */}
     <path
-      d="M 300,235 C 340,270 360,280 390,260"
+      d="M 505,105 C 555,75 620,105 650,180"
       fill="none"
       stroke={PINK}
       strokeWidth="2"
       markerEnd="url(#reflexion-rotation-arrow)"
+      strokeLinecap="round"
     />
 
-    {/* Poema reflejado: rotación de 180 grados */}
+    {/* Poema reflejado: cuadrante inferior derecho.
+        La rotación de 180° conserva el texto invertido.
+        textAnchor="end" hace que se extienda hacia la derecha. */}
     <g
-      transform="translate(480, 530) rotate(180)"
-      textAnchor="start"
+      transform="translate(490, 555) rotate(180)"
+      textAnchor="end"
       fill={INK}
       fontSize="14"
     >
