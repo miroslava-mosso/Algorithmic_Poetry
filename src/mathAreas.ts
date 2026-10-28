@@ -47,7 +47,7 @@ export const mathAreas: MathArea[] = [
     examples: [
       {
         index: '01',
-        title: 'Reflexión',
+        title: 'reflexion',
         technique: 'Poema palíndromo',
         manifest: 'Las palabras se refleja con respecto a un eje en el plano. El poema original se lee en un sentido y                     el reflejado se lee al revés.',
         shape: 'pascal-triangle',
