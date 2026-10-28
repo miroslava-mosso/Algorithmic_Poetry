@@ -619,7 +619,7 @@ case 'fibonacci': return (
 
 case 'piema': return (
   <svg
-    viewBox="0 0 500 620"
+    viewBox="0 0 490 620"
     className="w-full max-w-2xl"
     fontFamily="'JetBrains Mono', monospace"
     xmlns="http://www.w3.org/2000/svg"
