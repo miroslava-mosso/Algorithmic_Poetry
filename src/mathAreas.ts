@@ -93,7 +93,7 @@ export const mathAreas: MathArea[] = [
         index: '03',
         title: 'Nudo de trébol',
         technique: 'Trefoil-knot ó Pretzel',
-        manifest: 'Es el nudo no-trivial más simple, cuya notación de Alexander–Briggs 3₁.',
+        manifest: 'Es el nudo no-trivial más simple, cuya notación de Alexander–Briggs 3₁',
         shape: 'trefoil-knot',
       },
     ],
