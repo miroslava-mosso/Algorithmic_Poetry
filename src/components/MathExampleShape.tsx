@@ -217,7 +217,7 @@ case 'circulo-vicioso': return (
     </text>
 
     <text x="110" y="106" textAnchor="middle" fontSize="8" fill={DIM}>
-      palíndromo
+      loop
     </text>
 
     <text x="110" y="118" textAnchor="middle" fontSize="7.5" fill={PINK}></text>
