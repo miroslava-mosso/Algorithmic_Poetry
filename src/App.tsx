@@ -240,9 +240,9 @@ function App() {
       </div>
 
       {/* ── Contacto / Footer ──────────────────────────── */}
-      <footer id="contacto" className="bg-ink text-[#f7f5f1]">
-        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 py-20 sm:py-24">
-          <div className="reveal grid gap-12 sm:grid-cols-[1.2fr_1fr]">
+      <footer id="contacto" className="bg-ink text-[#f7f5f1] min-h-[50vh] flex items-center">
+        <div className="mx-auto max-w-[1180px] w-full px-5 sm:px-8 py-10 sm:py-12">
+          <div className="reveal grid gap-8 sm:gap-10 sm:grid-cols-[1.2fr_1fr]">
             <div>
               <span className="font-mono-lt text-[11px] uppercase text-[#f7f5f1]/50">§ Contacto</span>
               <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
