@@ -830,12 +830,12 @@ case 'primo': return (
     fontFamily="'JetBrains Mono', monospace"
   >
     {[
-      { n: '7', verse: 'el cielo despejado' },
+      { n: '7', verse: 'El cielo despejado' },
       { n: '5', verse: 'el sonido de' },
       { n: '3', verse: 'los grillos' },
       { n: '7', verse: 'me acompañan hasta' },
       { n: '5', verse: 'que amanece' },
-      { n: '3', verse: 'Qué corda' },
+      { n: '3', verse: 'Qué sorda' },
       { n: '7', verse: 'es la soledad y' },
       { n: '5', verse: 'presente es la' },
       { n: '3', verse: 'lejaní-' },
