@@ -157,7 +157,7 @@ function App() {
   <div className="reveal grid gap-10 sm:grid-cols-[1.5fr_0.8fr]">
     <div>
       <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Galería</span>
-      <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[4.5]">
+      <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[8]">
         Cuatro <span className="pink-underline">formas</span> geométricas, cuatro <span className="pink-underline">poemas</span> diferentes
       </h2>
     </div>
