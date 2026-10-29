@@ -357,7 +357,7 @@ case 'koch-snowflake': {
               transform={`rotate(${edge.angle}, ${x}, ${y})`}
               textAnchor="middle"
               dominantBaseline="middle"
-              fontSize={depth === 1 ? 11 : 7}
+              fontSize={depth === 1 ? 14 : 10}
               fontFamily="'JetBrains Mono', monospace"
               fill={colorForWord(word)}
             >
