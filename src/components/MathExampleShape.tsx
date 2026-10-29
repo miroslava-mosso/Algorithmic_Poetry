@@ -941,15 +941,36 @@ case 'fibonacci': {
 
   // Cuartos de círculo dentro de cada cuadrado.
   // Los extremos coinciden y la curva gira alrededor del centro.
+  c
+  // Espiral dibujada a mano con curvas Bézier.
+  // Los puntos de control determinan la concavidad y el giro.
   const spiral = `
     M ${sx(0)} ${sy(1)}
-    A ${unit} ${unit} 0 0 1 ${sx(1)} ${sy(0)}
-    A ${unit} ${unit} 0 0 1 ${sx(2)} ${sy(1)}
-    A ${2 * unit} ${2 * unit} 0 0 0 ${sx(0)} ${sy(3)}
-    A ${3 * unit} ${3 * unit} 0 0 1 ${sx(-3)} ${sy(0)}
-    A ${5 * unit} ${5 * unit} 0 0 0 ${sx(2)} ${sy(-5)}
-    A ${8 * unit} ${8 * unit} 0 0 1 ${sx(10)} ${sy(3)}
+    C ${sx(0)} ${sy(0.45)},
+      ${sx(0.45)} ${sy(0)},
+      ${sx(1)} ${sy(0)}
+
+    C ${sx(1.55)} ${sy(0)},
+      ${sx(2)} ${sy(0.45)},
+      ${sx(2)} ${sy(1)}
+
+    C ${sx(2)} ${sy(2.1)},
+      ${sx(1.1)} ${sy(3)},
+      ${sx(0)} ${sy(3)}
+
+    C ${sx(-1.65)} ${sy(3)},
+      ${sx(-3)} ${sy(1.65)},
+      ${sx(-3)} ${sy(0)}
+
+    C ${sx(-3)} ${sy(-2.7)},
+      ${sx(-0.3)} ${sy(-5)},
+      ${sx(2)} ${sy(-5)}
+
+    C ${sx(6.4)} ${sy(-5)},
+      ${sx(10)} ${sy(-1.4)},
+      ${sx(10)} ${sy(3)}
   `;
+
 
   return (
     <svg
