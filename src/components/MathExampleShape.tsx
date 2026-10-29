@@ -1009,7 +1009,6 @@ case 'fibonacci': {
           </g>
         );
       })}
-
       
       {/* Espiral orgánica en gris tenue */}
       <path
