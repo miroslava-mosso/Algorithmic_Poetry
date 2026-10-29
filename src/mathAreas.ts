@@ -116,7 +116,7 @@ export const mathAreas: MathArea[] = [
         index: '02',
         title: 'Los puentes de Königsberg',
         technique: 'Acertijo matemático',
-        manifest: 'Euler demostró que no existe camino que cruce cada arista exactamente una vez.',
+        manifest: 'Euler demostró que no existe camino que cruce cada arista exactamente una vez. PRÓXIMAMENTE',
         shape: 'konigsberg',
       },
       {
