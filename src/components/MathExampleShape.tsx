@@ -373,9 +373,13 @@ case 'koch-snowflake': {
           if (!edge) return null;
 
           // Coloca cada palabra ligeramente por encima de su arista.
-          const offset = depth === 1 ? 13 : 10;
-          const x = edge.x + edge.nx * offset;
-          const y = edge.y + edge.ny * offset;
+          const isBelow = ['Observa', 'Secretos'].includes(word);
+
+          const offset = depth === 1 ? 13 : 12;
+          const direction = isBelow ? -1 : 1;
+
+          const x = edge.x + edge.nx * offset * direction;
+          const y = edge.y + edge.ny * offset * direction;
 
           return (
             <text
