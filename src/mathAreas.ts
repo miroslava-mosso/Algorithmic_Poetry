@@ -167,9 +167,9 @@ export const mathAreas: MathArea[] = [
     examples: [
       {
         index: '01',
-        title: 'Dado',
-        technique: 'Seis caras, seis versos',
-        manifest: 'Distribución uniforme sobre el lenguaje.',
+        title: 'Dados',
+        technique: 'Juega con en azar de los dados.',
+        manifest: 'Asigna verbos aleatorios a cada número impar y asigna sustantivos aleatorios a los números pares .',
         shape: 'dado',
       },
       {
