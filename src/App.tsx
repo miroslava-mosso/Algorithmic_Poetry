@@ -223,11 +223,11 @@ function App() {
             </p>
           </div>
 
-          <div 
+    
         <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
           Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
         </p>
-      </div>
+ 
 
           <nav className="reveal mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono-lt text-[11px] uppercase text-ink/60">
             {mathAreas.map((a) => (
