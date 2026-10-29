@@ -245,7 +245,7 @@ function App() {
           <div className="reveal grid gap-8 sm:gap-10 sm:grid-cols-[1.2fr_1fr]">
             <div>
               <span className="font-mono-lt text-[11px] uppercase text-[#f7f5f1]/50">§ Contacto</span>
-              <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
+              <h2 className="font-display text-4xl sm:text-5xl mt-2 leading-[1.05]">
                 Escribámonos.
               </h2> 
               <p className="font-body text-lg text-[#f7f5f1]/70 mt-6 max-w-[44ch]">
