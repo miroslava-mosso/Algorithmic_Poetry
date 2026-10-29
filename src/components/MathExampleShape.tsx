@@ -383,7 +383,7 @@ case 'koch-snowflake': {
         </text>
 
         <g transform="translate(0, 32)">
-          {drawKoch(1, firstWords, () => INK, 365, 175)}
+          {drawKoch(1, firstWords, () => INK, 300, 190)}
         </g>
       </g>
 
