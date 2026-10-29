@@ -893,24 +893,11 @@ case 'primo': return (
 
         
 
+
 /* ———————————————— Fibonacci ─────────────────────────── */
-    
 
 case 'fibonacci': {
-  const unit = 14;
-  const ox = 34;
-  const oy = 28;
-
-  // Cuadrados de lados 1, 1, 2, 3, 5 y 8.
-  // Coordenadas en unidades de la sucesión.
-  const squares = [
-    { x: 8, y: 8, size: 1, n: '1' },
-    { x: 7, y: 8, size: 1, n: '1' },
-    { x: 7, y: 6, size: 2, n: '2' },
-    { x: 9, y: 6, size: 3, n: '3' },
-    { x: 7, y: 9, size: 5, n: '5' },
-    { x: 2, y: 6, size: 8, n: '8' },
-  ];
+  const sizes = [1, 1, 2, 3, 5, 8, 12, 21];
 
   const verses = [
     { n: '1', verse: 'luz' },
@@ -919,70 +906,150 @@ case 'fibonacci': {
     { n: '3', verse: 'de lana' },
     { n: '5', verse: 'que me protege' },
     { n: '8', verse: 'en el cielo despejado' },
+    { n: '12', verse: '' },
+    { n: '21', verse: '' },
   ];
+
+  type Square = {
+    x: number;
+    y: number;
+    size: number;
+    n: number;
+  };
+
+  // Construimos la disposición de dentro hacia fuera.
+  // Las coordenadas matemáticas tienen el eje Y hacia arriba.
+  const squares: Square[] = [];
+
+  let minX = 0;
+  let maxX = 0;
+  let minY = 0;
+  let maxY = 0;
+
+  sizes.forEach((size, i) => {
+    let x = 0;
+    let y = 0;
+
+    if (i === 0) {
+      x = 0;
+      y = 0;
+    } else {
+      // Derecha, arriba, izquierda, abajo; repetir.
+      switch ((i - 1) % 4) {
+        case 0:
+          x = maxX;
+          y = minY;
+          break;
+        case 1:
+          x = minX;
+          y = maxY;
+          break;
+        case 2:
+          x = minX - size;
+          y = minY;
+          break;
+        case 3:
+          x = minX;
+          y = minY - size;
+          break;
+      }
+    }
+
+    squares.push({ x, y, size, n: size });
+
+    minX = Math.min(minX, x);
+    maxX = Math.max(maxX, x + size);
+    minY = Math.min(minY, y);
+    maxY = Math.max(maxY, y + size);
+  });
+
+  // Escala uniforme para conservar las proporciones.
+  const unit = 5.8;
+  const diagramWidth = (maxX - minX) * unit;
+  const diagramHeight = (maxY - minY) * unit;
+  const offsetX = (300 - diagramWidth) / 2;
+  const offsetY = 12;
+
+  const sx = (x: number) =>
+    offsetX + (x - minX) * unit;
+
+  const sy = (y: number) =>
+    offsetY + (maxY - y) * unit;
 
   return (
     <svg
-      viewBox="0 0 300 330"
+      viewBox="0 0 300 410"
       className="w-full max-w-sm"
       fontFamily="'JetBrains Mono', monospace"
     >
-      {/* Cuadrados de Fibonacci */}
-      {squares.map((square, i) => (
-        <g key={i}>
-          <rect
-            x={ox + square.x * unit}
-            y={oy + square.y * unit}
-            width={square.size * unit}
-            height={square.size * unit}
-            fill="none"
-            stroke={PINK}
-            strokeWidth="0.8"
-            strokeOpacity="0.7"
-          />
-          <text
-            x={ox + (square.x + square.size / 2) * unit}
-            y={oy + (square.y + square.size / 2) * unit + 3}
-            textAnchor="middle"
-            fontSize={square.size === 1 ? 5 : 8}
-            fill={INK}
-          >
-            {square.n}
-          </text>
-        </g>
-      ))}
+      {/* Cuadrados y espiral, desde el centro hacia afuera */}
+      {squares.map((square, i) => {
+        const { x, y, size } = square;
+        const left = sx(x);
+        const top = sy(y + size);
+        const side = size * unit;
 
-      {/* Espiral aproximada mediante arcos circulares */}
-      <path
-        d={`
-          M ${ox + 10 * unit} ${oy + 14 * unit}
-          A ${8 * unit} ${8 * unit} 0 0 1 ${ox + 2 * unit} ${oy + 6 * unit}
-          A ${5 * unit} ${5 * unit} 0 0 1 ${ox + 7 * unit} ${oy + 11 * unit}
-          A ${3 * unit} ${3 * unit} 0 0 1 ${ox + 10 * unit} ${oy + 8 * unit}
-          A ${2 * unit} ${2 * unit} 0 0 0 ${ox + 8 * unit} ${oy + 6 * unit}
-          A ${1 * unit} ${1 * unit} 0 0 0 ${ox + 7 * unit} ${oy + 7 * unit}
-        `}
-        fill="none"
-        stroke={PINK}
-        strokeWidth="1.2"
-        strokeOpacity="0.8"
-      />
+        // Arco de un cuarto de círculo dentro de cada cuadrado.
+        // La dirección alterna para formar la espiral.
+        const arcPath =
+          i % 2 === 0
+            ? `M ${left + side} ${top}
+               A ${side} ${side} 0 0 1
+               ${left} ${top + side}`
+            : `M ${left} ${top}
+               A ${side} ${side} 0 0 0
+               ${left + side} ${top + side}`;
+
+        return (
+          <g key={i}>
+            <rect
+              x={left}
+              y={top}
+              width={side}
+              height={side}
+              fill="none"
+              stroke={PINK}
+              strokeWidth="0.8"
+              strokeOpacity="0.65"
+            />
+
+            <path
+              d={arcPath}
+              fill="none"
+              stroke={PINK}
+              strokeWidth="1.2"
+              strokeLinecap="round"
+            />
+
+            <text
+              x={left + side / 2}
+              y={top + side / 2 + 3}
+              textAnchor="middle"
+              fontSize={size < 3 ? 6 : 9}
+              fill={INK}
+            >
+              {square.n}
+            </text>
+          </g>
+        );
+      })}
 
       {/* Versos */}
       {verses.map((item, i) => (
-        <g key={i}>
+        <g key={`verse-${i}`}>
           <text
             x="70"
-            y={190 + i * 21}
+            y={210 + i * 21}
             textAnchor="middle"
             fontSize="10"
             fill={PINK}
           >
             {item.n}
           </text>
+
           <text
             x="95"
-            y={190 + i * 21}
+            y={210 + i * 21}
             fontSize="10"
             fill={INK}
           >
@@ -993,6 +1060,7 @@ case 'fibonacci': {
     </svg>
   );
 }
+
 
 
     
