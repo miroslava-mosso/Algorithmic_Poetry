@@ -892,9 +892,6 @@ case 'primo': return (
 
 
 
-
-
-
 /* ———————————————— Fibonacci ─────────────────────────── */
 
 case 'fibonacci': {
@@ -915,7 +912,7 @@ case 'fibonacci': {
     size: number;
   };
 
-  // Conservamos la disposición de las seis cajas.
+  // Cuadrados consecutivos: 1, 1, 2, 3, 5, 8.
   const squares: Square[] = [
     { x: 0, y: 0, size: 1 },
     { x: 1, y: 0, size: 1 },
@@ -930,7 +927,7 @@ case 'fibonacci': {
   const minY = Math.min(...squares.map(s => s.y));
   const maxY = Math.max(...squares.map(s => s.y + s.size));
 
-  // Más grande: aprovecha casi todo el ancho del SVG.
+  // Escala ampliada.
   const unit = 18;
   const diagramWidth = (maxX - minX) * unit;
   const offsetX = (300 - diagramWidth) / 2;
@@ -942,22 +939,17 @@ case 'fibonacci': {
   const sy = (y: number) =>
     offsetY + (maxY - y) * unit;
 
-  // Cada arco es un cuarto de círculo inscrito en su caja.
-  // Los extremos consecutivos coinciden exactamente.
-  const arcCommands = [
-    `M ${sx(0)} ${sy(1)}
-     A ${unit} ${unit} 0 0 1 ${sx(1)} ${sy(0)}`,
-
-    `A ${unit} ${unit} 0 0 1 ${sx(2)} ${sy(1)}`,
-
-    `A ${2 * unit} ${2 * unit} 0 0 0 ${sx(0)} ${sy(3)}`,
-
-    `A ${3 * unit} ${3 * unit} 0 0 1 ${sx(-3)} ${sy(0)}`,
-
-    `A ${5 * unit} ${5 * unit} 0 0 1 ${sx(2)} ${sy(-5)}`,
-
-    `A ${8 * unit} ${8 * unit} 0 0 1 ${sx(10)} ${sy(3)}`,
-  ];
+  // Cuartos de círculo dentro de cada cuadrado.
+  // Los extremos coinciden y la curva gira alrededor del centro.
+  const spiral = `
+    M ${sx(0)} ${sy(1)}
+    A ${unit} ${unit} 0 0 1 ${sx(1)} ${sy(0)}
+    A ${unit} ${unit} 0 0 1 ${sx(2)} ${sy(1)}
+    A ${2 * unit} ${2 * unit} 0 0 0 ${sx(0)} ${sy(3)}
+    A ${3 * unit} ${3 * unit} 0 0 1 ${sx(-3)} ${sy(0)}
+    A ${5 * unit} ${5 * unit} 0 0 0 ${sx(2)} ${sy(-5)}
+    A ${8 * unit} ${8 * unit} 0 0 1 ${sx(10)} ${sy(3)}
+  `;
 
   return (
     <svg
@@ -965,7 +957,7 @@ case 'fibonacci': {
       className="w-full max-w-sm"
       fontFamily="'JetBrains Mono', monospace"
     >
-      {/* Cajas */}
+      {/* Cuadrados */}
       {squares.map((square, i) => {
         const left = sx(square.x);
         const top = sy(square.y + square.size);
@@ -997,18 +989,17 @@ case 'fibonacci': {
         );
       })}
 
-      {/* Espiral en gris tenue */}
+      {/* Espiral gris tenue */}
       <path
-        d={arcCommands.join(' ')}
+        d={spiral}
         fill="none"
         stroke="#B8B8B8"
         strokeWidth="1.5"
         strokeOpacity="0.8"
         strokeLinecap="round"
-        strokeLinejoin="round"
       />
 
-      {/* Versos originales */}
+      {/* Versos */}
       {verses.map((item, i) => (
         <g key={`verse-${i}`}>
           <text
@@ -1034,6 +1025,7 @@ case 'fibonacci': {
     </svg>
   );
 }
+
 
 
 
