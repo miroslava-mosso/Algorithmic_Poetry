@@ -440,7 +440,7 @@ case 'koch-snowflake': {
                 ? INK
                 : DARK_BLUE,
             470,
-            245,
+            265,
           )}
         </g>
       </g>
