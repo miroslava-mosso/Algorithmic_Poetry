@@ -1242,11 +1242,11 @@ case 'dado': {
       <svg viewBox="0 0 300 150" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
         {/* Nodes */}
         {[
-          {x:30, y:50, w:'el'},
-          {x:100,y:50, w:'gato'},
-          {x:180,y:50, w:'duerme'},
-          {x:100,y:110,w:'tranquilo'},
-          {x:220,y:110,w:'soña'},
+          {x:30, y:50, w:'borrar'},
+          {x:100,y:50, w:'tu'},
+          {x:180,y:50, w:'nombre'},
+          {x:100,y:110,w:'del'},
+          {x:220,y:110,w:'cuaderno'},
         ].map(n=>(
           <g key={n.w}>
             <circle cx={n.x} cy={n.y} r="18" fill="none" stroke={PINK} strokeWidth="0.7" strokeOpacity="0.5"/>
@@ -1269,7 +1269,7 @@ case 'dado': {
           </g>
         ))}
         <text x="150" y="143" textAnchor="middle" fontSize="7.5" fill={DIM} letterSpacing="0.5">
-          p(xₙ | xₙ₋₁) — cada palabra depende solo de la anterior
+          p(xₙ | xₙ₋₁) — la siguiente palabra solo depende de la palabra actual. 
         </text>
       </svg>
     );
