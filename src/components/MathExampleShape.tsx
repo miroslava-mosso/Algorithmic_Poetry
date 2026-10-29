@@ -1263,32 +1263,6 @@ case 'piema': return (
 
  
 
-    case 'dimension-oculta': return (
-      <svg viewBox="0 0 280 140" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
-        {/* Anagram grid: amor / roma / ramo / mora */}
-        {[
-          {row:0, cols:[{w:'amor',c:INK},{w:'→',c:PINK},{w:'roma',c:DIM}]},
-          {row:1, cols:[{w:'↓',  c:PINK},{w:'',  c:''  },{w:'↓',  c:PINK}]},
-          {row:2, cols:[{w:'ramo',c:DIM},{w:'→',c:PINK},{w:'mora',c:DIM}]},
-        ].map(({row,cols})=>(
-          cols.map(({w,c},ci)=>{
-            if(!w) return null;
-            return (
-              <text key={`${row}-${ci}`} x={50+ci*90} y={40+row*45}
-                textAnchor="middle" fontSize={w==='→'||w==='↓'?10:11}
-                fill={c} letterSpacing="1">{w}</text>
-            );
-          })
-        ))}
-        <text x="140" y="125" textAnchor="middle" fontSize="8" fill={DIM} letterSpacing="0.5">
-          mismas letras · distintas dimensiones
-        </text>
-        {/* Decorative diagonals */}
-        <line x1="70" y1="30" x2="230" y2="90" stroke={PINK} strokeWidth="0.3" strokeOpacity="0.3" strokeDasharray="3,4"/>
-        <line x1="230" y1="30" x2="70" y2="90" stroke={PINK} strokeWidth="0.3" strokeOpacity="0.3" strokeDasharray="3,4"/>
-      </svg>
-    );
-
     case 'brana': return (
       <svg viewBox="0 0 280 200" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
         {/* Grid membrane with words at nodes */}
