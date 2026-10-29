@@ -1251,7 +1251,7 @@ case 'markov': return (
       // cuaderno -> borrar
       { x1: 155, y1: 42, x2: 199, y2: 42 },
       // borrar -> tu
-      { x1: 230, y1: 75, x2: 180, y2: 119 },
+      { x1: 230, y1: 75, x2: 180, y2: 110 },
       // borrar -> nombre
       { x1: 260, y1: 65, x2: 284, y2: 119 },
       // tu -> nombre
