@@ -1054,7 +1054,7 @@ case 'piema': return (
     {/* Tabla del poema */}
     {[
       { n: '3', verse: 'No puedo dormir,' },
-      { n: '1', verse: 'orcuridad' },
+      { n: '1', verse: 'oscuridad' },
       { n: '4', verse: 'no quiero cerrar los' },
       { n: '1', verse: 'ojos,' },
       { n: '5', verse: 'perder el norte hasta desaparecer' },
