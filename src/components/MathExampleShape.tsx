@@ -1240,8 +1240,8 @@ case 'dado': {
 
 case 'markov': return (
   <svg
-    viewBox="0 0 290 166"
-      className={`w-full ${isLightbox ? 'max-w-[800px]' : 'max-w-xs'}`}
+    viewBox="0 0 340 205"
+    className={`w-full ${isLightbox ? 'max-w-[600px]' : 'max-w-sm'}`}
     fontFamily="'JetBrains Mono', monospace"
   >
     {/* Flechas */}
