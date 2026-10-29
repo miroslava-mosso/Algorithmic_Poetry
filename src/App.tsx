@@ -11,7 +11,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('poesia');
 
   const tabs = [
-    { id: 'poesia', label: 'Poesía potencial' },
+    { id: 'poesia', label: 'Reglas del juego' },
     { id: 'galeria', label: 'Galería' },
     { id: 'areas', label: 'Áreas' },
     { id: 'algoritmo', label: 'Mi algoritmo' },
