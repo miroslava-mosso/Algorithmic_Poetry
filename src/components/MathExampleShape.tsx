@@ -867,7 +867,7 @@ case 'primo': return (
         <text
           x="110"
           y={26 + i * 27}
-          fontSize="16"
+          fontSize="18"
           fill={INK}
         >
           {item.verse}
