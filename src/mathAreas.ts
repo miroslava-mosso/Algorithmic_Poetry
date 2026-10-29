@@ -163,7 +163,7 @@ export const mathAreas: MathArea[] = [
     index: 'V',
     title: 'Probabilidad y combinatoria',
     description:
-      'El azar como coautor: dados, cadenas de Markov, paseos aleatorios. El poema es uno entre todos los posibles.',
+      'Métodos para jugar con el azar, las palabras, la combinatoria y los versos.',
     examples: [
       {
         index: '01',
