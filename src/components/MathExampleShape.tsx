@@ -892,89 +892,110 @@ case 'primo': return (
 
 
         
+
 /* ———————————————— Fibonacci ─────────────────────────── */
+    
 
-case 'fibonacci': return (
-  <svg
-    viewBox="0 0 300 330"
-    className="w-full max-w-sm"
-    fontFamily="'JetBrains Mono', monospace"
-  >
-    {/* Figura original de Fibonacci: rectángulos */}
-    <rect x="130" y="90" width="15" height="15" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
-    <rect x="115" y="90" width="15" height="15" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
-    <rect x="115" y="75" width="30" height="15" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
-    <rect x="85" y="75" width="30" height="30" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
-    <rect x="85" y="30" width="60" height="45" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
-    <rect x="145" y="30" width="95" height="75" fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.5"/>
+case 'fibonacci': {
+  const unit = 14;
+  const ox = 34;
+  const oy = 28;
 
-    {/* Espiral original */}
-    <path
-      d="M 145,105 Q 130,105 130,90 Q 130,75 145,75 Q 175,75 175,105 Q 175,150 130,150 Q 85,150 85,105 Q 85,30 145,30"
-      fill="none"
-      stroke={PINK}
-      strokeWidth="0.8"
-      strokeOpacity="0.3"
-    />
+  // Cuadrados de lados 1, 1, 2, 3, 5 y 8.
+  // Coordenadas en unidades de la sucesión.
+  const squares = [
+    { x: 8, y: 8, size: 1, n: '1' },
+    { x: 7, y: 8, size: 1, n: '1' },
+    { x: 7, y: 6, size: 2, n: '2' },
+    { x: 9, y: 6, size: 3, n: '3' },
+    { x: 7, y: 9, size: 5, n: '5' },
+    { x: 2, y: 6, size: 8, n: '8' },
+  ];
 
-    {/* Números dentro de la figura */}
-    {[
-      { x: 136, y: 100, n: '1' },
-      { x: 120, y: 100, n: '1' },
-      { x: 130, y: 84, n: '2' },
-      { x: 100, y: 94, n: '3' },
-      { x: 115, y: 57, n: '5' },
-      { x: 192, y: 70, n: '8' },
-    ].map((item, i) => (
-      <text
-        key={i}
-        x={item.x}
-        y={item.y}
-        textAnchor="middle"
-        fontSize="8"
-        fill={INK}
-      >
-        {item.n}
-      </text>
-    ))}
+  const verses = [
+    { n: '1', verse: 'luz' },
+    { n: '1', verse: 'chal' },
+    { n: '2', verse: 'fuego' },
+    { n: '3', verse: 'de lana' },
+    { n: '5', verse: 'que me protege' },
+    { n: '8', verse: 'en el cielo despejado' },
+  ];
 
-    {/* Tabla: primera columna rosa, segunda columna versos */}
-    {[
-      { n: '1', verse: 'luz' },
-      { n: '1', verse: 'chal' },
-      { n: '2', verse: 'fuego' },
-      { n: '3', verse: 'de lana' },
-      { n: '5', verse: 'que me protege' },
-      { n: '8', verse: 'en el cielo despejado' },
-    ].map((item, i) => (
-      <g key={i}>
-        {/* Números */}
-        <text
-          x="70"
-          y={190 + i * 21}
-          textAnchor="middle"
-          fontSize="10"
-          fill={PINK}
-        >
-          {item.n}
-        </text>
+  return (
+    <svg
+      viewBox="0 0 300 330"
+      className="w-full max-w-sm"
+      fontFamily="'JetBrains Mono', monospace"
+    >
+      {/* Cuadrados de Fibonacci */}
+      {squares.map((square, i) => (
+        <g key={i}>
+          <rect
+            x={ox + square.x * unit}
+            y={oy + square.y * unit}
+            width={square.size * unit}
+            height={square.size * unit}
+            fill="none"
+            stroke={PINK}
+            strokeWidth="0.8"
+            strokeOpacity="0.7"
+          />
+          <text
+            x={ox + (square.x + square.size / 2) * unit}
+            y={oy + (square.y + square.size / 2) * unit + 3}
+            textAnchor="middle"
+            fontSize={square.size === 1 ? 5 : 8}
+            fill={INK}
+          >
+            {square.n}
+          </text>
+        </g>
+      ))}
 
-        {/* Versos */}
-        <text
-          x="95"
-          y={190 + i * 21}
-          fontSize="10"
-          fill={INK}
-        >
-          {item.verse}
-        </text>
-      </g>
-    ))}
-  </svg>
-);
+      {/* Espiral aproximada mediante arcos circulares */}
+      <path
+        d={`
+          M ${ox + 10 * unit} ${oy + 14 * unit}
+          A ${8 * unit} ${8 * unit} 0 0 1 ${ox + 2 * unit} ${oy + 6 * unit}
+          A ${5 * unit} ${5 * unit} 0 0 1 ${ox + 7 * unit} ${oy + 11 * unit}
+          A ${3 * unit} ${3 * unit} 0 0 1 ${ox + 10 * unit} ${oy + 8 * unit}
+          A ${2 * unit} ${2 * unit} 0 0 0 ${ox + 8 * unit} ${oy + 6 * unit}
+          A ${1 * unit} ${1 * unit} 0 0 0 ${ox + 7 * unit} ${oy + 7 * unit}
+        `}
+        fill="none"
+        stroke={PINK}
+        strokeWidth="1.2"
+        strokeOpacity="0.8"
+      />
+
+      {/* Versos */}
+      {verses.map((item, i) => (
+        <g key={i}>
+          <text
+            x="70"
+            y={190 + i * 21}
+            textAnchor="middle"
+            fontSize="10"
+            fill={PINK}
+          >
+            {item.n}
+          </text>
+          <text
+            x="95"
+            y={190 + i * 21}
+            fontSize="10"
+            fill={INK}
+          >
+            {item.verse}
+          </text>
+        </g>
+      ))}
+    </svg>
+  );
+}
 
 
-
+    
 /* ── Piema ───────────────────────────────────── */
 
 case 'piema': return (
