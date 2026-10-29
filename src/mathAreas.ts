@@ -108,8 +108,8 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'Árbol',
-        technique: 'Grafo árbol — acíclico, sin raíz fija, toda hoja es un poema',
-        manifest: 'Puedes hacer el triángulo de Pascan tan grande como desees.',
+        technique: 'Grafo árbol — acíclico, todas las hojas es un poema',
+        manifest: 'PRÓXIMAMENTE.',
         shape: 'grafo-arbol',
       },
       {
