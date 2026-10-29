@@ -234,7 +234,7 @@ case 'circulo-vicioso': return (
 case 'koch-snowflake': {
   const DARK_BLUE = '#1677C8';
 
-  const firstWords = ['un', 'gato,', 'nos', 'observa'];
+  const firstWords = ['un', 'gato', 'nos', 'observa'];
 
   const secondWords = [
     'Un', 'teléfono', 'está', 'sonando',
