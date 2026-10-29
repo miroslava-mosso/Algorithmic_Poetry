@@ -766,6 +766,7 @@ case 'trefoil-knot': {
             fontSize="7.5" fill={PINK}>{n.w}</text>
         ))}
   <text x="130" y="155" textAnchor="middle" fontSize="7.5" fill={DIM}>PRÓXIMAMENTE</text>
+        
       </svg>
     );
 
