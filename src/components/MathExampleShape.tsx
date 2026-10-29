@@ -1170,35 +1170,70 @@ case 'piema': return (
 
         /* ── Dado ──────────────────────────────── */
 
-    case 'dado': return (
-      <svg viewBox="0 0 290 190" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
-        {[
-          {x:14, y:14, dots:1, word:'azar'},
-          {x:110,y:14, dots:2, word:'suerte'},
-          {x:206,y:14, dots:3, word:'destino'},
-          {x:14, y:96, dots:4, word:'ola'},
-          {x:110,y:96, dots:5, word:'tempestad'},
-          {x:206,y:96, dots:6, word:'calma'},
-        ].map(({x,y,dots,word})=>(
-          <g key={word} transform={`translate(${x},${y})`}>
-            <rect width="80" height="70" rx="6" fill="none" stroke={INK} strokeWidth="0.6" strokeOpacity="0.15"/>
-            {Array.from({length:dots}).map((_,i)=>{
-              const positions = [
-                [[40,35]],
-                [[20,18],[60,52]],
-                [[20,18],[40,35],[60,52]],
-                [[20,18],[60,18],[20,52],[60,52]],
-                [[20,18],[60,18],[40,35],[20,52],[60,52]],
-                [[20,18],[60,18],[20,35],[60,35],[20,52],[60,52]],
-              ];
-              const [px,py] = positions[dots-1][i];
-              return <circle key={i} cx={px} cy={py} r="2.5" fill={PINK} opacity="0.7"/>;
-            })}
-            <text x="40" y="84" textAnchor="middle" fontSize="8" fill={DIM}>{word}</text>
-          </g>
-        ))}
-      </svg>
-    );
+    
+case 'dado': {
+  const dice = [
+    { x: 25, y: 12, dots: 1, word: 'azar' },
+    { x: 110, y: 12, dots: 2, word: 'suerte' },
+    { x: 195, y: 12, dots: 3, word: 'destino' },
+    { x: 25, y: 91, dots: 4, word: 'ola' },
+    { x: 110, y: 91, dots: 5, word: 'tempestad' },
+    { x: 195, y: 91, dots: 6, word: 'calma' },
+  ];
+
+  const positions = [
+    [[20, 20]],
+    [[12, 12], [28, 28]],
+    [[12, 12], [20, 20], [28, 28]],
+    [[12, 12], [28, 12], [12, 28], [28, 28]],
+    [[12, 12], [28, 12], [20, 20], [12, 28], [28, 28]],
+    [[12, 12], [28, 12], [12, 20], [28, 20], [12, 28], [28, 28]],
+  ];
+
+  return (
+    <svg
+      viewBox="0 0 290 166"
+      className="w-full max-w-xs"
+      fontFamily="'JetBrains Mono', monospace"
+    >
+      {dice.map(({ x, y, dots, word }) => (
+        <g key={word} transform={`translate(${x}, ${y})`}>
+          <rect
+            width="40"
+            height="40"
+            rx="5"
+            fill="none"
+            stroke={INK}
+            strokeWidth="0.7"
+            strokeOpacity="0.2"
+          />
+
+          {positions[dots - 1].map(([px, py], i) => (
+            <circle
+              key={i}
+              cx={px}
+              cy={py}
+              r="2.2"
+              fill={PINK}
+              opacity="0.8"
+            />
+          ))}
+
+          <text
+            x="20"
+            y="54"
+            textAnchor="middle"
+            fontSize="8"
+            fill={DIM}
+          >
+            {word}
+          </text>
+        </g>
+      ))}
+    </svg>
+  );
+}
+
 
             /* ── Cadenas de Markov ──────────────────────────────── */
 
@@ -1328,13 +1363,7 @@ case 'pascal-triangle': {
     </svg>
   );
 }
-
-
-
-
-
-    
- 
+     
     default:
       return null;
   }
