@@ -464,7 +464,7 @@ case 'koch-snowflake': {
       <g transform={isLightbox ? "translate(20, 510)" : "translate(0, 285)"}>
         <text
           x="16"
-          y="38"
+          y="18"
           fontSize={isLightbox ? 32 : 33}
           fill={INK}
         >
