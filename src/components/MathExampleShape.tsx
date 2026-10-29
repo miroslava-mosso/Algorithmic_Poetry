@@ -768,6 +768,7 @@ case 'trefoil-knot': {
       </svg>
     );
 
+    
     /* ── Los puentes de Königsberg ────────────────────────────────────── */
 
     
@@ -799,6 +800,10 @@ case 'trefoil-knot': {
       </svg>
     );
 
+
+    /* ── Bipartito ────────────────────────────────────── */
+
+    
     case 'bipartito': return (
       <svg viewBox="0 0 260 160" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
         {/* Edges */}
