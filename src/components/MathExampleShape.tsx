@@ -1239,6 +1239,10 @@ case 'piema': return (
       </svg>
     );
 
+
+        /* ── Dado ──────────────────────────────── */
+
+    
     case 'borracho': return (
       <svg viewBox="0 0 300 120" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
         {/* Random walk path */}
