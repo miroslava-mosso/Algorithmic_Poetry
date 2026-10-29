@@ -1021,7 +1021,7 @@ case 'fibonacci': {
             x="70"
             y={210 + i * 21}
             textAnchor="middle"
-            fontSize="10"
+            fontSize="13"
             fill={PINK}
           >
             {item.n}
@@ -1030,7 +1030,7 @@ case 'fibonacci': {
           <text
             x="95"
             y={210 + i * 21}
-            fontSize="10"
+            fontSize="13"
             fill={INK}
           >
             {item.verse}
