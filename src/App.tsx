@@ -293,15 +293,19 @@ function App() {
       </div>}
 
       {activeTab === 'moduli-space' && <section id="panel-moduli-space" role="tabpanel" className="border-b hairline min-h-[70vh]">
-        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-20 sm:pt-28 pb-10">
-          <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Moduli space</span>
-          <h1 className="font-display text-5xl sm:text-7xl mt-5 leading-[1.05] max-w-[18ch]">
-            El <span className="pink-underline italic">moduli space</span> de poemas del diamante de Hodge
-          </h1>
-          <p className="font-body text-xl sm:text-2xl leading-[1.6] mt-8 max-w-[65ch] text-ink/80">
-            En esta sección intentamos construir un espacio de parámetros, también conocido como el <em>moduli space</em>, de todos los poemas que ustedes nos quieran mandar, siguiendo la constricción del diamante de Hodge <a href="#mi-algoritmo" onClick={(e) => { e.preventDefault(); navigateTo('algoritmo', 'mi-algoritmo'); }} className="pink-underline-thin">[ver Mi algoritmo]</a>. Las instrucciones para mandar tu poema están en <a href="#contacto" onClick={(e) => { e.preventDefault(); navigateTo('contacto', 'contacto'); }} className="pink-underline-thin">[Contacto]</a>.
-          </p>
-        </div>
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-10 sm:pb-16">
+  <div className="reveal grid gap-10 sm:grid-cols-[0.78fr_1.22fr]">
+    <div>
+      <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Moduli Space</span>
+      <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
+        El <span className="pink-underline italic">moduli space</span> de poemas del diamante de Hodge
+      </h2>
+    </div>
+    <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80">
+      En esta sección intentamos construir un espacio de parámetros, también conocido como el <em>moduli space</em>, de todos los poemas que ustedes nos quieran mandar, siguiendo la constricción del diamante de Hodge <a href="#mi-algoritmo" onClick={(e) => { e.preventDefault(); navigateTo('algoritmo', 'mi-algoritmo'); }} className="pink-underline-thin">[ver Mi algoritmo]</a>. Las instrucciones para mandar tu poema están en <a href="#contacto" onClick={(e) => { e.preventDefault(); navigateTo('contacto', 'contacto'); }} className="pink-underline-thin">[Contacto]</a>.
+    </p>
+  </div>
+</div>
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-16 grid gap-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border hairline border-b-0 border-l-0 border-r-0">
           {Array.from({ length: 3 }, (_, i) => (
             <PoemCard key={`moduli-${i}`} poem={{ id: `moduli-${i}`, index: `0${i + 1}`, title: 'Aqui va a ir tu poema', author: '', year: '', shape: 'cruz', technique: 'Aqui irá tu nombre o pseudónimo', manifest: 'PRÓXIMAMENTE', lines: [] }} i={i} placeholder />
