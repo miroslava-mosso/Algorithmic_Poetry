@@ -1253,7 +1253,7 @@ case 'markov': return (
       // borrar -> tu
       { x1: 230, y1: 75, x2: 180, y2: 110 },
       // borrar -> nombre
-      { x1: 240, y1: 65, x2: 284, y2: 109 },
+      { x1: 249, y1: 65, x2: 284, y2: 109 },
       // tu -> nombre
       { x1: 199, y1: 142, x2: 253, y2: 142 },
     ].map(({ x1, y1, x2, y2 }, i) => {
