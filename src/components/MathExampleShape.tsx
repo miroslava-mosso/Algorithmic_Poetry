@@ -405,14 +405,14 @@ case 'koch-snowflake': {
   
   return (
     <svg
-      viewBox={isLightbox ? "0 0 1400 1050" : "0 0 800 650"}
-      className={
-        isLightbox
-          ? "block w-full max-w-none h-auto"
-          : "block w-full max-w-4xl h-auto"
-      }
-      xmlns="http://www.w3.org/2000/svg"
-    >
+  viewBox={isLightbox ? '0 0 1400 1050' : '0 0 800 650'}
+  className={
+    isLightbox
+      ? 'block w-full max-w-none h-auto'
+      : 'w-full max-w-4xl'
+  }
+  xmlns="http://www.w3.org/2000/svg"
+>
       {/* Primera iteración: arriba a la izquierda */}
       <g transform={isLightbox ? "translate(20, 20) scale(1.35)" : "translate(0, 0)"}>
         <text
