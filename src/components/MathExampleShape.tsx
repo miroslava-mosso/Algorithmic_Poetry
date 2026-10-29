@@ -440,7 +440,7 @@ case 'koch-snowflake': {
         <text
           x={isLightbox ? 60 : 116}
           y={isLightbox ? 28 : 68}
-          fontSize={isLightbox ? 27 : 33}
+          fontSize={isLightbox ? 25 : 33}
           fill={INK}
         >
           Segunda iteración:
