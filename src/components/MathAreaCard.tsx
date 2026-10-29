@@ -121,10 +121,12 @@ function MathExample({ ex }: { ex: MathExample }) {
 >
   <div
     className={
-      ex.shape === 'trefoil-knot'
-        ? 'w-[min(92vw,86vh,1100px)] min-w-0 shrink-0'
-        : 'w-[min(85vw,70vh,680px)]'
-    }
+  ex.shape === 'koch-snowflake'
+    ? 'w-[min(96vw,1500px)] min-w-0 shrink-0'
+    : ex.shape === 'trefoil-knot'
+      ? 'w-[min(92vw,86vh,1100px)] min-w-0 shrink-0'
+      : 'w-[min(85vw,70vh,680px)]'
+}
   >
     <MathExampleShape shape={ex.shape} isLightbox />
   </div>
