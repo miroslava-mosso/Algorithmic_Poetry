@@ -4,7 +4,7 @@ import type { Poem } from '@/poems';
 import { PoemShapeView } from './PoemShapeView';
 import { Lightbox } from './Lightbox';
 
-export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
+export function PoemCard({ poem, i, placeholder = false }: { poem: Poem; i: number; placeholder?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -25,12 +25,19 @@ export function PoemCard({ poem, i }: { poem: Poem; i: number }) {
             </h3>
           </div>
 
-          <span className="font-mono-lt text-[10px] text-ink/40 hidden sm:inline">
-            {poem.year}
-          </span>
+          {!placeholder && (
+            <span className="font-mono-lt text-[10px] text-ink/40 hidden sm:inline">
+              {poem.year}
+            </span>
+          )}
         </header>
 
         <div className="flex items-center justify-center py-0 min-h-0 overflow-hidden">
+          {placeholder ? (
+            <div className="w-full aspect-[4/3] flex items-center justify-center border hairline bg-[#ebe7df]/60">
+              <span className="font-display text-2xl sm:text-3xl italic text-ink/45">PRÓXIMAMENTE</span>
+            </div>
+          ) : (
           <div
   
 className={
@@ -47,12 +54,13 @@ className={
   compact={poem.shape === 'zurvan' || poem.shape === 'cono'}
 />
 </div>
+          )}
         </div>
 
         <footer className="flex flex-col gap-2 mt-4">
           <div className="flex items-center justify-between font-mono-lt text-[10px] uppercase text-ink/55">
             <span>{poem.technique}</span>
-            <span className="text-ink/40">{poem.author}</span>
+            {!placeholder && <span className="text-ink/40">{poem.author}</span>}
           </div>
 
           <p className="font-body text-[15px] leading-[1.55] text-ink/70 italic">
@@ -65,10 +73,16 @@ className={
         open={open}
         onClose={() => setOpen(false)}
         title={poem.title}
-        subtitle={`${poem.technique} · ${poem.author} · ${poem.year}`}
+        subtitle={placeholder ? poem.technique : `${poem.technique} · ${poem.author} · ${poem.year}`}
         caption={poem.manifest}
       >
-        <PoemShapeView shape={poem.shape} lines={poem.lines} />
+        {placeholder ? (
+          <div className="w-full min-h-[45vh] flex items-center justify-center bg-[#ebe7df]/60 border hairline">
+            <span className="font-display text-4xl sm:text-6xl italic text-ink/45">PRÓXIMAMENTE</span>
+          </div>
+        ) : (
+          <PoemShapeView shape={poem.shape} lines={poem.lines} />
+        )}
       </Lightbox>
     </>
   );
