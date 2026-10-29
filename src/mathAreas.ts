@@ -183,7 +183,7 @@ export const mathAreas: MathArea[] = [
         index: '01',
         title: 'Triángulo de Pascal',
         technique: 'Sílabas de coeficientes binomiales.',
-        manifest: 'Cada fila del triángulo propone una nueva medida para el poema. Cada fila representa un verso, cada número denota el                     número de sílabas de las palabras de tu verso. Puedes extender el triángulo de Pascal tanto como quieras.',
+        manifest: 'Cada fila del triángulo propone una nueva medida para el poema. Cada fila representa un verso, cada número denota el                     número de sílabas totales en tu verso. Puedes extender el triángulo de Pascal tanto como quieras.',
         shape: 'pascal-triangle',
       },
     ],
