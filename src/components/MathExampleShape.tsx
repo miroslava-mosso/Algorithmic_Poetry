@@ -729,6 +729,9 @@ case 'trefoil-knot': {
 
     /* ── GRAFOS ────────────────────────────────────── */
 
+        /* ── Árbol ────────────────────────────────────── */
+
+
     case 'grafo-arbol': return (
       <svg viewBox="0 0 300 160" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
         {/* Edges */}
@@ -765,6 +768,9 @@ case 'trefoil-knot': {
       </svg>
     );
 
+    /* ── Los puentes de Königsberg ────────────────────────────────────── */
+
+    
     case 'konigsberg': return (
       <svg viewBox="0 0 280 180" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
         {/* Islands */}
@@ -1165,7 +1171,7 @@ case 'piema': return (
 
     
 
-    /* ── PROBABILIDAD ──────────────────────────────── */
+/* ── PROBABILIDAD ──────────────────────────────── */
     
 
         /* ── Dado ──────────────────────────────── */
