@@ -65,7 +65,6 @@ function App() {
     </button>
   </React.Fragment>
 ))}
-
         </nav>
       </header>
 
