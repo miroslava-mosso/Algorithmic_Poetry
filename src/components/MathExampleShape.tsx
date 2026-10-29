@@ -1238,6 +1238,96 @@ case 'dado': {
  /* ── Cadenas de Markov ──────────────────────────────── */
 
 
+case 'markov': return (
+  <svg
+    viewBox="0 0 340 205"
+    className={`w-full ${isLightbox ? 'max-w-[680px]' : 'max-w-sm'}`}
+    fontFamily="'JetBrains Mono', monospace"
+  >
+    {/* Flechas */}
+    {[
+      // del -> cuaderno
+      { x1: 43, y1: 42, x2: 91, y2: 42 },
+      // cuaderno -> borrar
+      { x1: 151, y1: 42, x2: 199, y2: 42 },
+      // borrar -> tu
+      { x1: 230, y1: 65, x2: 180, y2: 119 },
+      // borrar -> nombre
+      { x1: 260, y1: 65, x2: 284, y2: 119 },
+      // tu -> nombre
+      { x1: 199, y1: 142, x2: 253, y2: 142 },
+    ].map(({ x1, y1, x2, y2 }, i) => {
+      const angle = Math.atan2(y2 - y1, x2 - x1);
+      const size = 4;
+      const baseX = x2 - size * Math.cos(angle);
+      const baseY = y2 - size * Math.sin(angle);
+      const perpX = size * 0.6 * Math.sin(angle);
+      const perpY = -size * 0.6 * Math.cos(angle);
+
+      return (
+        <g key={i}>
+          <line
+            x1={x1}
+            y1={y1}
+            x2={baseX}
+            y2={baseY}
+            stroke={INK}
+            strokeWidth="0.7"
+            strokeOpacity="0.3"
+          />
+          <polygon
+            points={`${x2},${y2} ${baseX + perpX},${baseY + perpY} ${baseX - perpX},${baseY - perpY}`}
+            fill={INK}
+            fillOpacity="0.35"
+          />
+        </g>
+      );
+    })}
+
+    {/* Nodos */}
+    {[
+      { x: 25, y: 42, r: 17, w: 'del' },
+      { x: 121, y: 42, r: 28, w: 'cuaderno' },
+      { x: 229, y: 42, r: 28, w: 'borrar' },
+      { x: 174, y: 142, r: 22, w: 'tu' },
+      { x: 281, y: 142, r: 27, w: 'nombre' },
+    ].map(({ x, y, r, w }) => (
+      <g key={w}>
+        <circle
+          cx={x}
+          cy={y}
+          r={r}
+          fill="none"
+          stroke={PINK}
+          strokeWidth="0.8"
+          strokeOpacity="0.65"
+        />
+        <text
+          x={x}
+          y={y + 3}
+          textAnchor="middle"
+          fontSize={w === 'cuaderno' ? 7.5 : w === 'nombre' ? 8 : 8}
+          fill={INK}
+        >
+          {w}
+        </text>
+      </g>
+    ))}
+
+    {/* Etiqueta */}
+    <text
+      x="170"
+      y="190"
+      textAnchor="middle"
+      fontSize="10.5"
+      fill={DIM}
+      letterSpacing="0.5"
+    >
+      p(xₙ | xₙ₋₁)
+    </text>
+  </svg>
+);
+
 
         /* ── Triangulo de Pascal ──────────────────────────────── */
 
