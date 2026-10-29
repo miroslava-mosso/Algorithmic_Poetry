@@ -1261,6 +1261,77 @@ case 'piema': return (
 
     /* ── TEORÍA DE CUERDAS ─────────────────────────── */
 
+ 
+
+    case 'dimension-oculta': return (
+      <svg viewBox="0 0 280 140" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
+        {/* Anagram grid: amor / roma / ramo / mora */}
+        {[
+          {row:0, cols:[{w:'amor',c:INK},{w:'→',c:PINK},{w:'roma',c:DIM}]},
+          {row:1, cols:[{w:'↓',  c:PINK},{w:'',  c:''  },{w:'↓',  c:PINK}]},
+          {row:2, cols:[{w:'ramo',c:DIM},{w:'→',c:PINK},{w:'mora',c:DIM}]},
+        ].map(({row,cols})=>(
+          cols.map(({w,c},ci)=>{
+            if(!w) return null;
+            return (
+              <text key={`${row}-${ci}`} x={50+ci*90} y={40+row*45}
+                textAnchor="middle" fontSize={w==='→'||w==='↓'?10:11}
+                fill={c} letterSpacing="1">{w}</text>
+            );
+          })
+        ))}
+        <text x="140" y="125" textAnchor="middle" fontSize="8" fill={DIM} letterSpacing="0.5">
+          mismas letras · distintas dimensiones
+        </text>
+        {/* Decorative diagonals */}
+        <line x1="70" y1="30" x2="230" y2="90" stroke={PINK} strokeWidth="0.3" strokeOpacity="0.3" strokeDasharray="3,4"/>
+        <line x1="230" y1="30" x2="70" y2="90" stroke={PINK} strokeWidth="0.3" strokeOpacity="0.3" strokeDasharray="3,4"/>
+      </svg>
+    );
+
+    case 'brana': return (
+      <svg viewBox="0 0 280 200" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
+        {/* Grid membrane with words at nodes */}
+        {(() => {
+          const cols = 5, rows = 5;
+          const xs = [40,90,140,190,240];
+          const ys = [30,68,106,144,182];
+          const words = [
+            ['·','·','brana','·','·'],
+            ['·','mem','brana','mem','·'],
+            ['mem','brana','BRANA','brana','mem'],
+            ['·','mem','brana','mem','·'],
+            ['·','·','brana','·','·'],
+          ];
+          const lines = [];
+          for(let r=0;r<rows;r++) for(let c=0;c<cols-1;c++)
+            lines.push(<line key={`h${r}${c}`} x1={xs[c]} y1={ys[r]} x2={xs[c+1]} y2={ys[r]}
+              stroke={PINK} strokeWidth="0.4" strokeOpacity="0.3"/>);
+          for(let r=0;r<rows-1;r++) for(let c=0;c<cols;c++)
+            lines.push(<line key={`v${r}${c}`} x1={xs[c]} y1={ys[r]} x2={xs[c]} y2={ys[r+1]}
+              stroke={PINK} strokeWidth="0.4" strokeOpacity="0.3"/>);
+          return (
+            <>
+              {lines}
+              {words.map((row,ri)=>row.map((w,ci)=>(
+                <text key={`${ri}-${ci}`} x={xs[ci]} y={ys[ri]+4}
+                  textAnchor="middle"
+                  fontSize={w==='BRANA'?11: w==='·'?10:8}
+                  fill={w==='BRANA'?INK: w==='·'?PINK:DIM}
+                  fontWeight={w==='BRANA'?'500':'300'}>
+                  {w}
+                </text>
+              )))}
+            </>
+          );
+        })()}
+      </svg>
+    );
+
+    default:
+      return null;
+  }
+}
 
 export function MathExampleShape({
   shape,
