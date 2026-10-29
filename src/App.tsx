@@ -158,25 +158,25 @@ function App() {
       {activeTab === 'galeria' && <div id="panel-galeria" role="tabpanel">
       <section id="galeria" className="border-b hairline">
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
-          <div className="reveal flex items-end justify-between gap-6 flex-wrap">
-            <div>
-              <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Galería</span>
-              <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
-                Cuatro <span className="pink-underline">formas</span> geométricas, cuatro <span className="pink-underline">poemas</span> diferentes
-              </h2>
-            </div>
-            <p className="font-body text-lg sm:text-xl text-ink/60 max-w-[34ch]">
-              Pasa el cursor y haz clic sobre cada poema para verlo en grande. La restricción geométrica define la forma y el                texto su contenido. 
-               {/* Authorship */}
-        <div className="reveal mt-5 pt-2 border-t hairline">
-          <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
-             Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
-          </p>
-        </div>
-            </p>
-          </div>
-        </div>
-
+  <div className="reveal grid gap-10 sm:grid-cols-[0.78fr_1.22fr]">
+    <div>
+      <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Galería</span>
+      <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
+        Cuatro <span className="pink-underline">formas</span> geométricas, cuatro <span className="pink-underline">poemas</span> diferentes
+      </h2>
+    </div>
+    <div>
+      <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/60">
+        Pasa el cursor y haz clic sobre cada poema para verlo en grande. La restricción geométrica define la forma y el texto su contenido.
+      </p>
+      <div className="mt-5 pt-3 border-t hairline">
+        <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
+          Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-8 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
           {poems.map((p, i) => (
             <PoemCard key={p.id} poem={p} i={i} />
