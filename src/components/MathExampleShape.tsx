@@ -228,8 +228,6 @@ case 'circulo-vicioso': return (
 
 
 
-
-
 /* ── Curva de Koch ───────────────────────────── */
 
 case 'koch-snowflake': {
