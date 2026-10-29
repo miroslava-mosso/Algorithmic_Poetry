@@ -1247,7 +1247,7 @@ case 'markov': return (
     {/* Flechas */}
     {[
       // del -> cuaderno
-      { x1: 57, y1: 42, x2: 89, y2: 42 },
+      { x1: 57, y1: 42, x2: 87, y2: 42 },
       // cuaderno -> borrar
       { x1: 155, y1: 42, x2: 199, y2: 42 },
       // borrar -> tu
