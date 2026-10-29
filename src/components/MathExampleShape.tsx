@@ -229,9 +229,8 @@ case 'circulo-vicioso': return (
 
     /* ── Copo de nueve ─────────────────────────────────── */
 
-    
 
-/* ── Copo de nieve de Koch ───────────────────── */
+/* ── Curva de Koch ───────────────────────────── */
 
 case 'koch-snowflake': {
   const DARK_BLUE = '#234A68';
@@ -245,31 +244,35 @@ case 'koch-snowflake': {
     'Observa', 'nuestros', 'pactos', 'Secretos',
   ];
 
-  // Construye una curva de Koch sobre un segmento.
+  type Point = [number, number];
+
+  // Construye una curva de Koch ABIERTA sobre un segmento.
   const kochPoints = (
-    start: [number, number],
-    end: [number, number],
+    start: Point,
+    end: Point,
     depth: number,
-  ): [number, number][] => {
+  ): Point[] => {
     if (depth === 0) return [start, end];
 
     const dx = (end[0] - start[0]) / 3;
     const dy = (end[1] - start[1]) / 3;
 
-    const p1: [number, number] = [
+    const p1: Point = [
       start[0] + dx,
       start[1] + dy,
     ];
 
-    const p3: [number, number] = [
-      start[0] + 2 * dx,
-      start[1] + 2 * dy,
+    // Pico de 60° hacia arriba.
+    const p2: Point = [
+      p1[0] + dx * Math.cos(-Math.PI / 3)
+        - dy * Math.sin(-Math.PI / 3),
+      p1[1] + dx * Math.sin(-Math.PI / 3)
+        + dy * Math.cos(-Math.PI / 3),
     ];
 
-    const angle = -Math.PI / 3;
-    const p2: [number, number] = [
-      p1[0] + dx * Math.cos(angle) - dy * Math.sin(angle),
-      p1[1] + dx * Math.sin(angle) + dy * Math.cos(angle),
+    const p3: Point = [
+      start[0] + 2 * dx,
+      start[1] + 2 * dy,
     ];
 
     const a = kochPoints(start, p1, depth - 1);
@@ -285,71 +288,66 @@ case 'koch-snowflake': {
     ];
   };
 
-  // Triángulo equilátero inicial, orientado hacia arriba.
-  const snowflakePoints = (depth: number): [number, number][] => {
-    const A: [number, number] = [180, 18];
-    const B: [number, number] = [24, 288];
-    const C: [number, number] = [336, 288];
-
-    const side1 = kochPoints(A, B, depth);
-    const side2 = kochPoints(B, C, depth);
-    const side3 = kochPoints(C, A, depth);
-
-    return [
-      ...side1.slice(0, -1),
-      ...side2.slice(0, -1),
-      ...side3.slice(0, -1),
-    ];
-  };
-
   const drawKoch = (
     depth: number,
     words: string[],
+    offsetY: number,
     colorForWord: (word: string) => string,
-    showWords: boolean,
   ) => {
-    const points = snowflakePoints(depth);
-    const path = points
-      .map((p, i) => `${i === 0 ? 'M' : 'L'} ${p[0]} ${p[1]}`)
-      .join(' ') + ' Z';
+    // Un solo segmento horizontal como punto de partida.
+    const points = kochPoints([24, 140], [426, 140], depth);
 
-    const edges = points.map((p, i) => {
-      const next = points[(i + 1) % points.length];
-      const dx = next[0] - p[0];
-      const dy = next[1] - p[1];
+    const path = points
+      .map((point, i) =>
+        `${i === 0 ? 'M' : 'L'} ${point[0]} ${point[1]}`
+      )
+      .join(' ');
+
+    const edges = points.slice(0, -1).map((point, i) => {
+      const next = points[i + 1];
 
       return {
-        x: (p[0] + next[0]) / 2,
-        y: (p[1] + next[1]) / 2,
-        angle: Math.atan2(dy, dx) * 180 / Math.PI,
+        x: (point[0] + next[0]) / 2,
+        y: (point[1] + next[1]) / 2,
+        angle: Math.atan2(
+          next[1] - point[1],
+          next[0] - point[0],
+        ) * 180 / Math.PI,
       };
     });
 
     return (
-      <g>
+      <g transform={`translate(0, ${offsetY})`}>
+        {/* La curva NO se cierra: no añadimos Z al path */}
         <path
           d={path}
           fill="none"
           stroke={PINK}
           strokeWidth="1.5"
           strokeLinejoin="round"
+          strokeLinecap="round"
         />
 
-        {showWords && words.map((word, i) => {
+        {/* Una palabra por cada arista */}
+        {words.map((word, i) => {
           const edge = edges[i];
           if (!edge) return null;
 
           return (
             <text
-              key={`${word}-${i}`}
+              key={`${depth}-${i}`}
               x={edge.x}
               y={edge.y}
               transform={`rotate(${edge.angle}, ${edge.x}, ${edge.y})`}
               textAnchor="middle"
               dominantBaseline="middle"
-              fontSize={depth === 0 ? 11 : 8}
-              fill={colorForWord(word)}
+              fontSize={depth === 1 ? 12 : 8}
               fontFamily="'JetBrains Mono', monospace"
+              fill={colorForWord(word)}
+              stroke="white"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+              paintOrder="stroke"
             >
               {word}
             </text>
@@ -361,46 +359,45 @@ case 'koch-snowflake': {
 
   return (
     <svg
-      viewBox="0 0 380 1080"
+      viewBox="0 0 450 850"
       className="w-full max-w-2xl"
       xmlns="http://www.w3.org/2000/svg"
     >
       {/* Primera iteración */}
-      <text x="12" y="24" fontSize="17" fill={INK}>
+      <text x="12" y="25" fontSize="17" fill={INK}>
         Primera iteración:
       </text>
-      <g transform="translate(0, 32) scale(1, 0.72)">
-        {drawKoch(1, firstWords, () => INK, true)}
-      </g>
+
+      {drawKoch(1, firstWords, 0, () => INK)}
 
       {/* Segunda iteración */}
-      <text x="12" y="340" fontSize="17" fill={INK}>
+      <text x="12" y="310" fontSize="17" fill={INK}>
         Segunda iteración:
       </text>
-      <g transform="translate(0, 350) scale(1, 0.72)">
-        {drawKoch(
-          2,
-          secondWords,
-          (word) =>
-            ['Un', 'Gato', 'Observa'].includes(word)
-              ? INK
-              : DARK_BLUE,
-          true,
-        )}
-      </g>
+
+      {drawKoch(
+        2,
+        secondWords,
+        285,
+        (word) =>
+          ['Un', 'Gato', 'Observa'].includes(word)
+            ? INK
+            : DARK_BLUE,
+      )}
 
       {/* Tercera iteración: solo la curva */}
-      <text x="12" y="655" fontSize="17" fill={INK}>
+      <text x="12" y="595" fontSize="17" fill={INK}>
         Tercera iteración:
       </text>
-      <g transform="translate(0, 665) scale(1, 0.72)">
-        {drawKoch(3, [], () => INK, false)}
-      </g>
+
+      {drawKoch(3, [], 570, () => INK)}
     </svg>
   );
 }
 
 
+
+    
     /* ── NUDOS ─────────────────────────────────────── */
 
 /* Nudo Hopf-link */      
