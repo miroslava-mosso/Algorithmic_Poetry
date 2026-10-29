@@ -68,11 +68,13 @@ function App() {
 
             <div className="reveal flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[420px] aspect-[4/5] overflow-hidden border hairline p-2 bg-[#ebe7df]">
-                <img
-                  src="/Po-poema_2.001.jpeg"
-                  alt="Poema visual sobre una escultura en un patio"
-                  className="w-full h-full object-cover object-[38%_center]"
-                />
+                
+<img
+  src={`${import.meta.env.BASE_URL}Po-poema_2.001.jpeg`}
+  alt="Poema visual sobre una escultura en un patio"
+  className="w-full h-full object-cover object-[38%_center]"
+/>
+
               </div>
             </div>
           </div>
