@@ -1243,8 +1243,8 @@ case 'dado': {
         {/* Nodes */}
         {[
           {x:50, y:50, w:'del'},
-          {x:100,y:50, w:'cuaderno'},
-          {x:180,y:50, w:'borrar'},
+          {x:120,y:50, w:'cuaderno'},
+          {x:190,y:50, w:'borrar'},
           {x:100,y:110,w:'tu'},
           {x:230,y:110,w:'nombre'},
         ].map(n=>(
