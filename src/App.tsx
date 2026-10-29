@@ -281,7 +281,7 @@ function App() {
             </div>
           </div>
 
-          <div className="reveal mt-16 pt-6 border-t border-[#f7f5f1]/15 flex flex-wrap items-center justify-between gap-4 font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">
+          <div className="reveal mt-8 pt-5 border-t border-[#f7f5f1]/15 flex flex-wrap items-center justify-between gap-4 font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">
             <span>Cuaderno digital de poesía potencial · {new Date().getFullYear()}</span>
             <span className="flex items-center gap-2">
               <span className="inline-block w-2 h-2 bg-[#f4b6c2] rotate-45" />
