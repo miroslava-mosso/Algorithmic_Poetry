@@ -1243,32 +1243,97 @@ case 'piema': return (
         /* ── Dado ──────────────────────────────── */
 
     
-    case 'borracho': return (
-      <svg viewBox="0 0 300 120" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
-        {/* Random walk path */}
-        {(() => {
-          const pts: [number,number][] = [
-            [10,60],[40,40],[70,70],[100,45],[130,75],[160,50],[190,80],[220,35],[250,65],[280,55]
-          ];
-          const words = ['pa','so','a','pa','so','a','pa','so','a','pa'];
+
+case 'pascal-triangle': {
+  const rows = [
+    [1],
+    [1, 1],
+    [1, 2, 1],
+    [1, 3, 3, 1],
+    [1, 4, 6, 4, 1],
+    [1, 5, 10, 10, 5, 1],
+  ];
+
+  const centerX = 160;
+  const startY = 13;
+  const rowGap = 22;
+  const colGap = 48;
+
+  const point = (row: number, col: number) => ({
+    x: centerX - (row * colGap) / 2 + col * colGap,
+    y: startY + row * rowGap,
+  });
+
+  return (
+    <svg
+      viewBox="0 0 320 130"
+      className="w-full max-w-sm"
+      fontFamily="'JetBrains Mono', monospace"
+    >
+      {/* Líneas que conectan los coeficientes */}
+      {rows.slice(0, -1).map((row, i) =>
+        row.map((_, j) => {
+          const parent = point(i, j);
+          const leftChild = point(i + 1, j);
+          const rightChild = point(i + 1, j + 1);
+
           return (
-            <g>
-              <polyline points={pts.map(([x,y])=>`${x},${y}`).join(' ')}
-                fill="none" stroke={PINK} strokeWidth="1" strokeOpacity="0.5"/>
-              {pts.map(([x,y],i)=>(
-                <g key={i}>
-                  <circle cx={x} cy={y} r="2" fill={INK} opacity="0.3"/>
-                  <text x={x} y={y-8} textAnchor="middle" fontSize="8.5" fill={INK}>{words[i]}</text>
-                </g>
-              ))}
-              <line x1="10" y1="100" x2="280" y2="100" stroke={INK} strokeWidth="0.3" strokeOpacity="0.2"/>
-              <text x="150" y="115" textAnchor="middle" fontSize="7.5" fill={DIM}>paseo aleatorio · Δ = ±1</text>
+            <g key={`connectors-${i}-${j}`}>
+              <line
+                x1={parent.x}
+                y1={parent.y + 3}
+                x2={leftChild.x}
+                y2={leftChild.y - 5}
+                stroke={PINK}
+                strokeWidth="0.8"
+                strokeOpacity="0.45"
+              />
+              <line
+                x1={parent.x}
+                y1={parent.y + 3}
+                x2={rightChild.x}
+                y2={rightChild.y - 5}
+                stroke={PINK}
+                strokeWidth="0.8"
+                strokeOpacity="0.45"
+              />
             </g>
           );
-        })()}
-      </svg>
-    );
+        })
+      )}
 
+      {/* Coeficientes del triángulo */}
+      {rows.map((row, i) =>
+        row.map((value, j) => {
+          const { x, y } = point(i, j);
+          const isTen = value === 10;
+          const isOne = value === 1;
+
+          return (
+            <text
+              key={`coefficient-${i}-${j}`}
+              x={x}
+              y={y}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize="11"
+              fontWeight={isTen ? "600" : "400"}
+              fill={isTen ? PINK : isOne ? `${INK}70` : INK}
+            >
+              {value}
+            </text>
+          );
+        })
+      )}
+    </svg>
+  );
+}
+
+
+
+
+
+    
  
     default:
       return null;
