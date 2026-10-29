@@ -1268,8 +1268,8 @@ case 'dado': {
               transform={`rotate(${Math.atan2(y2-y1,x2-x1)*180/Math.PI},${x2},${y2})`}/>
           </g>
         ))}
-        <text x="150" y="143" textAnchor="middle" fontSize="7" fill={DIM} letterSpacing="0.5">
-          p(xₙ | xₙ₋₁) — la siguiente palabra solo depende de la palabra actual. 
+        <text x="150" y="143" textAnchor="middle" fontSize="8.5" fill={DIM} letterSpacing="0.5">
+          p(xₙ | xₙ₋₁)
         </text>
       </svg>
     );
