@@ -1286,7 +1286,7 @@ case 'markov': return (
 
     {/* Nodos */}
     {[
-      { x: 25, y: 42, r: 17, w: 'del' },
+      { x: 35, y: 42, r: 17, w: 'del' },
       { x: 121, y: 42, r: 28, w: 'cuaderno' },
       { x: 229, y: 42, r: 20, w: 'borrar' },
       { x: 174, y: 142, r: 17, w: 'tu' },
