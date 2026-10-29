@@ -263,11 +263,11 @@ function App() {
               </div>
               <div>
                 <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">Manda tu poema</p>
-                <p className="font-body text-base sm:text-lg mt-2 list-disc pl-6 leading-snug space-y-0.5">
+                <p className="font-body text-lg mt-1">
                 Incluye lo siguiente:
                 </p>
 
-<ul className="font-body text-lg mt-2 list-disc pl-6 space-y-1">
+<ul className="font-body text-base sm:text-lg mt-2 list-disc pl-6 leading-snug space-y-0.5">
   <li>
     El diamante de Hodge con los números originales y otro con las palabras sustituidas.
   </li>
