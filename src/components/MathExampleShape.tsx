@@ -891,8 +891,6 @@ case 'primo': return (
 );
 
 
-        
-
 
 
 
@@ -916,18 +914,16 @@ case 'fibonacci': {
     size: number;
   };
 
-  // Disposición clásica de los cuadrados:
-  // cada nuevo cuadrado se coloca girando 90 grados.
+  // Cajas consecutivas de Fibonacci.
   const squares: Square[] = [
     { x: 0, y: 0, size: 1 },
     { x: 1, y: 0, size: 1 },
     { x: 0, y: 1, size: 2 },
     { x: -3, y: 0, size: 3 },
-    { x: 0, y: -5, size: 5 },
-    { x: 5, y: 0, size: 8 },
+    { x: -3, y: -5, size: 5 },
+    { x: 2, y: -5, size: 8 },
   ];
 
-  // Marco que contiene todos los cuadrados.
   const minX = Math.min(...squares.map(s => s.x));
   const maxX = Math.max(...squares.map(s => s.x + s.size));
   const minY = Math.min(...squares.map(s => s.y));
@@ -935,7 +931,6 @@ case 'fibonacci': {
 
   const unit = 9;
   const diagramWidth = (maxX - minX) * unit;
-  const diagramHeight = (maxY - minY) * unit;
   const offsetX = (300 - diagramWidth) / 2;
   const offsetY = 12;
 
@@ -945,21 +940,21 @@ case 'fibonacci': {
   const sy = (y: number) =>
     offsetY + (maxY - y) * unit;
 
-  // Cuartos de círculo conectados en una sola trayectoria.
-  // Cada arco se inscribe en su cuadrado.
+  // Un cuarto de círculo por caja.
+  // Cada arco termina exactamente donde empieza el siguiente.
   const arcCommands = [
-    `M ${sx(0)} ${sy(0)}
-     A ${unit} ${unit} 0 0 0 ${sx(1)} ${sy(1)}`,
+    `M ${sx(0)} ${sy(1)}
+     A ${unit} ${unit} 0 0 1 ${sx(1)} ${sy(0)}`,
 
-    `A ${unit} ${unit} 0 0 0 ${sx(2)} ${sy(0)}`,
+    `A ${unit} ${unit} 0 0 1 ${sx(2)} ${sy(1)}`,
 
-    `A ${2 * unit} ${2 * unit} 0 0 0 ${sx(0)} ${sy(2)}`,
+    `A ${2 * unit} ${2 * unit} 0 0 0 ${sx(0)} ${sy(3)}`,
 
-    `A ${3 * unit} ${3 * unit} 0 0 0 ${sx(-3)} ${sy(0)}`,
+    `A ${3 * unit} ${3 * unit} 0 0 1 ${sx(-3)} ${sy(0)}`,
 
-    `A ${5 * unit} ${5 * unit} 0 0 0 ${sx(2)} ${sy(-5)}`,
+    `A ${5 * unit} ${5 * unit} 0 0 1 ${sx(2)} ${sy(-5)}`,
 
-    `A ${8 * unit} ${8 * unit} 0 0 0 ${sx(10)} ${sy(3)}`,
+    `A ${8 * unit} ${8 * unit} 0 0 1 ${sx(10)} ${sy(3)}`,
   ];
 
   return (
@@ -1000,7 +995,7 @@ case 'fibonacci': {
         );
       })}
 
-      {/* Espiral */}
+      {/* Espiral de Fibonacci */}
       <path
         d={arcCommands.join(' ')}
         fill="none"
@@ -1010,7 +1005,7 @@ case 'fibonacci': {
         strokeLinejoin="round"
       />
 
-      {/* Versos */}
+      {/* Versos: conservamos su disposición original */}
       {verses.map((item, i) => (
         <g key={`verse-${i}`}>
           <text
