@@ -733,7 +733,7 @@ case 'trefoil-knot': {
 
 
     case 'grafo-arbol': return (
-      <svg viewBox="0 0 300 160" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
+      <svg viewBox="0 0 300 260" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
         {/* Edges */}
         {[
           [150,18, 80,50], [150,18, 220,50],
