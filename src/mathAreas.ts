@@ -63,7 +63,7 @@ export const mathAreas: MathArea[] = [
         index: '03',
         title: 'Copo de nieve de Koch',
         technique: 'Curva fractal ',
-        manifest: 'Cada arista se reemplaza por un triángulo equilátero.',
+        manifest: 'En la 1ra iteración elige 4 palabras y escríbelas sobre las líneas. Para la 2da iteración divide cada segmento en 4 de la forma original, y así sucesivamente para cada iteración.',
         shape: 'koch-snowflake',
       },
     ],
