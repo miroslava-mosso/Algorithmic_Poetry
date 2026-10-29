@@ -123,7 +123,7 @@ export const mathAreas: MathArea[] = [
         index: '03',
         title: 'Bipartito',
         technique: 'Funciones',
-        manifest: 'Dos conjuntos que solo se conectan entre sí — nunca consigo mismo.',
+        manifest: 'PRÓXIMAMENTE.',
         shape: 'bipartito',
       },
     ],
