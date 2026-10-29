@@ -248,7 +248,7 @@ function App() {
               <h2 className="font-display text-4xl sm:text-5xl mt-2 leading-[1.05]">
                 Escribámonos.
               </h2> 
-              <p className="font-body text-lg text-[#f7f5f1]/70 mt-6 max-w-[44ch]">
+              <p className="font-body text-lg text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
                 Si escribes un poema usando el algoritmo <span className="pink-underline-thin"><a href="#mi-algoritmo" onClick={(e) => { e.preventDefault(); navigateTo('algoritmo', 'mi-algoritmo'); }} className="hover:text-ink transition">El diamante de Hodge</a></span> y te                   gustaría compartirlo, ¡envíanoslo por correo electrónico para                      publicarlo en nuestra página!
                 </p>
               <p className="font-body text-lg text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
