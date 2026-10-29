@@ -51,7 +51,7 @@ function App() {
         
       {/* ── Hero ────────────────────────────────────────── */}
       <section id="top" className="relative">
-        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-20 sm:pt-2 pb-20 sm:pb-28">
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-20 sm:pt-5 pb-20 sm:pb-28">
           <div className="reveal flex items-center gap-3 mb-10">
           </div>
 
