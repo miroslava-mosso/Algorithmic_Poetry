@@ -438,9 +438,9 @@ case 'koch-snowflake': {
       {/* Segunda iteración: arriba a la derecha */}
       <g transform={isLightbox ? "translate(555, 20) scale(1.35)" : "translate(320, 0)"}>
         <text
-          x={isLightbox ? 60 : 116}
+          x={isLightbox ? 80 : 116}
           y={isLightbox ? 28 : 68}
-          fontSize={isLightbox ? 25 : 33}
+          fontSize={isLightbox ? 20 : 33}
           fill={INK}
         >
           Segunda iteración:
