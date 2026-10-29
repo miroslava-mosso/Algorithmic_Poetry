@@ -895,6 +895,7 @@ case 'primo': return (
 
 
 /* ———————————————— Fibonacci ─────────────────────────── */
+    
 
 case 'fibonacci': {
   const sizes = [1, 1, 2, 3, 5, 8, 12, 21];
