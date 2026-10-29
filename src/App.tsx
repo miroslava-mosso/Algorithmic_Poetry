@@ -226,7 +226,7 @@ function App() {
 
       {/* ── Fotografía ─────────────────────────────────── */}
       {activeTab === 'contacto' && <div id="panel-contacto" role="tabpanel">
-      <div className="reveal relative overflow-hidden bg-[#cdb887]" style={{ height: '57vh', minHeight: '240px' }}>
+      <div className="reveal relative overflow-hidden bg-[#cdb887]" style={{ height: '58vh', minHeight: '240px' }}>
         <img
           src={`${import.meta.env.BASE_URL}0001_2000268740001_2.jpg`}
           alt="Mar tranquilo, horizonte azul y arena"
