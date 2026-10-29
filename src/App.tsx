@@ -35,7 +35,7 @@ function App() {
             <span className="inline-block w-2 h-2 bg-[#f4b6c2] rotate-45" />
             Poesía algorítmica
           </button>
-          <span className="font-mono-lt text-[10px] text-ink/40">Portafolio · 01—04</span>
+          <span className="font-mono-lt text-[10px] text-ink/40">Poesía Algorítmica 2026</span>
         </div>
         <nav aria-label="Secciones" role="tablist" className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-3 flex items-center gap-5 sm:gap-7 overflow-x-auto font-mono-lt text-[10px] sm:text-[11px] uppercase text-ink/70">
           {tabs.map((tab) => (
