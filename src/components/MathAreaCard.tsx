@@ -132,7 +132,6 @@ function MathExample({ ex }: { ex: MathExample }) {
               : ex.shape === ' pascal-triangle'
                 ? 'w-[min(90vw,500px)] min-w-0 shrink-0'
                 : 'w-[min(85vw,70vh,680px)]'
-
             
     }
   >
