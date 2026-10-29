@@ -624,7 +624,7 @@ case 'figure-eight-knot': return (
       fill="none"
       stroke="#35BFC2"
       strokeWidth="2.5"
-      strokeOpacity="0.2"
+      strokeOpacity="0.3"
       strokeLinejoin="round"
     />
 
