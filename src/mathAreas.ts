@@ -175,8 +175,8 @@ export const mathAreas: MathArea[] = [
       {
         index: '02',
         title: 'Cadena de Markov',
-        technique: 'Memoria de un solo paso',
-        manifest: 'Cada palabra depende solo de la anterior.',
+        technique: 'La probabilidad de que aparezca la siguiente palabra depende solo de la palabra actual.',
+        manifest: 'Escoge tu buscador web favorito, comienza con una palabra como ',
         shape: 'markov',
       },
       {
