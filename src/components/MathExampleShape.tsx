@@ -229,6 +229,7 @@ case 'circulo-vicioso': return (
 
 
 
+
 /* ── Curva de Koch ───────────────────────────── */
 
 case 'koch-snowflake': {
@@ -245,7 +246,6 @@ case 'koch-snowflake': {
 
   type Point = [number, number];
 
-  // Construye una curva de Koch ABIERTA sobre un segmento.
   const kochPoints = (
     start: Point,
     end: Point,
@@ -256,17 +256,12 @@ case 'koch-snowflake': {
     const dx = (end[0] - start[0]) / 3;
     const dy = (end[1] - start[1]) / 3;
 
-    const p1: Point = [
-      start[0] + dx,
-      start[1] + dy,
-    ];
+    const p1: Point = [start[0] + dx, start[1] + dy];
 
-    // Pico de 60° hacia arriba.
+    const angle = -Math.PI / 3;
     const p2: Point = [
-      p1[0] + dx * Math.cos(-Math.PI / 3)
-        - dy * Math.sin(-Math.PI / 3),
-      p1[1] + dx * Math.sin(-Math.PI / 3)
-        + dy * Math.cos(-Math.PI / 3),
+      p1[0] + dx * Math.cos(angle) - dy * Math.sin(angle),
+      p1[1] + dx * Math.sin(angle) + dy * Math.cos(angle),
     ];
 
     const p3: Point = [
@@ -290,34 +285,54 @@ case 'koch-snowflake': {
   const drawKoch = (
     depth: number,
     words: string[],
-    offsetY: number,
     colorForWord: (word: string) => string,
+    width: number,
+    height: number,
   ) => {
-    // Un solo segmento horizontal como punto de partida.
-    const points = kochPoints([24, 140], [426, 140], depth);
+    const margin = 12;
+    const baseline = height - 12;
+    const peakHeight = height * 0.72;
+    const segmentWidth = width - margin * 2;
 
-    const path = points
-      .map((point, i) =>
-        `${i === 0 ? 'M' : 'L'} ${point[0]} ${point[1]}`
-      )
+    // Curva abierta horizontal con pico hacia arriba.
+    const points = kochPoints(
+      [margin, baseline],
+      [width - margin, baseline],
+      depth,
+    );
+
+    // Ajusta la altura de los picos sin cerrar la curva.
+    const originalMaxY = Math.min(...points.map(p => p[1]));
+    const originalMinY = Math.min(...points.map(p => p[1]));
+    const originalBottom = Math.max(...points.map(p => p[1]));
+    const originalHeight = originalBottom - originalMinY || 1;
+
+    const scaledPoints = points.map(([x, y]): Point => [
+      x,
+      baseline - ((originalBottom - y) / originalHeight) * peakHeight,
+    ]);
+
+    const path = scaledPoints
+      .map((p, i) => `${i === 0 ? 'M' : 'L'} ${p[0]} ${p[1]}`)
       .join(' ');
 
-    const edges = points.slice(0, -1).map((point, i) => {
-      const next = points[i + 1];
+    const edges = scaledPoints.slice(0, -1).map((p, i) => {
+      const next = scaledPoints[i + 1];
+      const dx = next[0] - p[0];
+      const dy = next[1] - p[1];
+      const length = Math.hypot(dx, dy) || 1;
 
       return {
-        x: (point[0] + next[0]) / 2,
-        y: (point[1] + next[1]) / 2,
-        angle: Math.atan2(
-          next[1] - point[1],
-          next[0] - point[0],
-        ) * 180 / Math.PI,
+        x: (p[0] + next[0]) / 2,
+        y: (p[1] + next[1]) / 2,
+        angle: Math.atan2(dy, dx) * 180 / Math.PI,
+        nx: dy / length,
+        ny: -dx / length,
       };
     });
 
     return (
-      <g transform={`translate(0, ${offsetY})`}>
-        {/* La curva NO se cierra: no añadimos Z al path */}
+      <g>
         <path
           d={path}
           fill="none"
@@ -327,26 +342,26 @@ case 'koch-snowflake': {
           strokeLinecap="round"
         />
 
-        {/* Una palabra por cada arista */}
         {words.map((word, i) => {
           const edge = edges[i];
           if (!edge) return null;
 
+          // Desplaza el texto ligeramente hacia arriba de la arista.
+          const offset = depth === 1 ? 10 : 6;
+          const x = edge.x + edge.nx * offset;
+          const y = edge.y + edge.ny * offset;
+
           return (
             <text
               key={`${depth}-${i}`}
-              x={edge.x}
-              y={edge.y}
-              transform={`rotate(${edge.angle}, ${edge.x}, ${edge.y})`}
+              x={x}
+              y={y}
+              transform={`rotate(${edge.angle}, ${x}, ${y})`}
               textAnchor="middle"
               dominantBaseline="middle"
-              fontSize={depth === 1 ? 12 : 8}
+              fontSize={depth === 1 ? 11 : 7}
               fontFamily="'JetBrains Mono', monospace"
               fill={colorForWord(word)}
-              stroke="white"
-              strokeWidth="2.5"
-              strokeLinejoin="round"
-              paintOrder="stroke"
             >
               {word}
             </text>
@@ -358,42 +373,54 @@ case 'koch-snowflake': {
 
   return (
     <svg
-      viewBox="0 0 450 850"
-      className="w-full max-w-2xl"
+      viewBox="0 0 760 570"
+      className="w-full max-w-3xl"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Primera iteración */}
-      <text x="12" y="25" fontSize="17" fill={INK}>
-        Primera iteración:
-      </text>
+      {/* Primera fila: iteraciones 1 y 2 */}
 
-      {drawKoch(1, firstWords, 0, () => INK)}
+      <g transform="translate(0, 0)">
+        <text x="12" y="24" fontSize="17" fill={INK}>
+          Primera iteración:
+        </text>
 
-      {/* Segunda iteración */}
-      <text x="12" y="310" fontSize="17" fill={INK}>
-        Segunda iteración:
-      </text>
+        <g transform="translate(0, 32)">
+          {drawKoch(1, firstWords, () => INK, 365, 175)}
+        </g>
+      </g>
 
-      {drawKoch(
-        2,
-        secondWords,
-        285,
-        (word) =>
-          ['Un', 'Gato', 'Observa'].includes(word)
-            ? INK
-            : DARK_BLUE,
-      )}
+      <g transform="translate(380, 0)">
+        <text x="12" y="24" fontSize="17" fill={INK}>
+          Segunda iteración:
+        </text>
 
-      {/* Tercera iteración: solo la curva */}
-      <text x="12" y="595" fontSize="17" fill={INK}>
-        Tercera iteración:
-      </text>
+        <g transform="translate(0, 32)">
+          {drawKoch(
+            2,
+            secondWords,
+            (word) =>
+              ['Un', 'Gato', 'Observa'].includes(word)
+                ? INK
+                : DARK_BLUE,
+            365,
+            175,
+          )}
+        </g>
+      </g>
 
-      {drawKoch(3, [], 570, () => INK)}
+      {/* Segunda fila: iteración 3 centrada y más ancha */}
+      <g transform="translate(0, 270)">
+        <text x="12" y="24" fontSize="17" fill={INK}>
+          Tercera iteración:
+        </text>
+
+        <g transform="translate(0, 32)">
+          {drawKoch(3, [], () => INK, 740, 230)}
+        </g>
+      </g>
     </svg>
   );
 }
-
 
 
     
