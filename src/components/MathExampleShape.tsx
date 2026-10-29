@@ -1073,7 +1073,7 @@ case 'piema': return (
         </text>
 
         <text
-          x="85"
+          x="65"
           y={24 + i * 29}
           fontSize="20"
           fill={INK}
