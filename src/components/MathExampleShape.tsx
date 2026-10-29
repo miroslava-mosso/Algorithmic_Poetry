@@ -230,39 +230,176 @@ case 'circulo-vicioso': return (
     /* ── Copo de nueve ─────────────────────────────────── */
 
     
-    case 'koch-snowflake': return (
-      <svg viewBox="0 0 280 260" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
-        {/* Level-2 Koch snowflake outline as polygon */}
-        <polygon
-          points="140,18 195,108 245,108 218,155 245,200 140,200 35,200 62,155 35,108 85,108"
-          fill="none" stroke={PINK} strokeWidth="0.5" strokeOpacity="0.4"/>
-        {/* Words at fractal vertices */}
-        {[
-          [140, 14,  'nieve'],
-          [250, 106, 'nieve'],
-          [252, 204, 'nieve'],
-          [140, 215, 'nieve'],
-          [28,  204, 'nieve'],
-          [28,  106, 'nieve'],
-          [196, 60,  'copo'],
-          [222, 132, 'copo'],
-          [196, 162, 'copo'],
-          [140, 178, 'copo'],
-          [84,  162, 'copo'],
-          [58,  132, 'copo'],
-          [84,  60,  'copo'],
-        ].map(([x, y, w], i) => (
-          <text key={i} x={x as number} y={y as number} fontSize={w === 'nieve' ? '9.5' : '8'}
-            textAnchor="middle" fill={w === 'nieve' ? INK : DIM}
-            fontWeight={w === 'nieve' ? '400' : '300'}>
-            {w as string}
-          </text>
-        ))}
-        <text x="140" y="120" textAnchor="middle" fontSize="8" fill={DIM}>fractal</text>
-        <text x="140" y="132" textAnchor="middle" fontSize="8" fill={PINK}>·</text>
-        <text x="140" y="144" textAnchor="middle" fontSize="8" fill={DIM}>infinito</text>
-      </svg>
+
+/* ── Copo de nieve de Koch ───────────────────── */
+
+case 'koch-snowflake': {
+  const DARK_BLUE = '#234A68';
+
+  const firstWords = ['un', 'gato,', 'nos', 'observa'];
+
+  const secondWords = [
+    'Un', 'teléfono', 'está', 'sonando',
+    'Gato', 'que', 'se', 'perdió',
+    'Nos', 'maullaba', 'desde', 'afuera',
+    'Observa', 'nuestros', 'pactos', 'Secretos',
+  ];
+
+  // Construye una curva de Koch sobre un segmento.
+  const kochPoints = (
+    start: [number, number],
+    end: [number, number],
+    depth: number,
+  ): [number, number][] => {
+    if (depth === 0) return [start, end];
+
+    const dx = (end[0] - start[0]) / 3;
+    const dy = (end[1] - start[1]) / 3;
+
+    const p1: [number, number] = [
+      start[0] + dx,
+      start[1] + dy,
+    ];
+
+    const p3: [number, number] = [
+      start[0] + 2 * dx,
+      start[1] + 2 * dy,
+    ];
+
+    const angle = -Math.PI / 3;
+    const p2: [number, number] = [
+      p1[0] + dx * Math.cos(angle) - dy * Math.sin(angle),
+      p1[1] + dx * Math.sin(angle) + dy * Math.cos(angle),
+    ];
+
+    const a = kochPoints(start, p1, depth - 1);
+    const b = kochPoints(p1, p2, depth - 1);
+    const c = kochPoints(p2, p3, depth - 1);
+    const d = kochPoints(p3, end, depth - 1);
+
+    return [
+      ...a.slice(0, -1),
+      ...b.slice(0, -1),
+      ...c.slice(0, -1),
+      ...d,
+    ];
+  };
+
+  // Triángulo equilátero inicial, orientado hacia arriba.
+  const snowflakePoints = (depth: number): [number, number][] => {
+    const A: [number, number] = [180, 18];
+    const B: [number, number] = [24, 288];
+    const C: [number, number] = [336, 288];
+
+    const side1 = kochPoints(A, B, depth);
+    const side2 = kochPoints(B, C, depth);
+    const side3 = kochPoints(C, A, depth);
+
+    return [
+      ...side1.slice(0, -1),
+      ...side2.slice(0, -1),
+      ...side3.slice(0, -1),
+    ];
+  };
+
+  const drawKoch = (
+    depth: number,
+    words: string[],
+    colorForWord: (word: string) => string,
+    showWords: boolean,
+  ) => {
+    const points = snowflakePoints(depth);
+    const path = points
+      .map((p, i) => `${i === 0 ? 'M' : 'L'} ${p[0]} ${p[1]}`)
+      .join(' ') + ' Z';
+
+    const edges = points.map((p, i) => {
+      const next = points[(i + 1) % points.length];
+      const dx = next[0] - p[0];
+      const dy = next[1] - p[1];
+
+      return {
+        x: (p[0] + next[0]) / 2,
+        y: (p[1] + next[1]) / 2,
+        angle: Math.atan2(dy, dx) * 180 / Math.PI,
+      };
+    });
+
+    return (
+      <g>
+        <path
+          d={path}
+          fill="none"
+          stroke={PINK}
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+        />
+
+        {showWords && words.map((word, i) => {
+          const edge = edges[i];
+          if (!edge) return null;
+
+          return (
+            <text
+              key={`${word}-${i}`}
+              x={edge.x}
+              y={edge.y}
+              transform={`rotate(${edge.angle}, ${edge.x}, ${edge.y})`}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize={depth === 0 ? 11 : 8}
+              fill={colorForWord(word)}
+              fontFamily="'JetBrains Mono', monospace"
+            >
+              {word}
+            </text>
+          );
+        })}
+      </g>
     );
+  };
+
+  return (
+    <svg
+      viewBox="0 0 380 1080"
+      className="w-full max-w-2xl"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Primera iteración */}
+      <text x="12" y="24" fontSize="17" fill={INK}>
+        Primera iteración:
+      </text>
+      <g transform="translate(0, 32) scale(1, 0.72)">
+        {drawKoch(1, firstWords, () => INK, true)}
+      </g>
+
+      {/* Segunda iteración */}
+      <text x="12" y="340" fontSize="17" fill={INK}>
+        Segunda iteración:
+      </text>
+      <g transform="translate(0, 350) scale(1, 0.72)">
+        {drawKoch(
+          2,
+          secondWords,
+          (word) =>
+            ['Un', 'Gato', 'Observa'].includes(word)
+              ? INK
+              : DARK_BLUE,
+          true,
+        )}
+      </g>
+
+      {/* Tercera iteración: solo la curva */}
+      <text x="12" y="655" fontSize="17" fill={INK}>
+        Tercera iteración:
+      </text>
+      <g transform="translate(0, 665) scale(1, 0.72)">
+        {drawKoch(3, [], () => INK, false)}
+      </g>
+    </svg>
+  );
+}
+
 
     /* ── NUDOS ─────────────────────────────────────── */
 
