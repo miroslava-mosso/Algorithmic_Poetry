@@ -436,7 +436,7 @@ case 'koch-snowflake': {
             2,
             secondWords,
             (word) =>
-              ['Un', 'Gato', 'Observa'].includes(word)
+              ['Un', 'Gato', 'Nos', 'Observa'].includes(word)
                 ? INK
                 : DARK_BLUE,
             470,
