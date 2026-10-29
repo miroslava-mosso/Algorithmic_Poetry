@@ -222,7 +222,8 @@ function App() {
               lenguaje. Hay tres ejemplos por cada territorio matemático.
             </p>
           </div>
-          <div className="mt-5 pt-3 border-t hairline">
+
+          <div 
         <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
           Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
         </p>
