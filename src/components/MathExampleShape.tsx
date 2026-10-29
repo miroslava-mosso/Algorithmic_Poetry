@@ -1262,7 +1262,7 @@ case 'markov': return (
       const baseX = x2 - size * Math.cos(angle);
       const baseY = y2 - size * Math.sin(angle);
       const perpX = size * 0.2 * Math.sin(angle);
-      const perpY = -size * 0.6 * Math.cos(angle);
+      const perpY = -size * Math.cos(angle);
 
       return (
         <g key={i}>
