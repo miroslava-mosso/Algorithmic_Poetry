@@ -1356,7 +1356,7 @@ case 'pascal-triangle': {
   return (
     <svg
       viewBox="0 0 320 130"
-      className="w-full max-w-sm"
+      className={`w-full ${isLightbox ? 'max-w-[850px]' : 'max-w-sm'}`}
       fontFamily="'JetBrains Mono', monospace"
     >
       {/* Líneas que conectan los coeficientes */}
