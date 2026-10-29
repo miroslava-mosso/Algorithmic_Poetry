@@ -1319,7 +1319,7 @@ case 'markov': return (
       x="170"
       y="190"
       textAnchor="middle"
-      fontSize="10.5"
+      fontSize="12"
       fill={DIM}
       letterSpacing="0.5"
     >
