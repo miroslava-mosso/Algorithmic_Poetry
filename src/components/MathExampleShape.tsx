@@ -1238,41 +1238,102 @@ case 'dado': {
  /* ── Cadenas de Markov ──────────────────────────────── */
 
 
-    case 'markov': return (
-      <svg viewBox="0 0 300 150" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
-        {/* Nodes */}
-        {[
-          {x:50, y:50, w:'del'},
-          {x:150,y:50, w:'cuaderno'},
-          {x:250,y:50, w:'borrar'},
-          {x:100,y:110,w:'tu'},
-          {x:230,y:110,w:'nombre'},
-        ].map(n=>(
-          <g key={n.w}>
-            <circle cx={n.x} cy={n.y} r="18" fill="none" stroke={PINK} strokeWidth="0.7" strokeOpacity="0.5"/>
-            <text x={n.x} y={n.y+4} textAnchor="middle" fontSize="8" fill={INK}>{n.w}</text>
-          </g>
-        ))}
-        {/* Arrows */}
-        {[
-          [50,50, 82,50],
-          [118,50,162,50],
-          [180,68,120,92],
-          [155,110,202,110],
-          [210,95,195,65],
-        ].map(([x1,y1,x2,y2],i)=>(
-          <g key={i}>
-            <line x1={x1} y1={y1} x2={x2} y2={y2} stroke={INK} strokeWidth="0.6" strokeOpacity="0.25"/>
-            <polygon points={`${x2},${y2} ${x2-6},${y2-3} ${x2-6},${y2+3}`}
-              fill={INK} fillOpacity="0.25"
-              transform={`rotate(${Math.atan2(y2-y1,x2-x1)*180/Math.PI},${x2},${y2})`}/>
-          </g>
-        ))}
-        <text x="150" y="143" textAnchor="middle" fontSize="10.5" fill={DIM} letterSpacing="0.5">
-          p(xₙ | xₙ₋₁)
+case 'markov': return (
+  <svg
+    viewBox="0 0 300 165"
+    className="w-full max-w-sm"
+    fontFamily="'JetBrains Mono', monospace"
+  >
+    {/* Flechas: van detrás de los nodos */}
+    {[
+      // del -> cuaderno
+      { x1: 69, y1: 50, x2: 131, y2: 50 },
+
+      // cuaderno -> borrar
+      { x1: 169, y1: 50, x2: 231, y2: 50 },
+
+      // cuaderno -> tu
+      { x1: 139, y1: 68, x2: 111, y2: 91 },
+
+      // tu -> nombre
+      { x1: 119, y1: 110, x2: 211, y2: 110 },
+
+      // nombre -> borrar
+      { x1: 220, y1: 91, x2: 241, y2: 69 },
+    ].map(({ x1, y1, x2, y2 }, i) => {
+      const angle = Math.atan2(y2 - y1, x2 - x1);
+      const tipX = x2;
+      const tipY = y2;
+      const size = 4;
+
+      const baseX = tipX - size * Math.cos(angle);
+      const baseY = tipY - size * Math.sin(angle);
+      const perpX = size * 0.65 * Math.sin(angle);
+      const perpY = -size * 0.65 * Math.cos(angle);
+
+      return (
+        <g key={i}>
+          <line
+            x1={x1}
+            y1={y1}
+            x2={baseX}
+            y2={baseY}
+            stroke={INK}
+            strokeWidth="0.8"
+            strokeOpacity="0.35"
+          />
+          <polygon
+            points={`${tipX},${tipY} ${baseX + perpX},${baseY + perpY} ${baseX - perpX},${baseY - perpY}`}
+            fill={INK}
+            fillOpacity="0.4"
+          />
+        </g>
+      );
+    })}
+
+    {/* Nodos */}
+    {[
+      { x: 50, y: 50, w: 'del' },
+      { x: 150, y: 50, w: 'cuaderno' },
+      { x: 250, y: 50, w: 'borrar' },
+      { x: 100, y: 110, w: 'tu' },
+      { x: 230, y: 110, w: 'nombre' },
+    ].map(({ x, y, w }) => (
+      <g key={w}>
+        <circle
+          cx={x}
+          cy={y}
+          r="18"
+          fill="none"
+          stroke={PINK}
+          strokeWidth="0.8"
+          strokeOpacity="0.7"
+        />
+        <text
+          x={x}
+          y={y + 3}
+          textAnchor="middle"
+          fontSize={w === 'cuaderno' || w === 'nombre' ? '7' : '8'}
+          fill={INK}
+        >
+          {w}
         </text>
-      </svg>
-    );
+      </g>
+    ))}
+
+    {/* Etiqueta inferior */}
+    <text
+      x="150"
+      y="151"
+      textAnchor="middle"
+      fontSize="10.5"
+      fill={DIM}
+      letterSpacing="0.5"
+    >
+      p(xₙ | xₙ₋₁)
+    </text>
+  </svg>
+);
 
 
         /* ── Dado ──────────────────────────────── */
