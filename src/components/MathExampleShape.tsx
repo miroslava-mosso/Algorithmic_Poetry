@@ -1235,7 +1235,7 @@ case 'dado': {
 }
 
 
-            /* ── Cadenas de Markov ──────────────────────────────── */
+ /* ── Cadenas de Markov ──────────────────────────────── */
 
 
     case 'markov': return (
