@@ -199,7 +199,7 @@ function App() {
       {/* ── Fotografía ─────────────────────────────────── */}
       <div className="reveal relative overflow-hidden bg-[#cdb887]" style={{ height: 'clamp(280px, 38vw, 560px)' }}>
         <img
-          src="/0001_2000268740001_2.jpg"
+          src={`${import.meta.env.BASE_URL}0001_2000268740001_2.jpg`}
           alt="Mar tranquilo, horizonte azul y arena"
           className="w-full h-full object-cover object-center"
           style={{ filter: 'saturate(0.88) contrast(1.04)' }}
