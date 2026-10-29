@@ -1258,7 +1258,7 @@ case 'markov': return (
       { x1: 199, y1: 142, x2: 253, y2: 142 },
     ].map(({ x1, y1, x2, y2 }, i) => {
       const angle = Math.atan2(y2 - y1, x2 - x1);
-      const size = 4;
+      const size = 5;
       const baseX = x2 - size * Math.cos(angle);
       const baseY = y2 - size * Math.sin(angle);
       const perpX = size * 0.6 * Math.sin(angle);
