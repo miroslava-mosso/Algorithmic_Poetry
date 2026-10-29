@@ -1240,36 +1240,33 @@ case 'dado': {
 
 case 'markov': return (
   <svg
-    viewBox="0 0 300 165"
-    className="w-full max-w-sm"
+    viewBox="0 0 440 250"
+    className={`w-full ${isLightbox ? 'max-w-[850px]' : 'max-w-sm'}`}
     fontFamily="'JetBrains Mono', monospace"
   >
-    {/* Flechas: van detrás de los nodos */}
+    {/* Flechas: detrás de los nodos */}
     {[
       // del -> cuaderno
-      { x1: 69, y1: 50, x2: 131, y2: 50 },
+      { x1: 48, y1: 48, x2: 112, y2: 48 },
 
       // cuaderno -> borrar
-      { x1: 169, y1: 50, x2: 231, y2: 50 },
+      { x1: 177, y1: 48, x2: 242, y2: 48 },
 
-      // cuaderno -> tu
-      { x1: 139, y1: 68, x2: 111, y2: 91 },
+      // borrar -> tu
+      { x1: 267, y1: 68, x2: 205, y2: 137 },
+
+      // borrar -> nombre
+      { x1: 304, y1: 68, x2: 356, y2: 137 },
 
       // tu -> nombre
-      { x1: 119, y1: 110, x2: 211, y2: 110 },
-
-      // nombre -> borrar
-      { x1: 220, y1: 91, x2: 241, y2: 69 },
+      { x1: 226, y1: 163, x2: 326, y2: 163 },
     ].map(({ x1, y1, x2, y2 }, i) => {
       const angle = Math.atan2(y2 - y1, x2 - x1);
-      const tipX = x2;
-      const tipY = y2;
-      const size = 4;
-
-      const baseX = tipX - size * Math.cos(angle);
-      const baseY = tipY - size * Math.sin(angle);
-      const perpX = size * 0.65 * Math.sin(angle);
-      const perpY = -size * 0.65 * Math.cos(angle);
+      const size = 6;
+      const baseX = x2 - size * Math.cos(angle);
+      const baseY = y2 - size * Math.sin(angle);
+      const perpX = size * 0.55 * Math.sin(angle);
+      const perpY = -size * 0.55 * Math.cos(angle);
 
       return (
         <g key={i}>
@@ -1278,14 +1275,14 @@ case 'markov': return (
             y1={y1}
             x2={baseX}
             y2={baseY}
-            stroke={INK}
-            strokeWidth="0.8"
-            strokeOpacity="0.35"
+            stroke={PINK}
+            strokeWidth="1.2"
+            strokeOpacity="0.8"
           />
           <polygon
-            points={`${tipX},${tipY} ${baseX + perpX},${baseY + perpY} ${baseX - perpX},${baseY - perpY}`}
-            fill={INK}
-            fillOpacity="0.4"
+            points={`${x2},${y2} ${baseX + perpX},${baseY + perpY} ${baseX - perpX},${baseY - perpY}`}
+            fill={PINK}
+            fillOpacity="0.9"
           />
         </g>
       );
@@ -1293,27 +1290,27 @@ case 'markov': return (
 
     {/* Nodos */}
     {[
-      { x: 50, y: 50, w: 'del' },
-      { x: 150, y: 50, w: 'cuaderno' },
-      { x: 250, y: 50, w: 'borrar' },
-      { x: 100, y: 110, w: 'tu' },
-      { x: 230, y: 110, w: 'nombre' },
-    ].map(({ x, y, w }) => (
+      { x: 30, y: 48, r: 18, w: 'del' },
+      { x: 145, y: 48, r: 32, w: 'cuaderno' },
+      { x: 260, y: 48, r: 32, w: 'borrar' },
+      { x: 190, y: 163, r: 24, w: 'tu' },
+      { x: 360, y: 163, r: 30, w: 'nombre' },
+    ].map(({ x, y, r, w }) => (
       <g key={w}>
         <circle
           cx={x}
           cy={y}
-          r="18"
+          r={r}
           fill="none"
           stroke={PINK}
-          strokeWidth="0.8"
-          strokeOpacity="0.7"
+          strokeWidth="1.2"
+          strokeOpacity="0.85"
         />
         <text
           x={x}
-          y={y + 3}
+          y={y + 4}
           textAnchor="middle"
-          fontSize={w === 'cuaderno' || w === 'nombre' ? '7' : '8'}
+          fontSize={w === 'cuaderno' ? 8.5 : w === 'nombre' ? 9 : 10}
           fill={INK}
         >
           {w}
@@ -1321,12 +1318,12 @@ case 'markov': return (
       </g>
     ))}
 
-    {/* Etiqueta inferior */}
+    {/* Probabilidad de transición */}
     <text
-      x="150"
-      y="151"
+      x="220"
+      y="225"
       textAnchor="middle"
-      fontSize="10.5"
+      fontSize="13"
       fill={DIM}
       letterSpacing="0.5"
     >
@@ -1336,7 +1333,7 @@ case 'markov': return (
 );
 
 
-        /* ── Dado ──────────────────────────────── */
+        /* ── Triangulo de Pascal ──────────────────────────────── */
 
     
 
