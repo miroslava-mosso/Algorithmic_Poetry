@@ -765,7 +765,7 @@ case 'trefoil-knot': {
           <text key={`${n.x}${n.w}`} x={n.x} y={130} textAnchor="middle"
             fontSize="7.5" fill={PINK}>{n.w}</text>
         ))}
-  <text x="155" y="205" textAnchor="middle" fontSize="10" fill={DIM}>PRÓXIMAMENTE</text>
+  <text x="155" y="115" textAnchor="middle" fontSize="10" fill={DIM}>PRÓXIMAMENTE</text>
         
       </svg>
     );
