@@ -894,6 +894,7 @@ case 'primo': return (
 
 
 
+
 /* ———————————————— Fibonacci ─────────────────────────── */
 
 case 'fibonacci': {
@@ -914,7 +915,7 @@ case 'fibonacci': {
     size: number;
   };
 
-  // Cajas consecutivas de Fibonacci.
+  // Conservamos la disposición de las seis cajas.
   const squares: Square[] = [
     { x: 0, y: 0, size: 1 },
     { x: 1, y: 0, size: 1 },
@@ -929,7 +930,8 @@ case 'fibonacci': {
   const minY = Math.min(...squares.map(s => s.y));
   const maxY = Math.max(...squares.map(s => s.y + s.size));
 
-  const unit = 9;
+  // Más grande: aprovecha casi todo el ancho del SVG.
+  const unit = 18;
   const diagramWidth = (maxX - minX) * unit;
   const offsetX = (300 - diagramWidth) / 2;
   const offsetY = 12;
@@ -940,8 +942,8 @@ case 'fibonacci': {
   const sy = (y: number) =>
     offsetY + (maxY - y) * unit;
 
-  // Un cuarto de círculo por caja.
-  // Cada arco termina exactamente donde empieza el siguiente.
+  // Cada arco es un cuarto de círculo inscrito en su caja.
+  // Los extremos consecutivos coinciden exactamente.
   const arcCommands = [
     `M ${sx(0)} ${sy(1)}
      A ${unit} ${unit} 0 0 1 ${sx(1)} ${sy(0)}`,
@@ -963,7 +965,7 @@ case 'fibonacci': {
       className="w-full max-w-sm"
       fontFamily="'JetBrains Mono', monospace"
     >
-      {/* Cuadrados de Fibonacci */}
+      {/* Cajas */}
       {squares.map((square, i) => {
         const left = sx(square.x);
         const top = sy(square.y + square.size);
@@ -995,17 +997,18 @@ case 'fibonacci': {
         );
       })}
 
-      {/* Espiral de Fibonacci */}
+      {/* Espiral en gris tenue */}
       <path
         d={arcCommands.join(' ')}
         fill="none"
-        stroke={PINK}
-        strokeWidth="1.4"
+        stroke="#B8B8B8"
+        strokeWidth="1.5"
+        strokeOpacity="0.8"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
 
-      {/* Versos: conservamos su disposición original */}
+      {/* Versos originales */}
       {verses.map((item, i) => (
         <g key={`verse-${i}`}>
           <text
