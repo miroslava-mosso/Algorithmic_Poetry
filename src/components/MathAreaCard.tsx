@@ -129,6 +129,7 @@ function MathExample({ ex }: { ex: MathExample }) {
           : ex.shape === 'dado'
             ? 'w-[min(90vw,500px)] min-w-0 shrink-0'
             : 'w-[min(85vw,70vh,680px)]'
+            
     }
   >
     <MathExampleShape shape={ex.shape} isLightbox />
