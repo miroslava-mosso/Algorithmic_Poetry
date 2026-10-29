@@ -824,7 +824,7 @@ case 'trefoil-knot': {
           <text key={n.w} x="202" y={n.y} textAnchor="start" fontSize="9.5" fill={INK}>{n.w}</text>
         ))}
         <line x1="130" y1="15" x2="130" y2="145" stroke={INK} strokeWidth="0.3" strokeOpacity="0.2" strokeDasharray="3,3"/>
-        <text x="130" y="155" textAnchor="middle" fontSize="7.5" fill={DIM}>solo se rozan en la orilla</text>
+        <text x="130" y="155" textAnchor="middle" fontSize="7.5" fill={DIM}>PRÓXIMAMENTE</text>
       </svg>
     );
 
