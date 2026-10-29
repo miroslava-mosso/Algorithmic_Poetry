@@ -374,7 +374,7 @@ case 'koch-snowflake': {
 
           // Coloca cada palabra ligeramente por encima de su arista.
         
-          const isBelow = ['Observa', 'Secretos'].includes(word);
+          const isBelow = ['Un','Gato','Observa', 'Secretos'].includes(word);
 
           const offset = depth === 1 ? 13 : 12;
           const direction = isBelow ? -1 : 1;
