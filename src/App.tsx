@@ -38,11 +38,34 @@ function App() {
           <span className="font-mono-lt text-[10px] text-ink/40">Poesía Algorítmica 2026</span>
         </div>
         <nav aria-label="Secciones" role="tablist" className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-4 pb-6 flex items-center gap-5 sm:gap-10 overflow-x-auto font-mono-lt text-sm sm:text-[13px] uppercase text-ink/70">
-          {tabs.map((tab) => (
-            <button key={tab.id} id={`tab-${tab.id}`} type="button" role="tab" aria-selected={activeTab === tab.id} aria-controls={`panel-${tab.id}`} onClick={() => { setActiveTab(tab.id); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className={`shrink-0 transition hover:text-ink ${activeTab === tab.id ? 'text-ink pink-underline-thin' : ''}`}>
-              {tab.label}
-            </button>
-          ))}
+          
+{tabs.map((tab, index) => (
+  <React.Fragment key={tab.id}>
+    {index > 0 && (
+      <span
+        aria-hidden="true"
+        className="inline-block w-1.5 h-1.5 bg-[#f4b6c2] rotate-45 shrink-0"
+      />
+    )}
+    <button
+      id={`tab-${tab.id}`}
+      type="button"
+      role="tab"
+      aria-selected={activeTab === tab.id}
+      aria-controls={`panel-${tab.id}`}
+      onClick={() => {
+        setActiveTab(tab.id);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }}
+      className={`shrink-0 transition hover:text-ink ${
+        activeTab === tab.id ? 'text-ink pink-underline-thin' : ''
+      }`}
+    >
+      {tab.label}
+    </button>
+  </React.Fragment>
+))}
+
         </nav>
       </header>
 
