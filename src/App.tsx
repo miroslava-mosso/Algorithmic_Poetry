@@ -256,14 +256,14 @@ function App() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4">
               <div>
                 <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">Correo</p>
                 <p className="font-display text-2xl mt-1">poesia@potencial.co</p>
               </div>
               <div>
                 <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">Manda tu poema</p>
-                <p className="font-body text-lg mt-1">
+                <p className="font-body text-base sm:text-lg mt-2 list-disc pl-6 leading-snug space-y-0.5">
                 Incluye lo siguiente:
                 </p>
 
