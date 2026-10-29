@@ -103,7 +103,7 @@ export const mathAreas: MathArea[] = [
     index: 'III',
     title: 'Grafos',
     description:
-      'Cada palabra es un vértice, cada salto de sentido es una arista. Los poemas se recorren como caminos sobre un grafo.',
+      'Cada concepto es un vértice, cada verso es una arista. Los poemas se recorren como caminos sobre un grafo.',
     examples: [
       {
         index: '01',
