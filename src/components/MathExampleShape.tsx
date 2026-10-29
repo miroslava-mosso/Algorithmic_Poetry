@@ -402,16 +402,25 @@ case 'koch-snowflake': {
     );
   };
 
+  
   return (
     <svg
-      viewBox="0 0 800 650"
-      className="w-full max-w-4xl"
+      viewBox={isLightbox ? "0 0 1400 1050" : "0 0 800 650"}
+      className={
+        isLightbox
+          ? "block w-full max-w-none h-auto"
+          : "block w-full max-w-4xl h-auto"
+      }
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Primera fila: iteraciones 1 y 2 */}
-
-      <g transform="translate(0, 0)">
-        <text x="36" y="28" fontSize="33" fill={INK}>
+      {/* Primera iteración: arriba a la izquierda */}
+      <g transform={isLightbox ? "translate(20, 20) scale(1.35)" : "translate(0, 0)"}>
+        <text
+          x="36"
+          y="28"
+          fontSize={isLightbox ? 27 : 33}
+          fill={INK}
+        >
           Primera iteración:
         </text>
 
@@ -420,14 +429,20 @@ case 'koch-snowflake': {
             1,
             firstWords,
             () => INK,
-            300,
-            205,
+            isLightbox ? 390 : 300,
+            isLightbox ? 230 : 205,
           )}
         </g>
       </g>
 
-      <g transform="translate(320, 0)">
-        <text x="116" y="68" fontSize="33" fill={INK}>
+      {/* Segunda iteración: arriba a la derecha */}
+      <g transform={isLightbox ? "translate(555, 20) scale(1.35)" : "translate(320, 0)"}>
+        <text
+          x={isLightbox ? 30 : 116}
+          y={isLightbox ? 28 : 68}
+          fontSize={isLightbox ? 27 : 33}
+          fill={INK}
+        >
           Segunda iteración:
         </text>
 
@@ -439,11 +454,35 @@ case 'koch-snowflake': {
               ['Un', 'Gato', 'Nos', 'Observa'].includes(word)
                 ? INK
                 : DARK_BLUE,
-            470,
-            300,
+            isLightbox ? 600 : 470,
+            isLightbox ? 300 : 300,
           )}
         </g>
       </g>
+
+      {/* Tercera iteración: abajo, sin palabras */}
+      <g transform={isLightbox ? "translate(20, 510)" : "translate(0, 285)"}>
+        <text
+          x="16"
+          y="38"
+          fontSize={isLightbox ? 32 : 33}
+          fill={INK}
+        >
+          Tercera iteración:
+        </text>
+
+        <g transform="translate(12, 55)">
+          {drawKoch(
+            3,
+            [],
+            () => INK,
+            isLightbox ? 1320 : 776,
+            isLightbox ? 400 : 300,
+          )}
+        </g>
+      </g>
+    </svg>
+  );
 
       {/* Segunda fila: tercera iteración, sin palabras */}
 
