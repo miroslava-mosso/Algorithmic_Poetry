@@ -1250,7 +1250,7 @@ case 'dado': {
         ].map(n=>(
           <g key={n.w}>
             <circle cx={n.x} cy={n.y} r="18" fill="none" stroke={PINK} strokeWidth="0.7" strokeOpacity="0.5"/>
-            <text x={n.x} y={n.y+4} textAnchor="middle" fontSize="8.5" fill={INK}>{n.w}</text>
+            <text x={n.x} y={n.y+4} textAnchor="middle" fontSize="8" fill={INK}>{n.w}</text>
           </g>
         ))}
         {/* Arrows */}
