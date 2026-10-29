@@ -113,6 +113,7 @@ function MathExample({ ex }: { ex: MathExample }) {
 
 
 
+
 <Lightbox
   open={open}
   onClose={() => setOpen(false)}
@@ -128,8 +129,11 @@ function MathExample({ ex }: { ex: MathExample }) {
           ? 'w-[min(92vw,86vh,1100px)] min-w-0 shrink-0'
           : ex.shape === 'dado'
             ? 'w-[min(90vw,500px)] min-w-0 shrink-0'
-            : 'w-[min(85vw,70vh,680px)]'
-            
+            : ex.shape === 'markov'
+              ? 'w-[min(90vw,850px)] min-w-0 shrink-0'
+              : ex.shape === 'triangulo-pascal'
+                ? 'w-[min(90vw,850px)] min-w-0 shrink-0'
+                : 'w-[min(85vw,70vh,680px)]'
     }
   >
     <MathExampleShape shape={ex.shape} isLightbox />
