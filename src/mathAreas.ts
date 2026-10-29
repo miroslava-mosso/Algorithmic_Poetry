@@ -63,7 +63,7 @@ export const mathAreas: MathArea[] = [
         index: '03',
         title: 'Copo de nieve de Koch',
         technique: 'Curva fractal ',
-        manifest: 'En la 1ra iteración elige 4 palabras y escríbelas sobre las líneas. Para la 2da iteración divide cada segmento en 4 de la forma original, y así sucesivamente para cada iteración.',
+        manifest: 'En la 1ra iteración elige 4 palabras y escríbelas sobre las líneas. Para la 2da iteración divide cada segmento en 4 de la forma original. Crea un verso nuevo de 4 palabras, preservando la 1ra palabra de la 1ra iteración, y así sucesivamente. ',
         shape: 'koch-snowflake',
       },
     ],
