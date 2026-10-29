@@ -33,7 +33,7 @@ function App() {
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 h-14 flex items-center justify-between">
           <button type="button" onClick={() => { setActiveTab('poesia'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-display text-lg tracking-wide flex items-center gap-2">
             <span className="inline-block w-2 h-2 bg-[#f4b6c2] rotate-45" />
-            Poesía potencial
+            Poesía algorítmica
           </button>
           <span className="font-mono-lt text-[10px] text-ink/40">Portafolio · 01—04</span>
         </div>
