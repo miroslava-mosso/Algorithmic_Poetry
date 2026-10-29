@@ -1288,8 +1288,8 @@ case 'markov': return (
     {[
       { x: 25, y: 42, r: 17, w: 'del' },
       { x: 121, y: 42, r: 28, w: 'cuaderno' },
-      { x: 229, y: 42, r: 28, w: 'borrar' },
-      { x: 174, y: 142, r: 22, w: 'tu' },
+      { x: 229, y: 42, r: 20, w: 'borrar' },
+      { x: 174, y: 142, r: 17, w: 'tu' },
       { x: 281, y: 142, r: 27, w: 'nombre' },
     ].map(({ x, y, r, w }) => (
       <g key={w}>
