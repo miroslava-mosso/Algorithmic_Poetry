@@ -856,7 +856,7 @@ case 'primo': return (
         <text
           x="70"
           y={26 + i * 27}
-          fontSize="18"
+          fontSize="20"
           fill={PINK}
           textAnchor="middle"
         >
@@ -867,7 +867,7 @@ case 'primo': return (
         <text
           x="110"
           y={26 + i * 27}
-          fontSize="18"
+          fontSize="20"
           fill={INK}
         >
           {item.verse}
