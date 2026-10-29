@@ -328,8 +328,8 @@ case 'koch-snowflake': {
     const baseline = height - margin;
 
     const points: Point[] = sourcePoints.map(([x, y]) => [
-      offsetX + (x - minX) * scale,
-      baseline + (y - minY) * scale,
+    offsetX + (x - minX) * scale,
+    baseline + (y - maxY) * scale,
     ]);
 
     const path = points
