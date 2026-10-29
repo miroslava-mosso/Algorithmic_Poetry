@@ -175,7 +175,7 @@ export const mathAreas: MathArea[] = [
       {
         index: '02',
         title: 'Cadena de Markov',
-        technique: '',
+        technique: 'El poema más probable.',
         manifest: 'Escoge tu buscador web favorito, comienza con una palabra e.g. "borrar", comienza un                 verso con ella, el siguiente verso debe comenzar con la palabra sugerida de tu buscador, e.g.                "tu", y así sucesivamente. La probabilidad de que aparezca la siguiente palabra depende solo de              la palabra actual.',
         shape: 'markov',
       },
