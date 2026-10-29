@@ -1010,7 +1010,8 @@ case 'fibonacci': {
         );
       })}
 
-      {/* Espiral gris tenue */}
+      
+      {/* Espiral orgánica en gris tenue */}
       <path
         d={spiral}
         fill="none"
@@ -1018,7 +1019,9 @@ case 'fibonacci': {
         strokeWidth="1.5"
         strokeOpacity="0.8"
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
+
 
       {/* Versos */}
       {verses.map((item, i) => (
