@@ -1242,11 +1242,11 @@ case 'dado': {
       <svg viewBox="0 0 300 150" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
         {/* Nodes */}
         {[
-          {x:30, y:50, w:'borrar'},
-          {x:100,y:50, w:'tu'},
-          {x:180,y:50, w:'nombre'},
-          {x:100,y:110,w:'del'},
-          {x:220,y:110,w:'cuaderno'},
+          {x:30, y:50, w:'del'},
+          {x:100,y:50, w:'cuaderno'},
+          {x:180,y:50, w:'borrar'},
+          {x:100,y:110,w:'tu'},
+          {x:220,y:110,w:'nombre'},
         ].map(n=>(
           <g key={n.w}>
             <circle cx={n.x} cy={n.y} r="18" fill="none" stroke={PINK} strokeWidth="0.7" strokeOpacity="0.5"/>
