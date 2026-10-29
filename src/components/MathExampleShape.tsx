@@ -912,7 +912,6 @@ case 'fibonacci': {
     size: number;
   };
 
-  // Cuadrados consecutivos: 1, 1, 2, 3, 5, 8.
   const squares: Square[] = [
     { x: 0, y: 0, size: 1 },
     { x: 1, y: 0, size: 1 },
@@ -927,7 +926,6 @@ case 'fibonacci': {
   const minY = Math.min(...squares.map(s => s.y));
   const maxY = Math.max(...squares.map(s => s.y + s.size));
 
-  // Escala ampliada.
   const unit = 18;
   const diagramWidth = (maxX - minX) * unit;
   const offsetX = (300 - diagramWidth) / 2;
@@ -939,11 +937,7 @@ case 'fibonacci': {
   const sy = (y: number) =>
     offsetY + (maxY - y) * unit;
 
-  // Cuartos de círculo dentro de cada cuadrado.
-  // Los extremos coinciden y la curva gira alrededor del centro.
-  c
-  // Espiral dibujada a mano con curvas Bézier.
-  // Los puntos de control determinan la concavidad y el giro.
+  // Espiral orgánica dibujada con curvas Bézier.
   const spiral = `
     M ${sx(0)} ${sy(1)}
     C ${sx(0)} ${sy(0.45)},
@@ -970,7 +964,6 @@ case 'fibonacci': {
       ${sx(10)} ${sy(-1.4)},
       ${sx(10)} ${sy(3)}
   `;
-
 
   return (
     <svg
@@ -1009,8 +1002,8 @@ case 'fibonacci': {
           </g>
         );
       })}
-      
-      {/* Espiral orgánica en gris tenue */}
+
+      {/* Espiral gris tenue */}
       <path
         d={spiral}
         fill="none"
@@ -1020,7 +1013,6 @@ case 'fibonacci': {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-
 
       {/* Versos */}
       {verses.map((item, i) => (
@@ -1048,6 +1040,7 @@ case 'fibonacci': {
     </svg>
   );
 }
+
 
 
 
