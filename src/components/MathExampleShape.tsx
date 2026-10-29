@@ -1244,7 +1244,7 @@ case 'dado': {
         {[
           {x:50, y:50, w:'del'},
           {x:150,y:50, w:'cuaderno'},
-          {x:200,y:50, w:'borrar'},
+          {x:250,y:50, w:'borrar'},
           {x:100,y:110,w:'tu'},
           {x:230,y:110,w:'nombre'},
         ].map(n=>(
