@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { poems } from '@/poems';
 import { mathAreas } from '@/mathAreas';
 import { useReveal } from '@/useReveal';
@@ -7,27 +8,46 @@ import { HodgeAlgorithm } from '@/components/HodgeAlgorithm';
 
 function App() {
   const ref = useReveal<HTMLDivElement>();
+  const [activeTab, setActiveTab] = useState('poesia');
+
+  const tabs = [
+    { id: 'poesia', label: 'Poesía potencial' },
+    { id: 'galeria', label: 'Galería' },
+    { id: 'areas', label: 'Áreas' },
+    { id: 'algoritmo', label: 'Mi algoritmo' },
+    { id: 'contacto', label: 'Contacto' },
+    { id: 'moduli-space', label: 'Moduli space' },
+  ];
+
+  const navigateTo = (tab: string, sectionId: string) => {
+    setActiveTab(tab);
+    window.setTimeout(() => {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
+  };
 
   return (
     <div ref={ref} className="min-h-screen bg-[#f7f5f1] text-ink">
       {/* ── Nav ─────────────────────────────────────────── */}
       <header className="sticky top-0 z-40 backdrop-blur-md bg-[#f7f5f1]/80 border-b hairline">
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 h-14 flex items-center justify-between">
-          <a href="#top" className="font-display text-lg tracking-wide flex items-center gap-2">
+          <button type="button" onClick={() => { setActiveTab('poesia'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-display text-lg tracking-wide flex items-center gap-2">
             <span className="inline-block w-2 h-2 bg-[#f4b6c2] rotate-45" />
             Poesía potencial
-          </a>
-          <nav className="hidden sm:flex items-center gap-7 font-mono-lt text-[11px] uppercase text-ink/70">
-            <a href="#Reglas del juego" className="hover:text-ink transition">Reglas del juego</a>
-            <a href="#galeria" className="hover:text-ink transition">Galería</a>
-            <a href="#areas" className="hover:text-ink transition">Áreas</a>
-            <a href="#mi-algoritmo" className="hover:text-ink transition">Mi algoritmo</a>
-            <a href="#contacto" className="hover:text-ink transition">Contacto</a>
-          </nav>
+          </button>
           <span className="font-mono-lt text-[10px] text-ink/40">Portafolio · 01—04</span>
         </div>
+        <nav aria-label="Secciones" role="tablist" className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-3 flex items-center gap-5 sm:gap-7 overflow-x-auto font-mono-lt text-[10px] sm:text-[11px] uppercase text-ink/70">
+          {tabs.map((tab) => (
+            <button key={tab.id} id={`tab-${tab.id}`} type="button" role="tab" aria-selected={activeTab === tab.id} aria-controls={`panel-${tab.id}`} onClick={() => { setActiveTab(tab.id); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className={`shrink-0 transition hover:text-ink ${activeTab === tab.id ? 'text-ink pink-underline-thin' : ''}`}>
+              {tab.label}
+            </button>
+          ))}
+        </nav>
       </header>
 
+      <main>
+      {activeTab === 'poesia' && <div id="panel-poesia" role="tabpanel" aria-labelledby="tab-poesia">
       {/* ── Hero ────────────────────────────────────────── */}
       <section id="top" className="relative">
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-20 sm:pt-32 pb-20 sm:pb-28">
@@ -60,7 +80,7 @@ function App() {
                 <span className="text-ink/20">/</span>
                 <span>1 algoritmo nuevo</span>
                 <span className="text-ink/20">/</span>
-                <a href="#galeria" className="pink-underline-thin text-ink hover:text-ink transition">
+                <a href="#galeria" onClick={(e) => { e.preventDefault(); navigateTo('galeria', 'galeria'); }} className="pink-underline-thin text-ink hover:text-ink transition">
                   Ver galería
                 </a>
               </div>
@@ -132,7 +152,10 @@ function App() {
         </div>
       </section>
 
+      </div>}
+
       {/* ── Galería ─────────────────────────────────────── */}
+      {activeTab === 'galeria' && <div id="panel-galeria" role="tabpanel">
       <section id="galeria" className="border-b hairline">
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
           <div className="reveal flex items-end justify-between gap-6 flex-wrap">
@@ -160,8 +183,10 @@ function App() {
           ))}
         </div>
       </section>
+      </div>}
 
       {/* ── Áreas matemáticas ──────────────────────────── */}
+      {activeTab === 'areas' && <div id="panel-areas" role="tabpanel">
       <section id="areas">
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
           <div className="reveal flex items-end justify-between gap-6 flex-wrap">
@@ -193,10 +218,14 @@ function App() {
           ))}
         </div>
       </section>
+      </div>}
 
+      {activeTab === 'algoritmo' && <div id="panel-algoritmo" role="tabpanel">
       <HodgeAlgorithm />
+      </div>}
 
       {/* ── Fotografía ─────────────────────────────────── */}
+      {activeTab === 'contacto' && <div id="panel-contacto" role="tabpanel">
       <div className="reveal relative overflow-hidden bg-[#cdb887]" style={{ height: 'clamp(280px, 38vw, 560px)' }}>
         <img
           src={`${import.meta.env.BASE_URL}0001_2000268740001_2.jpg`}
@@ -220,7 +249,7 @@ function App() {
                 Escribámonos.
               </h2> 
               <p className="font-body text-lg text-[#f7f5f1]/70 mt-6 max-w-[44ch]">
-                Si escribes un poema usando el algoritmo <span className="pink-underline-thin"><a href="#mi-algoritmo" className="hover:text-ink transition">El diamante de Hodge</a></span> y te                   gustaría compartirlo, ¡envíanoslo por correo electrónico para                      publicarlo en nuestra página!
+                Si escribes un poema usando el algoritmo <span className="pink-underline-thin"><a href="#mi-algoritmo" onClick={(e) => { e.preventDefault(); navigateTo('algoritmo', 'mi-algoritmo'); }} className="hover:text-ink transition">El diamante de Hodge</a></span> y te                   gustaría compartirlo, ¡envíanoslo por correo electrónico para                      publicarlo en nuestra página!
                 </p>
               <p className="font-body text-lg text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
                 Puedes mandarlo como un dibujo hecho a mano o de manera digital,                   fotografía, composición visual, collage o cualquier otra forma visual que explore las posibilidades del algoritmo.
@@ -261,6 +290,25 @@ function App() {
           </div>
         </div>
       </footer>
+      </div>}
+
+      {activeTab === 'moduli-space' && <section id="panel-moduli-space" role="tabpanel" className="border-b hairline min-h-[70vh]">
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-20 sm:pt-28 pb-10">
+          <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Moduli space</span>
+          <h1 className="font-display text-5xl sm:text-7xl mt-5 leading-[1.05] max-w-[18ch]">
+            El <span className="pink-underline italic">moduli space</span> de poemas del diamante de Hodge
+          </h1>
+          <p className="font-body text-xl sm:text-2xl leading-[1.6] mt-8 max-w-[65ch] text-ink/80">
+            En esta sección intentamos construir un espacio de parámetros, también conocido como el <em>moduli space</em>, de todos los poemas que ustedes nos quieran mandar, siguiendo la constricción del diamante de Hodge <a href="#mi-algoritmo" onClick={(e) => { e.preventDefault(); navigateTo('algoritmo', 'mi-algoritmo'); }} className="pink-underline-thin">[ver Mi algoritmo]</a>. Las instrucciones para mandar tu poema están en <a href="#contacto" onClick={(e) => { e.preventDefault(); navigateTo('contacto', 'contacto'); }} className="pink-underline-thin">[Contacto]</a>.
+          </p>
+        </div>
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-16 grid gap-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border hairline border-b-0 border-l-0 border-r-0">
+          {Array.from({ length: 3 }, (_, i) => (
+            <PoemCard key={`moduli-${i}`} poem={{ id: `moduli-${i}`, index: `0${i + 1}`, title: 'Aqui va a ir tu poema', author: '', year: '', shape: 'cruz', technique: 'Aqui irá tu nombre o pseudónimo', manifest: 'PRÓXIMAMENTE', lines: [] }} i={i} placeholder />
+          ))}
+        </div>
+      </section>}
+      </main>
     </div>
   );
 }
