@@ -1193,7 +1193,7 @@ case 'dado': {
   return (
     <svg
       viewBox="0 0 290 166"
-      className={`w-full ${isLightbox ? 'max-w-[850px]' : 'max-w-xs'}`}
+      className={`w-full ${isLightbox ? 'max-w-[800px]' : 'max-w-xs'}`}
       fontFamily="'JetBrains Mono', monospace"
     >
       {dice.map(({ x, y, dots, word }) => (
