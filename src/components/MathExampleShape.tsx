@@ -427,7 +427,7 @@ case 'koch-snowflake': {
       </g>
 
       <g transform="translate(320, 0)">
-        <text x="26" y="68" fontSize="33" fill={INK}>
+        <text x="86" y="68" fontSize="33" fill={INK}>
           Segunda iteración:
         </text>
 
