@@ -232,7 +232,7 @@ case 'circulo-vicioso': return (
 /* ── Curva de Koch ───────────────────────────── */
 
 case 'koch-snowflake': {
-  const DARK_BLUE = '#234A68';
+  const DARK_BLUE = '#1677C8';
 
   const firstWords = ['un', 'gato,', 'nos', 'observa'];
 
