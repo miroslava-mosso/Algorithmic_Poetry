@@ -1246,7 +1246,7 @@ case 'dado': {
           {x:100,y:50, w:'cuaderno'},
           {x:180,y:50, w:'borrar'},
           {x:100,y:110,w:'tu'},
-          {x:220,y:110,w:'nombre'},
+          {x:200,y:110,w:'nombre'},
         ].map(n=>(
           <g key={n.w}>
             <circle cx={n.x} cy={n.y} r="18" fill="none" stroke={PINK} strokeWidth="0.7" strokeOpacity="0.5"/>
