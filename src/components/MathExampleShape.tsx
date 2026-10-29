@@ -796,7 +796,7 @@ case 'trefoil-knot': {
         <text x="230" y="93" textAnchor="middle" fontSize="8.5" fill={DIM}>orilla</text>
         <text x="140" y="33" textAnchor="middle" fontSize="8" fill={DIM}>norte</text>
         <text x="140" y="153" textAnchor="middle" fontSize="8" fill={DIM}>sur</text>
-        <text x="140" y="172" textAnchor="middle" fontSize="7.5" fill={PINK} letterSpacing="1">sin camino euleriano</text>
+        <text x="140" y="172" textAnchor="middle" fontSize="7.5" fill={PINK} letterSpacing="1">PRÓXIMAMENTE</text>
       </svg>
     );
 
