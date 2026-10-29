@@ -37,7 +37,7 @@ function App() {
           </button>
           <span className="font-mono-lt text-[10px] text-ink/40">Poesía Algorítmica 2026</span>
         </div>
-        <nav aria-label="Secciones" role="tablist" className="mx-auto max-w-[1180px] px-5 sm:px-8 py-4 flex items-center gap-5 sm:gap-7 overflow-x-auto font-mono-lt text-sm sm:text-base uppercase text-ink/70">
+        <nav aria-label="Secciones" role="tablist" className="mx-auto max-w-[1180px] px-5 sm:px-8 py-4 flex items-center gap-5 sm:gap-10 overflow-x-auto font-mono-lt text-sm sm:text-base uppercase text-ink/70">
           {tabs.map((tab) => (
             <button key={tab.id} id={`tab-${tab.id}`} type="button" role="tab" aria-selected={activeTab === tab.id} aria-controls={`panel-${tab.id}`} onClick={() => { setActiveTab(tab.id); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className={`shrink-0 transition hover:text-ink ${activeTab === tab.id ? 'text-ink pink-underline-thin' : ''}`}>
               {tab.label}
