@@ -1064,7 +1064,7 @@ case 'piema': return (
       <g key={i}>
         <text
           x="35"
-          y={34 + i * 29}
+          y={54 + i * 29}
           fontSize="20"
           fill={PINK}
           textAnchor="middle"
@@ -1074,7 +1074,7 @@ case 'piema': return (
 
         <text
           x="65"
-          y={34 + i * 29}
+          y={54 + i * 29}
           fontSize="20"
           fill={INK}
         >
