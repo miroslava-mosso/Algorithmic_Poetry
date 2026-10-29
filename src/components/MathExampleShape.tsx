@@ -1259,8 +1259,6 @@ case 'piema': return (
       </svg>
     );
 
-    /* ── TEORÍA DE CUERDAS ─────────────────────────── */
-
  
     default:
       return null;
