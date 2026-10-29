@@ -1166,6 +1166,9 @@ case 'piema': return (
     
 
     /* ── PROBABILIDAD ──────────────────────────────── */
+    
+
+        /* ── Dado ──────────────────────────────── */
 
     case 'dado': return (
       <svg viewBox="0 0 290 190" className="w-full max-w-xs" fontFamily="'JetBrains Mono', monospace">
@@ -1196,6 +1199,9 @@ case 'piema': return (
         ))}
       </svg>
     );
+
+            /* ── Cadenas de Markov ──────────────────────────────── */
+
 
     case 'markov': return (
       <svg viewBox="0 0 300 150" className="w-full max-w-sm" fontFamily="'JetBrains Mono', monospace">
