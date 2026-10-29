@@ -439,8 +439,8 @@ case 'koch-snowflake': {
               ['Un', 'Gato', 'Nos', 'Observa'].includes(word)
                 ? INK
                 : DARK_BLUE,
-            450,
-            285,
+            470,
+            295,
           )}
         </g>
       </g>
