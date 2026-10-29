@@ -138,7 +138,7 @@ export const mathAreas: MathArea[] = [
       {
         index: '01',
         title: 'El número primo 53',
-        technique: 'Press 53',
+        technique: 'Press 53 Editors',
         manifest: 'Un poema de 4 estrofas, 53 sílabas, divididas en 11 líneas. El número en cada línea denota el número de sílabas que                 debes usar, nótese que son números primos.',
         shape: 'primo',
       },
