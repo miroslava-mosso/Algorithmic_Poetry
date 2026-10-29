@@ -1173,12 +1173,12 @@ case 'piema': return (
     
 case 'dado': {
   const dice = [
-    { x: 25, y: 12, dots: 1, word: 'azar' },
+    { x: 25, y: 12, dots: 1, word: 'descansar' },
     { x: 110, y: 12, dots: 2, word: 'suerte' },
-    { x: 195, y: 12, dots: 3, word: 'destino' },
-    { x: 25, y: 91, dots: 4, word: 'ola' },
-    { x: 110, y: 91, dots: 5, word: 'tempestad' },
-    { x: 195, y: 91, dots: 6, word: 'calma' },
+    { x: 195, y: 12, dots: 3, word: 'cortando' },
+    { x: 25, y: 91, dots: 4, word: 'miel' },
+    { x: 110, y: 91, dots: 5, word: 'desciende' },
+    { x: 195, y: 91, dots: 6, word: 'ajolote' },
   ];
 
   const positions = [
