@@ -1241,7 +1241,7 @@ case 'dado': {
 case 'markov': return (
   <svg
     viewBox="0 0 340 205"
-    className={`w-full ${isLightbox ? 'max-w-[680px]' : 'max-w-sm'}`}
+    className={`w-full ${isLightbox ? 'max-w-[850px]' : 'max-w-sm'}`}
     fontFamily="'JetBrains Mono', monospace"
   >
     {/* Flechas */}
@@ -1329,8 +1329,9 @@ case 'markov': return (
 );
 
 
-        /* ── Triangulo de Pascal ──────────────────────────────── */
+    
 
+/* ── Triangulo de Pascal ──────────────────────────────── */
     
 
 case 'pascal-triangle': {
