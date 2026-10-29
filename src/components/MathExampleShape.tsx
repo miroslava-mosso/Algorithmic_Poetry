@@ -227,7 +227,6 @@ case 'circulo-vicioso': return (
 );
 
 
-    /* ── Copo de nueve ─────────────────────────────────── */
 
 
 /* ── Curva de Koch ───────────────────────────── */
