@@ -411,7 +411,7 @@ case 'koch-snowflake': {
       {/* Primera fila: iteraciones 1 y 2 */}
 
       <g transform="translate(0, 0)">
-        <text x="16" y="28" fontSize="30" fill={INK}>
+        <text x="16" y="28" fontSize="35" fill={INK}>
           Primera iteración:
         </text>
 
@@ -427,7 +427,7 @@ case 'koch-snowflake': {
       </g>
 
       <g transform="translate(320, 0)">
-        <text x="16" y="28" fontSize="30" fill={INK}>
+        <text x="16" y="28" fontSize="35" fill={INK}>
           Segunda iteración:
         </text>
 
