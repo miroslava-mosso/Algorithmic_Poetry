@@ -212,7 +212,7 @@ function App() {
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
           <div className="reveal flex items-end justify-between gap-6 flex-wrap">
             <div>
-              <span className="font-mono-lt text-[9px] uppercase text-ink/50">§ Áreas</span>
+              <span className="font-mono-lt text-[13px] uppercase text-ink/50">§ Áreas</span>
               <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
                 Cinco <span className="pink-underline">territorios</span> matemáticos
               </h2>
