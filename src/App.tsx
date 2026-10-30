@@ -49,7 +49,6 @@ function App() {
             Poesía Algorítmica 2026
           </span>
         </div>
-
         <nav
           aria-label="Secciones"
           role="tablist"
