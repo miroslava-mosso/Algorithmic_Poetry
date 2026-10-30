@@ -60,8 +60,6 @@ function BuyMeACoffeeButton({ text }: { text: string }) {
   return <div ref={containerRef} className="inline-flex" />;
 }
 
-  return <div ref={containerRef} className="inline-flex" />;
-}
 
 function App() {
   const ref = useReveal<HTMLDivElement>();
