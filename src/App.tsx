@@ -64,7 +64,7 @@ function App() {
       rel="noopener noreferrer"
       className="font-mono-lt text-[10px] sm:text-[11px] uppercase tracking-wide text-ink/60 hover:text-ink transition inline-flex items-center gap-1.5"
     >
-      <span aria-hidden="true">☕</span>
+      <BuyMeACoffeeIcon className="w-4 h-4" />
       {t('Invítame a un café', 'Buy me a coffee')}
     </a>
   </div>
