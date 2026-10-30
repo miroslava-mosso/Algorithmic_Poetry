@@ -179,7 +179,7 @@ function App() {
                 <strong>popoesía</strong>
               </a>{t(
                 ', en donde aprendí a hacer muchos de los poemas que aquí muestro. Y si tienen curiosidad por aprender muchas otras constricciones y juegos, les recomiendo mucho unirse a sus laboratorios.',
-                ', where I learned to make many of the poems I show here. And if you are curious to learn many other constraints and games, I highly recommend joining their laboratories.'
+                ', where I learned to make many of the poems I show here. And if you are curious to learn many other constraints and games, I highly recommend joining her laboratories.'
               )}
             </p>
           </div>
