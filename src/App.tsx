@@ -66,22 +66,22 @@ function App() {
                 />
               )}
 
-              <button
-  id={`tab-${tab.id}`}
-  type="button"
-  role="tab"
-  aria-selected={activeTab === tab.id}
-  aria-controls={`panel-${tab.id}`}
-  onClick={() => {
-    setActiveTab(tab.id);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }}
-  className={`shrink-0 transition hover:text-ink ${
-    activeTab === tab.id ? 'text-ink pink-underline-thin' : ''
-  }`}
->
-  {tab.label}
-</button>
+                            <button
+                id={'tab-' + tab.id}
+                type="button"
+                role="tab"
+                aria-selected={activeTab === tab.id}
+                aria-controls={'panel-' + tab.id}
+                onClick={() => {
+                  setActiveTab(tab.id);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className={`shrink-0 transition hover:text-ink ${
+                  activeTab === tab.id ? 'text-ink pink-underline-thin' : ''
+                }`}
+              >
+                {tab.label}
+              </button>
             </span>
           ))}
         </nav>
