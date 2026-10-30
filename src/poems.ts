@@ -119,3 +119,8 @@ export const poemsEnglish: Poem[] = [
     ],
   },
 ];
+
+/** Returns the poem set for the selected language. */
+export function getPoems(language: 'es' | 'en' = 'es'): Poem[] {
+  return language === 'en' ? poemsEnglish : poems;
+}
