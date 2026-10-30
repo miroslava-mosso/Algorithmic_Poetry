@@ -433,7 +433,7 @@ function App() {
                   )}
                 </p>
 
-               <div className="mt-8">
+               <div className="mt-5">
   <BuyMeACoffeeButton
     text={t('Invítame un café', 'Buy me a coffee')}
   />
