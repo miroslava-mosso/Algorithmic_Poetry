@@ -328,6 +328,28 @@ function App() {
                   'You can send it as a hand-drawn or digital drawing, photograph, visual composition, collage, or any other visual form that explores the possibilities of the algorithm.'
                 )}
               </p>
+              <p className="font-body text-lg text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
+  {t(
+    'Publicaré todos los poemas que me manden en la sección llamada',
+    'All submitted poems will be published in the section called'
+  )}{' '}
+  <span className="pink-underline-thin">
+    <a
+      href="#panel-moduli-space"
+      onClick={(e) => {
+        e.preventDefault();
+        navigateTo('moduli-space', 'panel-moduli-space');
+      }}
+      className="hover:text-ink transition"
+    >
+      Moduli Space
+    </a>
+  </span>
+  {t(
+    '. Intentaré actualizar la página una vez al mes. No hay fecha límite para mandar tu poema.',
+    '. I will try to update the page once a month. There is no deadline for submitting your poem.'
+  )}
+</p>
             </div>
 
             <div className="flex flex-col gap-4">
