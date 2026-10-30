@@ -1,11 +1,13 @@
 
 import { useState } from 'react';
 import type { Poem } from '@/poems';
+import { useLang } from '@/i18n';
 import { PoemShapeView } from './PoemShapeView';
 import { Lightbox } from './Lightbox';
 
 export function PoemCard({ poem, i, placeholder = false }: { poem: Poem; i: number; placeholder?: boolean }) {
   const [open, setOpen] = useState(false);
+  const { t } = useLang();
 
   return (
     <>
@@ -35,7 +37,7 @@ export function PoemCard({ poem, i, placeholder = false }: { poem: Poem; i: numb
         <div className="flex items-center justify-center py-0 min-h-0 overflow-hidden">
           {placeholder ? (
             <div className="w-full aspect-[4/3] flex items-center justify-center border hairline bg-[#ebe7df]/60">
-              <span className="font-display text-2xl sm:text-3xl italic text-ink/45">PRÓXIMAMENTE</span>
+              <span className="font-display text-2xl sm:text-3xl italic text-ink/45">{t('PRÓXIMAMENTE', 'COMING SOON')}</span>
             </div>
           ) : (
           <div
@@ -45,7 +47,7 @@ className={
     ? 'w-full'
     : 'scale-[0.7] origin-center -my-6'
 }
-            
+          
 
 >
   <PoemShapeView
@@ -78,7 +80,7 @@ className={
       >
         {placeholder ? (
           <div className="w-full min-h-[45vh] flex items-center justify-center bg-[#ebe7df]/60 border hairline">
-            <span className="font-display text-4xl sm:text-6xl italic text-ink/45">PRÓXIMAMENTE</span>
+            <span className="font-display text-4xl sm:text-6xl italic text-ink/45">{t('PRÓXIMAMENTE', 'COMING SOON')}</span>
           </div>
         ) : (
           <PoemShapeView shape={poem.shape} lines={poem.lines} />

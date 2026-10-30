@@ -40,7 +40,7 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children }: 
         <button
           className="absolute top-4 right-4 font-mono-lt text-sm text-ink/50 hover:text-ink transition w-8 h-8 flex items-center justify-center"
           onClick={onClose}
-          aria-label="Cerrar"
+          aria-label={t('Cerrar', 'Close')}
         >
           ✕
         </button>

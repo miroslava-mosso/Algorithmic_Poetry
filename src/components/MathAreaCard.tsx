@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { MathArea, MathExample } from '@/mathAreas';
+import { useLang } from '@/i18n';
 import { MathExampleShape } from '@/components/MathExampleShape';
 import { Lightbox } from '@/components/Lightbox';
 
@@ -16,6 +17,8 @@ const enlargedShapes = new Set([
 ]);
 
 export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
+  const { t } = useLang();
+
   return (
     <details
       id={area.id}
@@ -30,7 +33,7 @@ export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
             </span>
             <div className="min-w-0">
               <span className="font-mono-lt text-[10px] uppercase text-ink/45">
-                Área
+                {t('Área', 'Area')}
               </span>
               <h3 className="font-display text-4xl sm:text-5xl leading-[1.05] mt-1">
                 <span>{area.title}</span>
