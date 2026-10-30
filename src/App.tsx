@@ -197,7 +197,7 @@ function App() {
             <PoemCard key={p.id} poem={p} i={i} />
           ))}
         </div>
-        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-4">
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-6 pb-3 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
           <h3 className="font-display text-2xl sm:text-3xl">
             <span className="pink-underline">Versión original</span>
           </h3>
