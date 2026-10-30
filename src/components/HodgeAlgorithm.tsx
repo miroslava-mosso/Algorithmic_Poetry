@@ -190,11 +190,11 @@ export function HodgeAlgorithm() {
                 </svg>
 
                 <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between bg-[#f4b6c2]/10">
-                  <span className="font-mono-lt text-[10px] uppercase text-ink/55">Primeros cortes: sustituyendo los números de Hodge para una superficie K3.</span>
+                  <span className="font-mono-lt text-[13px] uppercase text-ink/55">Primeros cortes: sustituyendo los números de Hodge para una superficie K3.</span>
                   <div className="flex-1 flex items-center justify-center">
                     <Diamond values={numericK3} roomy />
                   </div>
-                  <span className="font-body text-base text-ink/60 italic text-center">El diamante de Hodge de la superficie K3 tomando forma.</span>
+                  <span className="font-body text-base text-[20px] text-ink/60 italic text-center">El diamante de Hodge de la superficie K3 tomando forma.</span>
                 </div>
               </div>
             </div>
