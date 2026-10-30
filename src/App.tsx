@@ -294,7 +294,7 @@ function App() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#f7f5f1]/0 via-[#f7f5f1]/0 to-[#0d0d0d]/80" />
         <p className="absolute bottom-7 left-1/2 -translate-x-1/2 font-mono-lt text-[11px] uppercase text-[#f7f5f1]/65 tracking-[0.22em] text-center whitespace-nowrap">
-          {t('el horizonte también es una restricción', 'the horizon is also a constraint')}
+          {t('una restricción no es el límite de la creatividad, sino el lugar donde empiezan nuevas posibilidades', 'a constraint is not the limit of creativity, but the place where new possibilities begin')}
         </p>
       </div>
 
