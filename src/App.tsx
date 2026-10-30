@@ -427,7 +427,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-4 font-mono-lt text-[11px] uppercase tracking-wide text-[#f7f5f1] pink-underline-thin hover:text-[#f4b6c2] transition"
                 >
-                  <span aria-hidden="true">☕</span>
+                  <BuyMeACoffeeIcon className="w-4 h-4" />
                   {t('Invítame a un café', 'Buy me a coffee')}
                   <span aria-hidden="true">↗</span>
                 </a>
