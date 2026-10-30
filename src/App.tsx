@@ -8,6 +8,20 @@ import { MathAreaCard } from '@/components/MathAreaCard';
 import { HodgeAlgorithm } from '@/components/HodgeAlgorithm';
 import { LanguageToggle } from '@/components/LanguageToggle';
 
+function BuyMeACoffeeIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={className}
+      fill="currentColor"
+    >
+      <path d="M18.5 5H4.75A1.75 1.75 0 0 0 3 6.75v8.5A4.75 4.75 0 0 0 7.75 20h5.5A4.75 4.75 0 0 0 18 15.25V14h.5a3.5 3.5 0 0 0 0-7h-.5V5Zm-.5 7v3.25A2.75 2.75 0 0 1 15.25 18h-7.5A2.75 2.75 0 0 1 5 15.25V7h13v5Zm1-3h.5a1.5 1.5 0 0 1 0 3H19V9Z" />
+      <path d="M7 2.5a1 1 0 0 1 2 0v1a1 1 0 0 1-2 0v-1Zm4 0a1 1 0 0 1 2 0v1a1 1 0 0 1-2 0v-1Zm4 0a1 1 0 0 1 2 0v1a1 1 0 0 1-2 0v-1Z" />
+    </svg>
+  );
+}
+
 function App() {
   const ref = useReveal<HTMLDivElement>();
   const [activeTab, setActiveTab] = useState('poesia');
