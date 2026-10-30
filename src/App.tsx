@@ -433,9 +433,11 @@ function App() {
                   )}
                 </p>
 
-                <BuyMeACoffeeButton
-  text={t('Invítame un café', 'Buy me a coffee')}
-/>
+               <div className="mt-8">
+  <BuyMeACoffeeButton
+    text={t('Invítame un café', 'Buy me a coffee')}
+  />
+</div>
 
                 <p className="font-mono-lt text-[9px] uppercase tracking-wide text-[#f7f5f1]/35 mt-2">
                   {t('Aportación voluntaria', 'Voluntary support')}
