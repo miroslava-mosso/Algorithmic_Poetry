@@ -9,11 +9,13 @@ interface LightboxProps {
   subtitle?: string;
   caption?: string;
   children: ReactNode;
+  language?: 'es' | 'en';
 }
 
-export function Lightbox({ open, onClose, title, subtitle, caption, children }: LightboxProps) {
+export function Lightbox({ open, onClose, title, subtitle, caption, children, language = 'es' }: LightboxProps) {
   useEffect(() => {
     if (!open) return;
+    const previousOverflow = document.body.style.overflow;
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
@@ -21,7 +23,7 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children }: 
     document.body.style.overflow = 'hidden';
     return () => {
       document.removeEventListener('keydown', handleKey);
-      document.body.style.overflow = '';
+      document.body.style.overflow = previousOverflow;
     };
   }, [open, onClose]);
 
@@ -40,7 +42,7 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children }: 
         <button
           className="absolute top-4 right-4 font-mono-lt text-sm text-ink/50 hover:text-ink transition w-8 h-8 flex items-center justify-center"
           onClick={onClose}
-          aria-label={t('Cerrar', 'Close')}
+          aria-label={language === 'en' ? 'Close' : 'Cerrar'}
         >
           ✕
         </button>
