@@ -1,13 +1,15 @@
 
 import { useState } from 'react';
-import type { Poem } from '@/poems';
-import { useLang } from '@/i18n';
+import { poems, type Poem } from '@/poems';
 import { PoemShapeView } from './PoemShapeView';
 import { Lightbox } from './Lightbox';
 
-export function PoemCard({ poem, i, placeholder = false }: { poem: Poem; i: number; placeholder?: boolean }) {
+export function PoemCard({ poem, i, placeholder = false, language = 'es' }: { poem: Poem; i: number; placeholder?: boolean; language?: 'es' | 'en' }) {
+  const comingSoon = language === 'en' ? 'COMING SOON' : 'PRÓXIMAMENTE';
+  // Keep the artwork's original line layout in both languages. Translated
+  // lines can change the geometry and break the shape of the visual poems.
+  const artwork = poems.find((original) => original.id === poem.id) ?? poem;
   const [open, setOpen] = useState(false);
-  const { t } = useLang();
 
   return (
     <>
@@ -37,7 +39,7 @@ export function PoemCard({ poem, i, placeholder = false }: { poem: Poem; i: numb
         <div className="flex items-center justify-center py-0 min-h-0 overflow-hidden">
           {placeholder ? (
             <div className="w-full aspect-[4/3] flex items-center justify-center border hairline bg-[#ebe7df]/60">
-              <span className="font-display text-2xl sm:text-3xl italic text-ink/45">{t('PRÓXIMAMENTE', 'COMING SOON')}</span>
+              <span className="font-display text-2xl sm:text-3xl italic text-ink/45">{comingSoon}</span>
             </div>
           ) : (
           <div
@@ -47,13 +49,13 @@ className={
     ? 'w-full'
     : 'scale-[0.7] origin-center -my-6'
 }
-          
+            
 
 >
   <PoemShapeView
-  shape={poem.shape}
-  lines={poem.lines}
-  compact={poem.shape === 'zurvan' || poem.shape === 'cono'}
+  shape={artwork.shape}
+  lines={artwork.lines}
+  compact={artwork.shape === 'zurvan' || artwork.shape === 'cono'}
 />
 </div>
           )}
@@ -74,16 +76,17 @@ className={
       <Lightbox
         open={open}
         onClose={() => setOpen(false)}
+        language={language}
         title={poem.title}
         subtitle={placeholder ? poem.technique : `${poem.technique} · ${poem.author} · ${poem.year}`}
         caption={poem.manifest}
       >
         {placeholder ? (
           <div className="w-full min-h-[45vh] flex items-center justify-center bg-[#ebe7df]/60 border hairline">
-            <span className="font-display text-4xl sm:text-6xl italic text-ink/45">{t('PRÓXIMAMENTE', 'COMING SOON')}</span>
+            <span className="font-display text-4xl sm:text-6xl italic text-ink/45">{comingSoon}</span>
           </div>
         ) : (
-          <PoemShapeView shape={poem.shape} lines={poem.lines} />
+          <PoemShapeView shape={artwork.shape} lines={artwork.lines} />
         )}
       </Lightbox>
     </>
