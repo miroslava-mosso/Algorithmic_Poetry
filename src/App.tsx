@@ -92,6 +92,11 @@ function App() {
               {index > 0 && (
                 <span aria-hidden="true" className="inline-block w-1.5 h-1.5 bg-[#f4b6c2] rotate-45 shrink-0" />
               )}
+              <div className="ml-3 shrink-0">
+  <BuyMeACoffeeButton
+    text={t('Invítame un café', 'Buy me a coffee')}
+  />
+</div>
               <button
                 id={`tab-${tab.id}`}
                 type="button"
