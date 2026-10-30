@@ -318,7 +318,7 @@ export function HodgeAlgorithm() {
   {[
     {
       k: 'b₀ = b₄',
-      formula: <>h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1</>,
+      formula: <>h<sup className="text-[0.92em]">00</sup> = h<sup className="text-[0.92em]">22</sup> = 1</>,
       words: 'bruma',
     },
     {
