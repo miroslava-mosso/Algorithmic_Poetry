@@ -221,7 +221,6 @@ function App() {
               Cada área matemática abre una manera distinta de jugar con el
               lenguaje. Hay tres ejemplos por cada territorio matemático.
             </p>
-            <div 
           </div>
 
           <nav className="reveal mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono-lt text-[11px] uppercase text-ink/60">
