@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { poems } from '@/poems';
 import { mathAreas } from '@/mathAreas';
