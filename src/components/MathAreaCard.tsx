@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import type { MathArea, MathExample } from '@/mathAreas';
+import { useLang } from '@/i18n';
 import { MathExampleShape } from '@/components/MathExampleShape';
 import { Lightbox } from '@/components/Lightbox';
+import { mathPoemTranslations } from '@/mathPoemTranslations';
 
 const enlargedShapes = new Set([
   'reflexion',
@@ -15,7 +17,9 @@ const enlargedShapes = new Set([
   'markov',
 ]);
 
-export function MathAreaCard({ area, i, language = 'es' }: { area: MathArea; i: number; language?: 'es' | 'en' }) {
+export function MathAreaCard({ area, i, language: languageProp }: { area: MathArea; i: number; language?: 'es' | 'en' }) {
+  const { lang } = useLang();
+  const language = languageProp ?? lang;
   return (
     <details
       id={area.id}
@@ -122,6 +126,7 @@ function MathExample({ ex, language }: { ex: MathExample; language: 'es' | 'en' 
   subtitle={ex.technique}
   caption={ex.manifest}
 >
+  <div className="flex w-full flex-col items-center gap-8">
   <div
     className={
       ex.shape === 'koch-snowflake'
@@ -138,6 +143,26 @@ function MathExample({ ex, language }: { ex: MathExample; language: 'es' | 'en' 
     }
   >
     <MathExampleShape shape={ex.shape} isLightbox />
+  </div>
+  {language === 'en' && mathPoemTranslations[ex.shape] && (
+    <div className="w-full max-w-[70ch] border-t hairline pt-6 text-center">
+      <p className="mb-5 font-mono-lt text-[10px] uppercase tracking-wide text-ink/45">English translation</p>
+      <div className="space-y-7">
+        {mathPoemTranslations[ex.shape]!.map((section, sectionIndex) => (
+          <div key={sectionIndex} className="space-y-2">
+            {section.title && <p className="mb-3 font-mono-lt text-[10px] uppercase text-ink/40">{section.title}</p>}
+            {section.lines.map((line, lineIndex) => (
+              <p key={lineIndex} className="font-body text-base sm:text-lg leading-relaxed" style={{ color: line.color ?? '#0d0d0d', opacity: line.opacity ?? 1 }}>
+                {line.segments
+                  ? line.segments.map((segment, segmentIndex) => <span key={segmentIndex} style={{ color: segment.color }}>{segment.text}</span>)
+                  : line.text}
+              </p>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
   </div>
 </Lightbox>
 
