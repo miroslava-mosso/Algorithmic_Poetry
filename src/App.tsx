@@ -218,15 +218,18 @@ function App() {
               </h2>
             </div>
                         <div className="max-w-[36ch]">
-              <p className="font-body text-lg sm:text-xl text-ink/60">
-                Cada área matemática abre una manera distinta de jugar con el
-                lenguaje. Hay tres ejemplos por cada territorio matemático.
-              </p>
+              <div className="max-w-[42ch] ml-auto">
+  <p className="font-body text-lg sm:text-xl text-ink/60 leading-relaxed">
+    Cada área matemática abre una manera distinta de jugar con el
+    lenguaje. Hay tres ejemplos por cada territorio matemático.
+  </p>
 
-              <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7] mt-4">
-                Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
-              </p>
-            </div>
+  <div className="w-full h-px bg-ink/20 my-6" />
+
+  <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
+    Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
+  </p>
+</div>
           </div>
 
           <nav className="reveal mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono-lt text-[11px] uppercase text-ink/60">
