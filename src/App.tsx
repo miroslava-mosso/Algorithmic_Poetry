@@ -174,7 +174,6 @@ function App() {
       </div>}
 
       {/* ── Galería ─────────────────────────────────────── */}
-      {activeTab === 'galeria' && <div id="panel-galeria" role="tabpanel">
       <section id="galeria" className="border-b hairline">
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
   <div className="reveal grid gap-10 sm:grid-cols-[1.5fr_0.8fr]">
