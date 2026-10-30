@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { useLang } from '@/i18n';
 
 function hpq(p: number, q: number): ReactNode {
   return (
@@ -61,6 +62,13 @@ const wordK3: ReactNode[][] = [
   ['[silencio]', '[silencio]'],
   ['bruma'],
 ];
+const wordK3English: ReactNode[][] = [
+  ['mist'],
+  ['[silence]', '[silence]'],
+  ['mist', <em key="verse" className="text-ink/90">twenty syllables to cross the silent night without ever touching it at all</em>, 'mist'],
+  ['[silence]', '[silence]'],
+  ['mist'],
+];
 
 function SymmetryBlock({
   title,
@@ -69,6 +77,7 @@ function SymmetryBlock({
   after,
   beforeLabel,
   afterLabel,
+  language,
 }: {
   title: string;
   description: ReactNode;
@@ -76,6 +85,7 @@ function SymmetryBlock({
   after: ReactNode[][];
   beforeLabel: string;
   afterLabel: string;
+  language: 'es' | 'en';
 }) {
   return (
     <div className="space-y-6">
@@ -86,27 +96,27 @@ function SymmetryBlock({
 
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between">
-          <span className="font-mono-lt text-[15px] uppercase text-ink/45">{beforeLabel}</span>
+          <span className="font-mono-lt text-[10px] uppercase text-ink/45">{beforeLabel}</span>
           <div className="flex-1 flex items-center justify-center">
             <Diamond values={before} roomy />
           </div>
-          <span className="font-body text-sm text-[25px] text-ink/50 italic text-center">Antes</span>
+          <span className="font-body text-sm text-ink/50 italic text-center">{language === 'en' ? 'before' : 'antes'}</span>
         </div>
         <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between bg-[#f4b6c2]/8">
-          <span className="font-mono-lt text-[15px] uppercase text-ink/55">{afterLabel}</span>
+          <span className="font-mono-lt text-[10px] uppercase text-ink/55">{afterLabel}</span>
           <div className="flex-1 flex items-center justify-center">
             <Diamond values={after} roomy />
           </div>
-          <span className="font-body text-sm text-[25px] text-ink/55 italic text-center">Después</span>
+          <span className="font-body text-sm text-ink/55 italic text-center">{language === 'en' ? 'after' : 'después'}</span>
         </div>
       </div>
 
       <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6 max-w-[960px] mx-auto">
-        <span className="font-mono-lt text-[12px] uppercase text-ink/55 text-center block">El poema con la simetría aplicada</span>
+        <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">{language === 'en' ? 'The poem with the symmetry applied' : 'El poema con la simetría aplicada'}</span>
         <div className="flex-1 flex items-center justify-center py-6">
-          <Diamond values={wordK3} />
+          <Diamond values={language === 'en' ? wordK3English : wordK3} />
         </div>
-        <span className="font-body text-sm text-[19px] text-ink/55 italic text-center block">El diamante hecho verso</span>
+        <span className="font-body text-sm text-ink/55 italic text-center block">{language === 'en' ? 'the diamond turned into verse' : 'el diamante hecho verso'}</span>
       </div>
     </div>
   );
@@ -121,38 +131,41 @@ function StepHeader({ number, title }: { number: string; title: string }) {
   );
 }
 
-export function HodgeAlgorithm() {
+export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | 'en' } = {}) {
+  const { lang } = useLang();
+  const language = propLanguage ?? lang;
+  const en = language === 'en';
   return (
     <section id="mi-algoritmo" className="border-b hairline">
       <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-20 sm:pb-28">
         {/* Intro */}
         <div className="reveal grid gap-10 sm:grid-cols-[0.78fr_1.22fr]">
           <div>
-            <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Mi algoritmo</span>
+            <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ {en ? 'My Algorithm' : 'Mi algoritmo'}</span>
             <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
-              Un poema en un arreglo de <span className="pink-underline">diamante</span>
+              {en ? <>A poem arranged in a <span className="pink-underline">diamond</span></> : <>Un poema en un arreglo de <span className="pink-underline">diamante</span></>}
             </h2>
             <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mt-7 max-w-[34ch]">
-              Mi algoritmo —o constricción— está inspirado en el diamante de Hodge de las <em>Kähler manifolds</em>.
+              {en ? <>My algorithm—or constraint—is inspired by the Hodge diamond of <em>Kähler manifolds</em>.</> : <>Mi algoritmo —o constricción— está inspirado en el diamante de Hodge de las <em>Kähler manifolds</em>.</>}
             </p>
             <p className="font-mono-lt text-[10px] uppercase text-ink/45 mt-8 leading-[1.7]">
-              Técnica de: Miroslava Mosso Rojas
+              {en ? 'Technique by: ' : 'Técnica de: '}Miroslava Mosso Rojas
             </p>
           </div>
 
           <div className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 space-y-5">
             <p>
-              Elige tu geometría de <em>Kähler</em> favorita y deja que sus números de Hodge definan la longitud de los versos. No                      necesitas conocer toda la teoría matemática detrás, siguiendo los pasos de este algoritmo vamos a pulir este diamante el                  bruto
+              {en ? <>Choose your favorite <em>Kähler</em> geometry and let its Hodge numbers determine the length of your lines. You do not need to know all the mathematics behind it; follow this algorithm to polish the rough diamond.</> : <>Elige tu geometría de <em>Kähler</em> favorita y deja que sus números de Hodge definan la longitud de los versos. No necesitas conocer toda la teoría matemática detrás; siguiendo los pasos de este algoritmo vamos a pulir este diamante en bruto.</>}
             </p>
             <div className="border-l-2 border-[#f4b6c2] pl-5 py-1">
               <p className="font-mono-lt text-[11px] uppercase text-ink/60 leading-[1.7]">
-                <strong className="font-normal text-ink">Extracción:</strong> escoge tu <em>Kähler manifold</em> favorita y busca su                       diamante de Hodge asociado.
+                {en ? <><strong className="font-normal text-ink">Extraction:</strong> choose your favorite <em>Kähler manifold</em> and find its Hodge diamond.</> : <><strong className="font-normal text-ink">Extracción:</strong> escoge tu <em>Kähler manifold</em> favorita y busca su diamante de Hodge asociado.</>}
               </p>
             </div>
             <p>
-              Si no sabes cuál elegir, puedes buscar uno de manera aleatoria en{' '}
+              {en ? 'If you are not sure which one to choose, you can find one at random on ' : 'Si no sabes cuál elegir, puedes buscar uno de manera aleatoria en '}
               <a href="https://ahuchala.com/hodge/" target="_blank" rel="noreferrer" className="pink-underline-thin text-ink">
-                esta página de diamantes de Hodge
+                {en ? 'this Hodge diamond page' : 'esta página de diamantes de Hodge'}
               </a>.
             </p>
           </div>
@@ -164,7 +177,7 @@ export function HodgeAlgorithm() {
           <details className="area-accordion border-b hairline">
             <summary className="cursor-pointer list-none select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#f4b6c2] focus-visible:outline-offset-8">
               <div className="py-8 sm:py-10 flex items-center justify-between gap-6">
-                <StepHeader number="01" title="Explorando la mina: Extracción de la geometría" />
+                <StepHeader number="01" title={en ? 'Mining the source: choosing a geometry' : 'Explorando la mina: Extracción de la geometría'} />
                 <span className="area-chevron shrink-0 flex items-center justify-center w-9 h-9 border hairline font-mono-lt text-lg text-ink/65" aria-hidden="true">
                   ↓
                 </span>
@@ -172,16 +185,16 @@ export function HodgeAlgorithm() {
             </summary>
             <div className="pb-14 sm:pb-20">
               <p className="font-body text-lg sm:text-xl text-ink/70 max-w-[60ch] mb-9">
-                Tomemos una superficie K3. A la izquierda está el diamante de Hodge el términos de los números de Hodge como variables. A la derecha, sustituimos los valores de los números de Hodge correspondientes a la geometría elegida.
+                {en ? 'Take a K3 surface. On the left is its Hodge diamond, with Hodge numbers shown as variables. On the right, we substitute the Hodge numbers for the chosen geometry.' : 'Tomemos una superficie K3. A la izquierda está el diamante de Hodge expresado en términos de los números de Hodge como variables. A la derecha, sustituimos los valores correspondientes a la geometría elegida.'}
               </p>
 
               <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] items-center">
                 <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between">
-                  <span className="font-mono-lt text-[13px] uppercase text-ink/45">Diamante en bruto: sin sustituir aún los                       valores de los números de Hodge.</span>
+                  <span className="font-mono-lt text-[10px] uppercase text-ink/45">{en ? 'Rough diamond: Hodge numbers not substituted yet.' : 'Diamante en bruto: sin sustituir aún los valores de los números de Hodge.'}</span>
                   <div className="flex-1 flex items-center justify-center">
                     <Diamond values={rawK3} roomy />
                   </div>
-                  <span className="font-body text-base text-[20px] text-ink/55 italic text-center">El esqueleto del diamante, antes del poema.</span>
+                  <span className="font-body text-base text-ink/55 italic text-center">{en ? 'The diamond’s skeleton, before the poem.' : 'El esqueleto del diamante, antes del poema.'}</span>
                 </div>
 
                 <svg viewBox="0 0 100 80" className="w-20 h-16 mx-auto text-[#a84739]" aria-hidden="true">
@@ -190,11 +203,11 @@ export function HodgeAlgorithm() {
                 </svg>
 
                 <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between bg-[#f4b6c2]/10">
-                  <span className="font-mono-lt text-[13px] uppercase text-ink/55">Primeros cortes: sustituyendo los números de Hodge para una superficie K3.</span>
+                  <span className="font-mono-lt text-[10px] uppercase text-ink/55">{en ? 'First cuts: substituting the Hodge numbers for a K3 surface.' : 'Primeros cortes: sustituyendo los números de Hodge para una superficie K3.'}</span>
                   <div className="flex-1 flex items-center justify-center">
                     <Diamond values={numericK3} roomy />
                   </div>
-                  <span className="font-body text-base text-[20px] text-ink/60 italic text-center">El diamante de Hodge de la superficie K3 tomando forma.</span>
+                  <span className="font-body text-base text-ink/60 italic text-center">{en ? 'The Hodge diamond of the K3 surface taking shape.' : 'El diamante de Hodge de la superficie K3 tomando forma.'}</span>
                 </div>
               </div>
             </div>
@@ -204,7 +217,7 @@ export function HodgeAlgorithm() {
           <details className="area-accordion border-b hairline">
             <summary className="cursor-pointer list-none select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#f4b6c2] focus-visible:outline-offset-8">
               <div className="py-8 sm:py-10 flex items-center justify-between gap-6">
-                <StepHeader number="02" title="Pulido: Sustituye los números por lenguaje" />
+                <StepHeader number="02" title={en ? 'Polishing: replace numbers with language' : 'Pulido: Sustituye los números por lenguaje'} />
                 <span className="area-chevron shrink-0 flex items-center justify-center w-9 h-9 border hairline font-mono-lt text-lg text-ink/65" aria-hidden="true">
                   ↓
                 </span>
@@ -215,26 +228,26 @@ export function HodgeAlgorithm() {
                 <div>
                   <ol className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 space-y-4 list-decimal pl-6 mb-10">
                     <li>
-                      Donde veas un <strong>1</strong>, escribe una palabra. No es necesario que siempre uses la misma palabra; cada 1 puede convertirse en una palabra distinta.
+                      {en ? <>Where you see a <strong>1</strong>, write one word. You do not have to use the same word each time; every 1 can become a different word.</> : <>Donde veas un <strong>1</strong>, escribe una palabra. No es necesario que siempre uses la misma palabra; cada 1 puede convertirse en una palabra distinta.</>}
                     </li>
                     <li>
-                      Donde veas un <strong>0</strong>, agrega algo relacionado con la nada, el vacío o una pausa. Si es una acción sin palabras, escríbela fonéticamente, como en los subtítulos para personas sordas y con discapacidad auditiva, e.g., <span className="font-mono-lt text-sm text-ink/60">[silencio]</span>. Estas palabras pueden variar en cada aparición, o pueden simplemente ser espacios vacíos.
+                      {en ? <>Where you see a <strong>0</strong>, add something related to nothingness, emptiness, or a pause. If it is a wordless action, write it phonetically, as in captions for Deaf and hard-of-hearing viewers; for example, <span className="font-mono-lt text-sm text-ink/60">[silence]</span>. These words can vary each time, or simply be blank spaces.</> : <>Donde veas un <strong>0</strong>, agrega algo relacionado con la nada, el vacío o una pausa. Si es una acción sin palabras, escríbela fonéticamente, como en los subtítulos para personas sordas y con discapacidad auditiva, e.g., <span className="font-mono-lt text-sm text-ink/60">[silencio]</span>. Estas palabras pueden variar en cada aparición, o pueden simplemente ser espacios vacíos.</>}
                     </li>
-                    <li>Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número. En nuestro ejemplo sería un verso de 20 sílabas. </li>
+                    <li>{en ? 'Numbers greater than 1 become a line with exactly that number of syllables. In our example, that is a 20-syllable line.' : 'Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número. En nuestro ejemplo sería un verso de 20 sílabas.'}</li>
                   </ol>
 
                   <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mb-10">
-                    El poema se puede leer como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección revela un plano distinto del diamante. 
+                    {en ? 'The poem can be read in any direction: vertically, horizontally, or diagonally. Each direction reveals a different plane of the diamond.' : 'El poema se puede leer como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección revela un plano distinto del diamante.'}
                   </p>
                 </div>
 
                 <div>
                   <div className="border hairline p-6 sm:p-8">
-                    <span className="font-mono-lt text-[12px] uppercase text-ink/45">Ejemplo de traducción de los números a las palabras</span>
+                    <span className="font-mono-lt text-[10px] uppercase text-ink/45">{en ? 'Example: translating numbers into words' : 'Ejemplo de traducción de los números a las palabras'}</span>
                     <div className="mt-6 space-y-3 font-body text-lg sm:text-xl leading-[1.6]">
-                      <p><span className="font-mono-lt text-[#a84739]">1</span> → <span className="pink-underline-thin">bruma</span></p>
-                      <p><span className="font-mono-lt text-[#a84739]">0</span> → <span className="font-mono-lt text-sm">[silencio]</span></p>
-                      <p><span className="font-mono-lt text-[#a84739]">20</span> → <em>veinte sílabas para cruzar la noche sin tocarla</em></p>
+                      <p><span className="font-mono-lt text-[#a84739]">1</span> → <span className="pink-underline-thin">{en ? 'mist' : 'bruma'}</span></p>
+                      <p><span className="font-mono-lt text-[#a84739]">0</span> → <span className="font-mono-lt text-sm">{en ? '[silence]' : '[silencio]'}</span></p>
+                      <p><span className="font-mono-lt text-[#a84739]">20</span> → <em>{en ? 'twenty syllables to cross the night without touching it' : 'veinte sílabas para cruzar la noche sin tocarla'}</em></p>
                     </div>
                   </div>
                 </div>
@@ -242,11 +255,11 @@ export function HodgeAlgorithm() {
 
               <div className="mt-8">
                 <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6">
-                  <span className="font-mono-lt text-[13px] uppercase text-ink/55 text-center block">Puliendo el diamante de Hodge: ahora con los números sustituidos por las palabras.</span>
+                  <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">{en ? 'Polishing the Hodge diamond: now with numbers replaced by words.' : 'Puliendo el diamante de Hodge: ahora con los números sustituidos por las palabras.'}</span>
                   <div className="flex-1 flex items-center justify-center py-6">
-                    <Diamond values={wordK3} />
+                    <Diamond values={en ? wordK3English : wordK3} />
                   </div>
-                  <span className="font-body text-sm text-[20px] text-ink/55 italic text-center block">Diamante de Hodge de la superficie K3 traducido en un poema.</span>
+                  <span className="font-body text-sm text-ink/55 italic text-center block">{en ? 'The Hodge diamond of the K3 surface translated into a poem.' : 'Diamante de Hodge de la superficie K3 traducido en un poema.'}</span>
                 </div>
               </div>
             </div>
@@ -256,7 +269,7 @@ export function HodgeAlgorithm() {
           <details className="area-accordion border-b hairline">
             <summary className="cursor-pointer list-none select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#f4b6c2] focus-visible:outline-offset-8">
               <div className="py-8 sm:py-10 flex items-center justify-between gap-6">
-                <StepHeader number="03" title="Observando sus simetrías" />
+                <StepHeader number="03" title={en ? 'Observing its symmetries' : 'Observando sus simetrías'} />
                 <span className="area-chevron shrink-0 flex items-center justify-center w-9 h-9 border hairline font-mono-lt text-lg text-ink/65" aria-hidden="true">
                   ↓
                 </span>
@@ -264,25 +277,31 @@ export function HodgeAlgorithm() {
             </summary>
             <div className="pb-14 sm:pb-20 space-y-16">
               <SymmetryBlock
-                title="Conjugación compleja"
-                description={<>
+                title={en ? 'Complex conjugation' : 'Conjugación compleja'}
+                language={language}
+                description={en ? <>
+                  Complex conjugation exchanges the indices p and q in the Hodge numbers; that is, h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. In the diamond, each row reflects across its vertical axis. For a K3 surface, h<sup className="text-[0.72em]">20</sup> = h<sup className="text-[0.72em]">02</sup> = 1 and h<sup className="text-[0.72em]">10</sup> = h<sup className="text-[0.72em]">01</sup> = 0. In your poem, swap the corresponding words and lines.
+                </> : <>
                   La conjugación compleja intercambia los índices p y q en los números de Hodge; es decir, h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">qp</sup>. En el diamante, cada fila se refleja con respecto a su eje vertical. Para la superficie K3, h<sup className="text-[0.72em]">20</sup> = h<sup className="text-[0.72em]">02</sup> = 1 y h<sup className="text-[0.72em]">10</sup> = h<sup className="text-[0.72em]">01</sup> = 0. En tu poema, intercambia las palabras y versos correspondientes. 
                 </>}
                 before={rawK3}
                 after={conjugationK3}
-                beforeLabel="Diamante original (K3)"
-                afterLabel="Con conjugación compleja aplicada"
+                beforeLabel={en ? 'Original diamond (K3)' : 'Diamante original (K3)'}
+                afterLabel={en ? 'After complex conjugation' : 'Con conjugación compleja aplicada'}
               />
 
               <SymmetryBlock
-                title="Dualidad de Serre"
-                description={<>
+                title={en ? 'Serre duality' : 'Dualidad de Serre'}
+                language={language}
+                description={en ? <>
+                  Serre duality states that h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">n-q,n-p</sup>, where n is the complex dimension of the variety. For a K3 surface (n=2), this means h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">2-q,2-p</sup>. In the diamond, this appears as a 180° rotation: Hodge numbers reflect across the main horizontal axis, so h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1. In your poem, you can swap the upper and lower rows.
+                </> : <>
                   La dualidad de Serre establece que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">n-q,n-p</sup>, donde n es la dimensión compleja de la variedad. Para la superficie K3 (n=2), esto significa que h<sup className="text-[0.72em]">pq</sup> = h<sup className="text-[0.72em]">2-q,2-p</sup>. En el diamante, esto se ve reflejado en una rotación de 180°. Es decir,los números de Hodge se ven reflejados con respecto al eje horizontal principal, tal que h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1. En tu poema, puedes intercambiar las filas superiores por las inferiores.
                 </>}
                 before={rawK3}
                 after={serreK3}
-                beforeLabel="Diamante original (K3)"
-                afterLabel="Con dualidad de Serre aplicada"
+                beforeLabel={en ? 'Original diamond (K3)' : 'Diamante original (K3)'}
+                afterLabel={en ? 'After applying Serre duality' : 'Con dualidad de Serre aplicada'}
               />
             </div>
           </details>
@@ -291,7 +310,7 @@ export function HodgeAlgorithm() {
           <details className="area-accordion border-b hairline">
             <summary className="cursor-pointer list-none select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#f4b6c2] focus-visible:outline-offset-8">
               <div className="py-8 sm:py-10 flex items-center justify-between gap-6">
-                <StepHeader number="04" title="Paso extra (opcional): Los números de Betti" />
+                <StepHeader number="04" title={en ? 'Optional extra step: Betti numbers' : 'Paso extra (opcional): Los números de Betti'} />
                 <span className="area-chevron shrink-0 flex items-center justify-center w-9 h-9 border hairline font-mono-lt text-lg text-ink/65" aria-hidden="true">
                   ↓
                 </span>
@@ -301,40 +320,40 @@ export function HodgeAlgorithm() {
               
               
               <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 max-w-[62ch] mb-8">
-  Si te da curiosidad, puedes calcular el <em>k-ésimo número de Betti</em> sumando los números de Hodge para los que p + q = k; en el diamante, cada suma corresponde a una diagonal. La fórmula general es:
+  {en ? <>If you are curious, you can calculate the <em>kth Betti number</em> by adding the Hodge numbers for which p + q = k; in the diamond, each sum corresponds to a diagonal. The general formula is:</> : <>Si te da curiosidad, puedes calcular el <em>k-ésimo número de Betti</em> sumando los números de Hodge para los que p + q = k; en el diamante, cada suma corresponde a una diagonal. La fórmula general es:</>}
 </p>
 
 <div className="border hairline p-6 sm:p-10 mb-10 bg-[#f4b6c2]/8">
   <p className="font-mono-lt text-base sm:text-lg text-center text-ink">
-    b<sub>k</sub> = Σ<sub>p+q=k</sub> h<sup className="text-[0.92em]">pq</sup>
+    b<sub>k</sub> = Σ<sub>p+q=k</sub> h<sup className="text-[0.72em]">pq</sup>
   </p>
 </div>
 
 <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 max-w-[62ch] mb-8">
-  Para una superficie K3, los números de Betti son b₀ = b₄ = 1, b₁ = b₃ = 0 y b₂ = 22. Al sustituir los números por palabras, cada suma se convierte también en una posible lectura del poema.
+  {en ? 'For a K3 surface, the Betti numbers are b₀ = b₄ = 1, b₁ = b₃ = 0, and b₂ = 22. When numbers are replaced by words, each sum also becomes a possible reading of the poem.' : 'Para una superficie K3, los números de Betti son b₀ = b₄ = 1, b₁ = b₃ = 0 y b₂ = 22. Al sustituir los números por palabras, cada suma se convierte también en una posible lectura del poema.'}
 </p>
 
 <div className="grid gap-6 sm:grid-cols-3">
   {[
     {
       k: 'b₀ = b₄',
-      formula: <>h<sup className="text-[0.92em]">00</sup> = h<sup className="text-[0.92em]">22</sup> = 1</>,
-      words: 'bruma',
+      formula: <>h<sup className="text-[0.72em]">00</sup> = h<sup className="text-[0.72em]">22</sup> = 1</>,
+      words: en ? 'mist' : 'bruma',
     },
     {
       k: 'b₂',
-      formula: <>h<sup className="text-[0.92em]">20</sup> + h<sup className="text-[0.92em]">11</sup> + h<sup className="text-[0.92em]">02</sup> = 1 + 20 + 1 = 22</>,
-      words: 'bruma + veinte sílabas + bruma',
+      formula: <>h<sup className="text-[0.72em]">20</sup> + h<sup className="text-[0.72em]">11</sup> + h<sup className="text-[0.72em]">02</sup> = 1 + 20 + 1 = 22</>,
+      words: en ? 'mist + twenty syllables + mist' : 'bruma + veinte sílabas + bruma',
     },
     {
       k: 'b₁ = b₃',
       formula: <>
-        h<sup className="text-[0.92em]">10</sup> + h<sup className="text-[0.92em]">01</sup>
+        h<sup className="text-[0.72em]">10</sup> + h<sup className="text-[0.72em]">01</sup>
         {' = '}
-        h<sup className="text-[0.92em]">21</sup> + h<sup className="text-[0.92em]">12</sup>
+        h<sup className="text-[0.72em]">21</sup> + h<sup className="text-[0.72em]">12</sup>
         {' = 0 + 0 = 0'}
       </>,
-      words: '[silencio]',
+      words: en ? '[silence]' : '[silencio]',
     },
   ].map((item) => (
     <div key={item.k} className="border hairline p-6 flex flex-col gap-3">
@@ -348,16 +367,16 @@ export function HodgeAlgorithm() {
           </details>
         </div>
 
-        {/* Último gesto */}
+        {/* Último gesto / Final note */}
         <div className="reveal mt-12 pt-8 font-body text-lg sm:text-xl leading-[1.6] text-ink/75">
-          <span className="font-mono-lt text-[10px] uppercase text-ink/45 block mb-3">Último detalle</span>
-          Recuerda escribir al final a qué geometría corresponde el diamante de Hodge que dio origen a tu constricción y a tu poema. En nuestro ejemplo usamos a <span className="pink-underline italic">la superficie K3</span>.
+          <span className="font-mono-lt text-[10px] uppercase text-ink/45 block mb-3">{en ? 'One last detail' : 'Último detalle'}</span>
+          {en ? <>Remember to note which geometry the Hodge diamond came from; it is the source of your constraint and poem. In our example, we used <span className="pink-underline italic">the K3 surface</span>.</> : <>Recuerda escribir al final a qué geometría corresponde el diamante de Hodge que dio origen a tu constricción y a tu poema. En nuestro ejemplo usamos a <span className="pink-underline italic">la superficie K3</span>.</>}
         </div>
 
         {/* Authorship */}
         <div className="reveal mt-10 pt-6 border-t hairline">
           <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
-            Algoritmo y constricción poética por <span className="text-ink">Miroslava Mosso Rojas</span>
+            {en ? 'Algorithm and poetic constraint by ' : 'Algoritmo y constricción poética por '}<span className="text-ink">Miroslava Mosso Rojas</span>
           </p>
         </div>
       </div>
