@@ -10,6 +10,7 @@ export interface Poem {
   technique: string;
   manifest: string;
   lines: string[];
+  translation?: { text: string; color?: string; opacity?: number; pinkUnderline?: boolean }[];
 }
 
 export const poems: Poem[] = [
@@ -69,24 +70,52 @@ export const poemsEnglish: Poem[] = [
     id: 'cruz', index: '01', title: 'Intersection', author: 'Cross composition', year: '2026', shape: 'cruz',
     technique: 'Alphabetic intersection',
     manifest: 'A horizontal line and a vertical line meet at a shared letter, like two gazes crossing.',
-    lines: ['t', 'h', 'e', ' ', 'w', 'o', 'u', "my country's exile", 'n', 'd', ' ', 'i', 's', ' ', 'd', 'o', 'n', 'e'],
+    lines: [],
+    translation: [
+      { text: 'The damage is done', color: '#0d0d0d' },
+      { text: 'Exile from my homeland', color: '#0d0d0d', pinkUnderline: true },
+    ],
   },
   {
     id: 'zurvan', index: '02', title: 'Zurvan', author: 'Persian symbol', year: '2026', shape: 'zurvan',
     technique: 'Tarkib-band',
     manifest: 'An ancient Persian deity who embodies infinite time and space. The tarkib-band is a poetic form found in Persian and Urdu literature.',
-    lines: ['     cloud     ', '   white   ', '  above   ', ' the Paris sky ', '  above   ', '   white   ', '     cloud     '],
+    lines: [],
+    translation: [
+      { text: 'The surface, softly infinite, is closed within itself.', color: '#171717' },
+      { text: 'The dawns will keep returning,', color: '#8f2638' },
+      { text: 'existing in time,', color: '#8f2638' },
+      { text: 'repeating, and the cherry trees,', color: '#8f2638' },
+      { text: 'even if I stop,', color: '#8f2638' },
+      { text: 'will go on blooming.', color: '#8f2638' },
+    ],
   },
   {
     id: 'cono', index: '03', title: 'Cone', author: 'Calligram', year: '2026', shape: 'cono',
     technique: 'Geometry',
     manifest: 'The poem narrows toward a lower point, like a funnel that condenses meaning into one final syllable.',
-    lines: ['The clear sky, the sound of crickets', '  keep me company until dawn.  ', '    How deafening loneliness is,    ', '       how present distance feels.       ', '        Turn on the light, breathe.         ', '          I cannot sleep.           ', '            I do not want             ', '              to close               ', '                my                 ', '                eyes                '],
+    lines: [],
+    translation: [
+      { text: 'Clear skies and cricket song', color: '#0d0d0d', opacity: 1 },
+      { text: 'keep me company till dawn.', color: '#0d0d0d', opacity: 0.9 },
+      { text: 'How deafening loneliness is,', color: '#0d0d0d', opacity: 0.8 },
+      { text: 'how present distance feels.', color: '#0d0d0d', opacity: 0.7 },
+      { text: 'Turn on the light. Breathe.', color: '#0d0d0d', opacity: 0.6 },
+      { text: 'I cannot sleep.', color: '#0d0d0d', opacity: 0.5 },
+      { text: 'I do not want', color: '#0d0d0d', opacity: 0.4 },
+      { text: 'to close', color: '#0d0d0d', opacity: 0.3 },
+      { text: 'my', color: '#0d0d0d', opacity: 0.2 },
+      { text: 'eyes.', color: '#0d0d0d', opacity: 0.1 },
+    ],
   },
   {
     id: 'espiral', index: '04', title: 'Spiral', author: 'Technique by Jacqueline Turner', year: '2026', shape: 'espiral',
     technique: 'Ergodic literature',
     manifest: 'The poem begins at the outer edge and moves inward, ending where the spiral collapses at its center. You can start a new spiral with the final word of the previous one.',
-    lines: ['I tried the sun reflected on the water. The heat burned my lips. The droplets were transparent.'],
+    lines: [],
+    translation: [
+      { text: 'I tried the sun reflected in the water. Its heat burned my lips. The drops were transparent.', color: '#0d0d0d' },
+      { text: 'Bitter drops of coffee. I wake after midday.', color: '#0d0d0d' },
+    ],
   },
 ];
