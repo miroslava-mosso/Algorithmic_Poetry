@@ -163,7 +163,7 @@ export const mathAreas: MathArea[] = [
     index: 'V',
     title: 'Probabilidad y combinatoria',
     description:
-      'Métodos para jugar con el azar, las palabras, la combinatoria y los versos. Tira los dados para determinar el tema de tus versos. Los coeficientes binomiales determinan las sílabas de tus versos. ',
+      'Métodos para jugar con el azar, las palabras, la combinatoria y los versos. Tira los dados para determinar el tema de tus versos. Poema predictivo. Coeficientes binomiales determinan  el número de las sílabas. ',
     examples: [
       {
         index: '01',
