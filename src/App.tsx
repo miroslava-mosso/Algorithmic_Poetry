@@ -326,7 +326,7 @@ function App() {
   <div className="reveal grid gap-10 sm:grid-cols-[0.78fr_1.22fr]">
     <div>
       <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Moduli Space</span>
-      <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.5]">
+      <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.8]">
         El <span className="pink-underline italic">moduli space</span> de poemas del diamante de Hodge
       </h2>
     </div>
