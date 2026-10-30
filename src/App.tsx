@@ -341,7 +341,7 @@ function App() {
 
       {/* ── Contacto / Footer ──────────────────────────── */}
       <footer id="contacto" className="bg-ink text-[#f7f5f1] min-h-[50vh] flex items-center">
-        <div className="mx-auto max-w-[1180px] w-full px-5 sm:px-8 py-20 sm:py-20">
+        <div className="mx-auto max-w-[1180px] w-full px-5 sm:px-8 py-16 sm:py-20">
           <div className="reveal grid gap-8 sm:gap-10 sm:grid-cols-[1.2fr_1fr]">
             <div>
               <span className="font-mono-lt text-[11px] uppercase text-[#f7f5f1]/50">§ {t('Contacto', 'Contact')}</span>
@@ -421,7 +421,7 @@ function App() {
               </div>
 
               {/* ── Apoya el proyecto / Buy Me a Coffee ── */}
-              <div className="mt-16 pt-5 border-t border-[#f7f5f1]/15">
+              <div className="mt-6 pt-5 border-t border-[#f7f5f1]/15">
                 <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">
                   {t('Apoya el proyecto', 'Support the project')}
                 </p>
