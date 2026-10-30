@@ -306,7 +306,7 @@ export function HodgeAlgorithm() {
 
 <div className="border hairline p-6 sm:p-10 mb-10 bg-[#f4b6c2]/8">
   <p className="font-mono-lt text-base sm:text-lg text-center text-ink">
-    b<sub>k</sub> = Σ<sub>p+q=k</sub> h<sup className="text-[0.72em]">pq</sup>
+    b<sub>k</sub> = Σ<sub>p+q=k</sub> h<sup className="text-[0.82em]">pq</sup>
   </p>
 </div>
 
