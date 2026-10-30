@@ -447,16 +447,9 @@ function App() {
                   )}
                 </p>
 
-                <a
-                  href="https://buymeacoffee.com/poesiaalgoa"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-4 font-mono-lt text-[11px] uppercase tracking-wide text-[#f7f5f1] pink-underline-thin hover:text-[#f4b6c2] transition"
-                >
-                  <BuyMeACoffeeIcon className="w-4 h-4" />
-                  {t('Invítame a un café', 'Buy me a coffee')}
-                  <span aria-hidden="true">↗</span>
-                </a>
+                <BuyMeACoffeeButton
+  text={t('Invítame un café', 'Buy me a coffee')}
+/>
 
                 <p className="font-mono-lt text-[9px] uppercase tracking-wide text-[#f7f5f1]/35 mt-2">
                   {t('Aportación voluntaria', 'Voluntary support')}
