@@ -181,7 +181,7 @@ export function HodgeAlgorithm() {
                   <div className="flex-1 flex items-center justify-center">
                     <Diamond values={rawK3} roomy />
                   </div>
-                  <span className="font-body text-base text-[13px] text-ink/55 italic text-center">El esqueleto del diamante, antes del poema.</span>
+                  <span className="font-body text-base text-[23px] text-ink/55 italic text-center">El esqueleto del diamante, antes del poema.</span>
                 </div>
 
                 <svg viewBox="0 0 100 80" className="w-20 h-16 mx-auto text-[#a84739]" aria-hidden="true">
