@@ -70,7 +70,7 @@ function App() {
       <header className="sticky top-0 z-40 backdrop-blur-md bg-[#f7f5f1]/80 border-b hairline">
         
 <div className="mx-auto max-w-[1180px] px-5 sm:px-8 h-14 flex items-center justify-between">
-  <div className="flex items-center gap-4 sm:gap-6">
+  <div className="flex items-center gap-4 sm:gap-10">
     <button type="button" onClick={() => { setActiveTab('poesia'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-display text-lg tracking-wide flex items-center gap-2">
       <span className="inline-block w-2 h-2 bg-[#f4b6c2] rotate-45" />
       {t('Poesía potencial', 'Potential poetry')}
