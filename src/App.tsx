@@ -225,7 +225,7 @@ function App() {
 
   <div className="w-full h-px bg-ink/20 my-6" />
 
-  <p className="font-mono-lt text-[9px] uppercase text-ink/50 leading-[1.0]">
+  <p className="font-mono-lt text-[10px] uppercase text-ink/50 leading-[1.5]">
     Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
   </p>
 </div>
