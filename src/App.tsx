@@ -220,12 +220,12 @@ function App() {
             <p className="font-body text-lg sm:text-xl text-ink/60 max-w-[36ch]">
               Cada área matemática abre una manera distinta de jugar con el
               lenguaje. Hay tres ejemplos por cada territorio matemático.
-          <div 
+            </p>
+            <div 
         <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
           Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
         </p>
       </div>
-            </p>
           </div>
 
           <nav className="reveal mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono-lt text-[11px] uppercase text-ink/60">
