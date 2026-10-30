@@ -76,9 +76,6 @@ function App() {
       {t('Poesía potencial', 'Potential poetry')}
     </button>
 
-    <BuyMeACoffeeButton
-  text={t('Invítame un café', 'Buy me a coffee')}
-/>
   </div>
 
   <div className="flex items-center gap-4">
