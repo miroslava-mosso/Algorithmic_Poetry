@@ -169,7 +169,7 @@ export const mathAreas: MathArea[] = [
         index: '01',
         title: 'Dados',
         technique: '6 versos generados a partir del azar de los dados.',
-        manifest: 'Asigna verbos aleatorios a cada número impar y asigna sustantivos aleatorios a los números pares. Tira los                 dados, observa los números y escribe un verso por cada dado que incluya la palabra asignada al número.',
+        manifest: 'Asigna verbos aleatorios a cada número impar y asigna sustantivos aleatorios a los números pares. Tira los dados, observa los números y escribe un verso por cada dado que incluya la palabra asignada al número.',
         shape: 'dado',
       },
       {
