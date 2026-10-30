@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import type { MathArea, MathExample } from '@/mathAreas';
-import { useLang } from '@/i18n';
 import { MathExampleShape } from '@/components/MathExampleShape';
 import { Lightbox } from '@/components/Lightbox';
 
@@ -16,9 +15,7 @@ const enlargedShapes = new Set([
   'markov',
 ]);
 
-export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
-  const { t } = useLang();
-
+export function MathAreaCard({ area, i, language = 'es' }: { area: MathArea; i: number; language?: 'es' | 'en' }) {
   return (
     <details
       id={area.id}
@@ -33,7 +30,7 @@ export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
             </span>
             <div className="min-w-0">
               <span className="font-mono-lt text-[10px] uppercase text-ink/45">
-                {t('Área', 'Area')}
+                {language === 'en' ? 'Area' : 'Área'}
               </span>
               <h3 className="font-display text-4xl sm:text-5xl leading-[1.05] mt-1">
                 <span>{area.title}</span>
@@ -55,14 +52,14 @@ export function MathAreaCard({ area, i }: { area: MathArea; i: number }) {
 
       <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-14 sm:pb-20 grid gap-6 sm:grid-cols-3">
         {area.examples.map((ex) => (
-          <MathExample key={ex.index} ex={ex} />
+          <MathExample key={ex.index} ex={ex} language={language} />
         ))}
       </div>
     </details>
   );
 }
 
-function MathExample({ ex }: { ex: MathExample }) {
+function MathExample({ ex, language }: { ex: MathExample; language: 'es' | 'en' }) {
   const [open, setOpen] = useState(false);
   const isEnlarged = enlargedShapes.has(ex.shape);
 
@@ -120,6 +117,7 @@ function MathExample({ ex }: { ex: MathExample }) {
 <Lightbox
   open={open}
   onClose={() => setOpen(false)}
+  language={language}
   title={ex.title}
   subtitle={ex.technique}
   caption={ex.manifest}
