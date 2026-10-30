@@ -378,6 +378,7 @@ function App() {
                   {t('Incluye lo siguiente:', 'Include the following:')}
                 </p>
 
+
 <ul className="font-body text-base sm:text-lg mt-2 list-disc pl-6 leading-snug space-y-0.5">
   <li>
     {t(
@@ -392,6 +393,35 @@ function App() {
   <li>{t('Fecha de creación.', 'Date of creation.')}</li>
 </ul>
               </div>
+
+              {/* ── Apoya el proyecto / Buy Me a Coffee ── */}
+              <div className="mt-6 pt-5 border-t border-[#f7f5f1]/15">
+                <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">
+                  {t('Apoya el proyecto', 'Support the project')}
+                </p>
+
+                <p className="font-body text-base sm:text-lg text-[#f7f5f1]/70 mt-2 max-w-[42ch]">
+                  {t(
+                    'Si disfrutas este espacio de experimentación entre poesía y matemáticas, puedes invitarme a un café para ayudar a que este proyecto siga creciendo.',
+                    'If you enjoy this space for experimentation between poetry and mathematics, you can buy me a coffee to help this project keep growing.'
+                  )}
+                </p>
+
+                <a
+                  href="https://buymeacoffee.com/poesiaalgoa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-4 font-mono-lt text-[11px] uppercase tracking-wide text-[#f7f5f1] pink-underline-thin hover:text-[#f4b6c2] transition"
+                >
+                  <span aria-hidden="true">☕</span>
+                  {t('Invítame a un café', 'Buy me a coffee')}
+                  <span aria-hidden="true">↗</span>
+                </a>
+
+                <p className="font-mono-lt text-[9px] uppercase tracking-wide text-[#f7f5f1]/35 mt-2">
+                  {t('Aportación voluntaria', 'Voluntary support')}
+                </p>
+              </div>
             </div>
           </div>
 
@@ -405,6 +435,7 @@ function App() {
         </div>
       </footer>
       </div>}
+
 
       {activeTab === 'moduli-space' && <section id="panel-moduli-space" role="tabpanel" className="border-b hairline min-h-[70vh]">
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-10 sm:pb-16">
