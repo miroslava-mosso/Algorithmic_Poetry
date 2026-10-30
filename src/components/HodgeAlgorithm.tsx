@@ -106,7 +106,7 @@ function SymmetryBlock({
         <div className="flex-1 flex items-center justify-center py-6">
           <Diamond values={wordK3} />
         </div>
-        <span className="font-body text-sm text-[15px] text-ink/55 italic text-center block">el diamante hecho verso</span>
+        <span className="font-body text-sm text-[25px] text-ink/55 italic text-center block">el diamante hecho verso</span>
       </div>
     </div>
   );
