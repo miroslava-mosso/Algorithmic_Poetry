@@ -207,104 +207,77 @@ function App() {
       </div>}
 
       
-{/* ── Galería ─────────────────────────────────────── */}
-{activeTab === 'galeria' && <div id="panel-galeria" role="tabpanel">
-  <section id="galeria" className="border-b hairline">
 
-    {/* Encabezado de Galería */}
-    <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-10">
-      <div className="reveal grid gap-10 sm:grid-cols-[1.5fr_0.8fr]">
-        <div>
-          <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Galería</span>
-          <h2
-            className="font-display text-4xl sm:text-5xl mt-4"
-            style={{ lineHeight: '1.3' }}
-          >
-            Cuatro <span className="pink-underline">formas</span> geométricas, cuatro <span className="pink-underline">poemas</span> diferentes
-          </h2>
-        </div>
+      {/* ── Galería ─────────────────────────────────────── */}
+      {activeTab === 'galeria' && <div id="panel-galeria" role="tabpanel">
+        <section id="galeria" className="border-b hairline">
 
-        <div>
-          <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/60">
-            Pasa el cursor y haz clic sobre cada poema para verlo en grande. La restricción geométrica define la forma y el texto su contenido.
-          </p>
-          <div className="mt-5 pt-3 border-t hairline">
-            <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
-              Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
-            </p>
+          {/* Encabezado original de Galería */}
+          <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
+            <div className="reveal grid gap-10 sm:grid-cols-[1.5fr_0.8fr]">
+              <div>
+                <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Galería</span>
+                <h2
+                  className="font-display text-4xl sm:text-5xl mt-4"
+                  style={{ lineHeight: '1.3' }}
+                >
+                  Cuatro <span className="pink-underline">formas</span> geométricas, cuatro <span className="pink-underline">poemas</span> diferentes
+                </h2>
+              </div>
+
+              <div>
+                <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/60">
+                  Pasa el cursor y haz clic sobre cada poema para verlo en grande. La restricción geométrica define la forma y el texto su contenido.
+                </p>
+                <div className="mt-5 pt-3 border-t hairline">
+                  <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
+                    Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    {/* ── Versión digitalizada ─────────────────────── */}
-    <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-4">
-      <h3 className="font-display text-2xl sm:text-3xl">
-        <span className="pink-underline">Versión digitalizada</span>
-      </h3>
-    </div>
+          {/* ── Versión digitalizada ───────────────────── */}
+          <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-4">
+            <h3 className="font-display text-2xl sm:text-3xl">
+              <span className="pink-underline">Versión digitalizada</span>
+            </h3>
+          </div>
 
-    
-{/* ── Versión digitalizada ─────────────────────── */}
-<div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-4">
-  <h3 className="font-display text-2xl sm:text-3xl">
-    <span className="pink-underline">Versión digitalizada</span>
-  </h3>
-</div>
+          {/* Las cuatro figuras originales */}
+          <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-10 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
+            {poems.map((p, i) => (
+              <PoemCard key={p.id} poem={p} i={i} />
+            ))}
+          </div>
 
-<div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-10 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
-  {poems.map((p, i) => (
-    <PoemCard key={p.id} poem={p} i={i} />
-  ))}
-</div>
+          {/* ── Versión original ───────────────────────── */}
+          <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-4">
+            <h3 className="font-display text-2xl sm:text-3xl">
+              <span className="pink-underline">Versión original</span>
+            </h3>
+          </div>
 
-{/* ── Versión original ─────────────────────────── */}
-<div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-4">
-  <h3 className="font-display text-2xl sm:text-3xl">
-    <span className="pink-underline">Versión original</span>
-  </h3>
-</div>
+          {/* Cuatro plantillas vacías */}
+          <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-8 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
+            {poems.map((p, i) => (
+              <PoemCard
+                key={`${p.id}-original`}
+                poem={{
+                  ...p,
+                  id: `${p.id}-original`,
+                  index: `O${i + 1}`,
+                }}
+                i={i}
+                placeholder={true}
+              />
+            ))}
+          </div>
 
-<div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-8 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
-  {poems.map((p, i) => (
-    <PoemCard
-      key={`${p.id}-original`}
-      poem={{
-        ...p,
-        id: `${p.id}-original`,
-        index: `O${i + 1}`,
-      }}
-      i={i}
-      placeholder={true}
-    />
-  ))}
-</div>
+        </section>
+      </div>}
 
-
-    {/* ── Versión original ────────────────────────── */}
-    <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-4">
-      <h3 className="font-display text-2xl sm:text-3xl">
-        <span className="pink-underline">Versión original</span>
-      </h3>
-    </div>
-
-    <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-12 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
-      {poems.map((p, i) => (
-        <PoemCard
-          key={`${p.id}-original`}
-          poem={{
-            ...p,
-            id: `${p.id}-original`,
-            index: `O${i + 1}`,
-          }}
-          i={i}
-          placeholder={true}
-        />
-      ))}
-    </div>
-
-  </section>
-</div>}
 
 
 
