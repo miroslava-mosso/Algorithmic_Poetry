@@ -28,6 +28,42 @@ function BuyMeACoffeeButton({ text }: { text: string }) {
     const container = containerRef.current;
     if (!container) return;
 
+    container.replaceChildren();
+
+    const script = document.createElement('script');
+
+    script.type = 'text/javascript';
+    script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
+    script.async = true;
+
+    script.setAttribute('data-name', 'bmc-button');
+    script.setAttribute('data-slug', 'poesiaalgoa');
+    script.setAttribute('data-color', '#FFDD00');
+    script.setAttribute('data-emoji', '☕');
+    script.setAttribute('data-font', 'Cookie');
+    script.setAttribute('data-text', text);
+    script.setAttribute('data-outline-color', '#000000');
+    script.setAttribute('data-font-color', '#000000');
+    script.setAttribute('data-coffee-color', '#ffffff');
+
+    script.onload = () => {
+      window.dispatchEvent(new Event('DOMContentLoaded'));
+    };
+
+    container.appendChild(script);
+
+    return () => {
+      container.replaceChildren();
+    };
+  }, [text]);
+
+  return <div ref={containerRef} className="inline-flex" />;
+}
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
     const script = document.createElement('script');
 
     script.type = 'text/javascript';
