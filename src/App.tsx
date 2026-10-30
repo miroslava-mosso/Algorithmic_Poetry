@@ -172,8 +172,8 @@ function App() {
                 <strong>Regina Roze</strong>
               </a>{' '}
               {t(
-                'por introducirme al mundo de la poesía potencial a través de los laboratorios de poesía potencial en México,',
-                'for introducing me to the world of potential poetry through the potential poetry laboratories in Mexico,'
+                'por introducirme al mundo de la poesía potencial a través de los laboratorios online de poesía potencial en México,',
+                'for introducing me to the world of potential poetry through the online potential poetry laboratories in Mexico,'
               )}{' '}
               <a className="burnt-marker" href="https://www.instagram.com/popoesia/" target="_blank" rel="noreferrer">
                 <strong>popoesía</strong>
