@@ -36,12 +36,27 @@ function App() {
     <div ref={ref} className="min-h-screen bg-[#f7f5f1] text-ink">
       {/* ── Nav ─────────────────────────────────────────── */}
       <header className="sticky top-0 z-40 backdrop-blur-md bg-[#f7f5f1]/80 border-b hairline">
-        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 h-14 flex items-center justify-between">
-          <button type="button" onClick={() => { setActiveTab('poesia'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-display text-lg tracking-wide flex items-center gap-2">
-            <span className="inline-block w-2 h-2 bg-[#f4b6c2] rotate-45" />
-            {t('Poesía potencial', 'Potential poetry')}
-          </button>
-          <div className="flex items-center gap-4">
+        
+<div className="mx-auto max-w-[1180px] px-5 sm:px-8 h-14 flex items-center justify-between">
+  <div className="flex items-center gap-4 sm:gap-6">
+    <button type="button" onClick={() => { setActiveTab('poesia'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-display text-lg tracking-wide flex items-center gap-2">
+      <span className="inline-block w-2 h-2 bg-[#f4b6c2] rotate-45" />
+      {t('Poesía potencial', 'Potential poetry')}
+    </button>
+
+    <a
+      href="https://buymeacoffee.com/poesiaalgoa"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-mono-lt text-[10px] sm:text-[11px] uppercase tracking-wide text-ink/60 hover:text-ink transition inline-flex items-center gap-1.5"
+    >
+      <span aria-hidden="true">☕</span>
+      {t('Invítame a un café', 'Buy me a coffee')}
+    </a>
+  </div>
+
+  <div className="flex items-center gap-4">
+
             <LanguageToggle />
             <span className="font-mono-lt text-[10px] text-ink/40 hidden sm:inline">
               {t('Poesía Algorítmica 2026', 'Algorithmic Poetry 2026')}
