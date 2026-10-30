@@ -326,9 +326,12 @@ function App() {
   <div className="reveal grid gap-10 sm:grid-cols-[0.78fr_1.22fr]">
     <div>
       <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Moduli Space</span>
-      <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[2.8]">
-        El <span className="pink-underline italic">moduli space</span> de poemas del diamante de Hodge
-      </h2>
+      <h2
+  className="font-display text-4xl sm:text-5xl mt-4"
+  style={{ lineHeight: '1.4em' }}
+>
+  El <span className="pink-underline italic">moduli space</span> de poemas del diamante de Hodge
+</h2>
     </div>
     <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80">
       En esta sección intentamos construir un espacio de parámetros, también conocido como el <em>moduli space</em>, de todos los poemas que ustedes nos quieran mandar, siguiendo la constricción del diamante de Hodge <a href="#mi-algoritmo" onClick={(e) => { e.preventDefault(); navigateTo('algoritmo', 'mi-algoritmo'); }} className="pink-underline-thin">[ver Mi algoritmo]</a>. Las instrucciones para mandar tu poema están en <a href="#contacto" onClick={(e) => { e.preventDefault(); navigateTo('contacto', 'contacto'); }} className="pink-underline-thin">[Contacto]</a>.
