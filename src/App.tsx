@@ -328,7 +328,7 @@ function App() {
       <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Moduli Space</span>
       <h2
   className="font-display text-4xl sm:text-5xl mt-4"
-  style={{ lineHeight: '1.4em' }}
+  style={{ lineHeight: '1.2em' }}
 >
   El <span className="pink-underline italic">moduli space</span> de poemas del diamante de Hodge
 </h2>
