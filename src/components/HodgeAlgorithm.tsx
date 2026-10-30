@@ -102,11 +102,11 @@ function SymmetryBlock({
       </div>
 
       <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6 max-w-[960px] mx-auto">
-        <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">El poema con la simetría aplicada</span>
+        <span className="font-mono-lt text-[12px] uppercase text-ink/55 text-center block">El poema con la simetría aplicada</span>
         <div className="flex-1 flex items-center justify-center py-6">
           <Diamond values={wordK3} />
         </div>
-        <span className="font-body text-sm text-ink/55 italic text-center block">el diamante hecho verso</span>
+        <span className="font-body text-sm text-[15px] text-ink/55 italic text-center block">el diamante hecho verso</span>
       </div>
     </div>
   );
