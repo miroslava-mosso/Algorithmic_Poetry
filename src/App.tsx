@@ -86,7 +86,7 @@ function App() {
             </span>
           </div>
         </div>
-        <nav aria-label={t('Secciones', 'Sections')} role="tablist" className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-4 pb-6 flex items-center gap-5 sm:gap-10 overflow-x-auto font-mono-lt text-sm sm:text-[13px] uppercase text-ink/70">
+        <nav aria-label={t('Secciones', 'Sections')} role="tablist" className="mx-auto max-w-[1180px] px-5 sm:px-8 pr-8 sm:pr-12 pt-4 pb-6 flex items-center gap-5 sm:gap-10 overflow-x-auto font-mono-lt text-sm sm:text-[13px] uppercase text-ink/70">
           {tabs.map((tab, index) => (
             <span key={tab.id} className="inline-flex items-center gap-5 sm:gap-10 shrink-0">
               {index > 0 && (
