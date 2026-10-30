@@ -323,15 +323,15 @@ export function HodgeAlgorithm() {
     },
     {
       k: 'b₂',
-      formula: <>h<sup className="text-[0.72em]">20</sup> + h<sup className="text-[0.72em]">11</sup> + h<sup className="text-[0.72em]">02</sup> = 1 + 20 + 1 = 22</>,
+      formula: <>h<sup className="text-[0.92em]">20</sup> + h<sup className="text-[0.92em]">11</sup> + h<sup className="text-[0.92em]">02</sup> = 1 + 20 + 1 = 22</>,
       words: 'bruma + veinte sílabas + bruma',
     },
     {
       k: 'b₁ = b₃',
       formula: <>
-        h<sup className="text-[0.72em]">10</sup> + h<sup className="text-[0.72em]">01</sup>
+        h<sup className="text-[0.92em]">10</sup> + h<sup className="text-[0.92em]">01</sup>
         {' = '}
-        h<sup className="text-[0.72em]">21</sup> + h<sup className="text-[0.72em]">12</sup>
+        h<sup className="text-[0.92em]">21</sup> + h<sup className="text-[0.92em]">12</sup>
         {' = 0 + 0 = 0'}
       </>,
       words: '[silencio]',
