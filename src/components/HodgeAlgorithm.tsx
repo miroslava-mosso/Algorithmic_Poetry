@@ -242,11 +242,11 @@ export function HodgeAlgorithm() {
 
               <div className="mt-8">
                 <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6">
-                  <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">Puliendo el diamante de Hodge: ahora con los números sustituidos por las palabras.</span>
+                  <span className="font-mono-lt text-[13px] uppercase text-ink/55 text-center block">Puliendo el diamante de Hodge: ahora con los números sustituidos por las palabras.</span>
                   <div className="flex-1 flex items-center justify-center py-6">
                     <Diamond values={wordK3} />
                   </div>
-                  <span className="font-body text-sm text-ink/55 italic text-center block">Diamante de Hodge de la superficie K3 traducido en un poema.</span>
+                  <span className="font-body text-sm text-[20px] text-ink/55 italic text-center block">Diamante de Hodge de la superficie K3 traducido en un poema.</span>
                 </div>
               </div>
             </div>
