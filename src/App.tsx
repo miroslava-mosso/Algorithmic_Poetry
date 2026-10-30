@@ -334,7 +334,7 @@ function App() {
 </h2>
     </div>
     <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80">
-      En esta sección intentamos construir un espacio de parámetros, también conocido como el <em>moduli space</em>, de todos los poemas que ustedes nos quieran mandar, siguiendo la constricción del diamante de Hodge en <a href="#mi-algoritmo" onClick={(e) => { e.preventDefault(); navigateTo('algoritmo', 'mi-algoritmo'); }} className="pink-underline-thin">Mi algoritmo</a>. Las instrucciones para mandar tu poema están en <a href="#contacto" onClick={(e) => { e.preventDefault(); navigateTo('contacto', 'contacto'); }} className="pink-underline-thin">[Contacto]</a>.
+      En esta sección intentamos construir un espacio de parámetros, también conocido como el <em>moduli space</em>, de todos los poemas que ustedes nos quieran mandar, siguiendo la constricción del diamante de Hodge en <a href="#mi-algoritmo" onClick={(e) => { e.preventDefault(); navigateTo('algoritmo', 'mi-algoritmo'); }} className="pink-underline-thin">Mi algoritmo</a>. Las instrucciones para mandar tu poema se encuentran en <a href="#contacto" onClick={(e) => { e.preventDefault(); navigateTo('contacto', 'contacto'); }} className="pink-underline-thin">Contacto</a>.
     </p>
   </div>
 </div>
