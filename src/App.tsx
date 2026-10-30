@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from 'react';import { getPoems } from '@/poems';
+import { useState, useEffect, useRef } from 'react';
+import { getPoems } from '@/poems';
 import { getMathAreas } from '@/mathAreas';
 import { useReveal } from '@/useReveal';
 import { useLang } from '@/i18n';
