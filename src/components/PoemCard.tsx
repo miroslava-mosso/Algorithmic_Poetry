@@ -1,10 +1,13 @@
 
 import { useState } from 'react';
 import { poems, type Poem } from '@/poems';
+import { useLang } from '@/i18n';
 import { PoemShapeView } from './PoemShapeView';
 import { Lightbox } from './Lightbox';
 
-export function PoemCard({ poem, i, placeholder = false, language = 'es' }: { poem: Poem; i: number; placeholder?: boolean; language?: 'es' | 'en' }) {
+export function PoemCard({ poem, i, placeholder = false, language: languageProp }: { poem: Poem; i: number; placeholder?: boolean; language?: 'es' | 'en' }) {
+  const { lang } = useLang();
+  const language = languageProp ?? lang;
   const comingSoon = language === 'en' ? 'COMING SOON' : 'PRÓXIMAMENTE';
   // Keep the artwork's original line layout in both languages. Translated
   // lines can change the geometry and break the shape of the visual poems.
@@ -86,7 +89,25 @@ className={
             <span className="font-display text-4xl sm:text-6xl italic text-ink/45">{comingSoon}</span>
           </div>
         ) : (
-          <PoemShapeView shape={artwork.shape} lines={artwork.lines} />
+          <div className={poem.id === 'cruz'
+            ? 'grid w-full min-w-0 items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(14rem,0.72fr)]'
+            : 'flex w-full min-w-0 flex-col items-center gap-8'}>
+            <div className="flex w-full min-w-0 items-center justify-center">
+              <PoemShapeView shape={artwork.shape} lines={artwork.lines} />
+            </div>
+            {language === 'en' && poem.translation && poem.translation.length > 0 && (
+              <div className={`w-full ${poem.id === 'cruz' ? 'text-left' : 'max-w-[65ch] text-center'}`}>
+                <p className="mb-4 font-mono-lt text-[10px] uppercase tracking-wide text-ink/45">English translation</p>
+                <div className={`space-y-2 font-body text-lg sm:text-xl leading-[1.55] ${poem.id === 'cruz' ? '' : 'flex flex-col items-center'}`}>
+                  {poem.translation.map((line, index) => (
+                    <p key={index} className={line.pinkUnderline ? 'pink-underline-thin' : undefined} style={{ color: line.color ?? '#0d0d0d', opacity: line.opacity ?? 1 }}>
+                      {line.text}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         )}
       </Lightbox>
     </>
