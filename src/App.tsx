@@ -251,7 +251,27 @@ function App() {
     </div>
 
     {/* ── Versión original ────────────────────────── */}
-  
+    <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-4">
+      <h3 className="font-display text-2xl sm:text-3xl">
+        <span className="pink-underline">Versión original</span>
+      </h3>
+    </div>
+
+    <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-12 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
+      {poems.map((p, i) => (
+        <PoemCard
+          key={`${p.id}-original`}
+          poem={{
+            ...p,
+            id: `${p.id}-original`,
+            index: `O${i + 1}`,
+          }}
+          i={i}
+          placeholder={true}
+        />
+      ))}
+    </div>
+
   </section>
 </div>}
 
