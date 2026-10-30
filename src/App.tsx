@@ -67,7 +67,7 @@ function App() {
               )}
 
                             <button
-                id={'tab-' + tab.id}
+                id={`tab-${tab.id}`}
                 type="button"
                 role="tab"
                 aria-selected={activeTab === tab.id}
