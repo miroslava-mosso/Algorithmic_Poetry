@@ -39,9 +39,8 @@ function App() {
         </div>
         <nav aria-label="Secciones" role="tablist" className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-4 pb-6 flex items-center gap-5 sm:gap-10 overflow-x-auto font-mono-lt text-sm sm:text-[13px] uppercase text-ink/70">
           
-
 {tabs.map((tab, index) => (
-  <span key={tab.id} className="inline-flex items-center gap-5 sm:gap-10 shrink-0">
+  <React.Fragment key={tab.id}>
     {index > 0 && (
       <span
         aria-hidden="true"
@@ -64,7 +63,7 @@ function App() {
     >
       {tab.label}
     </button>
-  </span>
+  </React.Fragment>
 ))}
         </nav>
       </header>
@@ -172,80 +171,74 @@ function App() {
       </section>
 
       </div>}
-      
 
       {/* ── Galería ─────────────────────────────────────── */}
       {activeTab === 'galeria' && <div id="panel-galeria" role="tabpanel">
-        <section id="galeria" className="border-b hairline">
-
-          {/* Encabezado original de Galería */}
-          <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
-            <div className="reveal grid gap-10 sm:grid-cols-[1.5fr_0.8fr]">
-              <div>
-                <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Galería</span>
-                <h2
-                  className="font-display text-4xl sm:text-5xl mt-4"
-                  style={{ lineHeight: '1.3' }}
-                >
-                  Cuatro <span className="pink-underline">formas</span> geométricas, cuatro <span className="pink-underline">poemas</span> diferentes
-                </h2>
-              </div>
-
-              <div>
-                <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/60">
-                  Pasa el cursor y haz clic sobre cada poema para verlo en grande. La restricción geométrica define la forma y el texto su contenido.
-                </p>
-                <div className="mt-5 pt-3 border-t hairline">
-                  <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
-                    Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* ── Versión digitalizada ───────────────────── */}
-          <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-4">
-            <h3 className="font-display text-2xl sm:text-3xl">
-              <span className="pink-underline">Versión digitalizada</span>
-            </h3>
-          </div>
-
-          {/* Las cuatro figuras originales */}
-          <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-10 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
-            {poems.map((p, i) => (
-              <PoemCard key={p.id} poem={p} i={i} />
-            ))}
-          </div>
-
-          {/* ── Versión original ───────────────────────── */}
-          <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-4">
-            <h3 className="font-display text-2xl sm:text-3xl">
-              <span className="pink-underline">Versión original</span>
-            </h3>
-          </div>
-
-          {/* Cuatro plantillas vacías */}
-          <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-8 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
-            {poems.map((p, i) => (
-              <PoemCard
-                key={`${p.id}-original`}
-                poem={{
-                  ...p,
-                  id: `${p.id}-original`,
-                  index: `O${i + 1}`,
-                }}
-                i={i}
-                placeholder={true}
-              />
-            ))}
-          </div>
-
-        </section>
+      <section id="galeria" className="border-b hairline">
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
+  <div className="reveal grid gap-10 sm:grid-cols-[1.5fr_0.8fr]">
+    <div>
+      <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Galería</span>
+      <h2
+  className="font-display text-4xl sm:text-5xl mt-4"
+  style={{ lineHeight: '1.3' }}>
+        Cuatro <span className="pink-underline">formas</span> geométricas, cuatro <span className="pink-underline">poemas</span> diferentes
+      </h2>
+    </div>
+    <div>
+      <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/60">
+        Pasa el cursor y haz clic sobre cada poema para verlo en grande. La restricción geométrica define la forma y el texto su contenido.
+      </p>
+      <div className="mt-5 pt-3 border-t hairline">
+        <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
+          Textos originales de: <span className="text-ink">Miroslava Mosso Rojas</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-8 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
+          {poems.map((p, i) => (
+            <PoemCard key={p.id} poem={p} i={i} />
+          ))}
+        </div>
+      </section>
       </div>}
 
+      {/* ── Áreas matemáticas ──────────────────────────── */}
+      {activeTab === 'areas' && <div id="panel-areas" role="tabpanel">
+      <section id="areas">
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
+          <div className="reveal flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Áreas</span>
+              <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
+                Cinco <span className="pink-underline">territorios</span> matemáticos
+              </h2>
+            </div>
+            <p className="font-body text-lg sm:text-xl text-ink/60 max-w-[36ch]">
+              Cada área matemática abre una manera distinta de jugar con el
+              lenguaje. Hay tres ejemplos por cada territorio matemático.
+            </p>
+          </div>
 
+          <nav className="reveal mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono-lt text-[11px] uppercase text-ink/60">
+            {mathAreas.map((a) => (
+              <a key={a.id} href={`#${a.id}`} className="hover:text-ink transition">
+                <span className="text-[#f4b6c2] mr-1.5">{a.index}</span>
+                {a.title}
+              </a>
+            ))}
+          </nav>
+        </div>
 
+        <div className="border-t hairline">
+          {mathAreas.map((a, i) => (
+            <MathAreaCard key={a.id} area={a} i={i} />
+          ))}
+        </div>
+      </section>
+      </div>}
 
       {activeTab === 'algoritmo' && <div id="panel-algoritmo" role="tabpanel">
       <HodgeAlgorithm />
@@ -286,7 +279,7 @@ function App() {
             <div className="flex flex-col gap-4">
               <div>
                 <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">Correo</p>
-                <p className="font-display text-2xl mt-1">poesia.algoritmica@proton.me</p>
+                <p className="font-display text-2xl mt-1">poesia@potencial.co</p>
               </div>
               <div>
                 <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">Manda tu poema</p>
@@ -324,15 +317,12 @@ function App() {
   <div className="reveal grid gap-10 sm:grid-cols-[0.78fr_1.22fr]">
     <div>
       <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Moduli Space</span>
-      <h2
-  className="font-display text-4xl sm:text-5xl mt-4"
-  style={{ lineHeight: '1.2em' }}
->
-  El <span className="pink-underline italic">moduli space</span> de poemas del diamante de Hodge
-</h2>
+      <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
+        El <span className="pink-underline italic">moduli space</span> de poemas del diamante de Hodge
+      </h2>
     </div>
     <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80">
-      En esta sección intentamos construir un espacio de parámetros, también conocido como el <em>moduli space</em>, de todos los poemas que ustedes nos quieran mandar, siguiendo la constricción del diamante de Hodge en <a href="#mi-algoritmo" onClick={(e) => { e.preventDefault(); navigateTo('algoritmo', 'mi-algoritmo'); }} className="pink-underline-thin">Mi algoritmo</a>. Las instrucciones para mandar tu poema se encuentran en <a href="#contacto" onClick={(e) => { e.preventDefault(); navigateTo('contacto', 'contacto'); }} className="pink-underline-thin">Contacto</a>.
+      En esta sección intentamos construir un espacio de parámetros, también conocido como el <em>moduli space</em>, de todos los poemas que ustedes nos quieran mandar, siguiendo la constricción del diamante de Hodge <a href="#mi-algoritmo" onClick={(e) => { e.preventDefault(); navigateTo('algoritmo', 'mi-algoritmo'); }} className="pink-underline-thin">[ver Mi algoritmo]</a>. Las instrucciones para mandar tu poema están en <a href="#contacto" onClick={(e) => { e.preventDefault(); navigateTo('contacto', 'contacto'); }} className="pink-underline-thin">[Contacto]</a>.
     </p>
   </div>
 </div>
