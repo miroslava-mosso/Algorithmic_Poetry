@@ -109,7 +109,7 @@ function App() {
               </button>
             </span>
           ))}
-<div className="ml-3 shrink-0">
+<div className="ml-3 mr-2 shrink-0">
   <BuyMeACoffeeButton
     text={t('Invítame un café', 'Buy me a coffee')}
   />
