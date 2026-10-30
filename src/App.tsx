@@ -217,8 +217,7 @@ function App() {
                 Cinco <span className="pink-underline">territorios</span> matemáticos
               </h2>
             </div>
-                        <div className="max-w-[36ch]">
-              <div className="max-w-[42ch] ml-auto">
+                        <div className="max-w-[42ch] ml-auto">
   <p className="font-body text-lg sm:text-xl text-ink/60 leading-relaxed">
     Cada área matemática abre una manera distinta de jugar con el
     lenguaje. Hay tres ejemplos por cada territorio matemático.
