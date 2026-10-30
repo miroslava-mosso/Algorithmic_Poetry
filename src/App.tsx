@@ -211,7 +211,7 @@ function App() {
       <section id="areas">
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-10 sm:pt-16 pb-6">
           <div className="reveal flex items-end justify-between gap-6 flex-wrap">
-            <div className="-translate-y-2">
+            <div className="-translate-y-10">
               <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ Áreas</span>
               <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
                 Cinco <span className="pink-underline">territorios</span> matemáticos
