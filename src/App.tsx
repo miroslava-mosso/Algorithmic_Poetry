@@ -188,14 +188,11 @@ function App() {
         </div>
 
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-8 pb-4 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
-  <h3 className="font-display text-2xl sm:text-3xl">
-    <span className="pink-underline">Versión digitalizada</span>
-  </h3>
-</div>
-
-<div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-10 grid gap-0 grid-cols-2 lg:grid-cols-4">
-  {/* Aquí permanecen tus PoemCard */}
-</div>
+          <h3 className="font-display text-2xl sm:text-3xl">
+            <span className="pink-underline">Versión digitalizada</span>
+          </h3>
+        </div>
+    <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-10 grid gap-0 grid-cols-2 lg:grid-cols-4">
           {poems.map((p, i) => (
             <PoemCard key={p.id} poem={p} i={i} />
           ))}
