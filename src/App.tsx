@@ -186,10 +186,9 @@ function App() {
             </div>
           </div>
         </div>
-
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-6 pb-3 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
           <h3 className="font-display text-2xl sm:text-3xl">
-            <span className="pink-underline">Versión digitalizada</span>
+            <span className="border-l-2 border-[#f4b6c2] pl-5 py-1">Versión digitalizada</span>
           </h3>
         </div>
     <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-10 grid gap-0 grid-cols-2 lg:grid-cols-4">
