@@ -23,43 +23,37 @@ function BuyMeACoffeeIcon({ className = '' }: { className?: string }) {
 }
 
 function BuyMeACoffeeButton({ text }: { text: string }) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const buttonUrl = new URL(
+    'https://img.buymeacoffee.com/button-api/'
+  );
 
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+  buttonUrl.search = new URLSearchParams({
+    text,
+    emoji: '☕',
+    slug: 'poesiaalgoa',
+    button_colour: 'FFDD00',
+    font_colour: '000000',
+    font_family: 'Cookie',
+    outline_colour: '000000',
+    coffee_colour: 'ffffff',
+  }).toString();
 
-    container.replaceChildren();
-
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
-    script.async = true;
-
-    script.setAttribute('data-name', 'bmc-button');
-    script.setAttribute('data-slug', 'poesiaalgoa');
-    script.setAttribute('data-color', '#FFDD00');
-    script.setAttribute('data-emoji', '☕');
-    script.setAttribute('data-font', 'Cookie');
-    script.setAttribute('data-text', text);
-    script.setAttribute('data-outline-color', '#000000');
-    script.setAttribute('data-font-color', '#000000');
-    script.setAttribute('data-coffee-color', '#ffffff');
-
-    script.onload = () => {
-      window.dispatchEvent(new Event('DOMContentLoaded'));
-    };
-
-    container.appendChild(script);
-
-    return () => {
-      container.replaceChildren();
-    };
-  }, [text]);
-
-  return <div ref={containerRef} className="inline-flex" />;
+  return (
+    <a
+      href="https://buymeacoffee.com/poesiaalgoa"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center"
+      aria-label={text}
+    >
+      <img
+        src={buttonUrl.toString()}
+        alt={text}
+        className="h-[42px] w-auto"
+      />
+    </a>
+  );
 }
-
 
 function App() {
   const ref = useReveal<HTMLDivElement>();
