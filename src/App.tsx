@@ -23,21 +23,6 @@ function BuyMeACoffeeIcon({ className = '' }: { className?: string }) {
 }
 
 function BuyMeACoffeeButton({ text }: { text: string }) {
-  const buttonUrl = new URL(
-    'https://img.buymeacoffee.com/button-api/'
-  );
-
-  buttonUrl.search = new URLSearchParams({
-    text,
-    emoji: '☕',
-    slug: 'poesiaalgoa',
-    button_colour: 'FFDD00',
-    font_colour: '000000',
-    font_family: 'Cookie',
-    outline_colour: '000000',
-    coffee_colour: 'ffffff',
-  }).toString();
-
   return (
     <a
       href="https://buymeacoffee.com/poesiaalgoa"
@@ -47,7 +32,7 @@ function BuyMeACoffeeButton({ text }: { text: string }) {
       aria-label={text}
     >
       <img
-        src={buttonUrl.toString()}
+        src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
         alt={text}
         className="h-[42px] w-auto"
       />
