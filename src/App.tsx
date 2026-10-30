@@ -421,7 +421,7 @@ function App() {
               </div>
 
               {/* ── Apoya el proyecto / Buy Me a Coffee ── */}
-              <div className="mt-6 pt-5 border-t border-[#f7f5f1]/15">
+              <div className="mt-16 pt-8 border-t border-[#f7f5f1]/15">
                 <p className="font-mono-lt text-[10px] uppercase text-[#f7f5f1]/45">
                   {t('Apoya el proyecto', 'Support the project')}
                 </p>
