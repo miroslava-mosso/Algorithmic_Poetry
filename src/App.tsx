@@ -328,6 +328,16 @@ function App() {
                   'You can send it as a hand-drawn or digital drawing, photograph, visual composition, collage, or any other visual form that explores the possibilities of the algorithm.'
                 )}
               </p>
+              </p>
+              <p className="font-body text-lg text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
+                {t(
+                  'Publicaré todos los poemas que me manden en la sección llamada Moduli Space. Intentaré actualizar la página una vez al mes. No hay fecha límite para mandar tu poema.',
+                  'I will publish all the poems that you send me in the section 
+      <a href="#mi-algoritmo" onClick={(e) => { e.preventDefault(); navigateTo('algoritmo', 'mi-algoritmo'); }} className="hover:text-ink transition">
+                    {t('Moduli Space', 'Moduli Space')}
+                  </a> I will try to update the web page once a month. There is no deadline to send your poem. .'
+                )}
+              </p>
             </div>
 
             <div className="flex flex-col gap-4">
