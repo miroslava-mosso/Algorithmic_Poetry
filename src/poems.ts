@@ -73,7 +73,7 @@ export const poemsEnglish: Poem[] = [
     lines: [],
     translation: [
       { text: 'The damage is done', color: '#0d0d0d' },
-      { text: 'Exile from my homeland', color: '#0d0d0d', pinkUnderline: true },
+      { text: 'from my homeland the exile', color: '#0d0d0d', pinkUnderline: true },
     ],
   },
   {
