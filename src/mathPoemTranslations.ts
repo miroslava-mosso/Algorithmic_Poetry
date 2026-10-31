@@ -5,6 +5,7 @@ export interface TranslatedVerse {
   color?: string;
   opacity?: number;
   segments?: { text: string; color: string }[];
+  textStyle?: 'lilac-outline' | 'pink-outline';
 }
 
 export interface TranslatedPoemSection {
