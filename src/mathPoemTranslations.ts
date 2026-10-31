@@ -81,7 +81,7 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
   'trefoil-knot': [
     {
       lines: [
-        { text: 'What do you see when you close your eyes? I wake and cannot tell reality from dreams. A minute stretches out in time. Memories of a distant past life. Dawn comes each day as long as I keep existing.', color: ink },
+        { text: 'What do you see when you close your eyes? I wake and cannot distinguish reality from dreams. A minute feels elongated in time. Memories of a distant past life. Dawn comes each day as long as I keep existing.', color: ink },
       ],
     },
   ],
