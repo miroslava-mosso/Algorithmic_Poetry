@@ -54,14 +54,14 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
       lines: [{ text: 'a cat observes us', color: ink }],
     },
     {
-      title: 'Second iteration',
-      lines: [
-        { text: '', segments: [{ text: 'A', color: ink }, { text: ' phone is ringing', color: blue }] },
-        { text: '', segments: [{ text: 'Cat', color: ink }, { text: ' who got lost', color: blue }] },
-        { text: '', segments: [{ text: ' meowed', color: blue } { text: 'us', color: ink }, { text: 'from outside', color: blue }] },
-        { text: '', segments: [{ text: 'observes', color: ink }, { text: ' our quiet secrets', color: blue }] },
-      ],
-    },
+  title: 'Second iteration',
+  lines: [
+    { text: '', segments: [{ text: 'A', color: ink }, { text: ' phone is ringing', color: blue }] },
+    { text: '', segments: [{ text: 'Cat', color: ink }, { text: ' who got lost', color: blue }] },
+    { text: '', segments: [{ text: ' meowed', color: blue }, { text: 'us', color: ink }, { text: 'from outside', color: blue }] },
+    { text: '', segments: [{ text: 'observes', color: ink }, { text: ' our quiet             secrets', color: blue }] },
+  ],
+},
   ],
   'hopf-link': [
     {
