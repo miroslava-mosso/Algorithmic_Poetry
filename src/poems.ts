@@ -11,6 +11,7 @@ export interface Poem {
   manifest: string;
   lines: string[];
   translation?: { text: string; color?: string; opacity?: number; pinkUnderline?: boolean }[];
+  textStyle?: 'lilac-outline' | 'pink-outline';
 }
 
 export const poems: Poem[] = [
