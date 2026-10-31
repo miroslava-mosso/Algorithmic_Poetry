@@ -113,7 +113,12 @@ export const poemsEnglish: Poem[] = [
     lines: [],
     translation: [
   {
-    text: 'I tasted the sun reflected in the water. Its heat burned my lips. Transparent were the',
+    text: 'I tasted the sun reflected in the water. Its heat burned my lips.',
+    color: '#0d0d0d',
+    underline: 'pink',
+  },
+  {
+    text: 'Transparent were the',
     color: '#0d0d0d',
     underline: 'pink',
   },
