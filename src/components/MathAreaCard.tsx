@@ -152,7 +152,22 @@ function MathExample({ ex, language }: { ex: MathExample; language: 'es' | 'en' 
           <div key={sectionIndex} className="space-y-2">
             {section.title && <p className="mb-3 font-mono-lt text-[10px] uppercase text-ink/40">{section.title}</p>}
             {section.lines.map((line, lineIndex) => (
-              <p key={lineIndex} className="font-body text-base sm:text-lg leading-relaxed" style={{ color: line.color ?? '#0d0d0d', opacity: line.opacity ?? 1 }}>
+              <p
+  key={lineIndex}
+  className="font-body text-base sm:text-lg leading-relaxed"
+  style={{
+    color: line.color ?? '#0d0d0d',
+    opacity: line.opacity ?? 1,
+    ...(line.textStyle === 'lilac-outline' && {
+      paintOrder: 'stroke',
+      WebkitTextStroke: '0.5px #B69AE8',
+    }),
+    ...(line.textStyle === 'pink-outline' && {
+      paintOrder: 'stroke',
+      WebkitTextStroke: '2.5px #f4b6c2',
+    }),
+  }}
+>
                 {line.segments
                   ? line.segments.map((segment, segmentIndex) => <span key={segmentIndex} style={{ color: segment.color }}>{segment.text}</span>)
                   : line.text}
