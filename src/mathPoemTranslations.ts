@@ -64,16 +64,18 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
   ],
 },
   ],
-  'hopf-link': [
+'hopf-link': [
     {
       lines: [
         {
           text: 'While the house smelled of freshly baked cake',
           color: '#0d0d0d',
+          textStyle: 'lilac-outline',
         },
         {
           text: 'Something broke when the siblings were separated',
           color: '#0d0d0d',
+          textStyle: 'pink-outline',
         },
       ],
     },
