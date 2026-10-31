@@ -51,7 +51,7 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
   'koch-snowflake': [
     {
       title: 'First iteration',
-      lines: [{ text: 'a cat watches us', color: ink }],
+      lines: [{ text: 'a cat observes us', color: ink }],
     },
     {
       title: 'Second iteration',
