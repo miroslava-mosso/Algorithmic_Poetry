@@ -82,7 +82,7 @@ export const poemsEnglish: Poem[] = [
     manifest: 'An ancient Persian deity who embodies infinite time and space. The tarkib-band is a poetic form found in Persian and Urdu literature.',
     lines: [],
     translation: [
-      { text: 'The surface, softly infinite, is closed within itself.', color: '#171717' },
+      { text: 'Infinitely smooth surface, is closed within itself.', color: '#171717' },
       { text: 'The dawns will keep returning,', color: '#8f2638' },
       { text: 'existing in time,', color: '#8f2638' },
       { text: 'repeating, and the cherry trees,', color: '#8f2638' },
