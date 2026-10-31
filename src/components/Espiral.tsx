@@ -59,7 +59,7 @@ export function Espiral({ lines }: EspiralProps) {
     .join(' ');
 
   const secondVerse =
-    'Gotas de café amargo. Despierto después de medio día';
+    'Las gotas de café amargo. Despierto después de medio día';
 
   return (
     <svg
