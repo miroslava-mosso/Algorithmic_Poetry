@@ -113,7 +113,7 @@ export const poemsEnglish: Poem[] = [
     lines: [],
     translation: [
       { text: 'I tasted the sun reflected in the water. Its heat burned my lips. Transparent were the', color: '#0d0d0d' },
-      { text: 'the drops of bitter coffee. I wake after midday.', color: '#0d0d0d' },
+      { text: 'the drops of bitter coffee. I wake up after midday.', color: '#0d0d0d' },
     ],
   },
 ];
