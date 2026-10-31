@@ -101,8 +101,8 @@ className={
                 <div className={`space-y-2 font-body text-lg sm:text-xl leading-[1.55] ${poem.id === 'cruz' ? '' : 'flex flex-col items-center'}`}>
                   {poem.translation.map((line, index) => (
                     <p key={index} className={line.pinkUnderline ? 'pink-underline-thin' : undefined} style={{ color: line.color ?? '#0d0d0d', opacity: line.opacity ?? 1 }}>
-                      {line.text}
-                    </p>
+  {line.text}
+</p>
                   ))}
                 </div>
               </div>
