@@ -127,11 +127,11 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
   primo: [
     {
       lines: [
-        { text: 'Clear sky opens above us', color: ink },
-        { text: 'crickets softly call', color: ink },
-        { text: 'crickets sing', color: ink },
-        { text: 'You walk beside me till dawn', color: ink },
-        { text: 'the morning soon breaks', color: ink },
+        { text: 'The clear sky', color: ink },
+        { text: 'the sound of', color: ink },
+        { text: 'the crickets', color: ink },
+        { text: 'which keep me company', color: ink },
+        { text: 'till dawn', color: ink },
         { text: 'silence roars', color: ink },
         { text: 'how loudly loneliness rings', color: ink },
         { text: 'distance stays present', color: ink },
