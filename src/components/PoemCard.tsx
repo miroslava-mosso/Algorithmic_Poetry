@@ -102,7 +102,15 @@ className={
                   {poem.translation.map((line, index) => (
                     <p
   key={index}
-  className={line.pinkUnderline ? 'pink-underline-thin w-fit' : undefined}
+  className={
+  line.underline === 'pink'
+    ? 'pink-underline-soft w-fit'
+    : line.underline === 'green'
+      ? 'green-underline-thin w-fit'
+      : line.pinkUnderline
+        ? 'pink-underline-thin w-fit'
+        : undefined
+}
   style={{
     color: line.color ?? '#0d0d0d',
     opacity: line.opacity ?? 1,
