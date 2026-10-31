@@ -74,7 +74,7 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
   'figure-eight-knot': [
     {
       lines: [
-        { text: 'What do you see when you close your eyes? Nothingness, emptiness, darkness, the fear of losing myself and not being able to return. Sometimes I feel I have lived a thousand lives. I have already forgotten many of them.', color: ink },
+        { text: 'What do you see when you close your eyes? Nothingness, emptiness, darkness, the fear of losing myself and not being able to return. Sometimes I feel I have lived a thousand lives. Many of them I have already forgotten.', color: ink },
       ],
     },
   ],
