@@ -63,18 +63,20 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
   ],
 },
   ],
-'hopf-link': [
-  {
-    text: 'While the house smelled of freshly baked cake',
-    color: '#0d0d0d',
-    textStyle: 'lilac-outline',
-  },
-  {
-    text: 'Something broke when the siblings were separated',
-    color: '#0d0d0d',
-    textStyle: 'pink-outline',
-  },
-],
+  'hopf-link': [
+    {
+      lines: [
+        {
+          text: 'While the house smelled of freshly baked cake',
+          color: '#0d0d0d',
+        },
+        {
+          text: 'Something broke when the siblings were separated',
+          color: '#0d0d0d',
+        },
+      ],
+    },
+  ],
   'figure-eight-knot': [
     {
       lines: [
