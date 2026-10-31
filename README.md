@@ -1,7 +1,7 @@
 # Algorithmic_Poetry
 
 
-[**Visita la página publicada**](https://miroslava-mosso.github.io/Algorithmic_Poetry/)
+[**Visit the website**](https://miroslava-mosso.github.io/Algorithmic_Poetry/)
 
 Experimental poetry + mathematics.
 
