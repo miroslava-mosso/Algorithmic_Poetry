@@ -99,26 +99,46 @@ className={
               <div className={`w-full ${poem.id === 'cruz' ? 'text-left' : 'max-w-[65ch] text-center'}`}>
                 <p className="mb-4 font-mono-lt text-[10px] uppercase tracking-wide text-ink/45">English translation</p>
                 <div className={`space-y-2 font-body text-lg sm:text-xl leading-[1.55] ${poem.id === 'cruz' ? '' : 'flex flex-col items-center'}`}>
-                  {poem.translation.map((line, index) => (
-                    <p
-  key={index}
-  className={
-  line.underline === 'pink'
-    ? 'pink-underline-soft w-fit'
-    : line.underline === 'green'
-      ? 'green-underline-thin w-fit'
-      : line.pinkUnderline
-        ? 'pink-underline-thin w-fit'
-        : undefined
-}
-  style={{
-    color: line.color ?? '#0d0d0d',
-    opacity: line.opacity ?? 1,
-  }}
->
-  {line.text}
-</p>
-                  ))}
+         {poem.translation.map((line, index) => (
+  <p
+    key={index}
+    className={
+      line.underline === 'pink'
+        ? 'pink-underline-soft w-fit'
+        : line.underline === 'green'
+          ? 'green-underline-thin w-fit'
+          : line.pinkUnderline
+            ? 'pink-underline-thin w-fit'
+            : undefined
+    }
+    style={{
+      color: line.color ?? '#0d0d0d',
+      opacity: line.opacity ?? 1,
+      fontSize:
+        line.textStyle === 'lilac-outline'
+          ? '9px'
+          : line.textStyle === 'pink-outline'
+            ? '8px'
+            : undefined,
+      letterSpacing:
+        line.textStyle === 'lilac-outline'
+          ? '0.3px'
+          : line.textStyle === 'pink-outline'
+            ? '0.6px'
+            : undefined,
+      WebkitTextStroke:
+        line.textStyle === 'lilac-outline'
+          ? '0.5px #B69AE8'
+          : line.textStyle === 'pink-outline'
+            ? '2.5px #f4b6c2'
+            : undefined,
+      paintOrder: 'stroke',
+      strokeLinejoin: 'round',
+    }}
+  >
+    {line.text}
+  </p>
+))}
                 </div>
               </div>
             )}
