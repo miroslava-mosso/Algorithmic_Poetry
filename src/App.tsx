@@ -92,7 +92,7 @@ function App() {
   className="mx-auto w-full max-w-[1500px] px-4 sm:px-8 pt-4 pb-6 flex items-center justify-between gap-3 overflow-visible font-mono-lt text-[11px] sm:text-[13px] uppercase text-ink/70 whitespace-nowrap"
 >
           {tabs.map((tab, index) => (
-            <span key={tab.id} className="inline-flex items-center gap-5 sm:gap-10 shrink-0">
+            <span key={tab.id} className="inline-flex items-center gap-3 sm:gap-5 shrink-0">
               {index > 0 && (
                 <span aria-hidden="true" className="inline-block w-1.5 h-1.5 bg-[#f4b6c2] rotate-45 shrink-0" />
               )}
