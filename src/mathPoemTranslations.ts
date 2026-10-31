@@ -59,7 +59,7 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
     { text: '', segments: [{ text: 'A', color: ink }, { text: ' phone is ringing', color: blue }] },
     { text: '', segments: [{ text: 'Cat', color: ink }, { text: ' who got lost', color: blue }] },
     { text: '', segments: [{ text: ' meowed', color: blue }, { text: ' us ', color: ink }, { text: 'from outside', color: blue }] },
-    { text: '', segments: [{ text: 'observes', color: ink }, { text: ' our quiet             secrets', color: blue }] },
+    { text: '', segments: [{ text: 'observes', color: ink }, { text: ' our             secret pacts', color: blue }] },
   ],
 },
   ],
