@@ -146,8 +146,8 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
       lines: [
         { text: 'light', color: ink },
         { text: 'shawl', color: ink },
-        { text: 'ember', color: ink },
-        { text: 'woven wool', color: ink },
+        { text: 'fire', color: ink },
+        { text: 'of wool', color: ink },
         { text: 'a shawl to warm me', color: ink },
         { text: 'under a wide and cloudless sky', color: ink },
       ],
