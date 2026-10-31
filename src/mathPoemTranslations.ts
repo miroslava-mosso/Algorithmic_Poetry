@@ -21,7 +21,7 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
     {
       title: 'Original poem',
       lines: [
-        { text: 'Debris, remnants after the gale', color: ink },
+        { text: 'Remnants, debris after the gale', color: ink },
         { text: 'The passage of time', color: ink },
         { text: 'eroded the earth,', color: ink },
         { text: 'mutilated the memory of the', color: ink },
@@ -32,8 +32,8 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
       title: 'Reflected poem',
       lines: [
         { text: 'Precise image,', color: ink },
-        { text: '—the one held in memory—', color: ink },
-        { text: 'it was mutilated; the earth eroded,', color: ink },
+        { text: '—the one of the memory—', color: ink },
+        { text: 'it was mutilated; the earth eroded it,', color: ink },
         { text: 'the passage of time,', color: ink },
         { text: 'the gale,', color: ink },
         { text: '—the one that came after—', color: ink },
