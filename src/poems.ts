@@ -103,7 +103,7 @@ export const poemsEnglish: Poem[] = [
       { text: 'I do not want', color: '#0d0d0d', opacity: 0.4 },
       { text: 'to close', color: '#0d0d0d', opacity: 0.3 },
       { text: 'my', color: '#0d0d0d', opacity: 0.2 },
-      { text: 'e.', color: '#0d0d0d', opacity: 0.1 },
+      { text: 'e', color: '#0d0d0d', opacity: 0.1 },
     ],
   },
   {
