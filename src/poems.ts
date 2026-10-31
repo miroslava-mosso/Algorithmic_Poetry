@@ -10,8 +10,14 @@ export interface Poem {
   technique: string;
   manifest: string;
   lines: string[];
-  translation?: { text: string; color?: string; opacity?: number; pinkUnderline?: boolean }[];
+  translation?: {
+  text: string;
+  color?: string;
+  opacity?: number;
+  pinkUnderline?: boolean;
+  underline?: 'pink' | 'green';
   textStyle?: 'lilac-outline' | 'pink-outline';
+}[];
 }
 
 export const poems: Poem[] = [
