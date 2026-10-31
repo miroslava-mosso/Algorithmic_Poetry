@@ -94,8 +94,8 @@ export const poemsEnglish: Poem[] = [
     manifest: 'The poem narrows toward a lower point, like a funnel that condenses meaning into one final syllable.',
     lines: [],
     translation: [
-      { text: 'Clear skies and cricket song', color: '#0d0d0d', opacity: 1 },
-      { text: 'keep me company till dawn.', color: '#0d0d0d', opacity: 0.9 },
+      { text: 'Clear skies, the sound of crickets', color: '#0d0d0d', opacity: 1 },
+      { text: 'which keep me company till dawn.', color: '#0d0d0d', opacity: 0.9 },
       { text: 'How deafening loneliness is,', color: '#0d0d0d', opacity: 0.8 },
       { text: 'how present distance feels.', color: '#0d0d0d', opacity: 0.7 },
       { text: 'Turn on the light. Breathe.', color: '#0d0d0d', opacity: 0.6 },
@@ -103,7 +103,7 @@ export const poemsEnglish: Poem[] = [
       { text: 'I do not want', color: '#0d0d0d', opacity: 0.4 },
       { text: 'to close', color: '#0d0d0d', opacity: 0.3 },
       { text: 'my', color: '#0d0d0d', opacity: 0.2 },
-      { text: 'eyes.', color: '#0d0d0d', opacity: 0.1 },
+      { text: 'e.', color: '#0d0d0d', opacity: 0.1 },
     ],
   },
   {
