@@ -83,11 +83,9 @@ export const poemsEnglish: Poem[] = [
     lines: [],
     translation: [
       { text: 'Infinitely smooth surface, is closed within itself.', color: '#171717' },
-      { text: 'The dawns will keep returning,', color: '#8f2638' },
-      { text: 'existing in time,', color: '#8f2638' },
-      { text: 'repeating, and the cherry trees,', color: '#8f2638' },
-      { text: 'even if I stop,', color: '#8f2638' },
-      { text: 'will go on blooming.', color: '#8f2638' },
+      { text: 'Even if I stop existing in time,', color: '#8f2638' },
+      { text: 'the sunrises will continue repeating,', color: '#8f2638' },
+      { text: 'and the cherry trees will go on blooming,', color: '#8f2638' },
     ],
   },
   {
