@@ -112,9 +112,17 @@ export const poemsEnglish: Poem[] = [
     manifest: 'The poem begins at the outer edge and moves inward, ending where the spiral collapses at its center. You can start a new spiral with the final word of the previous one.',
     lines: [],
     translation: [
-      { text: <span className="pink-underline-soft"> 'I tasted the sun reflected in the water. Its heat burned my lips. Transparent were the', color: '#0d0d0d' </span> },
-      { text: 'the drops of bitter coffee. I wake up after midday.', color: '#0d0d0d' },
-    ],
+  {
+    text: 'I tasted the sun reflected in the water. Its heat burned my lips. Transparent were the',
+    color: '#0d0d0d',
+    underline: 'pink',
+  },
+  {
+    text: 'the drops of bitter coffee. I wake up after midday.',
+    color: '#0d0d0d',
+    underline: 'green',
+  },
+],
   },
 ];
 
