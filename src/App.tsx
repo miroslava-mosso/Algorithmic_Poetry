@@ -245,8 +245,8 @@ function App() {
     <strong>{t('poesía matemática', 'Mathematical Poetry')}</strong>
   </a>
   {t(
-    ', un espacio que explora otros encuentros entre las matemáticas y la creación poética.',
-    ' website, a space that explores other intersections between mathematics and poetic creation.'
+    ', un espacio en donde los conceptos matemáticos se convierten en materia poética. Estos poemas surgen de describir la idea matemática sin nombrarla explícitamente, dejando que las palabras encuentren su propio camino hacia ella en forma de poesía.',
+    ' website, a space where mathematical concepts become poetic material. Poems that emerge from describing a mathematical idea without naming it explicitly, allowing words to find their own way towards it in the form of poetry.'
   )}
 </p>
           </div>
