@@ -237,7 +237,7 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
                   </ol>
 
                   <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mb-10">
-                    {en ? 'The poem can be read in any direction: vertically, horizontally, or diagonally. Each direction reveals a different plane of the diamond.' : 'El poema se puede leer como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección revela un plano distinto del diamante.'}
+                    {en ? 'The poem can be read in any direction that the reader prefers: vertically, horizontally, or diagonally. Each direction reveals a different plane of the diamond.' : 'El poema se puede leer como el lector guste: en vertical, en horizontal o en diagonal. Cada dirección revela un plano distinto del diamante.'}
                   </p>
                 </div>
 
