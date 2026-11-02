@@ -188,9 +188,9 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
                 {en ? 'Take a K3 surface. On the left is its Hodge diamond, with Hodge numbers shown as variables. On the right, we substitute the Hodge numbers for the chosen geometry.' : 'Tomemos una superficie K3. A la izquierda está el diamante de Hodge expresado en términos de los números de Hodge como variables. A la derecha, sustituimos los valores correspondientes a la geometría elegida.'}
               </p>
 
-              <div className="grid gap-2 lg:grid-cols-[1fr_auto_1fr] items-center">
+              <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] items-center">
                 <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between">
-                  <span className="font-mono-lt text-[12px] uppercase text-ink/45">{en ? 'Rough diamond: Hodge numbers not substituted yet.' : 'Diamante en bruto: sin sustituir aún los valores de los números de Hodge.'}</span>
+                  <span className="font-mono-lt text-[13px] uppercase text-ink/45">{en ? 'Rough diamond: Hodge numbers not substituted yet.' : 'Diamante en bruto: sin sustituir aún los valores de los números de Hodge.'}</span>
                   <div className="flex-1 flex items-center justify-center">
                     <Diamond values={rawK3} roomy />
                   </div>
