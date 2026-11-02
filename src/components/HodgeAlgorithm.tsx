@@ -375,7 +375,7 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
 
         {/* Authorship */}
         <div className="reveal mt-10 pt-6 border-t hairline">
-          <p className="font-mono-lt text-[11px] uppercase text-ink/50 leading-[1.7]">
+          <p className="font-mono-lt text-[12px] uppercase text-ink/50 leading-[1.7]">
             {en ? 'Algorithm and poetic constraint by ' : 'Algoritmo y constricción poética por '}<span className="text-ink">Miroslava Mosso Rojas</span>
           </p>
         </div>
