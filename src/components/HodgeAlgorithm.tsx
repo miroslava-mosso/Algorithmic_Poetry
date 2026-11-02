@@ -247,7 +247,7 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
                     <div className="mt-6 space-y-3 font-body text-lg sm:text-xl leading-[1.6]">
                       <p><span className="font-mono-lt text-[#a84739]">1</span> → <span className="pink-underline-thin">{en ? 'mist' : 'bruma'}</span></p>
                       <p><span className="font-mono-lt text-[#a84739]">0</span> → <span className="font-mono-lt text-sm">{en ? '[silence]' : '[silencio]'}</span></p>
-                      <p><span className="font-mono-lt text-[#a84739]">20</span> → <em>{en ? 'twenty syllables to cross the night without touching it' : 'veinte sílabas para cruzar la noche sin tocarla'}</em></p>
+                      <p><span className="font-mono-lt text-[#a84739]">20</span> → <em>{en ? 'twenty syllables to cross the endless and dark night without ever touching it' : 'veinte sílabas para cruzar la noche sin tocar su oscuridad'}</em></p>
                     </div>
                   </div>
                 </div>
