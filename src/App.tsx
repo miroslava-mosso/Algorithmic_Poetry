@@ -231,6 +231,24 @@ function App() {
                 ', where I learned to make many of the poems I show here. And if you are curious to learn many other constraints and games, I highly recommend joining her laboratories.'
               )}
             </p>
+            <p>
+  {t(
+    'Siguiendo esta misma línea, también me gustaría recomendarles la página de ',
+    'Along these same lines, I would also like to recommend the '
+  )}
+  <a
+    className="burnt-marker"
+    href="https://mathematical-poetry.pages.dev/"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <strong>{t('poesía matemática', 'Mathematical Poetry')}</strong>
+  </a>
+  {t(
+    ', un espacio que explora otros encuentros entre las matemáticas y la creación poética.',
+    ' website, a space that explores other intersections between mathematics and poetic creation.'
+  )}
+</p>
           </div>
         </div>
       </section>
