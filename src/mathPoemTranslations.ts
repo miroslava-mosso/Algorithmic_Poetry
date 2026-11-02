@@ -149,7 +149,7 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
         { text: 'fire', color: ink },
         { text: 'of wool', color: ink },
         { text: 'that protects me', color: ink },
-        { text: 'under a cloudless sky', color: ink },
+        { text: 'under the cloudless sky', color: ink },
       ],
     },
   ],
