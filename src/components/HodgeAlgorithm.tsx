@@ -233,7 +233,7 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
                     <li>
                       {en ? <>Where you see a <strong>0</strong>, add something related to nothingness, emptiness, or a pause. If it is a wordless action, write it phonetically, as in captions for deaf and hard-of-hearing viewers, e.g., <span className="font-mono-lt text-sm text-ink/60">[silence]</span>. These words can vary each time, or simply be blank spaces.</> : <>Donde veas un <strong>0</strong>, agrega algo relacionado con la nada, el vacío o una pausa. Si es una acción sin palabras, escríbela fonéticamente, como en los subtítulos para personas sordas y con discapacidad auditiva, e.g., <span className="font-mono-lt text-sm text-ink/60">[silencio]</span>. Estas palabras pueden variar en cada aparición, o pueden simplemente ser espacios vacíos.</>}
                     </li>
-                    <li>{en ? 'Numbers greater than 1 become a line with exactly that number of syllables. In our example, that is a 20-syllable line.' : 'Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número. En nuestro ejemplo sería un verso de 20 sílabas.'}</li>
+                    <li>{en ? 'Numbers greater than 1 become a line with exactly that number of syllables. In our example, it would be a 20-syllable line.' : 'Los números mayores que 1 se convierten en un verso cuyo total de sílabas sea exactamente ese número. En nuestro ejemplo sería un verso de 20 sílabas.'}</li>
                   </ol>
 
                   <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/75 mb-10">
