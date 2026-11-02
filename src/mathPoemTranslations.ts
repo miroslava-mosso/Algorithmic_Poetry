@@ -156,13 +156,13 @@ export const mathPoemTranslations: Partial<Record<MathShapeId, TranslatedPoemSec
   piema: [
     {
       lines: [
-        { text: 'Cannot sleep tonight', color: ink },
+        { text: 'I cannot sleep', color: ink },
         { text: 'darkness', color: ink },
-        { text: "I won't close my", color: ink },
+        { text: "I do not want to close my", color: ink },
         { text: 'eyes,', color: ink },
-        { text: 'lose the north and disappear', color: ink },
-        { text: "Feel the clock's numbers flickering there as you sleep", color: ink },
-        { text: 'blinking, watching over you as you sleep at night.', color: ink },
+        { text: 'lose the north till disappear', color: ink },
+        { text: "Feel the clock's numbers", color: ink },
+        { text: 'blinking, watching over me when I sleep.', color: ink },
       ],
     },
   ],
