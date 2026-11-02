@@ -189,7 +189,7 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
               </p>
 
               <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] items-center">
-                <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between">
+                <div className="border hairline p-8 sm:p-8 aspect-square flex flex-col justify-between">
                   <span className="font-mono-lt text-[12px] uppercase text-ink/45">{en ? 'Rough diamond: Hodge numbers not substituted yet.' : 'Diamante en bruto: sin sustituir aún los valores de los números de Hodge.'}</span>
                   <div className="flex-1 flex items-center justify-center">
                     <Diamond values={rawK3} roomy />
