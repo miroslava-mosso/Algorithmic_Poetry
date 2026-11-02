@@ -255,7 +255,7 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
 
               <div className="mt-8">
                 <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6">
-                  <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">{en ? 'Polishing the Hodge diamond: now with numbers replaced by words.' : 'Puliendo el diamante de Hodge: ahora con los números sustituidos por las palabras.'}</span>
+                  <span className="font-mono-lt text-[13px] uppercase text-ink/55 text-center block">{en ? 'Polishing the Hodge diamond: now with numbers replaced by words.' : 'Puliendo el diamante de Hodge: ahora con los números sustituidos por las palabras.'}</span>
                   <div className="flex-1 flex items-center justify-center py-6">
                     <Diamond values={en ? wordK3English : wordK3} />
                   </div>
