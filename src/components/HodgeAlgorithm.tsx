@@ -369,7 +369,7 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
 
         {/* Último gesto / Final note */}
         <div className="reveal mt-12 pt-8 font-body text-lg sm:text-xl leading-[1.6] text-ink/75">
-          <span className="font-mono-lt text-[10px] uppercase text-ink/45 block mb-3">{en ? 'One last detail' : 'Último detalle'}</span>
+          <span className="font-mono-lt text-[13px] uppercase text-ink/45 block mb-3">{en ? 'One last detail' : 'Último detalle'}</span>
           {en ? <>Remember to note which geometry the Hodge diamond came from; it is the source of your constraint and poem. In our example, we used <span className="pink-underline italic">the K3 surface</span>.</> : <>Recuerda escribir al final a qué geometría corresponde el diamante de Hodge que dio origen a tu constricción y a tu poema. En nuestro ejemplo usamos a <span className="pink-underline italic">la superficie K3</span>.</>}
         </div>
 
