@@ -202,12 +202,12 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
                   <path d="M 74 18 L 84 16 L 80 26" fill="none" stroke="currentColor" strokeWidth="1.5" />
                 </svg>
 
-                <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between bg-[#f4b6c2]/10">
+                <div className="border hairline p-8 sm:p-13 aspect-square flex flex-col justify-between bg-[#f4b6c2]/10">
                   <span className="font-mono-lt text-[10px] uppercase text-ink/55">{en ? 'First cuts: substituting the Hodge numbers for a K3 surface.' : 'Primeros cortes: sustituyendo los números de Hodge para una superficie K3.'}</span>
                   <div className="flex-1 flex items-center justify-center">
                     <Diamond values={numericK3} roomy />
                   </div>
-                  <span className="font-body text-base text-ink/60 italic text-center">{en ? 'The Hodge diamond of the K3 surface taking shape.' : 'El diamante de Hodge de la superficie K3 tomando forma.'}</span>
+                  <span className="font-body text-base text-[15px] text-ink/55 italic text-center">{en ? 'The Hodge diamond of the K3 surface taking shape.' : 'El diamante de Hodge de la superficie K3 tomando forma.'}</span>
                 </div>
               </div>
             </div>
