@@ -259,7 +259,7 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
                   <div className="flex-1 flex items-center justify-center py-6">
                     <Diamond values={en ? wordK3English : wordK3} />
                   </div>
-                  <span className="font-body text-[20px] text-ink/55 italic text-center block">{en ? 'The Hodge diamond of the K3 surface translated into a poem.' : 'Diamante de Hodge de la superficie K3 traducido en un poema.'}</span>
+                  <span className="font-body text-[18px] text-ink/55 italic text-center block">{en ? 'The Hodge diamond of the K3 surface translated into a poem.' : 'Diamante de Hodge de la superficie K3 traducido en un poema.'}</span>
                 </div>
               </div>
             </div>
