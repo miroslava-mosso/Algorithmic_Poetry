@@ -243,7 +243,7 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
 
                 <div>
                   <div className="border hairline p-6 sm:p-8">
-                    <span className="font-mono-lt text-[10px] uppercase text-ink/45">{en ? 'Example: translating numbers into words' : 'Ejemplo de traducción de los números a las palabras'}</span>
+                    <span className="font-mono-lt text-[12px] uppercase text-ink/45">{en ? 'Example: translating numbers into words' : 'Ejemplo de traducción de los números a las palabras'}</span>
                     <div className="mt-6 space-y-3 font-body text-lg sm:text-xl leading-[1.6]">
                       <p><span className="font-mono-lt text-[#a84739]">1</span> → <span className="pink-underline-thin">{en ? 'mist' : 'bruma'}</span></p>
                       <p><span className="font-mono-lt text-[#a84739]">0</span> → <span className="font-mono-lt text-sm">{en ? '[silence]' : '[silencio]'}</span></p>
