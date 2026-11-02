@@ -207,7 +207,7 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
                   <div className="flex-1 flex items-center justify-center">
                     <Diamond values={numericK3} roomy />
                   </div>
-                  <span className="font-body text-base text-[15px] text-ink/60 italic text-center">{en ? 'The Hodge diamond of the K3 surface taking shape.' : 'El diamante de Hodge de la superficie K3 tomando forma.'}</span>
+                  <span className="font-body text-base text-[18px] text-ink/60 italic text-center">{en ? 'The Hodge diamond of the K3 surface taking shape.' : 'El diamante de Hodge de la superficie K3 tomando forma.'}</span>
                 </div>
               </div>
             </div>
