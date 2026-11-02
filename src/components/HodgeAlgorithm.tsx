@@ -320,7 +320,7 @@ export function HodgeAlgorithm({ language: propLanguage }: { language?: 'es' | '
               
               
               <p className="font-body text-lg sm:text-xl leading-[1.6] text-ink/80 max-w-[62ch] mb-8">
-  {en ? <>If you are curious, you can calculate the <em>kth Betti number</em> by adding the Hodge numbers for which p + q = k; in the diamond, each sum corresponds to a diagonal. The general formula is:</> : <>Si te da curiosidad, puedes calcular el <em>k-ésimo número de Betti</em> sumando los números de Hodge para los que p + q = k; en el diamante, cada suma corresponde a una diagonal. La fórmula general es:</>}
+  {en ? <>If you are curious, you can compute the <em>kth Betti number</em> by adding the Hodge numbers for which p + q = k; in the diamond, each sum corresponds to a level. The general formula is:</> : <>Si te da curiosidad, puedes calcular el <em>k-ésimo número de Betti</em> sumando los números de Hodge para los que p + q = k; en el diamante, cada suma corresponde a un nivel. La fórmula general es:</>}
 </p>
 
 <div className="border hairline p-6 sm:p-10 mb-10 bg-[#f4b6c2]/8">
