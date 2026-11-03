@@ -454,7 +454,7 @@ function App() {
                   {t('Apoya el proyecto', 'Support the project')}
                 </p>
 
-                <p className="font-body text-base sm:text-lg text-[#f7f5f1]/70 mt-2 max-w-[42ch]">
+                <p className="font-body text-base sm:text-xl text-[#f7f5f1]/70 mt-2 max-w-[42ch]">
                   {t(
                     'Si disfrutas este espacio de experimentación entre poesía y matemáticas, puedes invitarme a un café para ayudar a que este proyecto siga creciendo.',
                     'If you enjoy this space for experimentation between poetry and mathematics, you can buy me a coffee to help this project keep growing.'
