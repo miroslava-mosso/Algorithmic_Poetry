@@ -433,7 +433,7 @@ function App() {
 
 <ul
   className="font-body text-base sm:text-xl mt-2 list-disc pl-6 leading-snug space-y-0.5"
-  style={{ color: '##CBAAB8' }}>
+  style={{ color: '#CFC2C7' }}>
   <li>
     {t(
       'El diamante de Hodge con los números originales y otro con las palabras sustituidas.',
