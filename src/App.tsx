@@ -467,7 +467,7 @@ function App() {
   />
 </div>
 
-                <p className="font-mono-lt text-[9px] uppercase tracking-wide text-[#f7f5f1]/35 mt-2">
+                <p className="font-mono-lt text-[11px] uppercase tracking-wide text-[#f7f5f1]/35 mt-2">
                   {t('Aportación voluntaria', 'Voluntary support')}
                 </p>
               </div>
