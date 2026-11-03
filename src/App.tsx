@@ -421,11 +421,11 @@ function App() {
 
             <div className="flex flex-col gap-4">
               <div>
-                <p className="font-mono-lt text-[14.5px] uppercase text-[#f7f5f1]/45">{t('Correo', 'Email')}</p>
+                <p className="font-mono-lt text-[15px] uppercase text-[#f7f5f1]/45">{t('Correo', 'Email')}</p>
                 <p className="font-display text-2xl mt-1">poesia.algoritmica@proton.me</p>
               </div>
               <div>
-                <p className="font-mono-lt text-[14.5px] uppercase text-[#f7f5f1]/45">{t('Manda tu poema', 'Send your poem')}</p>
+                <p className="font-mono-lt text-[15px] uppercase text-[#f7f5f1]/45">{t('Manda tu poema', 'Send your poem')}</p>
                 <p className="font-body text-xl mt-1">
                   {t('Incluye lo siguiente:', 'Include the following:')}
                 </p>
