@@ -425,7 +425,7 @@ function App() {
                 <p className="font-display text-2xl mt-1">poesia.algoritmica@proton.me</p>
               </div>
               <div>
-                <p className="font-mono-lt text-[15px] uppercase text-[#D9BFC9]/45">{t('Manda tu poema', 'Send your poem')}</p>
+                <p className="font-mono-lt text-[15px] uppercase text-[#D9BFC9]">{t('Manda tu poema', 'Send your poem')}</p>
                 <p className="font-body text-xl mt-3">
                   {t('Incluye lo siguiente:', 'Include the following:')}
                 </p>
