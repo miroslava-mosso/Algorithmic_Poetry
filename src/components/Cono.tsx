@@ -26,7 +26,7 @@ export function Cono({
         </span>
       ))}
 
-      <span className="mt-1 text-xl text-[#f4b6c2]">▼</span>
+      <span className="mt-1 text-[#f4b6c2]">▼</span>
     </div>
   );
 }
