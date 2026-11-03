@@ -65,7 +65,7 @@ className={
         </div>
 
         <footer className="flex flex-col gap-2 mt-4">
-          <div className="flex items-center justify-between font-mono-lt text-[12px] uppercase text-ink/55">
+          <div className="flex items-center justify-between font-mono-lt text-[11px] uppercase text-ink/55">
             <span>{poem.technique}</span>
             {!placeholder && <span className="text-ink/40">{poem.author}</span>}
           </div>
@@ -97,7 +97,7 @@ className={
             </div>
             {language === 'en' && poem.translation && poem.translation.length > 0 && (
               <div className={`w-full ${poem.id === 'cruz' ? 'text-left' : 'max-w-[65ch] text-center'}`}>
-                <p className="mb-4 font-mono-lt text-[12px] uppercase tracking-wide text-ink/45">English translation</p>
+                <p className="mb-4 font-mono-lt text-[11px] uppercase tracking-wide text-ink/45">English translation</p>
                 <div className={`space-y-2 font-body text-lg sm:text-xl leading-[1.55] ${poem.id === 'cruz' ? '' : 'flex flex-col items-center'}`}>
          {poem.translation.map((line, index) => (
   <p
