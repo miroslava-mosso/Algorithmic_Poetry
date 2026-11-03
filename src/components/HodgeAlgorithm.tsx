@@ -112,7 +112,7 @@ function SymmetryBlock({
       </div>
 
       <div className="border hairline p-8 sm:p-12 bg-[#f4b6c2]/8 flex flex-col justify-between gap-6 max-w-[960px] mx-auto">
-        <span className="font-mono-lt text-[10px] uppercase text-ink/55 text-center block">{language === 'en' ? 'The poem with the symmetry applied' : 'El poema con la simetría aplicada'}</span>
+        <span className="font-mono-lt text-[13px] uppercase text-ink/55 text-center block">{language === 'en' ? 'The poem with the symmetry applied' : 'El poema con la simetría aplicada'}</span>
         <div className="flex-1 flex items-center justify-center py-6">
           <Diamond values={language === 'en' ? wordK3English : wordK3} />
         </div>
