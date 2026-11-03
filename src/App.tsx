@@ -395,7 +395,7 @@ function App() {
                   'You can send it as a hand-drawn or digital drawing, photograph, visual composition, collage, or any other visual form that explores the possibilities of the algorithm.'
                 )}
               </p>
-              <p className="font-body text-lg text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
+              <p className="font-body text-xl text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
   {t(
     'Publicaré todos los poemas que me manden en la sección llamada',
     'All submitted poems will be published in the section called'
