@@ -431,7 +431,7 @@ function App() {
                 </p>
 
 
-<ul className="font-body text-base sm:text-lg mt-2 list-disc pl-6 leading-snug space-y-0.5">
+<ul className="font-body text-base sm:text-xl mt-2 list-disc pl-6 leading-snug space-y-0.5">
   <li>
     {t(
       'El diamante de Hodge con los números originales y otro con las palabras sustituidas.',
