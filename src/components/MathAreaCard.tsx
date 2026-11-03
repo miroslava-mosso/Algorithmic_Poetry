@@ -108,7 +108,7 @@ function MathExample({ ex, language }: { ex: MathExample; language: 'es' | 'en' 
           </p>
 
           {ex.manifest && (
-            <p className="font-body text-[19px] lg:text-base text-ink/75 leading-relaxed mt-3">
+            <p className="font-body text-[20px] lg:text-base text-ink/75 leading-relaxed mt-3">
               {ex.manifest}
             </p>
           )}
