@@ -370,7 +370,7 @@ function App() {
         <div className="mx-auto max-w-[1180px] w-full px-5 sm:px-8 py-16 sm:py-20">
           <div className="reveal grid gap-8 sm:gap-10 sm:grid-cols-[1.2fr_1fr]">
             <div>
-              <span className="font-mono-lt text-[11px] uppercase text-[#f7f5f1]/50">§ {t('Contacto', 'Contact')}</span>
+              <span className="font-mono-lt text-[13px] uppercase text-[#f7f5f1]/50">§ {t('Contacto', 'Contact')}</span>
               <h2 className="font-display text-4xl sm:text-5xl mt-2 leading-[1.05]">
                 {t('Escribámonos.', "Let's write to each other.")}
               </h2>
