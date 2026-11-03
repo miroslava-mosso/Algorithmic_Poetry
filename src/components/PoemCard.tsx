@@ -97,7 +97,7 @@ className={
             </div>
             {language === 'en' && poem.translation && poem.translation.length > 0 && (
               <div className={`w-full ${poem.id === 'cruz' ? 'text-left' : 'max-w-[65ch] text-center'}`}>
-                <p className="mb-4 font-mono-lt text-[13px] uppercase tracking-wide text-ink/45">English translation</p>
+                <p className="mb-4 font-mono-lt text-[12px] uppercase tracking-wide text-ink/45">English translation</p>
                 <div className={`space-y-2 font-body text-lg sm:text-xl leading-[1.55] ${poem.id === 'cruz' ? '' : 'flex flex-col items-center'}`}>
          {poem.translation.map((line, index) => (
   <p
