@@ -374,7 +374,7 @@ function App() {
               <h2 className="font-display text-4xl sm:text-5xl mt-2 leading-[1.05]">
                 {t('Escribámonos.', "Let's write to each other.")}
               </h2>
-              <p className="font-body text-llg text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
+              <p className="font-body text-lg text-[#f7f5f1]/70 mt-4 max-w-[44ch]">
                 {t(
                   'Si escribes un poema usando el algoritmo',
                   'If you write a poem using the algorithm'
