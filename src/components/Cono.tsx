@@ -13,7 +13,7 @@ export function Cono({
   return (
     <div
       className={`flex flex-col items-center font-mono-lt text-ink ${
-        compact ? 'w-max max-w-none text-[8px]' : 'text-xl sm:text-sm'
+        compact ? 'w-max max-w-none text-[8px]' : 'text-xs sm:text-sm'
       }`}
     >
       {lines.map((l, i) => (
