@@ -96,7 +96,7 @@ function SymmetryBlock({
 
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between">
-          <span className="font-mono-lt text-[10px] uppercase text-ink/45">{beforeLabel}</span>
+          <span className="font-mono-lt text-[13px] uppercase text-ink/45">{beforeLabel}</span>
           <div className="flex-1 flex items-center justify-center">
             <Diamond values={before} roomy />
           </div>
