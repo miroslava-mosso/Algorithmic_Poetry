@@ -65,7 +65,7 @@ className={
         </div>
 
         <footer className="flex flex-col gap-2 mt-4">
-          <div className="flex items-center justify-between font-mono-lt text-[11px] uppercase text-ink/55">
+          <div className="flex items-center justify-between font-mono-lt text-[10px] uppercase text-ink/55">
             <span>{poem.technique}</span>
             {!placeholder && <span className="text-ink/40">{poem.author}</span>}
           </div>
