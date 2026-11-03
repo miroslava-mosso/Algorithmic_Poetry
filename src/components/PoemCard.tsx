@@ -70,7 +70,7 @@ className={
             {!placeholder && <span className="text-ink/40">{poem.author}</span>}
           </div>
 
-          <p className="font-body text-[18px] leading-[5.55] text-ink/70 italic">
+          <p className="font-body text-[18px] leading-[2.55] text-ink/70 italic">
             {poem.manifest}
           </p>
         </footer>
