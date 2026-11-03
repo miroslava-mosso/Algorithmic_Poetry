@@ -116,7 +116,7 @@ function SymmetryBlock({
         <div className="flex-1 flex items-center justify-center py-6">
           <Diamond values={language === 'en' ? wordK3English : wordK3} />
         </div>
-        <span className="font-body text-sm text-ink/55 italic text-center block">{language === 'en' ? 'the diamond turned into verse' : 'el diamante hecho verso'}</span>
+        <span className="font-body text-[18px] text-ink/55 italic text-center block">{language === 'en' ? 'the diamond turned into verse' : 'el diamante hecho verso'}</span>
       </div>
     </div>
   );
