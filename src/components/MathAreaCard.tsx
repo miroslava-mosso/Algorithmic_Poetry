@@ -98,7 +98,7 @@ function MathExample({ ex, language }: { ex: MathExample; language: 'es' | 'en' 
           </div>
         </div>
 
-        <footer className="mt-auto pt-30 border-t hairline">
+        <footer className="mt-auto pt-3 border-t hairline">
           <p
             className={`font-mono-lt uppercase text-ink/50 leading-snug ${
               isEnlarged ? 'text-xs sm:text-sm' : 'text-[11px] sm:text-xs'
