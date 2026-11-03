@@ -426,7 +426,7 @@ function App() {
               </div>
               <div>
                 <p className="font-mono-lt text-[14.5px] uppercase text-[#f7f5f1]/45">{t('Manda tu poema', 'Send your poem')}</p>
-                <p className="font-body text-lg mt-1">
+                <p className="font-body text-xl mt-1">
                   {t('Incluye lo siguiente:', 'Include the following:')}
                 </p>
 
