@@ -39,7 +39,7 @@ export function MathAreaCard({ area, i, language: languageProp }: { area: MathAr
               <h3 className="font-display text-4xl sm:text-5xl leading-[1.05] mt-1">
                 <span>{area.title}</span>
               </h3>
-              <p className="font-body text-lg sm:text-3xl text-ink/65 italic mt-2 max-w-[58ch] leading-[1.5]">
+              <p className="font-body text-lg sm:text-xl text-ink/65 italic mt-2 max-w-[58ch] leading-[1.5]">
                 {area.description}
               </p>
             </div>
