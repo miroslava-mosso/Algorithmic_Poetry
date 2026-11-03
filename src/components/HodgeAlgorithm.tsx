@@ -100,7 +100,7 @@ function SymmetryBlock({
           <div className="flex-1 flex items-center justify-center">
             <Diamond values={before} roomy />
           </div>
-          <span className="font-body text-sm text-ink/50 italic text-center">{language === 'en' ? 'before' : 'antes'}</span>
+          <span className="font-body text-[13px] text-ink/50 italic text-center">{language === 'en' ? 'before' : 'antes'}</span>
         </div>
         <div className="border hairline p-8 sm:p-12 aspect-square flex flex-col justify-between bg-[#f4b6c2]/8">
           <span className="font-mono-lt text-[10px] uppercase text-ink/55">{afterLabel}</span>
