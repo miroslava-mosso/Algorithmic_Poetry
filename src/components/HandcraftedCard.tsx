@@ -3,6 +3,27 @@ import { useLang } from '@/i18n';
 import { Lightbox } from './Lightbox';
 import type { HandcraftedGalleryCard } from '@/handcraftedGallery';
 
+function renderDescription(text: string) {
+  return text.split(/(\[[^\]]+\]\(https?:\/\/[^)\s]+\))/g).map((part, index) => {
+    const match = part.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/);
+
+    if (!match) return part;
+
+    return (
+      <a
+        key={index}
+        href={match[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline decoration-[#f4b6c2] underline-offset-4 hover:text-ink"
+        onClick={(event) => event.stopPropagation()}
+      >
+        {match[1]}
+      </a>
+    );
+  });
+}
+
 export function HandcraftedCard({ card, i }: { card: HandcraftedGalleryCard; i: number }) {
   const { lang } = useLang();
   const [open, setOpen] = useState(false);
