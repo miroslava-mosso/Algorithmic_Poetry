@@ -22,7 +22,7 @@ export function Zurvan({
     direction: 'up' | 'down' = 'down',
   ) => (
     <span
-      className={`absolute whitespace-nowrap font-mono-lt ${lightbox ? 'text-[5px] sm:text-xs' : 'text-[8px] sm:text-xs'} ${position}`}
+      className={`absolute whitespace-nowrap font-mono-lt ${lightbox ? 'text-[6px] sm:text-xs' : 'text-[10px] sm:text-xs'} ${position}`}
       style={{
         color,
         writingMode: 'vertical-rl',
@@ -41,7 +41,7 @@ export function Zurvan({
     position: string,
   ) => (
     <span
-      className={`absolute whitespace-nowrap font-mono-lt ${lightbox ? 'text-[8px] sm:text-xs' : 'text-[10px] sm:text-xs'} ${position}`}
+      className={`absolute whitespace-nowrap font-mono-lt ${lightbox ? 'text-[8px] sm:text-xs' : 'text-[9px] sm:text-xs'} ${position}`}
       style={{
         color,
         transform: 'translate(-50%, -50%)',
