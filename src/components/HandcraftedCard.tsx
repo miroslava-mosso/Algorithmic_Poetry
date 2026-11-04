@@ -26,6 +26,9 @@ function renderDescription(text: string) {
 
 export function HandcraftedCard({ card, i }: { card: HandcraftedGalleryCard; i: number }) {
   const { lang } = useLang();
+  const title = lang === 'en' ? (card.titleEn ?? card.title) : card.title;
+  const technique = lang === 'en' ? (card.techniqueEn ?? card.technique) : card.technique;
+  const descriptions = lang === 'en' ? (card.descriptionsEn ?? card.descriptions) : card.descriptions;
   const [open, setOpen] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
   const hasImages = card.images.length > 0;
@@ -52,12 +55,12 @@ export function HandcraftedCard({ card, i }: { card: HandcraftedGalleryCard; i: 
             showLightbox();
           }
         }}
-        aria-label={`${card.title}: ${lang === 'en' ? 'open gallery' : 'abrir galería'}`}
+        aria-label={`${title}: ${lang === 'en' ? 'open gallery' : 'abrir galería'}`}
       >
         <header className="flex items-baseline justify-between gap-4 mb-6">
           <div className="flex items-baseline gap-3">
             <span className="font-mono-lt text-[11px] text-ink/50">{card.index}</span>
-            <h3 className="font-display text-2xl sm:text-3xl"><span className="aqua-underline">{card.title}</span></h3>
+            <h3 className="font-display text-2xl sm:text-3xl"><span className="aqua-underline">{title}</span></h3>
           </div>
         </header>
 
@@ -65,7 +68,7 @@ export function HandcraftedCard({ card, i }: { card: HandcraftedGalleryCard; i: 
           {hasImages ? (
             <img
               src={card.images[0]}
-              alt={`${card.title} · ${lang === 'en' ? 'handcrafted version' : 'versión artesanal'}`}
+              alt={`${title} · ${lang === 'en' ? 'handcrafted version' : 'versión artesanal'}`}
               className="w-full aspect-[4/3] object-cover border hairline"
             />
           ) : (
@@ -79,10 +82,10 @@ export function HandcraftedCard({ card, i }: { card: HandcraftedGalleryCard; i: 
 
         <footer className="flex flex-col gap-2 mt-4">
           <div className="flex items-center justify-between font-mono-lt text-[10.6px] uppercase text-ink/55">
-            <span>{card.technique}</span>
+            <span>{technique}</span>
             {card.images.length > 1 && <span>{card.images.length} {lang === 'en' ? 'images' : 'imágenes'}</span>}
           </div>
-          {card.descriptions.filter((description) => description.trim()).map((description, index) => (
+          {descriptions.filter((description) => description.trim()).map((description, index) => (
             <p key={`${card.id}-description-${index}`} className="font-body text-[18px] leading-[1.55] text-ink/70 italic">
               {renderDescription(description)}
             </p>
@@ -94,11 +97,11 @@ export function HandcraftedCard({ card, i }: { card: HandcraftedGalleryCard; i: 
         open={open}
         onClose={() => setOpen(false)}
         language={lang}
-        title={card.title}
-        subtitle={card.technique}
+        title={title}
+        subtitle={technique}
         caption={
   <div className="space-y-2">
-    {card.descriptions
+    {descriptions
       .filter((description) => description.trim())
       .map((description, index) => (
         <p key={`${card.id}-caption-${index}`}>
@@ -114,7 +117,7 @@ export function HandcraftedCard({ card, i }: { card: HandcraftedGalleryCard; i: 
           <div className="flex min-h-[45vh] w-full items-center justify-center px-12 sm:px-20">
             <img
               src={card.images[imageIndex]}
-              alt={`${card.title} · ${imageIndex + 1} / ${card.images.length}`}
+              alt={`${title} · ${imageIndex + 1} / ${card.images.length}`}
               className="max-h-[68vh] max-w-full object-contain"
             />
           </div>
