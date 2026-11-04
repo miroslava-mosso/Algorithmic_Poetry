@@ -47,7 +47,8 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     technique: 'Geometría',
     descriptions: ['El poema se estrecha hacia un punto inferior como un embudo que condensa el sentido en una última sílaba.'],
     // Add image paths here; all paths in this array are included in the lightbox.
-    images: [],
+    images: ['/Algorithmic_Poetry/images/artesanal/cono.jpeg',
+  '/Algorithmic_Poetry/images/artesanal/cono_cuaderno.jpeg'],
   },
   {
     id: 'artesanal-espiral',
