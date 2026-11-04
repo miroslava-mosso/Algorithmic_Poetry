@@ -7,7 +7,7 @@ interface LightboxProps {
   onClose: () => void;
   title: string;
   subtitle?: string;
-  caption?: string;
+  caption?: ReactNode;
   children: ReactNode;
   language?: 'es' | 'en';
   onPrevious?: () => void;
