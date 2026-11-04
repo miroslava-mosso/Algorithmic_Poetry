@@ -21,7 +21,7 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     title: 'Intersección',
     technique: 'Intersección alfabética',
     descriptions: [
-      'Poema escrito a pluma sobre un cuaderno y sobre un papel transparente de color rojo y blanco.',
+      'El poema está escrito a pluma sobre un cuaderno y sobre un papel transparente de color rojo y blanco.',
     ],
     // Add one or more image paths here. They appear on the card and in the lightbox.
     images: [
@@ -45,7 +45,7 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     index: 'O3',
     title: 'Cono',
     technique: 'Geometría',
-    descriptions: ['El poema se estrecha hacia un punto inferior como un embudo que condensa el sentido en una última sílaba.'],
+    descriptions: ['El poema está escrito a mano sobre un cono de filtro de café y sobre un cuaderno.'],
     // Add image paths here; all paths in this array are included in the lightbox.
     images: ['/Algorithmic_Poetry/images/artesanal/cono.jpeg',
   '/Algorithmic_Poetry/images/artesanal/cono_cuaderno.jpeg'],
