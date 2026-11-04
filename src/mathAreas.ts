@@ -291,7 +291,7 @@ export const mathAreasBilingual: BilingualMathArea[] = [
     es: {
       title: 'Grafos',
       description:
-        'Cada concepto es un vértice, cada verso es una arista. Los poemas se recorren como caminos sobre un grafo. Esta sección sigue en construcción.',
+        'Cada concepto es un vértice, cada verso es una arista. Los poemas se recorren como caminos sobre un grafo. Esta sección sigue EN CONSTRUCCIÓN.',
       examples: [
         {
           index: '01',
