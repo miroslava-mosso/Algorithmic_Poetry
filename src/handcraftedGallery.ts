@@ -67,7 +67,8 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     id: 'artesanal-reflexion', index: 'O5', title: 'Reflexión', technique: 'Poema palíndromo',
     descriptions: ['Texto originalmente escrito sobre una tablet, en un ejercicio de mirar las imágenes del libro The topography of tears de Rose-Lynn Fisher.'],
     // Add image paths here; all paths in this array are included in the lightbox.
-    images: [],
+    images: ['/Algorithmic_Poetry/images/artesanal/reflexion.png',
+  '/Algorithmic_Poetry/images/artesanal/reflexion_2.jpeg'],
   },
   {
     id: 'artesanal-nuevo-2', index: 'O6', title: 'Nuevo poema 2', technique: 'Añade la técnica',
