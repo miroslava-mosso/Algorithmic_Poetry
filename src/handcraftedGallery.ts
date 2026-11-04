@@ -57,10 +57,10 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     technique: 'Literatura ergódica',
     descriptions: ['Poemas escritos sobre una tablet y en una composición de fotografías y texto digital.'],
     // Add image paths here; all paths in this array are included in the lightbox.
-    images: ['/Algorithmic_Poetry/images/artesanal/espiral_1.png',
-  '/Algorithmic_Poetry/images/artesanal/espiral_1_2.jpeg',
-  '/Algorithmic_Poetry/images/artesanal/espiral_2.png',
-  '/Algorithmic_Poetry/images/artesanal/espiral_2_2.jpeg'],
+    images: ['/Algorithmic_Poetry/images/artesanal/espiral_1_2.jpeg',
+  '/Algorithmic_Poetry/images/artesanal/espiral_1.png',
+  '/Algorithmic_Poetry/images/artesanal/espiral_2_2.jpeg',
+  '/Algorithmic_Poetry/images/artesanal/espiral_2.png'],
   },
   // Three editable blank templates. Change each title and descriptions, then add image paths.
   {
@@ -84,4 +84,14 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     images: ['/Algorithmic_Poetry/images/artesanal/circulo_2.png',
   '/Algorithmic_Poetry/images/artesanal/circulo.png'],
   },
+  {
+    id: 'artesanal-koch', index: 'O8', title: 'Copo de nieve de Koch', technique: 'Curva Fractal',
+    descriptions: ['Poema —y sus iteraciones— escritas sobre una tablet.'],
+    // Add image paths here; all paths in this array are included in the lightbox.
+    images: ['/Algorithmic_Poetry/images/artesanal/koch_1.png',
+  '/Algorithmic_Poetry/images/artesanal/koch_2.png'],
+  },
+
+
+  
 ];
