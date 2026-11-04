@@ -25,7 +25,10 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
       'Poema escrito a pluma sobre papel transparente',
     ],
     // Add one or more image paths here. They appear on the card and in the lightbox.
-    images: ['/images/artesanal/interseccion_cuaderno.jpeg', '/images/artesanal/interseccion.jpeg'],
+    images: [
+  '/Algorithmic_Poetry/images/artesanal/interseccion_cuaderno.jpeg',
+  '/Algorithmic_Poetry/images/artesanal/interseccion.jpeg',
+],
   },
   {
     id: 'artesanal-zurvan',
