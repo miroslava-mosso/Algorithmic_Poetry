@@ -36,20 +36,37 @@ export function Zurvan({
   );
 
   const horizontal = (
-    text: string,
-    color: string,
-    position: string,
-  ) => (
+  text: string,
+  color: string,
+  position: string,
+  smallerWord?: string,
+) => {
+  const content =
+    smallerWord && text.endsWith(smallerWord) ? (
+      <>
+        {text.slice(0, -smallerWord.length)}
+        <span className={lightbox ? 'text-[6px] sm:text-xs' : ''}>
+          {smallerWord}
+        </span>
+      </>
+    ) : (
+      text
+    );
+
+  return (
     <span
-      className={`absolute whitespace-nowrap font-mono-lt ${lightbox ? 'text-[8px] sm:text-xs' : 'text-[9px] sm:text-xs'} ${position}`}
+      className={`absolute whitespace-nowrap font-mono-lt ${
+        lightbox ? 'text-[7px] sm:text-xs' : 'text-[10px] sm:text-xs'
+      } ${position}`}
       style={{
         color,
         transform: 'translate(-50%, -50%)',
       }}
     >
-      {text}
+      {content}
     </span>
   );
+};
 
   const composition = (
     <div
