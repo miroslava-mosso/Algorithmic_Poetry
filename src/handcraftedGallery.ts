@@ -43,7 +43,7 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     technique: 'Tarkib-band',
     techniqueEn: 'Tarkib-band',
     descriptions: ['Poema escrito sobre una tablet usando colores verde y azul.'],
-    descriptionsEn: ['Poem written on a tablet using green and blue.'],
+    descriptionsEn: ['Poem written on a tablet using green and blue colors.'],
     // Add image paths here; all paths in this array are included in the lightbox.
     images: ['/Algorithmic_Poetry/images/artesanal/zurvan_1.png',
   '/Algorithmic_Poetry/images/artesanal/zurvan_2.png',
@@ -80,9 +80,9 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
   // Three editable blank templates. Change each title and descriptions, then add image paths.
   {
     id: 'artesanal-reflexion', index: 'O5', title: 'Reflexión', titleEn: 'Reflection', technique: 'Poema palíndromo', techniqueEn: 'Palindrome poem',
-    descriptions: ['Texto que salió del ejercicio de mirar la imagen "Lo que realmente significó después de un tiempo en el olvido" del libro "La topografía de las lágrimas" de Rose-Lynn Fisher. Escrito sobre una tablet.',
+    descriptions: ['Texto que salió del ejercicio de mirar la imagen "Lo que realmente significó después de un tiempo en el olvido" del libro "La topografía de las lágrimas" de Rose-Lynn Fisher. Texto escrito sobre una tablet.',
                   'El libro y sus respectivas imágenes se pueden encontrar en [Link](https://rose-lynnfisher.com/tears.html).'],
-    descriptionsEn: ['Text inspired by looking at the image “What It Really Meant After a While in Obscurity” from Rose-Lynn Fisher’s book The Topography of Tears. Written on a tablet.',
+    descriptionsEn: ['Resulting text from the exercise of looking at the image “What it meant long after a time forgotten” from Rose-Lynn Fisher’s book The Topography of Tears. Text written on a tablet.',
       'The book and its images can be found at [Link](https://rose-lynnfisher.com/tears.html).'],
     // Add image paths here; all paths in this array are included in the lightbox.
     images: ['/Algorithmic_Poetry/images/artesanal/reflexion_2.png',
