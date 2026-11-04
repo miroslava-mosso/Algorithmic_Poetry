@@ -90,7 +90,7 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     // Add image paths here; all paths in this array are included in the lightbox.
     images: ['/Algorithmic_Poetry/images/artesanal/ocho_3.webp',
   '/Algorithmic_Poetry/images/artesanal/ocho_2.png',
-  '/Algorithmic_Poetry/images/artesanal/ocho_2.png'],
+  '/Algorithmic_Poetry/images/artesanal/ocho.png'],
   },
 
 
