@@ -37,8 +37,9 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     technique: 'Tarkib-band',
     descriptions: ['Dios persa antiguo como personificación del tiempo infinito y el espacio. Tarkib-band es una forma poética de la literatura persa y urdu.'],
     // Add image paths here; all paths in this array are included in the lightbox.
-    images: '/Algorithmic_Poetry/images/artesanal/interseccion.jpeg',
-  '/Algorithmic_Poetry/images/artesanal/interseccion_cuaderno.jpeg',
+    images: ['/Algorithmic_Poetry/images/artesanal/zurvan_1.png',
+  '/Algorithmic_Poetry/images/artesanal/zurvan_2.png',
+  '/Algorithmic_Poetry/images/artesanal/zurvan_3.png'],
   },
   {
     id: 'artesanal-cono',
