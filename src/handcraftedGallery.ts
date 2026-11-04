@@ -64,8 +64,8 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
   },
   // Three editable blank templates. Change each title and descriptions, then add image paths.
   {
-    id: 'artesanal-nuevo-1', index: 'O5', title: 'Nuevo poema 1', technique: 'Añade la técnica',
-    descriptions: ['Añade aquí una descripción o manifiesto.'],
+    id: 'artesanal-reflexion', index: 'O5', title: 'Reflexión', technique: 'Poema palíndromo',
+    descriptions: ['Texto originalmente escrito sobre una tablet, en un ejercicio de mirar las imágenes del libro The topography of tears de Rose-Lynn Fisher.'],
     // Add image paths here; all paths in this array are included in the lightbox.
     images: [],
   },
