@@ -54,7 +54,7 @@ export function Zurvan({
   const composition = (
     <div
       className={`relative aspect-[6/5] font-mono-lt ${
-        compact ? 'w-[520px]' : lightbox ? 'mx-auto w-full max-w-[600px]' : 'mx-auto w-full min-w-[320px] max-w-[600px]'
+        compact ? 'w-[500px]' : lightbox ? 'mx-auto w-full max-w-[600px]' : 'mx-auto w-full min-w-[320px] max-w-[600px]'
       }`}
     >
       {/* ESPACIO — negro */}
