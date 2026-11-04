@@ -71,10 +71,11 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
   '/Algorithmic_Poetry/images/artesanal/reflexion_2.png'],
   },
   {
-    id: 'artesanal-koch', index: 'O6', title: 'Copo de nieve de Koch', technique: 'Fractal',
-    descriptions: ['Añade aquí una descripción o manifiesto.'],
+    id: 'artesanal-koch', index: 'O6', title: 'Copo de nieve de Koch', technique: 'Curva Fractal',
+    descriptions: ['Poema escrito sobre una tablet.'],
     // Add image paths here; all paths in this array are included in the lightbox.
-    images: [],
+    images: ['/Algorithmic_Poetry/images/artesanal/koch_1.png',
+  '/Algorithmic_Poetry/images/artesanal/koch_2.png'],
   },
   {
     id: 'artesanal-nuevo-3', index: 'O7', title: 'Nuevo poema 3', technique: 'Añade la técnica',
