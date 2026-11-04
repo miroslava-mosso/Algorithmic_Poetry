@@ -21,8 +21,7 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     title: 'Intersección',
     technique: 'Intersección alfabética',
     descriptions: [
-      'Verso horizontal y verso vertical se cruzan en una letra compartida.',
-      'Poema escrito a pluma sobre papel transparente',
+      'Poema escrito a pluma sobre un cuaderno y sobre un papel transparente de color rojo y blanco.',
     ],
     // Add one or more image paths here. They appear on the card and in the lightbox.
     images: [
@@ -35,7 +34,7 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     index: 'O2',
     title: 'Zurvan',
     technique: 'Tarkib-band',
-    descriptions: ['Dios persa antiguo como personificación del tiempo infinito y el espacio. Tarkib-band es una forma poética de la literatura persa y urdu.'],
+    descriptions: ['Poema escrito sobre una tablet usando colores verde y azul.'],
     // Add image paths here; all paths in this array are included in the lightbox.
     images: ['/Algorithmic_Poetry/images/artesanal/zurvan_1.png',
   '/Algorithmic_Poetry/images/artesanal/zurvan_2.png',
