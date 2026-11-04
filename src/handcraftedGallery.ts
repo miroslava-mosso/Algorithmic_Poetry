@@ -85,10 +85,10 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
   '/Algorithmic_Poetry/images/artesanal/circulo.png'],
   },
   {
-    id: 'artesanal-koch', index: 'O8', title: 'Copo de nieve de Koch', technique: 'Curva Fractal',
-    descriptions: ['Poema —y sus iteraciones— escritas sobre una tablet.'],
+    id: 'artesanal-koch', index: 'O8', title: 'Nudo forma de ocho', technique: 'Cruces',
+    descriptions: ['Plantilla del nudo figura-ocho. Nudo reducido a una curva dibujada en un editor de fotos. Poema escrito sobre una tablet. '],
     // Add image paths here; all paths in this array are included in the lightbox.
-    images: ['/Algorithmic_Poetry/images/artesanal/ocho_1.png',
+    images: ['/Algorithmic_Poetry/images/artesanal/ocho_3.webp',
   '/Algorithmic_Poetry/images/artesanal/ocho_2.png',
   '/Algorithmic_Poetry/images/artesanal/ocho_2.png'],
   },
