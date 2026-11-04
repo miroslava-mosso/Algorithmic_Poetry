@@ -99,7 +99,12 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     images: ['/Algorithmic_Poetry/images/artesanal/trebol_2.jpeg',
       '/Algorithmic_Poetry/images/artesanal/trebol.png']
   },
-
+{
+    id: 'artesanal-53', index: '1O', title: 'Número primo 53', technique: 'Press 53 editors',
+    descriptions: ['Poema escrito sobre una tablet. '],
+    // Add image paths here; all paths in this array are included in the lightbox.
+    images: ['/Algorithmic_Poetry/images/artesanal/53.png']
+  },
 
   
 ];
