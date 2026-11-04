@@ -65,7 +65,7 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
   // Three editable blank templates. Change each title and descriptions, then add image paths.
   {
     id: 'artesanal-reflexion', index: 'O5', title: 'Reflexión', technique: 'Poema palíndromo',
-    descriptions: ['Texto originalmente escrito sobre una tablet, en un ejercicio de mirar las imágenes del libro The topography of tears de Rose-Lynn Fisher.'],
+    descriptions: ['Texto que salió del ejercicio de mirar la imagen "Lágrimas de cambio" del libro "La topografía de las lágrimas" de Rose-Lynn Fisher. Escrito sobre una tablet.'],
     // Add image paths here; all paths in this array are included in the lightbox.
     images: ['/Algorithmic_Poetry/images/artesanal/reflexion_2.png',
   '/Algorithmic_Poetry/images/artesanal/reflexion.png'],
@@ -79,7 +79,7 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
   },
   {
     id: 'artesanal-circulo', index: 'O7', title: 'Círculo uroboros', technique: 'Poema circular',
-    descriptions: ['Texto originalmente escrito sobre una tablet, en un ejercicio de mirar las imágenes del libro The topography of tears de Rose-Lynn Fisher..'],
+    descriptions: ['Texto que salió del ejercicio de mirar la imagen "Lágrimas de cambio" del libro "La topografía de las lágrimas" de Rose-Lynn Fisher. Escrito sobre una tablet.'],
     // Add image paths here; all paths in this array are included in the lightbox.
     images: ['/Algorithmic_Poetry/images/artesanal/circulo_2.png',
   '/Algorithmic_Poetry/images/artesanal/circulo.png'],
