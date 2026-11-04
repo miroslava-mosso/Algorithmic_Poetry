@@ -4,6 +4,8 @@ import { getMathAreas } from '@/mathAreas';
 import { useReveal } from '@/useReveal';
 import { useLang } from '@/i18n';
 import { PoemCard } from '@/components/PoemCard';
+import { HandcraftedCard } from '@/components/HandcraftedCard';
+import { handcraftedGallery } from '@/handcraftedGallery';
 import { MathAreaCard } from '@/components/MathAreaCard';
 import { HodgeAlgorithm } from '@/components/HodgeAlgorithm';
 import { LanguageToggle } from '@/components/LanguageToggle';
@@ -297,13 +299,8 @@ function App() {
           </h3>
         </div>
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-10 grid gap-0 grid-cols-2 lg:grid-cols-4">
-          {poems.map((p, i) => (
-            <PoemCard
-              key={`${p.id}-original`}
-              poem={{ ...p, id: `${p.id}-original`, index: `O${i + 1}` }}
-              i={i}
-              placeholder
-            />
+          {handcraftedGallery.map((card, i) => (
+            <HandcraftedCard key={card.id} card={card} i={i} />
           ))}
         </div>
       </section>
