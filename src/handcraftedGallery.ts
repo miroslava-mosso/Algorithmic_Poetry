@@ -21,11 +21,11 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     title: 'Intersección',
     technique: 'Intersección alfabética',
     descriptions: [
-      'Verso horizontal y verso vertical se cruzan en una letra compartida, como dos miradas que se encuentran.',
+      'Verso horizontal y verso vertical se cruzan en una letra compartida.',
       'Poema escrito a pluma sobre papel transparente',
     ],
     // Add one or more image paths here. They appear on the card and in the lightbox.
-    images: [],
+    images: ['/images/artesanal/interseccion_cuaderno.jpeg', '/images/artesanal/interseccion.jpeg'],
   },
   {
     id: 'artesanal-zurvan',
