@@ -114,6 +114,11 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
             '/Algorithmic_Poetry/images/artesanal/fibonacci_3.png',
             '/Algorithmic_Poetry/images/artesanal/fibonacci.png']
   },
-
+{
+    id: 'artesanal-piema', index: '11', title: 'El pi-ema', technique: 'Técnica de Mike Keith',
+    descriptions: ['Poema escrito sobre una tablet. '],
+    // Add image paths here; all paths in this array are included in the lightbox.
+    images: ['/Algorithmic_Poetry/images/artesanal/piema.png']
+  },
   
 ];
