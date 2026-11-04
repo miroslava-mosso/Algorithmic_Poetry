@@ -4,11 +4,13 @@
 type ZurvanProps = {
   lines: string[];
   compact?: boolean;
+  lightbox?: boolean;
 };
 
 export function Zurvan({
   lines: _lines,
   compact = false,
+  lightbox = false,
 }: ZurvanProps) {
   const space = '#171717';
   const time = '#8f2638';
@@ -20,7 +22,7 @@ export function Zurvan({
     direction: 'up' | 'down' = 'down',
   ) => (
     <span
-      className={`absolute whitespace-nowrap font-mono-lt text-[10px] sm:text-xs ${position}`}
+      className={`absolute whitespace-nowrap font-mono-lt ${lightbox ? 'text-[8px] sm:text-xs' : 'text-[10px] sm:text-xs'} ${position}`}
       style={{
         color,
         writingMode: 'vertical-rl',
@@ -39,7 +41,7 @@ export function Zurvan({
     position: string,
   ) => (
     <span
-      className={`absolute whitespace-nowrap font-mono-lt text-[10px] sm:text-xs ${position}`}
+      className={`absolute whitespace-nowrap font-mono-lt ${lightbox ? 'text-[8px] sm:text-xs' : 'text-[10px] sm:text-xs'} ${position}`}
       style={{
         color,
         transform: 'translate(-50%, -50%)',
@@ -52,7 +54,7 @@ export function Zurvan({
   const composition = (
     <div
       className={`relative aspect-[6/5] font-mono-lt ${
-        compact ? 'w-[520px]' : 'mx-auto w-full min-w-[340px] max-w-[620px]'
+        compact ? 'w-[520px]' : lightbox ? 'mx-auto w-full max-w-[620px]' : 'mx-auto w-full min-w-[340px] max-w-[620px]'
       }`}
     >
       {/* ESPACIO — negro */}
@@ -119,5 +121,5 @@ export function Zurvan({
     );
   }
 
-  return <div className="w-full overflow-x-auto">{composition}</div>;
+  return <div className={`w-full min-w-0 ${lightbox ? 'overflow-hidden' : 'overflow-x-auto'}`}>{composition}</div>;
 }
