@@ -98,9 +98,9 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
   },
   {
     id: 'artesanal-circulo', index: 'O7', title: 'Círculo uroboros', titleEn: 'Ouroboros circle', technique: 'Poema circular', techniqueEn: 'Circular poem',
-    descriptions: ['Texto que salió del ejercicio de mirar la imagen "Lágrimas de cambio" del libro "La topografía de las lágrimas" de Rose-Lynn Fisher. Escrito sobre una tablet.',
+    descriptions: ['Texto que salió del ejercicio de mirar la imagen "Lágrimas de cambio" del libro "La topografía de las lágrimas" de Rose-Lynn Fisher. Texto escrito sobre una tablet.',
                   'El libro y sus respectivas imágenes se pueden encontrar en [Link](https://rose-lynnfisher.com/tears.html).'],
-    descriptionsEn: ['Text inspired by looking at the image “Tears of Change” from Rose-Lynn Fisher’s book The Topography of Tears. Written on a tablet.',
+    descriptionsEn: ['Resulting text from the exercise of looking at the image “Tears of Change” from Rose-Lynn Fisher’s book The Topography of Tears. Text written on a tablet.',
       'The book and its images can be found at [Link](https://rose-lynnfisher.com/tears.html).'],
     // Add image paths here; all paths in this array are included in the lightbox.
     images: ['/Algorithmic_Poetry/images/artesanal/circulo_2.png',
