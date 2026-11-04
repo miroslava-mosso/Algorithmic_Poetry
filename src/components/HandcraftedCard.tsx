@@ -12,7 +12,7 @@ export function HandcraftedCard({ card, i }: { card: HandcraftedGalleryCard; i: 
     setImageIndex((current) => (current + step + card.images.length) % card.images.length);
   };
   const showLightbox = () => {
-    setImageIndex(0);
+    setImageIndex(0); 
     setOpen(true);
   };
 
