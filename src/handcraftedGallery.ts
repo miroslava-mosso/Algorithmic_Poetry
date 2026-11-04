@@ -96,8 +96,8 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     id: 'artesanal-trebol', index: 'O9', title: 'Nudo de trébol', technique: 'Trefoil',
     descriptions: ['Plantilla para nudo de trebol de un pin. Poema escrito sobre una tablet. '],
     // Add image paths here; all paths in this array are included in the lightbox.
-    images: ['/Algorithmic_Poetry/images/artesanal/trebol.png',
-  '/Algorithmic_Poetry/images/artesanal/trebol_2.jpeg']
+    images: ['/Algorithmic_Poetry/images/artesanal/trebol_2.jpeg',
+      '/Algorithmic_Poetry/images/artesanal/trebol.png']
   },
 
 
