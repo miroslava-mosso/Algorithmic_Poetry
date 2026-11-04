@@ -26,8 +26,8 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     ],
     // Add one or more image paths here. They appear on the card and in the lightbox.
     images: [
-  '/Algorithmic_Poetry/images/artesanal/interseccion_cuaderno.jpeg',
   '/Algorithmic_Poetry/images/artesanal/interseccion.jpeg',
+  '/Algorithmic_Poetry/images/artesanal/interseccion_cuaderno.jpeg',
 ],
   },
   {
