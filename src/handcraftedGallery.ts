@@ -78,9 +78,10 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
   '/Algorithmic_Poetry/images/artesanal/koch_2.png'],
   },
   {
-    id: 'artesanal-nuevo-3', index: 'O7', title: 'Nuevo poema 3', technique: 'Añade la técnica',
-    descriptions: ['Añade aquí una descripción o manifiesto.'],
+    id: 'artesanal-circulo', index: 'O7', title: 'Círculo uroboros', technique: 'Poema circular',
+    descriptions: ['Texto originalmente escrito sobre una tablet, en un ejercicio de mirar las imágenes del libro The topography of tears de Rose-Lynn Fisher..'],
     // Add image paths here; all paths in this array are included in the lightbox.
-    images: [],
+    images: ['/Algorithmic_Poetry/images/artesanal/circulo.png',
+  '/Algorithmic_Poetry/images/artesanal/circulo_2.png'],
   },
 ];
