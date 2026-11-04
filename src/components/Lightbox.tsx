@@ -10,14 +10,18 @@ interface LightboxProps {
   caption?: string;
   children: ReactNode;
   language?: 'es' | 'en';
+  onPrevious?: () => void;
+  onNext?: () => void;
 }
 
-export function Lightbox({ open, onClose, title, subtitle, caption, children, language = 'es' }: LightboxProps) {
+export function Lightbox({ open, onClose, title, subtitle, caption, children, language = 'es', onPrevious, onNext }: LightboxProps) {
   useEffect(() => {
     if (!open) return;
     const previousOverflow = document.body.style.overflow;
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowLeft') onPrevious?.();
+      if (e.key === 'ArrowRight') onNext?.();
     };
     document.addEventListener('keydown', handleKey);
     document.body.style.overflow = 'hidden';
@@ -25,7 +29,7 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children, la
       document.removeEventListener('keydown', handleKey);
       document.body.style.overflow = previousOverflow;
     };
-  }, [open, onClose]);
+  }, [open, onClose, onPrevious, onNext]);
 
   if (!open) return null;
 
@@ -57,6 +61,26 @@ export function Lightbox({ open, onClose, title, subtitle, caption, children, la
         <div className="flex-none flex items-center justify-center w-full py-0.5">
   {children}
 </div>
+        {onPrevious && onNext && (
+          <>
+            <button
+              type="button"
+              onClick={onPrevious}
+              aria-label={language === 'en' ? 'Previous image' : 'Imagen anterior'}
+              className="absolute left-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-ink/20 bg-[#f7f5f1]/95 text-3xl text-ink shadow-lg transition hover:bg-white sm:left-6 sm:h-14 sm:w-14"
+            >
+              ‹
+            </button>
+            <button
+              type="button"
+              onClick={onNext}
+              aria-label={language === 'en' ? 'Next image' : 'Imagen siguiente'}
+              className="absolute right-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-ink/20 bg-[#f7f5f1]/95 text-3xl text-ink shadow-lg transition hover:bg-white sm:right-6 sm:h-14 sm:w-14"
+            >
+              ›
+            </button>
+          </>
+        )}
         {caption && (
   <p className="font-body text-lg italic text-ink/100 text-center max-w-[60ch] leading-relaxed">
     {caption}
