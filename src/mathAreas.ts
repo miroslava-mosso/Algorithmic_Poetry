@@ -342,7 +342,7 @@ export const mathAreasBilingual: BilingualMathArea[] = [
     en: {
       title: 'Graphs',
       description:
-        'Each concept is a vertex, each verse is an edge. Poems are traversed like paths on a graph. This section is still under construction.',
+        'Each concept is a vertex, each verse is an edge. Poems are traversed like paths on a graph. This section is still UNDER CONSTRUCTION.',
       examples: [
         {
           index: '01',
