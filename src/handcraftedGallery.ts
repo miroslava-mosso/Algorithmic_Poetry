@@ -110,8 +110,8 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     descriptions: ['Espiral de Fibonacci en la naturaleza. Poema escrito sobre una tablet. ',
                    'Primeras dos imágenes tomadas de [Link](https://infinitesums.simonsfoundation.org/resources/fibonacci-day-community-activity-pack-english/)'],
     // Add image paths here; all paths in this array are included in the lightbox.
-    images: ['/Algorithmic_Poetry/images/artesanal/fibonacci_3.png',
-            '/Algorithmic_Poetry/images/artesanal/fibonacci_2.png',
+    images: ['/Algorithmic_Poetry/images/artesanal/fibonacci_2.png',
+            '/Algorithmic_Poetry/images/artesanal/fibonacci_3.png',
             '/Algorithmic_Poetry/images/artesanal/fibonacci.png']
   },
 
