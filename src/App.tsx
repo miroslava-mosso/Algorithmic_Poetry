@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 import { getPoems } from '@/poems';
 import { getMathAreas } from '@/mathAreas';
 import { useReveal } from '@/useReveal';
@@ -45,6 +46,7 @@ function BuyMeACoffeeButton({ text }: { text: string }) {
 function App() {
   const ref = useReveal<HTMLDivElement>();
   const [activeTab, setActiveTab] = useState('poesia');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { lang, t } = useLang();
 
   const poems = getPoems(lang);
@@ -69,36 +71,50 @@ function App() {
   return (
     <div ref={ref} className="min-h-screen bg-[#f7f5f1] text-ink">
       {/* ── Nav ─────────────────────────────────────────── */}
-      <header className="sticky top-0 z-40 backdrop-blur-md bg-[#f7f5f1]/80 border-b hairline">
-        
-<div className="mx-auto max-w-[1180px] px-5 sm:px-8 h-14 flex items-center justify-between">
-  <div className="flex items-center gap-4 sm:gap-10">
-    <button type="button" onClick={() => { setActiveTab('poesia'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-display text-lg tracking-wide flex items-center gap-2">
-      <span className="inline-block w-2 h-2 bg-[#f4b6c2] rotate-45" />
-      {t('Poesía potencial', 'Potential poetry')}
-    </button>
+      <header className="sticky top-0 z-40 backdrop-blur-md bg-[#f7f5f1]/90 border-b hairline">
+        <div className="mx-auto max-w-[1180px] px-4 sm:px-8 h-14 flex items-center justify-between gap-3">
+          <button
+            type="button"
+            onClick={() => {
+              setActiveTab('poesia');
+              setMobileMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="font-display text-base sm:text-lg tracking-wide flex items-center gap-2 min-w-0"
+          >
+            <span className="inline-block w-2 h-2 bg-[#f4b6c2] rotate-45 shrink-0" />
+            <span className="truncate">{t('Poesía potencial', 'Potential poetry')}</span>
+          </button>
 
-  </div>
-
-  <div className="flex items-center gap-4">
-
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             <LanguageToggle />
             <span className="font-mono-lt text-[10px] text-ink/40 hidden sm:inline">
               {t('Poesía Algorítmica 2026', 'Algorithmic Poetry 2026')}
             </span>
+            <button
+              type="button"
+              className="md:hidden inline-flex h-10 w-10 items-center justify-center border hairline text-ink"
+              aria-label={mobileMenuOpen ? t('Cerrar menú', 'Close menu') : t('Abrir menú', 'Open menu')}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="primary-navigation"
+              onClick={() => setMobileMenuOpen((open) => !open)}
+            >
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
           </div>
         </div>
+
         <nav
-  aria-label={t('Secciones', 'Sections')}
-  role="tablist"
-  className="mx-auto w-full max-w-[1500px] px-4 sm:px-8 pt-4 pb-6 flex items-center justify-between gap-3 overflow-visible font-mono-lt text-[11px] sm:text-[13px] uppercase text-ink/70 whitespace-nowrap"
->
+          id="primary-navigation"
+          aria-label={t('Secciones', 'Sections')}
+          role="tablist"
+          className={`${mobileMenuOpen ? 'flex' : 'hidden'} md:flex mx-auto w-full max-w-[1500px] px-4 sm:px-8 pt-1 pb-4 md:pt-4 md:pb-6 flex-col md:flex-row md:items-center md:justify-between gap-0 md:gap-3 overflow-visible font-mono-lt text-[12px] md:text-[11px] lg:text-[13px] uppercase text-ink/70 whitespace-normal md:whitespace-nowrap`}
+        >
           {tabs.map((tab, index) => (
-            <span key={tab.id} className="inline-flex items-center gap-3 sm:gap-5 shrink-0">
+            <span key={tab.id} className="inline-flex items-center gap-3 md:gap-5 shrink-0 border-b border-ink/10 md:border-0">
               {index > 0 && (
-                <span aria-hidden="true" className="inline-block w-1.5 h-1.5 bg-[#f4b6c2] rotate-45 shrink-0" />
+                <span aria-hidden="true" className="hidden md:inline-block w-1.5 h-1.5 bg-[#f4b6c2] rotate-45 shrink-0" />
               )}
-  
               <button
                 id={`tab-${tab.id}`}
                 type="button"
@@ -107,20 +123,18 @@ function App() {
                 aria-controls={`panel-${tab.id}`}
                 onClick={() => {
                   setActiveTab(tab.id);
+                  setMobileMenuOpen(false);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className={`shrink-0 transition hover:text-ink ${activeTab === tab.id ? 'text-ink pink-underline-thin' : ''}`}
+                className={`w-full md:w-auto py-3 md:py-0 text-left md:text-center transition hover:text-ink ${activeTab === tab.id ? 'text-ink pink-underline-thin' : ''}`}
               >
                 {tab.label}
               </button>
             </span>
           ))}
-<div className="ml-3 mr-2 shrink-0">
-  <BuyMeACoffeeButton
-    text={t('Invítame un café', 'Buy me a coffee')}
-  />
-</div>
-         
+          <div className="pt-3 md:pt-0 md:ml-3 md:mr-2 shrink-0 flex justify-start md:block">
+            <BuyMeACoffeeButton text={t('Invítame un café', 'Buy me a coffee')} />
+          </div>
         </nav>
       </header>
 
@@ -283,12 +297,12 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-8 pb-3 grid gap-0 grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pt-8 pb-3 grid gap-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border hairline border-b-0 border-l-0 border-r-0">
           <h3 className="font-display text-2xl sm:text-3xl">
             <span className="border-l-2 border-[#f4b6c2] pl-5 py-1">{t('Versión digitalizada', 'Digitized version')}</span>
           </h3>
         </div>
-    <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-10 grid gap-0 grid-cols-2 lg:grid-cols-4">
+    <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-10 grid gap-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {poems.map((p, i) => (
             <PoemCard key={p.id} poem={p} i={i} />
           ))}
@@ -298,7 +312,7 @@ function App() {
             <span className="border-l-2 border-[#f4b6c2] pl-5 py-1">{t('Versión artesanal', 'Handcrafted version')}</span>
           </h3>
         </div>
-        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-10 grid gap-0 grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto max-w-[1180px] px-5 sm:px-8 pb-10 grid gap-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {handcraftedGallery.map((card, i) => (
             <HandcraftedCard key={card.id} card={card} i={i} />
           ))}
