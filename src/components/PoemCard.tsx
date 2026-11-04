@@ -89,16 +89,14 @@ className={
             <span className="font-display text-4xl sm:text-6xl italic text-ink/45">{comingSoon}</span>
           </div>
         ) : (
-          <div className={poem.id === 'cruz'
-            ? 'grid w-full min-w-0 items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(14rem,0.72fr)]'
-            : 'flex w-full min-w-0 flex-col items-center gap-8'}>
+          <div className="flex w-full min-w-0 flex-col items-center gap-8">
             <div className="flex w-full min-w-0 items-center justify-center">
               <PoemShapeView shape={artwork.shape} lines={artwork.lines} lightbox />
             </div>
             {language === 'en' && poem.translation && poem.translation.length > 0 && (
-              <div className={`w-full ${poem.id === 'cruz' ? 'text-left' : 'max-w-[65ch] text-center'}`}>
+              <div className="w-full max-w-[65ch] text-center">
                 <p className="mb-4 font-mono-lt text-[13px] uppercase tracking-wide text-ink/45">English translation</p>
-                <div className={`space-y-2 font-body text-lg sm:text-xl leading-[1.55] ${poem.id === 'cruz' ? '' : 'flex flex-col items-center'}`}>
+                <div className="flex flex-col items-center space-y-2 font-body text-lg sm:text-xl leading-[1.55]">
          {poem.translation.map((line, index) => (
   <p
     key={index}
