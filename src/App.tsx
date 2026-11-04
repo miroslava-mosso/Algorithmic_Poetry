@@ -371,7 +371,7 @@ function App() {
           style={{ filter: 'saturate(0.88) contrast(1.04)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#f7f5f1]/0 via-[#f7f5f1]/0 to-[#0d0d0d]/80" />
-        <p className="absolute bottom-7 left-1/2 -translate-x-1/2 font-mono-lt text-[11px] uppercase text-[#f7f5f1]/65 tracking-[0.22em] text-center whitespace-nowrap">
+        <p className="absolute bottom-4 md:bottom-7 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] md:w-auto px-2 md:px-0 font-mono-lt text-[10px] md:text-[11px] uppercase text-[#f7f5f1]/65 tracking-[0.12em] md:tracking-[0.22em] leading-relaxed text-center whitespace-normal md:whitespace-nowrap">
           {t('una restricción no es el límite de la creatividad, sino el lugar donde empiezan nuevas posibilidades', 'a constraint is not the limit of creativity, but the place where new possibilities begin')}
         </p>
       </div>
