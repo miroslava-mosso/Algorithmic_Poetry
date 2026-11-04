@@ -55,9 +55,12 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     index: 'O4',
     title: 'Espiral',
     technique: 'Literatura ergódica',
-    descriptions: ['El poema empieza desde afuera hacia adentro. Se termina cuando el espiral colapsa en el centro. Puedes comenzar otro espiral que empiece en la última palabra del espiral anterior.'],
+    descriptions: ['Poemas escritos sobre una tablet y en una composición de fotografías y texto digital.'],
     // Add image paths here; all paths in this array are included in the lightbox.
-    images: [],
+    images: ['/Algorithmic_Poetry/images/artesanal/espiral_1.jpeg',
+  '/Algorithmic_Poetry/images/artesanal/espiral_1_2.jpeg',
+  '/Algorithmic_Poetry/images/artesanal/espiral_2.jpeg',
+  '/Algorithmic_Poetry/images/artesanal/espiral_2_2.jpeg'],
   },
   // Three editable blank templates. Change each title and descriptions, then add image paths.
   {
