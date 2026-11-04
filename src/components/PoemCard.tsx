@@ -93,7 +93,7 @@ className={
             ? 'grid w-full min-w-0 items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(14rem,0.72fr)]'
             : 'flex w-full min-w-0 flex-col items-center gap-8'}>
             <div className="flex w-full min-w-0 items-center justify-center">
-              <PoemShapeView shape={artwork.shape} lines={artwork.lines} />
+              <PoemShapeView shape={artwork.shape} lines={artwork.lines} lightbox />
             </div>
             {language === 'en' && poem.translation && poem.translation.length > 0 && (
               <div className={`w-full ${poem.id === 'cruz' ? 'text-left' : 'max-w-[65ch] text-center'}`}>
