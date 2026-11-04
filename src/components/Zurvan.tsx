@@ -22,7 +22,7 @@ export function Zurvan({
     direction: 'up' | 'down' = 'down',
   ) => (
     <span
-      className={`absolute whitespace-nowrap font-mono-lt ${lightbox ? 'text-[5px] sm:text-xs' : 'text-[10px] sm:text-xs'} ${position}`}
+      className={`absolute whitespace-nowrap font-mono-lt ${lightbox ? 'text-[3px] sm:text-xs' : 'text-[10px] sm:text-xs'} ${position}`}
       style={{
         color,
         writingMode: 'vertical-rl',
