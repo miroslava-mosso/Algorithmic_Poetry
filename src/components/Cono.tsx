@@ -4,16 +4,22 @@
 type ConoProps = {
   lines: string[];
   compact?: boolean;
+  lightbox?: boolean;
 };
 
 export function Cono({
   lines,
   compact = false,
+  lightbox = false,
 }: ConoProps) {
   return (
     <div
       className={`flex flex-col items-center font-mono-lt text-ink ${
-        compact ? 'w-max max-w-none text-[8px]' : 'text-xs sm:text-sm'
+        compact
+          ? 'w-max max-w-none text-[8px]'
+          : lightbox
+            ? 'w-full max-w-full text-[clamp(8px,2.5vw,14px)]'
+            : 'text-xs sm:text-sm'
       }`}
     >
       {lines.map((l, i) => (
