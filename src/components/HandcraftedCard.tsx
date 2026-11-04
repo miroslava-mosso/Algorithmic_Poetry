@@ -96,7 +96,17 @@ export function HandcraftedCard({ card, i }: { card: HandcraftedGalleryCard; i: 
         language={lang}
         title={card.title}
         subtitle={card.technique}
-        caption={card.descriptions.filter((description) => description.trim()).join(' ')}
+        caption={
+  <div className="space-y-2">
+    {card.descriptions
+      .filter((description) => description.trim())
+      .map((description, index) => (
+        <p key={`${card.id}-caption-${index}`}>
+          {renderDescription(description)}
+        </p>
+      ))}
+  </div>
+}
         onPrevious={hasImages ? () => changeImage(-1) : undefined}
         onNext={hasImages ? () => changeImage(1) : undefined}
       >
