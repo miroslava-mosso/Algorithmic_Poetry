@@ -10,6 +10,7 @@ interface Props {
   shape: PoemShape;
   lines: string[];
   compact?: boolean;
+  lightbox?: boolean;
 }
 
 /** Renders the geometric form of a poem, dispatching to the right shape component. */
@@ -17,14 +18,15 @@ export function PoemShapeView({
   shape,
   lines,
   compact = false,
+  lightbox = false,
 }: Props) {
   switch (shape) {
     case 'cruz':
       return <Cruz lines={lines} />;
     case 'zurvan':
-      return <Zurvan lines={lines} compact={compact} />;
+      return <Zurvan lines={lines} compact={compact} lightbox={lightbox} />;
     case 'cono':
-      return <Cono lines={lines} compact={compact} />;
+      return <Cono lines={lines} compact={compact} lightbox={lightbox} />;
     case 'espiral':
       return <Espiral lines={lines} />;
     default:
