@@ -84,7 +84,7 @@ export function HandcraftedCard({ card, i }: { card: HandcraftedGalleryCard; i: 
           </div>
           {card.descriptions.filter((description) => description.trim()).map((description, index) => (
             <p key={`${card.id}-description-${index}`} className="font-body text-[18px] leading-[1.55] text-ink/70 italic">
-              {description}
+              {renderDescription(description)}
             </p>
           ))}
         </footer>
