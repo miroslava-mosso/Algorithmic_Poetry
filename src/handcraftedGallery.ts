@@ -89,7 +89,7 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
   {
     id: 'artesanal-koch', index: 'O8', title: 'Nudo forma de ocho', technique: 'Cruces',
     descriptions: ['Plantilla del nudo figura-ocho. Nudo reducido a una curva dibujada en un editor de fotos. Poema escrito sobre una tablet.', 
-      'Plantilla de la 1ra imagen tomada de [Link](https://en.wikipedia.org/wiki/Figure-eight_knot_(mathematics))'],
+      'Plantilla de la 1ra imagen tomada de [Link](https://en.wikipedia.org/wiki/Figure-eight_knot_(mathematics)'],
     // Add image paths here; all paths in this array are included in the lightbox.
     images: ['/Algorithmic_Poetry/images/artesanal/ocho_3.webp',
   '/Algorithmic_Poetry/images/artesanal/ocho_2.png',
