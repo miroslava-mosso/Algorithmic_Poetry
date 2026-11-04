@@ -57,7 +57,7 @@ export const handcraftedGallery: HandcraftedGalleryCard[] = [
     technique: 'Literatura ergódica',
     descriptions: ['Poemas escritos sobre una tablet y en una composición de fotografías y texto digital.'],
     // Add image paths here; all paths in this array are included in the lightbox.
-    images: ['/Algorithmic_Poetry/images/artesanal/espiral_1.pnh',
+    images: ['/Algorithmic_Poetry/images/artesanal/espiral_1.png',
   '/Algorithmic_Poetry/images/artesanal/espiral_1_2.jpeg',
   '/Algorithmic_Poetry/images/artesanal/espiral_2.png',
   '/Algorithmic_Poetry/images/artesanal/espiral_2_2.jpeg'],
