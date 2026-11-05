@@ -226,7 +226,7 @@ function App() {
     </figcaption>
 
     <img
-      src="/images/yo.jpeg"
+      src={`${import.meta.env.BASE_URL}yo.jpeg`}
       alt={t('Retrato de Miroslava', 'Portrait of Miroslava')}
       className="block w-full aspect-[4/5] object-cover"
       loading="lazy"
