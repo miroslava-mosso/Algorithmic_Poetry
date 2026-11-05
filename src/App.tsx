@@ -226,7 +226,7 @@ function App() {
     </figcaption>
 
     <img
-      src="/yo.jpeg"
+      src="/images/yo.jpeg"
       alt={t('Retrato de Miroslava', 'Portrait of Miroslava')}
       className="block w-full aspect-[4/5] object-cover"
       loading="lazy"
