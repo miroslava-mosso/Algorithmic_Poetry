@@ -220,7 +220,7 @@ function App() {
     <span className="pink-underline italic">{t('poema', 'poem')}</span>.
   </h2>
 
-  <figure className="mt-18 max-w-[240px]">
+  <figure className="mt-24 max-w-[240px]">
     <figcaption className="font-mono-lt text-[11px] uppercase text-ink/50 mb-3">
       {t('Sobre quién escribe', 'About the writer')}
     </figcaption>
