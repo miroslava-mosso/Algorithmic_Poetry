@@ -211,11 +211,36 @@ function App() {
       <section id="Reglas del juego" className="border-b hairline">
         <div className="mx-auto max-w-[1180px] px-5 sm:px-8 py-20 sm:py-28 grid gap-10 sm:grid-cols-[0.9fr_1.1fr]">
           <div className="reveal">
-            <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ {t('Reglas del juego', 'Rules of the game')} </span>
-            <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
-              {t('Instrucciones para ponerle límites a un ', 'Instructions for setting limits on a ')}<span className="pink-underline italic">{t('poema', 'poem')}</span>.
-            </h2>
-          </div>
+  <span className="font-mono-lt text-[11px] uppercase text-ink/50">
+    § {t('Reglas del juego', 'Rules of the game')}
+  </span>
+
+  <h2 className="font-display text-4xl sm:text-5xl mt-4 leading-[1.05]">
+    {t('Instrucciones para ponerle límites a un ', 'Instructions for setting limits on a ')}
+    <span className="pink-underline italic">{t('poema', 'poem')}</span>.
+  </h2>
+
+  <figure className="mt-8 max-w-[240px]">
+    <figcaption className="font-mono-lt text-[11px] uppercase text-ink/50 mb-3">
+      {t('Sobre quién escribe', 'About the writer')}
+    </figcaption>
+
+    <img
+      src="/yo.jpeg"
+      alt={t('Retrato de Miroslava', 'Portrait of Miroslava')}
+      className="block w-full aspect-[4/5] object-cover"
+      loading="lazy"
+    />
+
+    <p className="font-body text-sm italic leading-[1.45] text-ink/65 mt-3">
+      {t(
+        'Mi nombre es Miroslava. Soy física-matemática y me gustan la poesía, la fotografía y la teoría de cuerdas.',
+        'My name is Miroslava. I’m a mathematical physicist, and I enjoy poetry, photography, and string theory.'
+      )}
+    </p>
+  </figure>
+</div>
+          
           <div className="reveal font-body text-lg sm:text-xl leading-[1.6] text-ink/80 space-y-5">
             <p>
               {t(
