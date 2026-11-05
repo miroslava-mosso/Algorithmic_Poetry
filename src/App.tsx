@@ -222,7 +222,7 @@ function App() {
 
   <figure className="mt-24 max-w-[240px]">
     <figcaption className="font-mono-lt text-[11px] uppercase text-ink/50 mb-3">
-      {t('Sobre quién escribe', 'About the writer')}
+      {t('Sobre quién escribe', 'About who is writing')}
     </figcaption>
 
     <img
