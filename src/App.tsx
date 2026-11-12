@@ -304,7 +304,7 @@ function App() {
             <div>
               <span className="font-mono-lt text-[11px] uppercase text-ink/50">§ {t('Galería', 'Gallery')}</span>
               <h2 className="font-display text-4xl sm:text-5xl mt-4" style={{ lineHeight: '1.3' }}>
-                {t('Cuatro', 'Four')} <span className="pink-underline">{t('formas', 'forms')}</span> {t('geométricas, cuatro', 'geometric, four')} <span className="pink-underline">{t('poemas', 'poems')}</span> {t('diferentes', 'different')}
+                {t('Cuatro', 'Four')} <span className="pink-underline">{t('formas', 'geometric')}</span> {t('geométricas', 'forms')} <span className="pink-underline">{t('poemas', 'poems')}</span> {t('diferentes', 'different')}
               </h2>
             </div>
             <div>
